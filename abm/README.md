@@ -17,10 +17,11 @@ NB: Dependencies are "docker" for running the Makefile target and the content fo
 
 ## Workflow
 
-Locally, in this repo, add some static content - a file with flexdashboard HTML named "biblioflex.html" in this case.
+1. Locally, in this repo, add some static content - a file with flexdashboard HTML named "biblioflex.html" in this case.
 
-Then run "make encrypt-report" locally.
+1. Then run "make encrypt-report" locally.
 
-Push the "index.html" file to the repository.
+1. Push the "index.html" file to the repository.
 
-It will then be available at <https://KTH-Library/abm> since it is the default content served in the directory named "abm".
+It will then be available at <https://KTH-Library.github.io/abm> since it is the default content served in the directory named "abm".
+
