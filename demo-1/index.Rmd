@@ -30,7 +30,7 @@ Amongst some researchers it can be perceived as an employee review tool... and i
 
 > The Bibliometrics group has thought about how it could be developed further, in the future, to __bring more value to the different stakeholders__.
 
-## Examples of ÅBU stakeholders at KTH {data-background="background.jpeg"}
+## Examples of ÅBU stakeholders at KTH
 
 - Individual researchers - focused on understanding __their own research impact__ and improving it
 - KTH management staff - focused on __KTH ranking and improving KTH at organizational levels__. Can use ÅBU as a tool in order to make KTH even more attractive in rankings when building careers that can make KTH even better in the future and at employee reviews. 
@@ -114,8 +114,13 @@ We will show how usage of visualizations such as maps, open access data sources 
 library(leaflet)
 
 markers <- read.csv('geodata.csv')
-m <- leaflet()
-m <- addTiles(m)
+
+m <-
+  leaflet(data = markers) %>%
+  addTiles(
+    urlTemplate = "//{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", 
+    options = tileOptions(maxZoom = 18), group = "Gray", layerId = "test"
+  )
 
 getMyIcon <- function(npubs){
     if (npubs < 100) {markColor <- 'lightgreen'}
@@ -150,9 +155,17 @@ m
 ```
 
 
-## Open Access Publications {.smaller}
+## OA Publications - Costs (EUR) from OpenAPC{.smaller}
 
-```{r, message=FALSE, out.width="100%"}
+```{css}
+.rpivotTable
+    {
+    overflow-x: auto;
+    overflow-y: auto;
+    }
+```
+
+```{r, message=FALSE, out.width="100%", out.height="90%"}
 
 library(rpivotTable)
 library(readr)
@@ -179,7 +192,21 @@ df2 <-
     DOAJ = "doaj"
   )
 
-rpivotTable(as.data.frame(df2), width="90%", height="90%")
+
+rpivotTable(
+  data = df2, width="100%", height="450px",
+  cols = c("Institution", "Period", "DOAJ"),
+  rows = c("Publisher"),
+  vals = "Euro",
+  aggregatorName = "Sum",
+  rendererName = "Heatmap",
+  inclusions = list(Institution = list(
+    "KTH Royal Institute of Technology" #, 
+    #"Chalmers University of Technology"
+  ))
+)
+
 
 ```
 
+Source: https://treemaps.intact-project.org/ and https://github.com/OpenAPC/openapc-de
