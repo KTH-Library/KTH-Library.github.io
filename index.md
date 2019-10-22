@@ -6,6 +6,7 @@ These GitHub pages contain POCs, presentations and other documentation related p
 
 - [Annual Bibilometric Monitoring Dashboard - KTH 2018](/abm/)
 - [Presentation web slides](/slides/)
+- [Web slides - Demo 1](/demo-1/)
 
 NB. The above links need a password and represent Work In Progress.
 
