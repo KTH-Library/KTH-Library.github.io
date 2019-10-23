@@ -70,11 +70,14 @@ Ideas:
 
 ## Finnish ÅBU example
 
-Who is Tuija Sonkkila, from Finland? She is working at Aalto University Leadership Support Services. Altmetrics, SQL, Power BI, QlikView, data wrangling. She has written a paper on [Metrics, Altmetrics, Data Visualization](https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2046&context=iatul)
+Who is Tuija Sonkkila, from Finland? 
 
-She has developed **Shiny apps** covering bibliometrics analytics for Aalto University. She also produces analytics and reporting on other things like **staff mobility**: https://github.com/tts/mobility2018
+She is working at Aalto University Leadership Support Services. Altmetrics, SQL, Power BI, QlikView, data wrangling. She has written a paper on [Metrics, Altmetrics, Data Visualization](https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2046&context=iatul)
 
-[Tuijas web page](https://blogs.aalto.fi/suoritin/) and private blog at [](https://tuijasonkkila.fi/blog).
+She has developed **Shiny apps** covering bibliometrics analytics for Aalto University. Find more about her work at [Tuijas web page](https://blogs.aalto.fi/suoritin/) and at [her private blog at](https://tuijasonkkila.fi/blog).
+
+She also produces analytics and reporting on other things like **staff mobility**: https://github.com/tts/mobility2018
+
 
 ## Finnish ÅBU example {.smaller}
 
@@ -92,7 +95,7 @@ Here are some links to her open source work, based on R, often using Shiny:
 - https://github.com/tts/altm2016top100
 - https://github.com/tts/aaltoaltmetrics
 
-# Visual examples 
+# Visual examples from KTHB
 
 ## ÅBU 1.2+ possible changes
  
@@ -108,7 +111,7 @@ We will show how usage of visualizations such as maps, open access data sources 
 
 [![](altmetrics-1record.png){height=450px}](https://www.altmetric.com/explorer/outputs?show_details=208908)
 
-## Map of Swedish publications > ~ 1980 (WoS)
+## Map of Swedish publications since ~ 1980 (WoS)
 
 ```{r}
 library(leaflet)
@@ -155,7 +158,7 @@ m
 ```
 
 
-## OA Publications - Costs (EUR) from OpenAPC{.smaller}
+## OA Publications Costs (€) from OpenAPC {.smaller}
 
 ```{css}
 .rpivotTable
@@ -210,3 +213,9 @@ rpivotTable(
 ```
 
 Source: https://treemaps.intact-project.org/ and https://github.com/OpenAPC/openapc-de
+
+## Co-publication network between KTH departments {.smaller}
+
+[![Click to launch Shiny app](network.png){height=450px}](https://shiny-1-r.referens.sys.kth.se/git/copub_dept)
+
+[Källkod på GitHub](https://gita.sys.kth.se/kthb/bibliometric-monitoring/tree/master/apps/copub_dept)
