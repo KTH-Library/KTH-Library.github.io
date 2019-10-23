@@ -20,6 +20,14 @@ suppressPackageStartupMessages(library(magick))
 
 ```
 
+## Demo ÅBU 1.0
+
+[![](shiny-diva.png){height=450px}](https://shiny-1-r.referens.sys.kth.se/git/diva_summary/)
+
+## Demo ÅBU 1.0
+
+[![](screenshot-abm.png){height=450px}](https://KTH-Library.github.io/abm/)
+
 ## WoS subject category profile, fractional count
 
 ![](fractional.png){height=450px}
