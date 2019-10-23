@@ -1,5 +1,5 @@
 ---
-title: "Demo ÅBU"
+title: "Demo ÅBU 1.2+"
 author: "KTH Library & ITA - 'ÅBU' project"
 date: "2019-10-22"
 output:
@@ -95,7 +95,7 @@ Here are some links to her open source work, based on R, often using Shiny:
 - https://github.com/tts/altm2016top100
 - https://github.com/tts/aaltoaltmetrics
 
-# Visual examples from KTHB
+# Examples from the KTHB team
 
 ## ÅBU 1.2+ possible changes
  
@@ -155,6 +155,14 @@ for (j in 1:length(markers$name)) {
 
 m
 
+```
+
+# Open Access {data-background="OA.jpg"}
+ 
+## KTH OA Costs (public OpenAPC data)
+
+```{r}
+knitr::include_url("https://treemaps.intact-project.org/apcdata/kth/embed/reduced")
 ```
 
 
