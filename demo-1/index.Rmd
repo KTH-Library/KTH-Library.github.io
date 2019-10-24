@@ -113,15 +113,15 @@ m
 
 - Add more data related to Open Access publications. 
 
-## Adding value in KTH management staff
+## Adding value for KTH management staff
 
 - How do you think Bibliometric reporting can be improved for management?
 
 ## Ideas and possibilities:
 
-- Make reporting on ranking for KTH and comparisons within Sweden and perhaps Europe available
-- Make reporting on Open Access publications and associated fees from Directory of Open Access Journals (DOAJ) available
-- Reporting on international research collaborations and funding organizations
+- Analytics related to ranking for KTH with comparisons within Sweden and perhaps Europe
+- Analytics related to Open Access publications and associated fees from open sources (DOAJ - Directory of Open Access Journals for example)
+- Analytics related to international research collaborations and funding organizations
 
 # Examples
 
@@ -193,7 +193,7 @@ rpivotTable(
 
 ```
 
-Source: https://treemaps.intact-project.org/ and https://github.com/OpenAPC/openapc-de
+Source: https://treemaps.intact-project.org/ & https://github.com/OpenAPC/openapc-de
 
 ## Finnish ÅBU example
 
