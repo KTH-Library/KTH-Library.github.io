@@ -4,7 +4,7 @@ These GitHub pages contain POCs, presentations and other documentation related p
 
 ### Annual Bibliometric Monitoring project
 
-- [Annual Bibilometric Monitoring Dashboard - KTH 2018](/abm/)
+- [Annual Biblioometric Monitoring Dashboard - KTH 2018](/abm/)
 - [Presentation web slides](/slides/)
 - [Web slides - Demo 1](/demo-1/)
 
