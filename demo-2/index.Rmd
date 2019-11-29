@@ -1,0 +1,156 @@
+---
+title: "Demo ÅBU"
+author: "KTH Library & ITA - 'ÅBU' project"
+date: "2019-12-05"
+output:
+  ioslides_presentation: 
+    logo: kth-logo.png
+    transition: slower
+    self-contained: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(cache = TRUE)
+library(webshot)
+#webshot::install_phantomjs()
+#unlink("retrosearch-screenshot.png")
+
+suppressPackageStartupMessages(library(magick))
+
+```
+
+## Recap from previous demo meeting
+
+- Questions and concerns regarding **the model** was raised. 
+
+- **Data access** and exports were requested. 
+
+- **Data sources** were discussed, including alternatives to existing data sources. 
+
+## Actions
+
+- In response to questions related to the ABM model, an **FAQ** could be developed to answer common concerns and questions about the ABM model and process.
+
+- In response to questions related to data access, we are developing **an API** (to provide JSON data) and an R package which bundles public data (without requiring database credentials).
+
+- In response to data sources, we plan to add functions to the R package which provides access to relevant **open data sources** (including from scopus, Microsoft Academic, Altmetric, Google Scholar etc).
+
+## Progress since last demo meeting
+
+- We're now on Sprint 6
+- We are getting ready to roll out work into production
+- We will show some of the work from the last month
+
+## Demo of ÅBU 1.0 current products
+
+- R package "bibliomatrix" on GitHub
+- API providing data access
+- New reports/flexdashboards and shiny app
+
+## 
+
+<iframe width="560" height="315" src="abm.webm" frameborder="0" allowfullscreen></iframe>
+
+## 
+
+<iframe width="560" height="315" src="abm.html" frameborder="0" allowfullscreen></iframe>
+
+# Future possibilities
+
+A couple of visual examples follow, involving use of open source based tools and visualizations that are web-friendly and responsive and interactive.
+
+## Altmetrics
+
+[![](altmetrics-1record.png){height=450px}](https://www.altmetric.com/explorer/outputs?show_details=208908)
+
+
+## OA Publication Costs for KTH
+
+```{r}
+knitr::include_url("https://treemaps.intact-project.org/apcdata/kth/embed/reduced")
+```
+
+
+## OA Publications Costs (€) from OpenAPC {.smaller}
+
+```{css}
+.rpivotTable
+    {
+    overflow-x: auto;
+    overflow-y: auto;
+    }
+```
+
+```{r, message=FALSE, out.width="100%", out.height="90%"}
+
+library(rpivotTable)
+library(readr)
+library(dplyr)
+
+apc_se_rich <- paste0(
+    "https://raw.githubusercontent.com/OpenAPC/openapc-de/master/data/openapc-se/",
+    "apc_se_enriched.csv"
+  )
+
+df <- 
+  apc_se_rich %>%
+  read_csv() %>%
+  filter(!is.na(doi))
+
+df2 <- 
+  df %>% 
+  select(
+    Institution = "institution",
+    Period = "period", 
+    Euro = "euro",
+    Publisher = "publisher",
+    Journal = "journal_full_title",
+    DOAJ = "doaj"
+  )
+
+
+rpivotTable(
+  data = df2, width="100%", height="450px",
+  cols = c("Institution", "Period", "DOAJ"),
+  rows = c("Publisher"),
+  vals = "Euro",
+  aggregatorName = "Sum",
+  rendererName = "Heatmap",
+  inclusions = list(Institution = list(
+    "KTH Royal Institute of Technology" #, 
+    #"Chalmers University of Technology"
+  ))
+)
+
+
+```
+
+Source: https://treemaps.intact-project.org/ & https://github.com/OpenAPC/openapc-de
+
+## Finnish ÅBU example
+
+Who is Tuija Sonkkila, from Finland? 
+
+She is working at Aalto University Leadership Support Services. Altmetrics, SQL, Power BI, QlikView, data wrangling. She has written a paper on [Metrics, Altmetrics, Data Visualization](https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2046&context=iatul)
+
+She has developed **Shiny apps** covering bibliometrics analytics for Aalto University. Find more about her work at [Tuijas web page](https://blogs.aalto.fi/suoritin/) and at [her private blog at](https://tuijasonkkila.fi/blog).
+
+She also produces analytics and reporting on other things like **staff mobility**: https://github.com/tts/mobility2018
+
+
+## Finnish ÅBU example {.smaller}
+
+[![Shiny app](aaltovirta.png){height=450px}](https://ttso.shinyapps.io/aaltovirta/)
+
+## Other examples of Tuija's public work
+
+Here are some links to her open source work, based on R, often using Shiny:
+
+- https://github.com/tts/aaltoaltmetrics
+- https://blogs.aalto.fi/suoritin/2015/07/02/looking-at-keywords-in-ref2014-impact-case-studies/
+- https://github.com/tts/aaltoced4pureconf
+- https://github.com/tts/opencitations/blob/master/query.R
+- https://github.com/tts/aaltovirta
+- https://github.com/tts/altm2016top100
+- https://github.com/tts/aaltoaltmetrics
