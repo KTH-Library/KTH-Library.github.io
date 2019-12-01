@@ -1,11 +1,12 @@
 ---
-title: "Demo ÅBU"
-author: "KTH Library & ITA - 'ÅBU' project"
+title: "Demo #2 - ABM project"
+author: "KTH Library & ITA - ABM project"
 date: "2019-12-05"
 output:
   ioslides_presentation: 
     logo: kth-logo.png
     transition: slower
+    mathjax: default
     self-contained: true
 ---
 
@@ -20,25 +21,52 @@ suppressPackageStartupMessages(library(magick))
 
 ```
 
-## Recap from previous demo meeting
 
-- Questions and concerns regarding **the model** was raised. 
+## Background - previous demo meeting
 
-- **Data access** and exports were requested. 
+Replacing the previous ABM (Annual Bibliometric Monitoring / Årlig Bibliometrisk Uppföljning).
 
-- **Data sources** were discussed, including alternatives to existing data sources. 
+- Project description
 
-## Actions
+- Overview of old ÅBU
 
-- In response to questions related to the ABM model, an **FAQ** could be developed to answer common concerns and questions about the ABM model and process.
+- Example apps and showing data flows
 
-- In response to questions related to data access, we are developing **an API** (to provide JSON data) and an R package which bundles public data (without requiring database credentials).
+- Demo of possible additions
 
-- In response to data sources, we plan to add functions to the R package which provides access to relevant **open data sources** (including from scopus, Microsoft Academic, Altmetric, Google Scholar etc).
+- Q/A and suggestions
+
+
+## Suggestions and comments from previous demo
+
+- Questions on the **bibliometric evaluation model** was raised.  
+  $\rightarrow$ organization based  
+  Evaluation of KTH-output and higher precision. Will add further **FAQ** to the ABM to answer common concerns and questions.
+  
+- Incorrect mappings and wrongly assigned publications  
+  $\rightarrow$ based on school dialog and checks by researchers
+  
+- Clearer view of incentives and how publications contribute to impact  
+  $\rightarrow$ E.g. list of top-contributing papers and journals
+
+
+## Suggestions and comments from previous demo, cont'd
+
+- **Data access** and exports were requested.  
+  $\rightarrow$ We are developing **an API** (currenlty JSON data) and an R package which bundles "public" data (without requiring database credentials).
+
+- **Data sources** were discussed, including possible additions 
+  $\rightarrow$ We are testing Scopus data, to add this as complementary data (citation counts, Scopus coverage).  
+  We also indent to add functionality to the R package, to provide access to relevant **open data sources** (e.g. Microsoft Academic, Altmetric, Google Scholar etc).
+  
+## Suggestions and comments from previous demo, cont'd
+
+Some comments on KTH's goals and incentives with bibliometrics.  
+This should be an ongoing discussion within KTH leadership and the schools, with input from bibliometric group.
 
 ## Progress since last demo meeting
 
-- We're now on Sprint 6
+- Many new features, updated presentation and testing
 - We are getting ready to roll out work into production
 - We will show some of the work from the last month
 
