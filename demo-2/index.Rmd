@@ -64,17 +64,25 @@ Replacing the previous ABM (Annual Bibliometric Monitoring / Årlig Bibliometris
 Some comments on KTH's goals and incentives with bibliometrics.  
 This should be an ongoing discussion within KTH leadership and the schools, with input from bibliometric group.
 
-## Progress since last demo meeting
+## Demo of ÅBU 1.0 current products
+
 
 - Many new features, updated presentation and testing
 - We are getting ready to roll out work into production
 - We will show some of the work from the last month
 
-## Demo of ÅBU 1.0 current products
-
-- R package "bibliomatrix" on GitHub
-- API providing data access
+- R package "bibliomatrix" [open source, on GitHub](https://github.com/kth-library/bibliomatrix)
+  - [documentation is available here](https://kth-library.github.io/bibliomatrix)
+  - you can use it without requiring database credentials
+  - embedded public data from ABM
 - New reports/flexdashboards and shiny app
+- API providing data access
+  - can be used by other applications
+- [Workflows](https://kth-library.github.io/workflow)
+
+##
+
+
 
 ## 
 
@@ -83,6 +91,14 @@ This should be an ongoing discussion within KTH leadership and the schools, with
 ## 
 
 <iframe width="560" height="315" src="abm.html" frameborder="0" allowfullscreen></iframe>
+
+## {.smaller}
+
+![API](api.png){height=450px}
+
+# Feedback
+
+What are your impressions?
 
 # Future possibilities
 
