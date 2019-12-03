@@ -36,6 +36,17 @@ Replacing the previous ABM (Annual Bibliometric Monitoring / Årlig Bibliometris
 
 - Q/A and suggestions
 
+## Agenda today
+
+- **Feedback** to suggestions and comments
+
+- Progress so far
+
+- **Demo** of new ABM app  
+  $\rightarrow$ progress towards ÅBU 1.0 and replacing the old ÅBU
+
+- Future **possibilities** / examples  
+  $\rightarrow$ comments are welcome
 
 ## Suggestions and comments from previous demo
 
@@ -55,7 +66,7 @@ Replacing the previous ABM (Annual Bibliometric Monitoring / Årlig Bibliometris
 - **Data access** and exports were requested.  
   $\rightarrow$ We are developing **an API** (currenlty JSON data) and an R package which bundles "public" data (without requiring database credentials).
 
-- **Data sources** were discussed, including possible additions 
+- **Data sources** were discussed, including possible additions  
   $\rightarrow$ We are testing Scopus data, to add this as complementary data (citation counts, Scopus coverage).  
   We also indent to add functionality to the R package, to provide access to relevant **open data sources** (e.g. Microsoft Academic, Altmetric, Google Scholar etc).
   
