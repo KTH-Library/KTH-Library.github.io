@@ -23,7 +23,7 @@ suppressPackageStartupMessages(library(magick))
 
 ## Background
 
-Replacing the previous ABM (Annual Bibliometric Monitoring / Årlig Bibliometrisk Uppföljning).
+**Goal:** Replacing the previous ABM (Annual Bibliometric Monitoring / Årlig Bibliometrisk Uppföljning).
 
 - Project description
 
@@ -41,7 +41,8 @@ Replacing the previous ABM (Annual Bibliometric Monitoring / Årlig Bibliometris
 
 - Progress so far
 
-- **Demo** of new ABM app
+- **Demo** of new ABM app  
+  $\rightarrow$ progress towards ÅBU 1.0
 
 - Future **possibilities** / examples
 
@@ -50,25 +51,26 @@ Replacing the previous ABM (Annual Bibliometric Monitoring / Årlig Bibliometris
 ## From previous demo
 
 - Questions on the bibliometric evaluation model was raised.  
-  - **organization based**: Evaluation of KTH-output and higher precision. Will add further **FAQ** to the ABM to answer common concerns and questions.
+  $\rightarrow$ **organization based**  
+  Evaluation of KTH-output and higher precision. Will add further **FAQ** to the ABM to answer common concerns and questions.
   
 - Incorrect mappings and wrongly assigned publications  
-  - **based on school dialog** and checks by researchers
+  $\rightarrow$ **based on school dialog** and checks by researchers
   
 - Clearer view of incentives and how publications contribute to impact  
-  - E.g. **list** of top-contributing papers and journals
+  $\rightarrow$ will add **sortable list** of top-contributing papers and journals
 
 
-## From previous demo
+## From previous demo, cont'd
 
 - **Data access** and exports were requested.  
-  - We are developing **an API** (currenlty JSON data) and an R package which bundles "public" data (without requiring database credentials).
+  $\rightarrow$ We are developing **an API** (currenlty JSON data) and an R package which bundles "public" data (without requiring database credentials).
 
 - **Data sources** were discussed, including possible additions  
-  - We are testing Scopus data, to add this as complementary data (citation counts, Scopus coverage).
-  - We also intend to add functionality to the R package, to provide access to relevant **open data sources** (e.g. Microsoft Academic, Altmetric, Google Scholar etc).
+  $\rightarrow$ We are testing Scopus data, to add this as complementary indicators (citation counts, Scopus coverage)  
+  $\rightarrow$ We also intend to add functionality to the R package, to embed access to relevant **open data sources** (e.g. Microsoft Academic, Altmetric, Google Scholar etc).
   
-## From previous demo
+## From previous demo, cont'd
 
 Some comments on KTH's goals and incentives with bibliometrics.
 
