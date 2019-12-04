@@ -18,11 +18,10 @@ library(webshot)
 #unlink("retrosearch-screenshot.png")
 
 suppressPackageStartupMessages(library(magick))
-
 ```
 
 
-## Background - previous demo meeting
+## Background
 
 Replacing the previous ABM (Annual Bibliometric Monitoring / Årlig Bibliometrisk Uppföljning).
 
@@ -36,53 +35,66 @@ Replacing the previous ABM (Annual Bibliometric Monitoring / Årlig Bibliometris
 
 - Q/A and suggestions
 
+## Agenda
 
-## Suggestions and comments from previous demo
+- **Feedback** to suggestions and comments
 
-- Questions on the **bibliometric evaluation model** was raised.  
-  $\rightarrow$ organization based  
-  Evaluation of KTH-output and higher precision. Will add further **FAQ** to the ABM to answer common concerns and questions.
+- Progress so far
+
+- **Demo** of new ABM app
+
+- Future **possibilities** / examples
+
+- Discussion
+
+## From previous demo
+
+- Questions on the bibliometric evaluation model was raised.  
+  - **organization based**: Evaluation of KTH-output and higher precision. Will add further **FAQ** to the ABM to answer common concerns and questions.
   
 - Incorrect mappings and wrongly assigned publications  
-  $\rightarrow$ based on school dialog and checks by researchers
+  - **based on school dialog** and checks by researchers
   
 - Clearer view of incentives and how publications contribute to impact  
-  $\rightarrow$ E.g. list of top-contributing papers and journals
+  - E.g. **list** of top-contributing papers and journals
 
 
-## Suggestions and comments from previous demo, cont'd
+## From previous demo
 
 - **Data access** and exports were requested.  
-  $\rightarrow$ We are developing **an API** (currenlty JSON data) and an R package which bundles "public" data (without requiring database credentials).
+  - We are developing **an API** (currenlty JSON data) and an R package which bundles "public" data (without requiring database credentials).
 
-- **Data sources** were discussed, including possible additions 
-  $\rightarrow$ We are testing Scopus data, to add this as complementary data (citation counts, Scopus coverage).  
-  We also indent to add functionality to the R package, to provide access to relevant **open data sources** (e.g. Microsoft Academic, Altmetric, Google Scholar etc).
+- **Data sources** were discussed, including possible additions  
+  - We are testing Scopus data, to add this as complementary data (citation counts, Scopus coverage).
+  - We also intend to add functionality to the R package, to provide access to relevant **open data sources** (e.g. Microsoft Academic, Altmetric, Google Scholar etc).
   
-## Suggestions and comments from previous demo, cont'd
+## From previous demo
 
-Some comments on KTH's goals and incentives with bibliometrics.  
-This should be an ongoing discussion within KTH leadership and the schools, with input from bibliometric group.
+Some comments on KTH's goals and incentives with bibliometrics.
 
-## Demo of ÅBU 1.0 current products
+> This should be an ongoing discussion within KTH leadership and the schools, with input from bibliometric group.
 
+## Demo of ÅBU 1.0
 
-- Many new features, updated presentation and testing
-- We are getting ready to roll out work into production
 - We will show some of the work from the last month
+- Sprint 7 - added data, dashboards, API etc
+- We are getting ready to roll out work into production
 
-- R package "bibliomatrix" [open source, on GitHub](https://github.com/kth-library/bibliomatrix)
+## ÅBU 1.0 products
+
+- [Workflows](https://kth-library.github.io/workflow/#6)
+- [Components are part of a platform](https://kth-library.github.io/workflow/#2)
+- You can use the R package "bibliomatrix" [open source, on GitHub](https://github.com/kth-library/bibliomatrix)
   - [documentation is available here](https://kth-library.github.io/bibliomatrix)
-  - you can use it without requiring database credentials
-  - embedded public data from ABM
-- New reports/flexdashboards and shiny app
-- API providing data access
-  - can be used by other applications
-- [Workflows](https://kth-library.github.io/workflow)
-
-##
+  - you can use embedded public data without requiring database credentials
+  - data will be updated with official ÅBU results
+- New reports/dashboards and a shiny app
+- New API providing data access
 
 
+# Live demo
+
+Demo of Dashboard / Shiny App / API
 
 ## 
 
@@ -94,11 +106,16 @@ This should be an ongoing discussion within KTH leadership and the schools, with
 
 ## {.smaller}
 
-![API](api.png){height=450px}
+![Screenshot from API](api.png){height=500px}
+
 
 # Feedback
 
-What are your impressions?
+- What are your impressions?
+
+- Do you think this can replace the existing older ÅBU reporting?
+
+- Anything you'd like to change or add in the future?
 
 # Future possibilities
 
@@ -115,8 +132,12 @@ A couple of visual examples follow, involving use of open source based tools and
 knitr::include_url("https://treemaps.intact-project.org/apcdata/kth/embed/reduced")
 ```
 
+# Open data sources and international comparisons
 
-## OA Publications Costs (€) from OpenAPC {.smaller}
+- Open Access Article Processing Charges
+- What are University Management looking at in Finland?
+
+## Open APC Costs (€) {.smaller}
 
 ```{css}
 .rpivotTable
@@ -170,7 +191,7 @@ rpivotTable(
 
 ```
 
-Source: https://treemaps.intact-project.org/ & https://github.com/OpenAPC/openapc-de
+https://treemaps.intact-project.org/ & https://github.com/OpenAPC/openapc-de
 
 ## Finnish ÅBU example
 
