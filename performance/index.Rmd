@@ -1,0 +1,79 @@
+---
+title: "Performance improvements"
+author: "KTH Library & ITA - ABM project"
+date: "2020-01-10"
+output:
+  ioslides_presentation: 
+    logo: kth-logo.png
+    transition: slower
+    mathjax: default
+    self-contained: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Performance improvements in ABM
+
+A typical issue (db timeout is set to 60s!) is that patience is required:
+
+    > source(here("data-raw/public_data.R"))
+    Patience, please. It takes a while to fetch the data into the cache.
+     Error: nanodbc/nanodbc.cpp:950: HYT00: [Microsoft]
+     [ODBC Driver 17 for SQL Server]Login timeout expired
+     
+    > source(here("data-raw/public_data.R"))
+    Patience, please. It takes a while to fetch the data into the cache.
+    Updating cached data for public data at: /home/markus/.config/bibmon/public.rds
+    ✔ Setting active project to '/home/markus/repos/bibliomatrix'
+    ✔ Saving 'abm_public_kth' to 'data/abm_public_kth.rda'
+
+## Possible areas of improvement
+
+- Improve database calls
+- Improve functions
+- Improve caching
+- Improve server
+- Evaluate alternative backends
+
+What areas do you see? 
+
+Which areas are the most important?
+
+## Refactoring db calls and functions
+
+- How long does calls to `abm_table*()` take?
+- Everything else equal - difference mssql vs sqlite3?
+- When to issue a `collect`?
+- Any opportunities to index?
+- Other ideas?
+
+## Caching
+
+- Since interactive time (sub-second) is not there -> caching
+- Caching of pre-rendered flexdashboards - a function exists
+- Two kinds of flexdashboards (almost dupes), variants: a) logged in and b) not logged in
+
+## Measuring performance{.smaller}
+
+```{r, message=FALSE, echo=TRUE}
+library(microbenchmark)
+library(bibliomatrix)
+library(dplyr)
+
+mb <- microbenchmark(times = 1, unit = "s",
+  t1 <- abm_table1(con = pool_bib("mssql")),
+  t2 <- abm_table1(con = pool_bib("sqlite"))
+)
+
+print(mb)
+
+```
+
+
+## Piñatas
+
+- Make abm_table1() faster
+- ...
