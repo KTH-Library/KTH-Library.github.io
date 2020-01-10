@@ -1,13 +1,14 @@
 ## Welcome to the GitHub Pages for the KTH Library
 
-These GitHub pages contain POCs, presentations and other documentation related primarily to the Annuabl Bibliometric Monitoring project.
+These GitHub pages contain POCs, presentations and other documentation related primarily to the Annual Bibliometric Monitoring project.
 
 ### Annual Bibliometric Monitoring project
 
-- [Annual Bibliometric Monitoring Dashboard - KTH 2018](/abm/)
-- [Presentation web slides](/slides/)
+- [Annual Bibliometric Monitoring Dashboard - KTH 2018](/abm/) * requires password
+- [Presentation web slides](/slides/) * requires password
 - [Web slides - Demo 1](/demo-1/)
+- [Web slides - Demo 2](/demo-2/)
 
-NB. The above links need a password and represent Work In Progress.
+NB. Some of the above links need a password and represent Work In Progress.
 
 
