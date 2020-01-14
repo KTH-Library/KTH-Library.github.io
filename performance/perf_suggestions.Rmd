@@ -143,6 +143,19 @@ print(mb_tab2)
 
 **Performance gain is substantial!** I gain less with SQLite than with MS SQL, possibly related to the database server being much faster than my computer and/or the MS SQL engine being more efficient than SQLite.
 
+## Pool is cool
+As a final note, running through an open pool seems sligtly faster, at least for MS SQL, than opening a connection that gets closed inside of the function, **which is the default behaviour** and used in for example abm_public_data().
+```{r, echo = TRUE, message = FALSE}
+microbenchmark(times = 10,
+               unit = "ms",
+               t1 <- abm_table1(poollite, unit_code),
+               t2 <- abm_table1(con_bib("sqlite"), unit_code),
+               t3 <- abm_table1(poolms, unit_code),
+               t4 <- abm_table1(con_bib("mssql"), unit_code))
+
+```
+
+
 ```{r, echo = FALSE, message = FALSE}
 poolClose(poollite)
 poolClose(poolms)

@@ -404,13 +404,13 @@ microbenchmark(times = 10,
                t3 &lt;- pubsyear_sql(poolms, &quot;KTH&quot;))</code></pre>
 <pre><code>## Unit: milliseconds
 ##                                               expr       min        lq     mean
-##                t1 &lt;- pubsyear_dplyr(poolms, &quot;KTH&quot;)  8.277101  8.746702 13.29036
-##  t2 &lt;- pubsyear_dplyr(poolms, &quot;KTH&quot;) %&gt;% collect() 41.612501 46.080701 53.72837
-##                  t3 &lt;- pubsyear_sql(poolms, &quot;KTH&quot;)  9.335201  9.461001 10.80817
-##    median      uq     max neval
-##  11.20005 16.6251 29.5528    10
-##  52.16195 58.8669 75.4443    10
-##  10.61725 11.1150 15.0612    10</code></pre>
+##                t1 &lt;- pubsyear_dplyr(poolms, &quot;KTH&quot;)  8.511102  9.244002 12.18675
+##  t2 &lt;- pubsyear_dplyr(poolms, &quot;KTH&quot;) %&gt;% collect() 33.293801 38.164101 39.58962
+##                  t3 &lt;- pubsyear_sql(poolms, &quot;KTH&quot;)  9.116101  9.509001 11.00720
+##    median        uq     max neval
+##   9.64290  9.855101 36.1784    10
+##  38.72445 39.672202 53.0996    10
+##   9.75275 10.009601 22.4756    10</code></pre>
 <p>It seems like the dplyr version and the query version give similar execution times, <strong>until collect() is run</strong>. It is confusing to me that collect() makes such a large difference, I probably just don’t fully understand how it works.</p>
 <p>Now, what if we replace the abm_tableX functions with versions using SQL queries directly?</p>
 <pre class="r"><code>abm_table1_alt &lt;- function(con, unit_code, analysis_start = abm_config()$start_year, analysis_stop = abm_config()$stop_year){
@@ -495,28 +495,49 @@ mb_tab2 &lt;- microbenchmark(times = 10,
 print(mb_tab1)</code></pre>
 <pre><code>## Unit: milliseconds
 ##                                       expr      min       lq      mean
-##      t1 &lt;- abm_table1(poollite, unit_code) 242.8948 250.2121 263.73691
-##  t2 &lt;- abm_table1_alt(poollite, unit_code)  31.0529  32.6592  38.10422
-##        t3 &lt;- abm_table1(poolms, unit_code) 714.1787 721.7760 791.48633
-##    t4 &lt;- abm_table1_alt(poolms, unit_code)  30.4440  31.6138  41.20977
+##      t1 &lt;- abm_table1(poollite, unit_code) 252.0878 262.5048 287.89331
+##  t2 &lt;- abm_table1_alt(poollite, unit_code)  31.2325  31.5738  35.56366
+##        t3 &lt;- abm_table1(poolms, unit_code) 722.8784 745.5419 791.58818
+##    t4 &lt;- abm_table1_alt(poolms, unit_code)  31.3831  31.7762  34.40194
 ##     median       uq       max neval
-##  252.71645 253.6739  351.0524    10
-##   40.45945  41.7428   45.2352    10
-##  729.07305 817.7875 1093.2469    10
-##   39.81745  45.3482   72.6326    10</code></pre>
+##  270.22960 339.4221  341.9846    10
+##   32.10435  42.1638   48.0778    10
+##  760.54670 774.1841 1062.8363    10
+##   32.66600  34.2017   44.7132    10</code></pre>
 <pre class="r"><code>print(mb_tab2)</code></pre>
 <pre><code>## Unit: milliseconds
-##                                       expr      min       lq      mean
-##      t1 &lt;- abm_table2(poollite, unit_code) 211.4417 212.9065 228.41632
-##  t2 &lt;- abm_table2_alt(poollite, unit_code) 116.5131 116.6273 118.76497
-##        t3 &lt;- abm_table2(poolms, unit_code) 621.1658 647.0999 658.96981
-##    t4 &lt;- abm_table2_alt(poolms, unit_code)  17.6385  17.8727  20.43556
-##     median       uq      max neval
-##  217.55925 224.3155 325.0382    10
-##  118.87245 120.0372 122.4840    10
-##  655.92095 669.6158 705.4085    10
-##   18.93035  21.6461  30.8032    10</code></pre>
+##                                       expr      min       lq      mean   median
+##      t1 &lt;- abm_table2(poollite, unit_code) 220.4148 228.5325 231.74380 231.1846
+##  t2 &lt;- abm_table2_alt(poollite, unit_code) 115.9981 118.4637 124.38973 122.6316
+##        t3 &lt;- abm_table2(poolms, unit_code) 665.7517 675.6249 699.77027 699.6137
+##    t4 &lt;- abm_table2_alt(poolms, unit_code)  17.6670  17.8642  19.28296  19.0261
+##        uq      max neval
+##  236.3301 245.5986    10
+##  132.4887 134.8727    10
+##  704.1952 763.6566    10
+##   20.4317  21.5759    10</code></pre>
 <p><strong>Performance gain is substantial!</strong> I gain less with SQLite than with MS SQL, possibly related to the database server being much faster than my computer and/or the MS SQL engine being more efficient than SQLite.</p>
+</div>
+<div id="pool-is-cool" class="section level2">
+<h2>Pool is cool</h2>
+<p>As a final note, running through an open pool seems sligtly faster, at least for MS SQL, than opening a connection that gets closed inside of the function, <strong>which is the default behaviour</strong> and used in for example abm_public_data().</p>
+<pre class="r"><code>microbenchmark(times = 10,
+               unit = &quot;ms&quot;,
+               t1 &lt;- abm_table1(poollite, unit_code),
+               t2 &lt;- abm_table1(con_bib(&quot;sqlite&quot;), unit_code),
+               t3 &lt;- abm_table1(poolms, unit_code),
+               t4 &lt;- abm_table1(con_bib(&quot;mssql&quot;), unit_code))</code></pre>
+<pre><code>## Unit: milliseconds
+##                                            expr      min       lq     mean
+##           t1 &lt;- abm_table1(poollite, unit_code) 255.9901 261.6555 272.7381
+##  t2 &lt;- abm_table1(con_bib(&quot;sqlite&quot;), unit_code) 254.9454 257.6578 274.2291
+##             t3 &lt;- abm_table1(poolms, unit_code) 746.6974 769.3540 806.5310
+##   t4 &lt;- abm_table1(con_bib(&quot;mssql&quot;), unit_code) 760.9709 837.2303 973.9882
+##     median        uq       max neval
+##   263.7236  266.5867  353.5152    10
+##   262.6565  280.2438  340.8586    10
+##   787.9479  854.5394  885.4926    10
+##  1001.0418 1100.3549 1155.4991    10</code></pre>
 </div>
 
 
