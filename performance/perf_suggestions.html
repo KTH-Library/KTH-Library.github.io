@@ -404,13 +404,13 @@ microbenchmark(times = 10,
                t3 &lt;- pubsyear_sql(poolms, &quot;KTH&quot;))</code></pre>
 <pre><code>## Unit: milliseconds
 ##                                               expr       min        lq     mean
-##                t1 &lt;- pubsyear_dplyr(poolms, &quot;KTH&quot;)  8.511102  9.244002 12.18675
-##  t2 &lt;- pubsyear_dplyr(poolms, &quot;KTH&quot;) %&gt;% collect() 33.293801 38.164101 39.58962
-##                  t3 &lt;- pubsyear_sql(poolms, &quot;KTH&quot;)  9.116101  9.509001 11.00720
-##    median        uq     max neval
-##   9.64290  9.855101 36.1784    10
-##  38.72445 39.672202 53.0996    10
-##   9.75275 10.009601 22.4756    10</code></pre>
+##                t1 &lt;- pubsyear_dplyr(poolms, &quot;KTH&quot;)  8.126000  8.293401 10.26012
+##  t2 &lt;- pubsyear_dplyr(poolms, &quot;KTH&quot;) %&gt;% collect() 31.564101 33.261701 37.57383
+##                  t3 &lt;- pubsyear_sql(poolms, &quot;KTH&quot;)  8.783801  8.887500 12.23323
+##     median        uq     max neval
+##   8.637351 12.525901 14.8239    10
+##  34.802551 38.526201 57.8772    10
+##   9.023951  9.934802 28.6861    10</code></pre>
 <p>It seems like the dplyr version and the query version give similar execution times, <strong>until collect() is run</strong>. It is confusing to me that collect() makes such a large difference, I probably just don’t fully understand how it works.</p>
 <p>Now, what if we replace the abm_tableX functions with versions using SQL queries directly?</p>
 <pre class="r"><code>abm_table1_alt &lt;- function(con, unit_code, analysis_start = abm_config()$start_year, analysis_stop = abm_config()$stop_year){
@@ -431,7 +431,7 @@ microbenchmark(times = 10,
               FROM orgdata
               GROUP BY Publication_Type_DiVA&quot;)
   
-  orgdata &lt;- dbGetQuery(poolms, q)
+  orgdata &lt;- dbGetQuery(con, q)
   
   if (!&quot;Pool&quot; %in% class(con)) dbDisconnect(con)
   
@@ -494,28 +494,28 @@ mb_tab2 &lt;- microbenchmark(times = 10,
 
 print(mb_tab1)</code></pre>
 <pre><code>## Unit: milliseconds
-##                                       expr      min       lq      mean
-##      t1 &lt;- abm_table1(poollite, unit_code) 252.0878 262.5048 287.89331
-##  t2 &lt;- abm_table1_alt(poollite, unit_code)  31.2325  31.5738  35.56366
-##        t3 &lt;- abm_table1(poolms, unit_code) 722.8784 745.5419 791.58818
-##    t4 &lt;- abm_table1_alt(poolms, unit_code)  31.3831  31.7762  34.40194
-##     median       uq       max neval
-##  270.22960 339.4221  341.9846    10
-##   32.10435  42.1638   48.0778    10
-##  760.54670 774.1841 1062.8363    10
-##   32.66600  34.2017   44.7132    10</code></pre>
+##                                       expr      min       lq      mean   median
+##      t1 &lt;- abm_table1(poollite, unit_code) 243.6644 254.2836 269.55248 261.6922
+##  t2 &lt;- abm_table1_alt(poollite, unit_code) 158.5931 160.1414 166.72099 162.2509
+##        t3 &lt;- abm_table1(poolms, unit_code) 717.9859 736.3553 788.45070 745.6024
+##    t4 &lt;- abm_table1_alt(poolms, unit_code)  30.8609  30.9447  31.59345  31.3616
+##        uq       max neval
+##  274.4804  334.7006    10
+##  173.8415  190.4268    10
+##  810.3930 1040.9252    10
+##   31.6929   33.4436    10</code></pre>
 <pre class="r"><code>print(mb_tab2)</code></pre>
 <pre><code>## Unit: milliseconds
-##                                       expr      min       lq      mean   median
-##      t1 &lt;- abm_table2(poollite, unit_code) 220.4148 228.5325 231.74380 231.1846
-##  t2 &lt;- abm_table2_alt(poollite, unit_code) 115.9981 118.4637 124.38973 122.6316
-##        t3 &lt;- abm_table2(poolms, unit_code) 665.7517 675.6249 699.77027 699.6137
-##    t4 &lt;- abm_table2_alt(poolms, unit_code)  17.6670  17.8642  19.28296  19.0261
-##        uq      max neval
-##  236.3301 245.5986    10
-##  132.4887 134.8727    10
-##  704.1952 763.6566    10
-##   20.4317  21.5759    10</code></pre>
+##                                       expr      min       lq      mean
+##      t1 &lt;- abm_table2(poollite, unit_code) 218.7095 219.2197 227.61383
+##  t2 &lt;- abm_table2_alt(poollite, unit_code) 113.6293 118.9924 120.70264
+##        t3 &lt;- abm_table2(poolms, unit_code) 636.2340 646.9495 659.00150
+##    t4 &lt;- abm_table2_alt(poolms, unit_code)  17.7158  18.2065  18.74571
+##     median       uq      max neval
+##  224.36150 237.2749 245.5771    10
+##  120.15385 122.7209 127.2957    10
+##  661.83900 667.6148 679.3371    10
+##   18.39855  19.1864  20.8728    10</code></pre>
 <p><strong>Performance gain is substantial!</strong> I gain less with SQLite than with MS SQL, possibly related to the database server being much faster than my computer and/or the MS SQL engine being more efficient than SQLite.</p>
 </div>
 <div id="pool-is-cool" class="section level2">
@@ -529,15 +529,15 @@ print(mb_tab1)</code></pre>
                t4 &lt;- abm_table1(con_bib(&quot;mssql&quot;), unit_code))</code></pre>
 <pre><code>## Unit: milliseconds
 ##                                            expr      min       lq     mean
-##           t1 &lt;- abm_table1(poollite, unit_code) 255.9901 261.6555 272.7381
-##  t2 &lt;- abm_table1(con_bib(&quot;sqlite&quot;), unit_code) 254.9454 257.6578 274.2291
-##             t3 &lt;- abm_table1(poolms, unit_code) 746.6974 769.3540 806.5310
-##   t4 &lt;- abm_table1(con_bib(&quot;mssql&quot;), unit_code) 760.9709 837.2303 973.9882
-##     median        uq       max neval
-##   263.7236  266.5867  353.5152    10
-##   262.6565  280.2438  340.8586    10
-##   787.9479  854.5394  885.4926    10
-##  1001.0418 1100.3549 1155.4991    10</code></pre>
+##           t1 &lt;- abm_table1(poollite, unit_code) 236.6581 255.5596 272.0285
+##  t2 &lt;- abm_table1(con_bib(&quot;sqlite&quot;), unit_code) 245.5257 249.9984 268.2283
+##             t3 &lt;- abm_table1(poolms, unit_code) 703.7947 734.9654 765.6228
+##   t4 &lt;- abm_table1(con_bib(&quot;mssql&quot;), unit_code) 730.9270 757.2545 919.3092
+##    median        uq       max neval
+##  262.2118  272.5651  329.1269    10
+##  266.1568  267.3115  331.6701    10
+##  739.6233  840.1039  854.4847    10
+##  942.8714 1060.5390 1125.3203    10</code></pre>
 </div>
 
 

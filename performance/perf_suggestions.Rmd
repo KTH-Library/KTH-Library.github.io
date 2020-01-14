@@ -76,7 +76,7 @@ abm_table1_alt <- function(con, unit_code, analysis_start = abm_config()$start_y
               FROM orgdata
               GROUP BY Publication_Type_DiVA")
   
-  orgdata <- dbGetQuery(poolms, q)
+  orgdata <- dbGetQuery(con, q)
   
   if (!"Pool" %in% class(con)) dbDisconnect(con)
   
