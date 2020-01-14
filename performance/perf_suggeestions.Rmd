@@ -1,0 +1,149 @@
+---
+title: "Hunting performance in ABM"
+author: "Agne"
+date: "2020-01-14"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(bibliomatrix)
+library(microbenchmark)
+library(dplyr)
+library(tidyr)
+library(DBI)
+library(pool)
+library(glue)
+```
+
+## We might do this already? Double check.
+
+When fetching flexdashboard, **always** use public data if possible. The only exceptions are
+
+- Dashboard for KTHID
+- Publication lists
+
+Pregenerate all dashboards except maybe personal ones.
+
+## The abm_tableX functions
+
+All the functions generating tables for ABM use abm_data() to fetch the masterfile table, and then do filtering and other data manipulation using dplyr verbs. At some point, collect() is run, usually when we come to a step that dplyr can't properly translate to sql code, but at the latest when the result is returned for display. An obvious question is whether it would be more efficient to just send SQL code to the database.
+
+```{r, echo = TRUE, message = FALSE}
+poolms <- pool_bib("mssql")
+poollite <- pool_bib("sqlite")
+
+pubsyear_dplyr <- function(con, unit_code){
+  con %>% tbl("masterfile") %>% filter(Unit_code == unit_code) %>%
+    group_by(Publication_Year) %>%
+    summarise(p_frac = sum(Unit_fraction, na.rm = T))
+}
+
+pubsyear_sql <- function(con, unit_code){
+  q <- glue("SELECT Publication_Year, sum(Unit_fraction) FROM masterfile
+             WHERE Unit_code = '{unit_code}' GROUP BY Publication_Year")
+  dbGetQuery(con, q)
+}
+
+microbenchmark(times = 10,
+               unit = "ms",
+               t1 <- pubsyear_dplyr(poolms, "KTH"),
+               t2 <- pubsyear_dplyr(poolms, "KTH") %>% collect(),
+               t3 <- pubsyear_sql(poolms, "KTH"))
+
+```
+
+It seems like the dplyr version and the query version give similar execution times, **until collect() is run**. It is confusing to me that collect() makes such a large difference, I probably just don't fully understand how it works.
+
+Now, what if we replace the abm_tableX functions with versions using SQL queries directly?
+
+```{r, echo = TRUE, message = FALSE}
+abm_table1_alt <- function(con, unit_code, analysis_start = abm_config()$start_year, analysis_stop = abm_config()$stop_year){
+  
+  q <- glue("WITH orgdata AS (SELECT *, CASE WHEN Doc_id IS NULL THEN 0 ELSE 1 END AS iswos",
+            " FROM masterfile WHERE Unit_code = '{unit_code}' AND Publication_Year BETWEEN {analysis_start} AND {analysis_stop})",
+            "SELECT Publication_Year,
+                     Publication_Type_DiVA,
+                     sum(Unit_fraction) AS P_frac,
+                     null AS WoS_coverage
+              FROM orgdata
+              GROUP BY Publication_Year, Publication_Type_DiVA
+              UNION
+              SELECT null AS Publication_Year,
+                     Publication_Type_DiVA,
+                     sum(Unit_fraction) AS P_frac,
+                     sum(Unit_fraction*iswos)/sum(Unit_Fraction) AS WoS_coverage
+              FROM orgdata
+              GROUP BY Publication_Type_DiVA")
+  
+  orgdata <- dbGetQuery(poolms, q)
+  
+  if (!"Pool" %in% class(con)) dbDisconnect(con)
+  
+  # Year dependent part of table
+  table1 <-
+    orgdata %>%
+    select(-WoS_coverage) %>% 
+    filter(!is.na(Publication_Year)) %>%
+    pivot_wider(names_from = Publication_Year, values_from = P_frac)
+  
+  # Summary part of table
+  table2 <-
+    orgdata %>%
+    filter(is.na(Publication_Year)) %>%
+    select(-Publication_Year)
+  
+  pubtype_order <- get_pubtype_order()
+  
+  table1 %>%
+    inner_join(table2, by = "Publication_Type_DiVA") %>%
+    inner_join(pubtype_order, by = c("Publication_Type_DiVA" = "diva_publication_type")) %>%
+    arrange(pt_ordning) %>%
+    select(-pt_ordning)
+}
+
+abm_table2_alt <- function(con, unit_code, analysis_start = abm_config()$start_year, analysis_stop = abm_config()$stop_year){
+  
+  q <- glue("WITH orgdata AS ",
+            "(SELECT * FROM masterfile WHERE Unit_code = '{unit_code}' AND Publication_Year BETWEEN {analysis_start} AND {analysis_stop} - 2",
+            " AND Publication_Type_WoS IN ('Article', 'Proceedings paper', 'Review', 'Letter', 'Editorial'))\n",
+            "SELECT CAST(Publication_Year AS nvarchar(5)) AS Publication_Year, sum(Unit_Fraction) AS P_frac, sum(Unit_Fraction * Citations_3yr) AS C3_frac
+             FROM orgdata
+             GROUP BY Publication_Year
+             UNION
+             SELECT 'Total' AS Publication_Year, sum(Unit_Fraction) AS P_frac, sum(Unit_Fraction * Citations_3yr) AS C3_frac
+             FROM orgdata")
+  
+  table1 <- dbGetQuery(con, q)
+  
+  if (!"Pool" %in% class(con)) dbDisconnect(con)
+  
+  table1
+}
+
+unit_code <- "KTH"
+
+mb_tab1 <- microbenchmark(times = 10,
+                          unit = "ms",
+                          t1 <- abm_table1(poollite, unit_code),
+                          t2 <- abm_table1_alt(poollite, unit_code),
+                          t3 <- abm_table1(poolms, unit_code),
+                          t4 <- abm_table1_alt(poolms, unit_code))
+
+mb_tab2 <- microbenchmark(times = 10,
+                          unit = "ms",
+                          t1 <- abm_table2(poollite, unit_code),
+                          t2 <- abm_table2_alt(poollite, unit_code),
+                          t3 <- abm_table2(poolms, unit_code),
+                          t4 <- abm_table2_alt(poolms, unit_code))
+
+print(mb_tab1)
+print(mb_tab2)
+```
+
+**Performance gain is substantial!** I gain less with SQLite than with MS SQL, possibly related to the database server being much faster than my computer and/or the MS SQL engine being more efficient than SQLite.
+
+```{r, echo = FALSE, message = FALSE}
+poolClose(poollite)
+poolClose(poolms)
+```
