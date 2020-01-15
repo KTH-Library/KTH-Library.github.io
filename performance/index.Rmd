@@ -102,8 +102,8 @@ We can look at the query sent to the backend and profile it using EXPLAIN etc:
 
 ```{r, echo=TRUE}
 
-abm_data(unit_code = 177) %>% show_query()
-#abm_data(unit_code = 177) %>% explain()  # for query plan used in db
+abm_data(unit_code = "KTH") %>% show_query()
+#abm_data(unit_code = "KTH") %>% explain()  # for query plan used in db
 
 # sqlite3 db does not have indexes
 
@@ -116,32 +116,27 @@ abm_data(unit_code = 177) %>% show_query()
     
     # use the dbplyr sql (which uses %in%)
     sqlite> .timer on
-    sqlite> SELECT *
+    sqlite> SELECT count(*)
        ...> FROM `masterfile`
-       ...> WHERE (`Unit_code` IN (177.0));
-    Run Time: real 0.070 user 0.062024 sys 0.007987
-    
-    sqlite> select * from masterfile where Unit_code = 177;
-    Run Time: real 0.056 user 0.043066 sys 0.012977
+       ...> WHERE (`Unit_code` IN ('KTH'));
+    Run Time: real 0.018 user 0.008986 sys 0.008708
     
     # add an index
     sqlite> create index idx1 on Masterfile(Unit_code);
     Run Time: real 0.092 user 0.064022 sys 0.016046
     
-    sqlite> select * from masterfile where Unit_code = 177;
-    Run Time: real 0.001 user 0.000241 sys 0.000074
-    
-    sqlite> select * from masterfile where Unit_code in (177);
-    Run Time: real 0.001 user 0.001682 sys 0.000000
+    sqlite> select count(*) from masterfile where Unit_code = "KTH";
+    Run Time: real 0.006 user 0.005362 sys 0.000000
 
 ## SQLite3 db after index{.smaller}
 
 EXPLAIN the query plan (shows that index is being used)
 
     sqlite> .eqp on
-    sqlite> select * from masterfile where Unit_code in (177);
-    --EQP-- 0,0,0,SEARCH TABLE masterfile USING INDEX idx1 (Unit_code=?)
-    Run Time: real 0.000 user 0.000391 sys 0.000000
+    sqlite> select count(*) from masterfile where Unit_code in ("KTH");
+    --EQP-- 0,0,0,SEARCH TABLE masterfile USING COVERING INDEX idx1 (Unit_code=?)
+    37274
+    Run Time: real 0.005 user 0.005458 sys 0.000000
 
 ## Measuring several fcns {.smaller}
 
