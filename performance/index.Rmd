@@ -8,6 +8,8 @@ output:
     transition: slower
     mathjax: default
     self-contained: true
+#    css: kth.css    
+    
 ---
 
 
@@ -30,23 +32,24 @@ A typical issue (db timeout is set to 60s!) is that patience is required:
     ✔ Setting active project to '/home/markus/repos/bibliomatrix'
     ✔ Saving 'abm_public_kth' to 'data/abm_public_kth.rda'
 
-## Possible areas of improvement
+## Some potential areas of improvement
 
-- Improve database calls
-- Improve functions
-- Improve caching
-- Improve server
-- Evaluate alternative backends
+- Improve database calls (at backend level - views/SPs/temptables etc)
+- Improve functions (at R package level)
+- Improve caching (at app level)
+- Improve server (more hardware / memory)
+- Evaluate alternative backends (investigate using Apache Spark?)
+- Faster rendering of rmarkdown (see [how on this link](https://bookdown.org/yihui/rmarkdown-cookbook/cache.html))
 
-What areas do you see? 
+> What areas do you see? 
 
-Which areas are the most important?
+> Which areas are the most important?
 
 ## Refactoring db calls and functions
 
 - How long does calls to `abm_table*()` take?
-- Everything else equal - difference mssql vs sqlite3?
-- When to issue a `collect`?
+- Everything else equal - differences between backends (mssql vs sqlite3)?
+- When to issue a `collect`? Should `compute()` be used? See this [link](https://dbplyr.tidyverse.org/articles/dbplyr.html).
 - Any opportunities to index?
 - Other ideas?
 
@@ -54,9 +57,11 @@ Which areas are the most important?
 
 - Since interactive time (sub-second) is not there -> caching
 - Caching of pre-rendered flexdashboards - a function exists
-- Two kinds of flexdashboards (almost dupes), variants: a) logged in and b) not logged in
+- Two kinds of flexdashboards (almost dupes), variants: 
+  - logged in (SAML auth) 
+  - not logged in ("anonymous")
 
-## Measuring performance{.smaller}
+## Measuring fcn performance {.smaller}
 
 ```{r, message=FALSE, echo=TRUE}
 library(microbenchmark)
@@ -72,8 +77,111 @@ print(mb)
 
 ```
 
+## Measuring fcn performance
 
-## Piñatas
+We can measure the times spent inside the `abm_table1()` when connecting against mssql using `profvis`:
 
-- Make abm_table1() faster
+```{r, message=FALSE, echo=TRUE}
+library(profvis)
+
+perf_profile <- profvis(abm_table1(con = pool_bib("mssql")))
+
+```
+
+Results are on the next slide
+
+## {.smaller}
+
+```{r}
+perf_profile
+```
+
+## Measuring query perf
+
+We can look at the query sent to the backend and profile it using EXPLAIN etc:
+
+```{r, echo=TRUE}
+
+abm_data(unit_code = 177) %>% show_query()
+#abm_data(unit_code = 177) %>% explain()  # for query plan used in db
+
+# sqlite3 db does not have indexes
+
+```
+
+## Adding indexes and tuning a query {.smaller}
+
+    # go to the sqlite3 db and start the db CLI
+    cd ~/.config/bibmon && sqlite3 bibmon.db
+    
+    # use the dbplyr sql (which uses %in%)
+    sqlite> .timer on
+    sqlite> SELECT *
+       ...> FROM `masterfile`
+       ...> WHERE (`Unit_code` IN (177.0));
+    Run Time: real 0.070 user 0.062024 sys 0.007987
+    
+    sqlite> select * from masterfile where Unit_code = 177;
+    Run Time: real 0.056 user 0.043066 sys 0.012977
+    
+    # add an index
+    sqlite> create index idx1 on Masterfile(Unit_code);
+    Run Time: real 0.092 user 0.064022 sys 0.016046
+    
+    sqlite> select * from masterfile where Unit_code = 177;
+    Run Time: real 0.001 user 0.000241 sys 0.000074
+    
+    sqlite> select * from masterfile where Unit_code in (177);
+    Run Time: real 0.001 user 0.001682 sys 0.000000
+
+## SQLite3 db after index{.smaller}
+
+EXPLAIN the query plan (shows that index is being used)
+
+    sqlite> .eqp on
+    sqlite> select * from masterfile where Unit_code in (177);
+    --EQP-- 0,0,0,SEARCH TABLE masterfile USING INDEX idx1 (Unit_code=?)
+    Run Time: real 0.000 user 0.000391 sys 0.000000
+
+## Measuring several fcns {.smaller}
+
+```{r, message=FALSE, echo=TRUE}
+library(rlang)
+library(purrr)
+library(dplyr)
+
+fns <- function(table_no, db_type) 
+  sprintf("abm_table%s(con = pool_bib('%s'))", table_no, db_type)
+
+fns_sqlite <- fns(1:5, "sqlite")
+fns_mssql <- fns(1:5, "mssql")
+
+mb <- function(f) 
+  microbenchmark(times = 1, unit = "s", x <- force(f))$time / 1e9
+
+perf <- function(f) tibble(
+    f = f,
+    p = map_dbl(f, function(x) mb(eval_tidy(parse_quo(x, env = global_env()))))
+  )
+
+res <- bind_cols(
+  perf(fns_sqlite),
+  perf(fns_mssql)
+)
+
+```
+
+Results on next page.
+
+## {.smaller}
+
+```{r}
+knitr::kable(res)
+```
+
+
+## Piñatas / TODOs
+
+- Make `abm_table*()` fcns faster
 - ...
+
