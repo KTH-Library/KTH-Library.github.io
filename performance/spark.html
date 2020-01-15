@@ -3142,7 +3142,16 @@ slide:not(.current) .plotly.html-widget{
           </hgroup>
   </slide>
 
-<slide class=""><hgroup><h2>Get Apache Spark locally</h2></hgroup><article  id="get-apache-spark-locally">
+<slide class=""><hgroup><h2>Apache Spark + sparklyr</h2></hgroup><article  id="apache-spark-sparklyr">
+
+<p>Resources:</p>
+
+<ul>
+<li><a href='https://therinspark.com' title=''>https://therinspark.com</a></li>
+<li><a href='https://spark.rstudio.com/guides/data-lakes/#spark-as-an-analysis-engine' title=''>https://spark.rstudio.com/guides/data-lakes/#spark-as-an-analysis-engine</a></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Get Apache Spark locally</h2></hgroup><article  id="get-apache-spark-locally">
 
 <pre class = 'prettyprint lang-r'>library(sparklyr)
 # get Apache Spark locally
@@ -3152,7 +3161,6 @@ spark_install()
 
 # sudo apt install openjdk-8-jdk
 # update-java-alternatives --list
-#java-1.11.0-openjdk-amd64      1111       /usr/lib/jvm/java-1.11.0-openjdk-amd64
 # sudo update-java-alternatives --set java-1.8.0-openjdk-amd64
 
 sc &lt;- spark_connect(master = &quot;local&quot;)</pre>

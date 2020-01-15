@@ -15,6 +15,13 @@ output:
 ```{r setup, include=FALSE}
 ```
 
+## Apache Spark + sparklyr
+
+Resources:
+
+- https://therinspark.com
+- https://spark.rstudio.com/guides/data-lakes/#spark-as-an-analysis-engine
+
 ## Get Apache Spark locally
 
 ```{r, eval=FALSE}
@@ -26,7 +33,6 @@ spark_install()
 
 # sudo apt install openjdk-8-jdk
 # update-java-alternatives --list
-#java-1.11.0-openjdk-amd64      1111       /usr/lib/jvm/java-1.11.0-openjdk-amd64
 # sudo update-java-alternatives --set java-1.8.0-openjdk-amd64
 
 sc <- spark_connect(master = "local")
