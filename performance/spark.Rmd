@@ -1,0 +1,72 @@
+---
+title: "Apache Spark + sparklyr"
+author: "KTH Library & ITA - ABM project"
+date: "2020-01-15"
+output:
+  ioslides_presentation: 
+    logo: kth-logo.png
+    transition: slower
+    mathjax: default
+    self-contained: true
+#    css: kth.css    
+    
+---
+
+```{r setup, include=FALSE}
+```
+
+## Get Apache Spark locally
+
+```{r, eval=FALSE}
+library(sparklyr)
+# get Apache Spark locally
+spark_install()
+
+# install Java 8 (if you don't have it already), on linux:
+
+# sudo apt install openjdk-8-jdk
+# update-java-alternatives --list
+#java-1.11.0-openjdk-amd64      1111       /usr/lib/jvm/java-1.11.0-openjdk-amd64
+# sudo update-java-alternatives --set java-1.8.0-openjdk-amd64
+
+sc <- spark_connect(master = "local")
+```
+
+## Migrate data
+
+```{r, eval=FALSE}
+
+library(dplyr)
+library(purrr)
+library(bibliomatrix)
+library(RSQLite)
+
+# move the "masterfile" table
+src1 <- con_bib_sqlite() %>% tbl("masterfile")
+dst1 <- copy_to(sc, src1, name = "masterfile")
+
+# make some query
+dst1 %>% filter(Unit_code == "u101eneg")
+
+```
+
+## Apache Spark config
+
+```{r, eval = FALSE}
+library(sparklyr)
+
+# config for Apache Spark
+Sys.setenv("SPARK_MEM" = "12g")
+config <- spark_config()
+config$`sparklyr.shell.driver-memory` <- '12G'
+config$`sparklyr.shell.executor-memory` <- '4G'
+config$sparklyr.defaultPackages <- "com.datastax.spark:spark-cassandra-connector_2.11:2.0.0-M3"
+config$spark.cassandra.cassandra.host <- "localhost"
+config$spark.driver.maxResultSize <- "4G"
+config$spark.executor.cores <- 3
+
+# make the connection
+sc <- spark_connect(master = "local", config = config)
+```
+
+
