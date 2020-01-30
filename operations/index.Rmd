@@ -1,0 +1,45 @@
+---
+title: "Operations and maintenance"
+author: "KTH Library & ITA - 'ÅBU' project"
+date: "2020-01-20"
+output:
+  ioslides_presentation: 
+    logo: kth-logo.png
+    transition: slower
+    self-contained: true
+---
+
+##
+
+![](venn.png){.width=600px}
+
+## Delivery components
+
+Containers - "units" that can be bundled together into "systems".
+
+- Binaries - Package a solution as (bundle of) units (Docker + Docker Hub)
+- Versions - latest or pinned version (dev, ref, prod)?
+
+## Procedures
+
+.. for Operations, Maintenance, Troubleshooting
+
+  - Updates to data (bundled data, caches)
+  - Steps for deploying updates to components
+  - Troubleshooting incidents and using logs
+  - FAQs and recipes
+  - Load testing
+  - Monitoring
+  - Usage reporting
+  
+## Documentation
+
+- Overview at https://kth-library.github.io/ - maintained [here](https://github.com/KTH-Library/KTH-Library.github.io)
+- Components:
+  - R-package: https://github.com/KTH-Library/bibliomatrix
+  - R-package: https://github.com/KTH-Library/ktheme
+  - Container: https://github.com/KTH-Library/kontarion
+  - Bundle: https://gita.sys.kth.se/kthb/kontarion-bundle
+  
+
+  
