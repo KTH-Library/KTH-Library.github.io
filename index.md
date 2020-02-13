@@ -26,4 +26,4 @@ Other technical documentation for ABM components:
 - [Documentation for `kontarion` binaries at Docker Hub](https://hub.docker.com/r/kthb/kontarion)
 - [Documentation for `bibliomatrix` R package at GitHub](https://github.com/KTH-Library/bibliomatrix) - how to operate and develop the R package that contains the ABM application, REST API and embedded public data
 - [Documentation for `ktheme` R package at GitHub](https://github.com/KTH-Library/bibliomatrix) - how to use KTH's graphical profile assets from R (for plotting or generating web content with the KTH style)
-- [Documentation for ABM load testing tools](https://gita.sys.kth.se/kthb/kontarion-bundle/shinyload) - how to load test the ABM components
+- [Documentation for ABM load testing tools](https://gita.sys.kth.se/kthb/kontarion-bundle/tree/master/shinyload) - how to load test the ABM components
