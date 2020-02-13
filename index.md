@@ -11,4 +11,19 @@ These GitHub pages contain POCs, presentations and other documentation related p
 
 * NB. Some of the above links need a password and represent Work In Progress.
 
+### Technical documentation
 
+Slides:
+
+- [Overview slides for Operations and maintenance](/operations/)
+- [Documentation for performance optimization practices and tools](/performance/)
+- [Documentation for development workflow for ABM - using GitHub Flow](/workflow/)
+
+Other technical documentation for ABM components:
+
+- [Documentation for `kontarion-bundle`](https://gita.sys.kth.se/kthb/kontarion-bundle) - how to operate and use the full application bundle
+- [Documentation for `kontarion` source code at GitHub](https://github.com/KTH-Library/kontarion) - how to operate and use the image bundling the ABM application and its dependencies
+- [Documentation for `kontarion` binaries at Docker Hub](https://hub.docker.com/r/kthb/kontarion)
+- [Documentation for `bibliomatrix` R package at GitHub](https://github.com/KTH-Library/bibliomatrix) - how to operate and develop the R package that contains the ABM application, REST API and embedded public data
+- [Documentation for `ktheme` R package at GitHub](https://github.com/KTH-Library/bibliomatrix) - how to use KTH's graphical profile assets from R (for plotting or generating web content with the KTH style)
+- [Documentation for ABM load testing tools](https://gita.sys.kth.se/kthb/kontarion-bundle/shinyload) - how to load test the ABM components
