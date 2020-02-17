@@ -13,6 +13,10 @@ These GitHub pages contain POCs, presentations and other documentation related p
 
 ### Technical documentation
 
+Confluence documentation:
+
+- [System configuration described in KTH's Confluence](https://confluence.sys.kth.se/confluence/pages/viewpage.action?pageId=70784672)
+
 Slides providing overviews:
 
 - [Overview slides for Operations and maintenance](/operations/)
