@@ -4,12 +4,14 @@ These GitHub pages contain POCs, presentations and other documentation related p
 
 ### Annual Bibliometric Monitoring project
 
+Presentations / Demos:
+
 - [Annual Bibliometric Monitoring Dashboard - KTH 2018](/abm/) *
 - [Presentation web slides](/slides/) *
 - [Web slides - Demo 1](/demo-1/)
 - [Web slides - Demo 2](/demo-2/)
 
-* NB. Some of the above links need a password and represent Work In Progress.
+__NB.__ Some of the above links need a password and represent Work In Progress.
 
 ### Technical documentation
 
@@ -31,3 +33,8 @@ Technical documentation for the components used in ABM:
 - [Documentation for `bibliomatrix` R package at GitHub](https://github.com/KTH-Library/bibliomatrix) - how to operate and develop the R package that contains the ABM application, REST API and embedded public data
 - [Documentation for `ktheme` R package at GitHub](https://github.com/KTH-Library/ktheme) - how to use KTH's graphical profile assets from R (for plotting or generating web content with the KTH style)
 - [Documentation for ABM load testing tools](https://gita.sys.kth.se/kthb/kontarion-bundle/tree/master/shinyload) - how to load test the ABM components
+
+Build logs:
+
+- [Build logs for `bibliomatrix`](https://travis-ci.org/KTH-Library/bibliomatrix/builds)
+- [Build logs for `kontarion`](https://hub.docker.com/r/kthb/kontarion/builds)
