@@ -24,15 +24,17 @@ Containers - "units" that can be bundled together into "systems".
 
 .. for Operations, Maintenance, Troubleshooting
 
-  - Updates to data (bundled data, caches)
-  - Steps for deploying updates to components
-  - Troubleshooting incidents and using logs
-  - FAQs and recipes
-  - Load testing
+  - [Updates to data](https://gita.sys.kth.se/kthb/kontarion-bundle#development) (bundled data, caches)
+  - [Steps for deploying updates to components](https://gita.sys.kth.se/kthb/kontarion-bundle#updating-public-data)
+  - [Troubleshooting incidents and using logs](https://gita.sys.kth.se/kthb/kontarion-bundle#troubleshooting)
+  - [FAQs and recipes](https://gita.sys.kth.se/kthb/kontarion-bundle#faqs)
+  - [Load testing](https://gita.sys.kth.se/kthb/kontarion-bundle/tree/master/shinyload)
   - Monitoring
   - Usage reporting
   
 ## Existing documentation
+
+Described at <https://KTH-Library.github.io>
 
 - Overview at https://kth-library.github.io/ - maintained [here](https://github.com/KTH-Library/KTH-Library.github.io)
 - Components:
@@ -41,20 +43,31 @@ Containers - "units" that can be bundled together into "systems".
   - Container: https://github.com/KTH-Library/kontarion
   - Bundle: https://gita.sys.kth.se/kthb/kontarion-bundle
   
-## Suggested updates to docs
+# "Hello Docker + Docker-Compose"
 
-- Create a FAQ to put on https://kth-library.github.io/
-- Update the system's overview to reflect current "kontarion-bundle" setup
-- Provide introductory description - What happens where and in which steps?
-  - Which services does what? Purpose of a service?
-  - What data volumes or environment variables are important?
-  - Which servers are in use? dev (shiny-1), ref (shiny-2), prod (new)
-- Which steps are needed for a deploy of kontarion? 
 
-## Suggested workshops
+## Docker and Compose
 
-- Using docker, running locally w a) "hello world" app b) kontarion
-- Procedures w steps required when adding more new components, such as...
-  - A hello world app - not authenticated, provided in a folder w some standalone files
-  - A new app, added to ABM, authenticated?
-  - Another app packaged as an R package?
+Preparations: get `docker`, `docker-compose` and `make`
+
+For Mac and Windows users those are provided in "Docker for Desktop":
+
+- https://docs.docker.com/docker-for-windows/
+- https://docs.docker.com/docker-for-mac/
+
+## Exercise
+
+Create a `docker-compose.yml` file that starts a database and client service
+
+- Look at official images for postgres, mariadb/mysql, mssql at https://hub.docker.com
+
+- Pre-load data ([Hint](https://stackoverflow.com/questions/29600369/starting-and-populating-a-postgres-container-in-docker#answer-36532635))
+- Bonus: Connect from your host computer (Hint: How to open the port?) and from another container
+
+## Solution
+
+Please find the following suggestions for solution:
+
+- [`docker-compose.yml`](docker-compose.yml) file w postgres, mariadb, mssql services and pgloader migration tool
+- [`Makefile`](Makefile) w actions/targets for migrating data from SQLite3 to postgres etc
+

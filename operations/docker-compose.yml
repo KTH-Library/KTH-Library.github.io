@@ -2,15 +2,26 @@ version: '3.1'
 
 services:
 
+  mssql:
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=yourStrong(!)Password
+
+  maria:
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=example
+
   db:
     image: postgres
     environment:
       - POSTGRES_PASSWORD=example
-    ports:
-      - 5432:5432
-#    volumes:
-#      - ./init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
-#      - ./bibmon.sql:/docker-entrypoint-initdb.d/z_bibmon.sql
+#    ports:
+#      - 5432:5432
+    volumes:
+      - ./init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+      - ./bibmon.sql:/docker-entrypoint-initdb.d/z_bibmon.sql
 
   pgadmin:
     image: dpage/pgadmin4
@@ -19,9 +30,14 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=password12
     ports:
       - 80:80
+    depends_on:
+      - db
 
   pgloader:
     image: dimitri/pgloader:ccl.latest
-    command: bash -c "sleep 10 && pgloader /tmp/bibmon.db postgresql://postgres:example@db/"
+#    command: bash -c "sleep 10 && pgloader /tmp/bibmon.db postgresql://postgres:example@db/"
     volumes:
       - ./bibmon.db:/tmp/bibmon.db
+    depends_on:
+      - db
+
