@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=example
+    ports:
+      - 5432:5432
+#    volumes:
+#      - ./init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+#      - ./bibmon.sql:/docker-entrypoint-initdb.d/z_bibmon.sql
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=markussk@kth.se
+      - PGADMIN_DEFAULT_PASSWORD=password12
+    ports:
+      - 80:80
+
+  pgloader:
+    image: dimitri/pgloader:ccl.latest
+    command: bash -c "sleep 10 && pgloader /tmp/bibmon.db postgresql://postgres:example@db/"
+    volumes:
+      - ./bibmon.db:/tmp/bibmon.db
