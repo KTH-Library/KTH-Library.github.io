@@ -1,0 +1,158 @@
+---
+title: "Open Data Science Platforms"
+author: Markus Skyttner
+date: Trends from FOSDEM20
+output: 
+  ioslides_presentation:
+    widescreen: true
+    smaller: false
+    transition: slower
+    logo: assets/img/logo.svg
+    css: assets/css/styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(ktheme)
+
+red <- function(txt) 
+  sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["cerise"]), txt)
+```
+
+## Open Data Science Platforms {data-background=assets/bg/kth-6.png data-background-size=cover}
+
+The research community around the world increasingly use the "cloud" and "containers" to support reproducible data science research activities. 
+
+- Researchers need "`r red("**data science workflows**")`" when working with data and publishing results
+- Peer-review of research findings -> results needs to be `r red("**reproducible**")`
+- Workflows increasingly involve open data but `r red("**also reproducible analyses (code)**")` 
+- `r red("**Convergence**")` of HPC and interative web applications - running together on containers.
+
+## Trends at FOSDEM20 {data-background=assets/bg/kth-3.png data-background-size=cover}
+
+Several such "science clouds" based on open source platforms were represented at the FOSDEM track for [HPC, Big Data and Data Science](https://fosdem.org/2020/schedule/track/hpc_big_data_and_data_science/).
+
+Examples: Compute Canada and Austrian BioCenter in Vienna
+
+Trends:
+
+- Converging HPC computing and interactive web applications through containers 
+- JupyterHub + RStudio as web-based analytics front-ends and Apache Spark as data backend
+- Open source with deployments "On-premise" and/or "in cloud"
+
+# Canadian open science cloud
+
+## {data-background=assets/bg/kth-4.png data-background-size=cover}
+
+Compute Canada provides HPC infrastructures and support to every academic research institution in Canada. 
+
+Researchers are provided with a complete HPC cluster software environment including a __Slurm scheduler__ (jobs), a Globus Endpoint (file sharing), JupyterHub, LDAP, DNS, and over 3000 research software packages. 
+
+https://fosdem.org/2020/schedule/event/magic_castle/
+
+Compute Canada staff has been using this software to deploy ephemeral clusters for training purposes every other week for the past two years.
+
+## {data-background=assets/bg/kth-5.png data-background-size=cover}
+
+<video height="500" controls>
+    <source src="https://video.fosdem.org/2020/UB5.132/magic_castle.webm#t=249,326" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+# Vienna Biocenter Open Science Cloud  
+
+## Interactive applications on HPC systems {data-background=assets/bg/kth-6.png data-background-size=cover}
+
+Exploratory data analysis has increased the demand for __interactive tools__. In the same way, workshops and other teaching events often benefit from immediate and on-demand access to preconfigured, interactive environments.
+
+On-premise container orchestration is often preferable because it enables __deploying interactive tools on existing compute infrastructure__ that provides access to both software packages and the data to be analysed. 
+
+The deployment on __HPC batch systems__ specifically brings challenges on how to handle authentication, user identities, and job submissions.
+
+## {data-background=assets/bg/kth-7.png data-background-size=cover}
+
+<video height="500" controls>
+    <source src="https://video.fosdem.org/2020/UB5.132/interactive_hpc.webm#t=1075,1162" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+Link: https://fosdem.org/2020/schedule/event/interactive_hpc/
+
+## Challenges for a researcher {data-background=assets/bg/kth-2.png data-background-size=cover}
+
+Creating
+
+- How can I as a researcher create reproducible open research results? Tools and support?
+- What do I need to know - skills in "data carpentry" etc?
+
+Sharing
+
+- What does it mean in practice if the research funds requires me to follow FAIR principles?
+- How do I deal with "personal data"?
+
+__Who can help me out? __
+__What are best practices and recommended workflows?__
+
+## Non-open "platforms" {data-background=assets/bg/kth-4.png data-background-size=cover}
+
+Within BI, existing commercial platforms are QlikTech, TIBCO Spotfire, Tableau, Cognos, SAS mm.
+
+Downsides:
+
+- `r red("__Vendor lock-in__")` and license managment requirements and costs. 
+- Support for modern `r red("__agile workflows not built-in__")`, such as using GitHub Flow and reproducible `containers` (Docker Hub)
+- Support for `r red("__reproducibility__")` is increasingly required in the frontlines of academic research, utilizing data science approaches using with R and Python for ML / AI. 
+- Weak support for `r red("__Big Data / Fast Data__")` such as data analysis powered by Apache Spark
+
+## Technical solution {data-background=assets/bg/kth-5.png data-background-size=cover}
+
+Open source-based platform for reproducible research including web-friendly data analysis:
+
+- Front-end for open data science [KONTARION](https://github.com/kth-library/kontarion)
+
+- Can do __ML och AI__, scales locally or in the cloud using Docker Swarm / Kubernetes, container-based, supports ML/AI workflows using R, Python (Jupyter) etc... GPU-scaling and [slurm jobs](https://docs.rstudio.com/rsp/integration/launcher-slurm/))
+
+- Backend for big data using [Apache Spark + Minio + Select S3](https://docs.google.com/presentation/d/1eGahU6aR9GynYYyka2X-tTLSqLISEGvz7ZzfgfYq6Qw/edit#slide=id.g54b55e0426_0_0)
+
+[![](https://raw.githubusercontent.com/KTH-Library/kontarion/master/logo.png)](https://github.com/kth-library/kontarion)
+
+## 
+
+Data Lake w/ Minio + Apache Spark + S3 Select + RStudio Web Edition / JupyterHub
+
+![](https://miro.medium.com/max/1000/1*OIA7qQ1VIfWZki0aue0fdg.png){height=500}
+
+[Minio blog article about S3 Select](https://blog.minio.io/running-peta-scale-spark-jobs-on-object-storage-using-s3-select-df7177ae518)
+
+## Handbook
+
+![](https://therinspark.s3-us-west-2.amazonaws.com/mastering-spark-with-r.png){height=450}
+
+https://therinspark.com/
+
+# Questions ?
+
+## About *KONTARION* {data-background=assets/bg/bridge.png data-background-size=cover}
+
+A "data science software stack" extending https://www.rocker-project.org/ w domain-specific functionality. 
+
+Web-friendly data analytics environment providing RStudio Open Source Edition (AGPL v3) and Jupyter. 
+
+Containerized Open Data Science Analytics front-end with `sparklyr` connection to Big Data backend.
+
+- interactive web-based analytics (runtimes for Shiny och Dash)
+- running "jobs"/tasks
+- deploying and using APIs for open data
+- markdown-based authoring of content
+
+## References / "Use cases" {data-background=assets/bg/plant.png data-background-size=cover}
+
+A large Data Science community with millions of users from academic sector (and corporate, too), check out some links:
+
+- https://spark.rstudio.com/mlib/ (Spark Machine Learning lib!)
+- https://blogs.rstudio.com/tensorflow/
+- https://tensorflow.rstudio.com/
+- https://www.r-bloggers.com/
+- https://plot.ly/dash/
+- https://shiny.rstudio.com/
+
