@@ -41,3 +41,12 @@ services:
     depends_on:
       - db
 
+  zeppelin:
+    image: apache/zeppelin:0.8.2
+    environment:
+      - ZEPPELIN_ADDR=0.0.0.0
+    depends_on:
+      - db
+    ports:
+      - 10000:8080
+
