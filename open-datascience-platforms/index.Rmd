@@ -28,6 +28,21 @@ The research community around the world increasingly use the "cloud" and "contai
 - Workflows increasingly involve open data but `r red("**also reproducible analyses (code)**")` 
 - `r red("**Convergence**")` of HPC and interative web applications - running together on containers.
 
+## Challenges for a researcher {data-background=assets/bg/kth-2.png data-background-size=cover}
+
+Creating
+
+- How can I as a researcher create reproducible open research results? Tools and support?
+- What do I need to know - skills in "data carpentry" etc?
+
+Sharing
+
+- What does it mean in practice if the research funds requires me to follow FAIR principles?
+- How do I deal with "personal data"?
+- How do I share my analysis? Is it reproducible?
+
+__What are best practices and recommended workflows?__
+
 ## Trends at FOSDEM20 {data-background=assets/bg/kth-3.png data-background-size=cover}
 
 Several such "science clouds" based on open source platforms were represented at the FOSDEM track for [HPC, Big Data and Data Science](https://fosdem.org/2020/schedule/track/hpc_big_data_and_data_science/).
@@ -59,6 +74,19 @@ Compute Canada staff has been using this software to deploy ephemeral clusters f
   Your browser does not support the video tag.
 </video>
 
+## Takeaways {data-background=assets/bg/kth-4.png data-background-size=cover}
+
+- Félix-Antoine Fortin at Université Laval, Canada Digital Research Institute
+- 5 datacenters, usage free for researchers
+- 150 workshops per year, ephemeral accounts approx 3 days
+- Access for researchers through https / ssh / globus (GridFTP)
+- Audience could log in at "superman.calculquebec.cloud"
+
+- DNS names automated incl SSL/TLS termination
+- Demo: Google Talk -> Dialogflow -> Flask -> MagicCastle -> OpenStack
+- On GitHub: https://github.com/magic_castle
+- Frontend: JupyterHub, GPU support on Compute Nodes
+
 # Vienna Biocenter Open Science Cloud  
 
 ## Interactive applications on HPC systems {data-background=assets/bg/kth-6.png data-background-size=cover}
@@ -78,33 +106,54 @@ The deployment on __HPC batch systems__ specifically brings challenges on how to
 
 Link: https://fosdem.org/2020/schedule/event/interactive_hpc/
 
-## Challenges for a researcher {data-background=assets/bg/kth-2.png data-background-size=cover}
+# Open source "science cloud" on Raspberry Pi
 
-Creating
+## "Cheap" open source "carpentry cluster" {data-background=assets/bg/kth-10.png data-background-size=cover}
 
-- How can I as a researcher create reproducible open research results? Tools and support?
-- What do I need to know - skills in "data carpentry" etc?
+- Colin Sanze, SWC-Abery, cos@aber.ac.uk
+- https://github.com/SCW-Aberystwyth/Introduction-to-HPC-with-RaspberryPi
+- https://github.com/colinsaze/pi_cluster
 
-Sharing
+Concerns for researchers:
 
-- What does it mean in practice if the research funds requires me to follow FAIR principles?
-- How do I deal with "personal data"?
+- The availability of a real HPC system and the effect running training courses
+- New users fear to use a large and expensive HPC system for the first time
+- Abstract HPC systems in data centers -> difficult to understand what you are using
 
-__Who can help me out? __
-__What are best practices and recommended workflows?__
+# Data Science Toolbox
 
-## Non-open "platforms" {data-background=assets/bg/kth-4.png data-background-size=cover}
+## Commercial/corporate analytics tools {data-background=assets/bg/kth-4.png data-background-size=cover}
 
-Within BI, existing commercial platforms are QlikTech, TIBCO Spotfire, Tableau, Cognos, SAS mm.
-
-Downsides:
+Within BI, existing commercial solutions are QlikTech, TIBCO Spotfire, Tableau, Cognos, SAS mm. Downsides for academic domain:
 
 - `r red("__Vendor lock-in__")` and license managment requirements and costs. 
 - Support for modern `r red("__agile workflows not built-in__")`, such as using GitHub Flow and reproducible `containers` (Docker Hub)
 - Support for `r red("__reproducibility__")` is increasingly required in the frontlines of academic research, utilizing data science approaches using with R and Python for ML / AI. 
 - Weak support for `r red("__Big Data / Fast Data__")` such as data analysis powered by Apache Spark
+- Sharing results and code openly
 
-## Technical solution {data-background=assets/bg/kth-5.png data-background-size=cover}
+## Open source analytics environments  {data-background=assets/bg/kth-10.png data-background-size=cover}
+
+Shareable web-enabled "interactive" notebooks with data + code + visuals and support for job launchers, runs locally or in the cloud by way of containers.
+
+- RStudio
+- JupyterHub
+- Apache Zeppelin (demo: https://kth-library.github.io/operations/docker-compose.yml)
+
+```bash
+    docker run -p 8080:8080 -e ZEPPELIN_ADDR=0.0.0.0 --rm \
+      --name zeppelin apache/zeppelin:0.8.2
+```
+
+- https://towardsdatascience.com/building-a-graph-data-pipeline-with-zeppelin-spark-and-neo4j-8b6b83f4fb70
+
+## Beyond front-end "notebooks" {data-background=assets/bg/kth-10.png data-background-size=cover}
+
+- Notebooks are not perfect; Summary of a paper about ["What is wrong with notebooks?"](https://web.eecs.utk.edu/~azh/blog/notebookpainpoints.html?ref=hvper.com)
+- http://openondemand.org/ (GitHub: https://github.com/OSC/Open-OnDemand) is a NSF-funded open-source HPC portal used by many US universities, exposes for example [Jupyter w auth to researchers](https://figshare.com/articles/Open_OnDemand_1_0_Jupyter_App_Development_Authentication/6225791)
+- [Presto](https://prestosql.io/) is a high performance, distributed SQL query engine for big data used by 1000s of users at Facebook for interactive querying of data - [runs locally, too](https://www.lewuathe.com/migrate-docker-presto-cluster-to-io.prestosql.html)
+
+## Technical solution in ÅBU {data-background=assets/bg/kth-5.png data-background-size=cover}
 
 Open source-based platform for reproducible research including web-friendly data analysis:
 
@@ -112,27 +161,11 @@ Open source-based platform for reproducible research including web-friendly data
 
 - Can do __ML och AI__, scales locally or in the cloud using Docker Swarm / Kubernetes, container-based, supports ML/AI workflows using R, Python (Jupyter) etc... GPU-scaling and [slurm jobs](https://docs.rstudio.com/rsp/integration/launcher-slurm/))
 
-- Backend for big data using [Apache Spark + Minio + Select S3](https://docs.google.com/presentation/d/1eGahU6aR9GynYYyka2X-tTLSqLISEGvz7ZzfgfYq6Qw/edit#slide=id.g54b55e0426_0_0)
+- Add-on: Backend for big data using [Apache Spark + Minio + Select S3](https://docs.google.com/presentation/d/1eGahU6aR9GynYYyka2X-tTLSqLISEGvz7ZzfgfYq6Qw/edit#slide=id.g54b55e0426_0_0)
 
 [![](https://raw.githubusercontent.com/KTH-Library/kontarion/master/logo.png)](https://github.com/kth-library/kontarion)
 
-## 
-
-Data Lake w/ Minio + Apache Spark + S3 Select + RStudio Web Edition / JupyterHub
-
-![](https://miro.medium.com/max/1000/1*OIA7qQ1VIfWZki0aue0fdg.png){height=500}
-
-[Minio blog article about S3 Select](https://blog.minio.io/running-peta-scale-spark-jobs-on-object-storage-using-s3-select-df7177ae518)
-
-## Handbook
-
-![](https://therinspark.s3-us-west-2.amazonaws.com/mastering-spark-with-r.png){height=450}
-
-https://therinspark.com/
-
-# Questions ?
-
-## About *KONTARION* {data-background=assets/bg/bridge.png data-background-size=cover}
+## About *KONTARION* {data-background=assets/bg/kth-5.png data-background-size=cover}
 
 A "data science software stack" extending https://www.rocker-project.org/ w domain-specific functionality. 
 
@@ -145,7 +178,31 @@ Containerized Open Data Science Analytics front-end with `sparklyr` connection t
 - deploying and using APIs for open data
 - markdown-based authoring of content
 
-## References / "Use cases" {data-background=assets/bg/plant.png data-background-size=cover}
+## Hybrid cloud big/fast data backend {data-background=assets/bg/kth-5.png data-background-size=cover}
+
+Data Lake w/ Minio + Apache Spark + S3 Select + RStudio Web Edition / JupyterHub
+
+![](https://miro.medium.com/max/1000/1*OIA7qQ1VIfWZki0aue0fdg.png){height=450}
+
+[Minio blog article about S3 Select](https://blog.minio.io/running-peta-scale-spark-jobs-on-object-storage-using-s3-select-df7177ae518)
+
+## Rationale {data-background=assets/bg/kth-5.png data-background-size=cover}
+
+Takeaways from presentations at FOSDEM20
+
+- Ditch "meta store" and heavy Hadoop Hive setup due to [complexity evident in Expedia presentation](https://fosdem.org/2020/schedule/event/data_lake_cloud/) 
+- Instead use dockerized Minio + Apache Spark + S3Select due to [faster, simpler, "hybrid-cloud" on-prem](https://databricks.com/session/using-s3-select-to-deliver-100x-performance-improvements-versus-the-public-cloud)
+- Spark on Docker versus bare metal: https://www.slideshare.net/SparkSummit/lessons-learned-from-running-spark-on-docker-63071214
+
+## Handbook {data-background=assets/bg/kth-5.png data-background-size=cover}
+
+![](https://therinspark.s3-us-west-2.amazonaws.com/mastering-spark-with-r.png){height=450}
+
+https://therinspark.com/
+
+# Questions ?
+
+## "Use cases" {data-background=assets/bg/plant.png data-background-size=cover}
 
 A large Data Science community with millions of users from academic sector (and corporate, too), check out some links:
 
@@ -155,4 +212,3 @@ A large Data Science community with millions of users from academic sector (and 
 - https://www.r-bloggers.com/
 - https://plot.ly/dash/
 - https://shiny.rstudio.com/
-
