@@ -4,7 +4,7 @@ services:
   light:
     image: kthb/kontarion:apidemo
     ports:
-      - 8080:8080
+      - 80:8080
     command: Rscript /tmp/kthb_start_api.R
     volumes:
       - ./kthb_light_api.R:/tmp/kthb_light_api.R:ro

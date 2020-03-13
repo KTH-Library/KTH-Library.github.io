@@ -1,0 +1,91 @@
+---
+title: "Web APIs"
+output:
+  ktheme::kth:
+  toc: true
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(fig.retina=2)
+```
+
+```{r kth_setup, message=FALSE, warning=FALSE, cache=FALSE, echo=FALSE}
+library(ktheme)
+library(tidyverse)
+
+update_geom_font_defaults(font_os)
+BASE <- "https://github.com/KTH-Library/KTH-Library.github.io/tree/master/webapis/"
+```
+
+#
+
+Här finns ett litet API definierat som hämtar data från lite olika andra Web API:er mm:
+
+- https://github.com/KTH-Library/KTH-Library.github.io/tree/master/webapis/kthb_light_api.R
+
+Öppnar man denna fil i RStudio dyker en knapp upp som heter "Run API". Har man då alla R paketberoenden så startar API:et lokalt och man kan testa att använda det.
+
+## Att deploya ett Plumber-API
+
+Om man vill deploya detta som en container med `docker` så behöver man paketera det. Då behövs ytterligare några filer:
+
+- ett [startscript](https://github.com/KTH-Library/KTH-Library.github.io/tree/master/webapis/kthb_start_api.R) 
+
+- en [Makefile](https://github.com/KTH-Library/KTH-Library.github.io/tree/master/webapis/Makefile) som använd för att bygga, starta och testa i olika steg (eller man kan göra alla genom att ange `make` enbart)
+
+- en [Dockerfile](https://github.com/KTH-Library/KTH-Library.github.io/tree/master/webapis/Dockerfile) - men varför behövs den? Varför används inte `kthb/kontarion:latest` direkt?
+
+- en [docker-compose.yml-fil](https://github.com/KTH-Library/KTH-Library.github.io/tree/master/webapis/docker-compose.yml) - som anger en minimal composition för att köra API:et
+
+# Andra exempel och resurser
+
+Här är lite andra länkar och resurser som man kan titta på om man är intresserad av att att konsumera och producera API:er mha R....
+
+## Konsumera data från Web API:er:
+
+Dessa paket använder alla en liknande approach - efter installation får man tillgång till några funktioner som gör jobbet med att hämta data över http - i dessa fall läsningar och paging (hämta flera chunks/pages och slå ihop till en "batch").
+
+- https://github.com/KTH-Library/XsearchLIBRIS
+- https://github.com/KTH-Library/dblp
+- https://github.com/KTH-Library/kthapi
+
+För den sista dvs __kthapi__ kan man göra autenticerade anrop om man har en api-nyckel som ITA delar ut som tillåter read-only access till Discovery API:et för ABM-appen (dvs som ska möjliggöra att hämta organisatorisk tillhörighet för användare på KTH - jag har inte hunnit titta på detta ännu). Nyckel-baserat åtkomst är ännu inte implementerat i "kthapi" paketet.
+
+De andra två är öppna API:er och kräver ingen token/api-nyckel e dyl.
+
+### Läromedel
+
+Bra resurser när man gör API wrappers:
+
+- https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html
+- https://www.r-bloggers.com/how-to-build-an-api-wrapper-package-in-10-minutes/
+
+Här är en jättebra tutorial ang API:er implementerade i R mha paketet Plumber:
+
+- https://resources.rstudio.com/rstudio-conf-2020/practical-plumber-patterns-james-blair
+
+En bra intro till att göra Plumber API:er finns här:
+
+- https://www.rplumber.io/
+
+PS. Man behöver förresten inte ens använda Plumber med annoteringar om man paketerar sin R-kod som ett paket och sedan använder [OpenCPU](https://www.opencpu.org/) men då får man ett API i RPC-stil och inte ett REST-API.
+
+## Producera egna API:er
+
+APIer kan leverera data men också annat (dashboards, csv-filer mm).
+
+Här är ett exempel från bibliomatrix-paketet:
+
+https://github.com/KTH-Library/bibliomatrix/blob/master/inst/plumber/abm/plumber.R
+
+### Autenticering
+
+För autenticering, titta på denna (incode) lösning:
+
+- https://github.com/jandix/sealr...
+
+```{r bib, include=FALSE}
+# KEEP THIS AT THE END OF THE DOCUMENT TO GENERATE A LOCAL bib FILE FOR PKGS USED
+knitr::write_bib(sub("^package:", "", grep("package", search(), value=TRUE)), file='skeleton.bib')
+```
+
