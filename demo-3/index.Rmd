@@ -63,6 +63,7 @@ The [1.0 release is done](https://kth.se/abm), three releases have been publishe
 
 ## Progress towards ABM 1.0
 
+- Tab with Open Acess data
 - SAML-integration (SSO)
 - Public/private modes implemented in the ABM app
 - Combo of shinyproxy for authed SAML and Shiny Server CE for non-authed public app
