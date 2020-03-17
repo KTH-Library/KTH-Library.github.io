@@ -56,12 +56,13 @@ The [1.0 release is done](https://kth.se/abm), three releases have been publishe
 
 ## Activities {data-background=assets/bg/kth-5.png data-background-size=cover}
 
-- Christmas - we made a **checklist** for production release - all items are checked
+- Christmas - we made a [**checklist** for production release](checklist.png) - all items are checked
 - Production **roll-out** with a couple of releases ([changelog](https://kth-library.github.io/bibliomatrix/news/index.html))
 - Learning together in **workshops**
 - Other (non-ABM-app) **tools** provided
 
 ## Progress towards ABM 1.0
+
 
 - Tab with Open Acess data
 - SAML-integration (SSO)
