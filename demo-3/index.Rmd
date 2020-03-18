@@ -115,7 +115,23 @@ TODO - Gaël
 
 - In addition to the total and average number of citations, the number and share of uncited publications are included
 - Uncited here means not cited after 3 years (the publication year and the two following years)
-- Shows the other end of "Top 10% cited"
+- The other end of "Top 10% cited"
+
+## "About" tab and other information
+
+Currently:
+
+- brief information in the **Overview** tab
+- longer texts in **Guide to ABM** and other documents linked from **Overview**
+- technical documentation at [github.io](https://KTH-Library.github.io)
+
+More information needed, such as:
+
+- Where do these data come from and when what is retrieved?
+- What criteria were used to select which publications to include?
+- Outside of the ABM, how is bibliometrics used at KTH?
+
+Much of the information directly related to the ABM can be put in an **About** tab.
 
 ## Questions from us to you
 
