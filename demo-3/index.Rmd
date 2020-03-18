@@ -111,9 +111,11 @@ Demo of Dashboard / Shiny App / API
 
 TODO - Gaël
 
-## "Andel ociterad" {data-background=assets/bg/kth-10.png data-background-size=cover}
+## Uncited publications {data-background=assets/bg/kth-10.png data-background-size=cover}
 
-TODO - Agne
+- In addition to the total and average number of citations, the number and share of uncited publications are included
+- Uncited here means not cited after 3 years (the publication year and the two following years)
+- Shows the other end of "Top 10% cited"
 
 ## Questions from us to you
 
