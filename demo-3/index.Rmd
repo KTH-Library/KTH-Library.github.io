@@ -117,7 +117,7 @@ TODO - Gaël
 - Uncited here means not cited after 3 years (the publication year and the two following years)
 - The other end of "Top 10% cited"
 
-![](assets/img/screenshot_uncited.png){height=300 .hcenter}
+![](screenshot_uncited.png){height=300 .hcenter}
 
 ## "About" tab and other information
 
