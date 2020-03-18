@@ -111,11 +111,13 @@ Demo of Dashboard / Shiny App / API
 
 TODO - Gaël
 
-## Uncited publications {data-background=assets/bg/kth-10.png data-background-size=cover}
+## Uncited publications
 
 - In addition to the total and average number of citations, the number and share of uncited publications are included
 - Uncited here means not cited after 3 years (the publication year and the two following years)
 - The other end of "Top 10% cited"
+
+![](assets/img/screenshot_uncited.png){height=300 .hcenter}
 
 ## "About" tab and other information
 
