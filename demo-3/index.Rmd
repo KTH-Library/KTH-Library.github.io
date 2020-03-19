@@ -109,7 +109,12 @@ Demo of Dashboard / Shiny App / API
 
 ## Open Access data in ABM {data-background=assets/bg/kth-4.png data-background-size=cover}
 
-TODO - Gaël
+- Open Access status and category as determined by **Unpaywall**
+  - Status: OA/Not OA. Categories: Gold, Hybrid, Green, Bronze
+- Subset of peer-reviewed publications. Criteria: 1) Have a DOI number 2) Be identified by Unpaywall
+- Two graphs for category distribution: overview, evolution in time
+
+![](screenshot_oagraphs.png){height=300 .hcenter}
 
 ## Uncited publications
 
