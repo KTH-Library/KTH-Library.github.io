@@ -134,7 +134,7 @@ Currently:
 
 More information needed, such as:
 
-- Where do these data come from and when what is retrieved?
+- Where do these data come from and when was it retrieved?
 - What criteria were used to select which publications to include?
 - Outside of the ABM, how is bibliometrics used at KTH?
 
