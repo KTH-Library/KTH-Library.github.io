@@ -54,13 +54,6 @@ The [1.0 release is done](https://kth.se/abm), three releases have been publishe
 
 - Your **feedback** and your suggestions and comments to us
 
-## Activities {data-background=assets/bg/kth-5.png data-background-size=cover}
-
-- Items on [**checklist** for production release](checklist.png) are checked
-- Production **roll-out** with a couple of releases ([changelog](https://kth-library.github.io/bibliomatrix/news/index.html))
-- Learning together in **workshops**
-- Other (non-ABM-app) **tools** provided
-
 ## ABM 1.0
 
 First step of project plan was a re-implementation of the functionality in the old ABM.
@@ -71,6 +64,13 @@ First step of project plan was a re-implementation of the functionality in the o
 - Open-access overview
 
 Currently released version meets these goals, with easy login though KTH and a public version of the app.
+
+## Activities {data-background=assets/bg/kth-5.png data-background-size=cover}
+
+- Items on [**checklist** for production release](checklist.png) are checked
+- Production **roll-out** with a couple of releases ([changelog](https://kth-library.github.io/bibliomatrix/news/index.html))
+- Learning together in **workshops**
+- Other (non-ABM-app) **tools** provided
 
 ## Progress towards public release
 
@@ -166,7 +166,7 @@ What would be most interesting to you in the short run?
 - Do you think the **PDF Guide** works? Is it useful?
 - What information would you like to see in an **About tab**?
 - What do you think is **missing** in the ABM dashboard?
-- Should the personal pages also include nonn-KTH publications?
+- Should the personal pages also include non-KTH publications?
 - Should app data be static (yearly) or continuously updated?
 
 # Thanks for your attention! If time permits...
