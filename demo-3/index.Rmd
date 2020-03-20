@@ -109,7 +109,16 @@ Demo of Dashboard / Shiny App / API
 - Uncited here means not cited after 3 years (the publication year and the two following years)
 - The other end of "Top 10% cited"
 
-![](screenshot_uncited.png){height=300 .hcenter}
+![](screenshot_uncited.png){height=300}
+
+## Coverage and sample size
+
+- The number of publications for the row with least number of publication in each table.
+- A warning text if any row is based on less than 50 publications.
+- Shows the Web of Science coverage for the row with least coverage in each table.
+- Displays **poor**, **moderate** or **good** WoS coverage.
+
+- For individuals, there is a general word of caution for everybody regardless of size or coverage.
 
 ## "About" tab and other information
 
