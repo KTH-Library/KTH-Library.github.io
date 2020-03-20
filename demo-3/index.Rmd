@@ -1,15 +1,16 @@
 ---
-title: "Demo #3 - ABM project"
+title: 'Demo #3 - ABM project'
 author: "KTH Library & ITA - ABM project"
-date: "2019-03-24"
+date: '2019-03-24'
 output:
-  ioslides_presentation: 
-    logo: assets/img/logo.svg
+  ioslides_presentation:
     css: assets/css/styles.css
-    widescreen: true
-    transition: slower
+    logo: assets/img/logo.svg
     mathjax: default
-    self-contained: true
+    self-contained: yes
+    transition: slower
+    widescreen: yes
+  beamer_presentation: default
 ---
   
 ```{r setup, include=FALSE}
@@ -65,13 +66,6 @@ First step of project plan was a re-implementation of the functionality in the o
 
 Currently released version meets these goals, with easy login though KTH and a public version of the app.
 
-## Activities {data-background=assets/bg/kth-5.png data-background-size=cover}
-
-- Items on [**checklist** for production release](checklist.png) are checked
-- Production **roll-out** with a couple of releases ([changelog](https://kth-library.github.io/bibliomatrix/news/index.html))
-- Learning together in **workshops**
-- Other (non-ABM-app) **tools** provided
-
 ## Progress towards public release
 
 - Tab with Open Acess data
@@ -85,29 +79,12 @@ Currently released version meets these goals, with easy login though KTH and a p
 - Bug fixing
 - [Documentation updates](https://KTH-Library.github.io)
 
-## Stats @ Git Hub ... {data-background=assets/bg/kth-10.png data-background-size=cover}
+## Activities {data-background=assets/bg/kth-5.png data-background-size=cover}
 
-- GitHub: 42 closed pull request, > 400 commits, 7 repos, 10 open issues and 50 closed
-- DockerHub shows 10K+ downloads for [KONTARION](https://hub.docker.com/r/kthb/kontarion)
-
-## Workshops/learning {data-background=assets/bg/kth-11.png data-background-size=cover}
-
-- [Agile workflow workshop](https://KTH-Library.github.io/workflow) 
-- [Operations/maintenance workshop](https://KTH-Library.github.io/operations) 
-- [Performance improvements workshop](https://KTH-Library.github.io/performance)
-- [Web APIs usage workshop](https://KTH-Library.github.io/webapis)
-- [Open Data Science Platforms - Trends from FOSDEM20 in Bruxelles](https://KTH-Library.github.io/open-datascience-platforms)
-
-## Other new tools 
-
-- Access through API wrappers to new data sources
-  - Use case described by Chip related to DiVA data quality improvements -> new R packages with API Wrapper clients
-    - [`kthapi`](https://github.com/KTH-Library/kthapi) for accessing data from KTH APIs
-    - [`dblp`](https://github.com/KTH-Library/dblp) for accessing data from API at https://dblp.org (CS biliographics)
-    - [`XsearchLIBRIS`](https://github.com/KTH-Library/XsearchLIBRIS) for searches against LIBRIS and SwePub
-  - Co-publication
-
-- KTH Styling for R users: [`ktheme`](https://github.com/KTH-Library/ktheme) ... used for example to make these slides
+- Items on [**checklist** for production release](checklist.png) are checked
+- Production **roll-out** with a couple of releases ([changelog](https://kth-library.github.io/bibliomatrix/news/index.html))
+- Learning together in **workshops**
+- Other (non-ABM-app) **tools** provided
 
 # Live demo - ABM dashboard
 
@@ -144,7 +121,6 @@ Currently:
 
 More information needed, such as:
 
-
 - Where do these data come from and when was it retrieved?
 - What criteria were used to select which publications to include?
 - Outside of the ABM, how is bibliometrics used at KTH?
@@ -159,6 +135,27 @@ Much of the information directly related to the ABM can be put in an **About** t
 - Additional data sources
 
 What would be most interesting to you in the short run?
+
+## Other new tools 
+
+- Access through API wrappers to new data sources
+  - Use case described by Chip related to DiVA data quality improvements -> new R packages with API Wrapper clients
+    - [`kthapi`](https://github.com/KTH-Library/kthapi) for accessing data from KTH APIs
+    - [`dblp`](https://github.com/KTH-Library/dblp) for accessing data from API at https://dblp.org (CS biliographics)
+    - [`XsearchLIBRIS`](https://github.com/KTH-Library/XsearchLIBRIS) for searches against LIBRIS and SwePub
+  - Co-publication
+
+- KTH Styling for R users: [`ktheme`](https://github.com/KTH-Library/ktheme) ... used for example to make these slides
+
+## Workshops/learning {data-background=assets/bg/kth-11.png data-background-size=cover}
+
+- [Agile workflow workshop](https://KTH-Library.github.io/workflow) 
+- [Operations/maintenance workshop](https://KTH-Library.github.io/operations) 
+- [Performance improvements workshop](https://KTH-Library.github.io/performance)
+- [Web APIs usage workshop](https://KTH-Library.github.io/webapis)
+- [Open Data Science Platforms - Trends from FOSDEM20 in Bruxelles](https://KTH-Library.github.io/open-datascience-platforms)
+
+Feel free to look at these resources if you are interested in the workflow and implementation.
 
 ## Questions from us to you
 
@@ -190,6 +187,11 @@ Data Lake w/ Minio + Apache Spark + S3 Select + RStudio Web Edition / JupyterHub
 ![](https://miro.medium.com/max/1000/1*OIA7qQ1VIfWZki0aue0fdg.png){height=450}
 
 [Minio blog article about S3 Select](https://blog.minio.io/running-peta-scale-spark-jobs-on-object-storage-using-s3-select-df7177ae518)
+
+## Stats @ Git Hub ... {data-background=assets/bg/kth-10.png data-background-size=cover}
+
+- GitHub: 42 closed pull request, > 400 commits, 7 repos, 10 open issues and 50 closed
+- DockerHub shows 10K+ downloads for [KONTARION](https://hub.docker.com/r/kthb/kontarion)
 
 ## Handbook {data-background=assets/bg/kth-5.png data-background-size=cover}
 
