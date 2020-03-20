@@ -61,8 +61,18 @@ The [1.0 release is done](https://kth.se/abm), three releases have been publishe
 - Learning together in **workshops**
 - Other (non-ABM-app) **tools** provided
 
-## Progress towards ABM 1.0
+## ABM 1.0
 
+First step of project plan was a re-implementation of the functionality in the old ABM.
+
+- Same results, based on DiVA and Bibmet
+- More attractive and dynamic presentation
+- Share uncited publications
+- Open-access overview
+
+Currently released version meets these goals, with easy login though KTH and a public version of the app.
+
+## Progress towards public release
 
 - Tab with Open Acess data
 - SAML-integration (SSO)
@@ -140,14 +150,23 @@ More information needed, such as:
 
 Much of the information directly related to the ABM can be put in an **About** tab.
 
+## Next steps
+
+- More comprehensive co-publication information
+- Collaboration networks
+- About tab
+- Additional data sources
+
+What would be most interesting to you in the short run?
+
 ## Questions from us to you
 
 - Does the in-dashboard notes to assist in **interpreting indicators** in the case of low `n` help?
 - Do you think the **PDF Guide** works? Is it useful?
 - What information would you like to see in an **About tab**?
 - What do you think is **missing** in the ABM dashboard?
-
-- Should non-KTH publications be included?
+- Should the personal pages also include nonn-KTH publications?
+- Should app data be static (yearly) or continuously updated?
 
 # Thanks for your attention! If time permits...
 
