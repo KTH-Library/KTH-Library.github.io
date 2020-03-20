@@ -57,42 +57,23 @@ The [1.0 release is done](https://kth.se/abm), three releases have been publishe
 
 ## ABM 1.0
 
-First step of project plan was a re-implementation of the functionality in the old ABM.
+The first step of the project plan was a re-implementation of the old ABM. 
 
-- Same results, based on DiVA and Bibmet
-- More attractive and dynamic presentation
-- Share uncited publications
-- Open-access overview
+- More attractive and dynamic **presentation**
+- Same results, based on **DiVA and Bibmet**
+- `r red("New")`: Share of **uncited** publications
+- `r red("New")`: Overview for **Open Access** publications
+- `r red("New")`: Notes to help with **interpretation** of indicators/results
 
-Currently released version meets these goals, with easy login though KTH and a public version of the app.
-
-## Progress towards public release
-
-- Tab with Open Acess data
-- SAML-integration (SSO)
-- Public/private modes implemented in the ABM app
-- Combo of shinyproxy for authed SAML and Shiny Server CE for non-authed public app
-- Stress testing and browser testing (50 simultaneous users)
-- Responsive mobile layout
-- Proxy chain integration 
-- Caching content
-- Bug fixing
-- [Documentation updates](https://KTH-Library.github.io)
-
-## Activities {data-background=assets/bg/kth-5.png data-background-size=cover}
-
-- Items on [**checklist** for production release](checklist.png) are checked
-- Production **roll-out** with a couple of releases ([changelog](https://kth-library.github.io/bibliomatrix/news/index.html))
-- Learning together in **workshops**
-- Other (non-ABM-app) **tools** provided
+There is now a public version of the app showing breakdowns for KTH units. It allows researchers to login using their KTH account to view their own data.
 
 # Live demo - ABM dashboard
 
-Demo of Dashboard / Shiny App / API
+Demo of Dashboard / Shiny App
 
 ## 
 
-<iframe width="560" height="315" src="abm.webm" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="abm.mp4" frameborder="0" allowfullscreen></iframe>
 
 ## Open Access data in ABM {data-background=assets/bg/kth-4.png data-background-size=cover}
 
@@ -101,7 +82,7 @@ Demo of Dashboard / Shiny App / API
 - Subset of peer-reviewed publications. Criteria: 1) Have a DOI number 2) Be identified by Unpaywall
 - Two graphs for category distribution: overview, evolution in time
 
-![](screenshot_oagraphs.png){height=300 .hcenter}
+![](screenshot_oagraphs.png){width=800 .hcenter}
 
 ## Uncited publications
 
@@ -109,9 +90,9 @@ Demo of Dashboard / Shiny App / API
 - Uncited here means not cited after 3 years (the publication year and the two following years)
 - The other end of "Top 10% cited"
 
-![](screenshot_uncited.png){height=300}
+![](screenshot_uncited.png){width=500 .hcenter}
 
-## Coverage and sample size
+## "Notes": Coverage and sample size
 
 - The number of publications for the row with least number of publication in each table.
 - A warning text if any row is based on less than 50 publications.
@@ -120,13 +101,26 @@ Demo of Dashboard / Shiny App / API
 
 - For individuals, there is a general word of caution for everybody regardless of size or coverage.
 
-## "About" tab and other information
+# What is planned next for ABM?
+
+## Next phase for ABM
+
+We will now show some planned future changes:
+
+- About tab
+- Additional data sources
+- More comprehensive co-publication information
+- Collaboration networks
+
+Please think about what would be **most interesting to you** in the short run?
+
+## "About" tab
 
 Currently:
 
 - brief information in the **Overview** tab
-- longer texts in **Guide to ABM** and other documents linked from **Overview**
-- technical documentation at [github.io](https://KTH-Library.github.io)
+- longer texts in [**Guide to ABM**](https://kth-library.github.io/abm/ABM_guide.pdf) and other documents linked from **Overview**
+- technical documentation at [https://KTH-Library.github.io](https://KTH-Library.github.io)
 
 More information needed, such as:
 
@@ -134,18 +128,27 @@ More information needed, such as:
 - What criteria were used to select which publications to include?
 - Outside of the ABM, how is bibliometrics used at KTH?
 
-Much of the information directly related to the ABM can be put in an **About** tab.
+# Beyond the ABM 1.0 app - Capacity building
 
-## Next steps
+## Recap of activities {data-background=assets/bg/kth-5.png data-background-size=cover}
 
-- More comprehensive co-publication information
-- Collaboration networks
-- About tab
-- Additional data sources
+- Items on [**checklist** for production release](checklist.png) are checked
+- Production **roll-out** with a couple of releases ([changelog](https://kth-library.github.io/bibliomatrix/news/index.html))
+- Learning together in **workshops**
+- [Other (non-ABM-app) **tools**](https://github.com/KTH-Library) are in the pipeline
 
-What would be most interesting to you in the short run?
+## Workshops/learning {data-background=assets/bg/kth-11.png data-background-size=cover}
 
-## Other new tools 
+Feel free to look at these resources if you are interested in the our workflows and potential applications (beyond the ABM 1.0 app) in the future.
+
+- [Agile workflow workshop](https://KTH-Library.github.io/workflow) 
+- [Operations/maintenance workshop](https://KTH-Library.github.io/operations) 
+- [Performance improvements workshop](https://KTH-Library.github.io/performance)
+- [Web APIs usage workshop](https://KTH-Library.github.io/webapis)
+- [Open Data Science Platforms - Trends from FOSDEM20 in Bruxelles](https://KTH-Library.github.io/open-datascience-platforms)
+
+
+## Other tools being developed
 
 - Access through API wrappers to new data sources
   - Use case described by Chip related to DiVA data quality improvements -> new R packages with API Wrapper clients
@@ -156,26 +159,20 @@ What would be most interesting to you in the short run?
 
 - KTH Styling for R users: [`ktheme`](https://github.com/KTH-Library/ktheme) ... used for example to make these slides
 
-## Workshops/learning {data-background=assets/bg/kth-11.png data-background-size=cover}
+# Questions and feedback
 
-- [Agile workflow workshop](https://KTH-Library.github.io/workflow) 
-- [Operations/maintenance workshop](https://KTH-Library.github.io/operations) 
-- [Performance improvements workshop](https://KTH-Library.github.io/performance)
-- [Web APIs usage workshop](https://KTH-Library.github.io/webapis)
-- [Open Data Science Platforms - Trends from FOSDEM20 in Bruxelles](https://KTH-Library.github.io/open-datascience-platforms)
-
-Feel free to look at these resources if you are interested in the workflow and implementation.
-
-## Questions from us to you
+## Questions related to ABM 1.0
 
 - Does the in-dashboard notes to assist in **interpreting indicators** in the case of low `n` help?
-- Do you think the **PDF Guide** works? Is it useful?
+- Do you think the [**PDF Guide**](https://kth-library.github.io/abm/ABM_guide.pdf) works? Is it useful?
 - What information would you like to see in an **About tab**?
 - What do you think is **missing** in the ABM dashboard?
 - Should the personal pages also include non-KTH publications?
 - Should app data be static (yearly) or continuously updated?
 
-# Thanks for your attention! If time permits...
+# Thanks for your attention!
+
+# If time permits...
 
 ## Technical solution in ÅBU {data-background=assets/bg/kth-5.png data-background-size=cover}
 
