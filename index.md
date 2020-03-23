@@ -2,16 +2,28 @@
 
 These GitHub pages contain POCs, presentations and other documentation related primarily to the Annual Bibliometric Monitoring project.
 
-### Annual Bibliometric Monitoring project
+### Annual Bibliometric Monitoring 
+
+Public app:
+
+- [Annual Bibliometric Monitoring Dashboard - KTH 2019](https://kth.se/abm/public)
+
+System requirements: 
+
+- Latest stable version of most popular web browsers; Firefox, Chrome/Chromiumm, MS Edge v 80 or later
+- Microsoft IE and earlier versions of MS Edge (< 80) are not supported, please use an alternative above
+
+### Public project documentation
 
 Presentations / Demos:
 
 - [Annual Bibliometric Monitoring Dashboard - KTH 2018](/abm/) *
 - [Presentation web slides](/slides/) *
-- [Web slides - Demo 1](/demo-1/)
-- [Web slides - Demo 2](/demo-2/)
+- [Web slides - Demo 1 - 2019-10-22](/demo-1/)
+- [Web slides - Demo 2 - 2019-12-05](/demo-2/)
+- [Web slides - Demo 3 - 2020-03-24](/demo-3/)
 
-__NB.__ Some of the above links need a password and represent Work In Progress.
+__NB.__ Some presentations are outdated but are kept on record here.
 
 ### Technical documentation
 
