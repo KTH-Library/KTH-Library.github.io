@@ -1,7 +1,7 @@
 ---
 title: 'Demo #3 - ABM project'
 author: "KTH Library & ITA - ABM project"
-date: '2019-03-24'
+date: '2020-03-24'
 output:
   ioslides_presentation:
     css: assets/css/styles.css
@@ -128,14 +128,20 @@ More information needed, such as:
 - What criteria were used to select which publications to include?
 - Outside of the ABM, how is bibliometrics used at KTH?
 
-# Beyond the ABM 1.0 app - Capacity building
+# Beyond the ABM 1.0 app - Capacity building{.flexbox .vcenter}
 
 ## Recap of activities {data-background=assets/bg/kth-5.png data-background-size=cover}
 
+<div style="float: left; width: 65%;">
+![](https://kth-library.github.io/workflow/workflows.png){height=450}
+</div>
+
+<div style="float: right; width: 35%;">
 - Items on [**checklist** for production release](checklist.png) are checked
 - Production **roll-out** with a couple of releases ([changelog](https://kth-library.github.io/bibliomatrix/news/index.html))
 - Learning together in **workshops**
 - [Other (non-ABM-app) **tools**](https://github.com/KTH-Library) are in the pipeline
+</div>
 
 ## Workshops/learning {data-background=assets/bg/kth-11.png data-background-size=cover}
 
