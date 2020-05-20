@@ -57,7 +57,7 @@ The [ABM services at KTH](https://kth.se/abm) are operational and the "old" ABM 
 
 ## What is new? {data-background=assets/bg/plant.png data-background-size=cover}
 
-- The "old" ABM / ÅBU has been sunsetted / retired and outreach communications was made about the new "ABM" on the KTH Intranet
+- The "old" ABM / ÅBU has been sunsetted / retired and [outreach communications was made about the new "ABM"](https://intra.kth.se/aktuellt/nyheter/kth-s-publiceringar-i-fokus-1.980728) on the KTH Intranet
 
 - We have spent time on capacity building for operations phase (KTHB + ITA)
 
