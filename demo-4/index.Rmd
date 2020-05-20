@@ -69,6 +69,8 @@ The [ABM services at KTH](https://kth.se/abm) are operational and the "old" ABM 
 
 ## New components integrated in ABM
 
+NB: These new R packages (`kthapi` and `ktheme`) can be used for data integrations and KTH styling also in a wider context (not ABM-specific) by researchers at KTH.
+
 ### Data integrations
 
 - Development and integration of [`kthapi` R package](https://github.com/KTH-Library/kthapi) and integration of data (for example mapping DiVA -> KTH Directory/Profile APIs -> Altmetric data)
