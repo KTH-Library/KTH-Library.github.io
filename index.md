@@ -22,6 +22,7 @@ Presentations / Demos:
 - [Web slides - Demo 1 - 2019-10-22](/demo-1/)
 - [Web slides - Demo 2 - 2019-12-05](/demo-2/)
 - [Web slides - Demo 3 - 2020-03-24](/demo-3/)
+- [Web slides - Demo 4 - 2020-05-26](/demo-4/)
 
 __NB.__ Some presentations are outdated but are kept on record here.
 
@@ -45,6 +46,7 @@ Technical documentation for the components used in ABM:
 - [Documentation for `bibliomatrix` R package at GitHub](https://github.com/KTH-Library/bibliomatrix) - how to operate and develop the R package that contains the ABM application, REST API and embedded public data
 - [Documentation for `ktheme` R package at GitHub](https://github.com/KTH-Library/ktheme) - how to use KTH's graphical profile assets from R (for plotting or generating web content with the KTH style)
 - [Documentation for ABM load testing tools](https://gita.sys.kth.se/kthb/kontarion-bundle/tree/master/shinyload) - how to load test the ABM components
+- [Documentation for `kthapi` R package at GitHub](https://github.com/KTH-Library/kthapi) - data access from KTH APIs using R (Profiles, Directory)
 
 Build logs:
 
