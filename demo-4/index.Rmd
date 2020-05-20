@@ -77,21 +77,21 @@ The [ABM services at KTH](https://kth.se/abm) are operational and the "old" ABM 
 
 - Development and integration of [`ktheme` R package](https://github.com/KTH-Library/ktheme) for thematic styling of visuals using KTH style
 
-## UX improvements
+# UX improvements
 
-<div style="float: left; width: 50%;">
-![](ux-board.png){width=300}
+##
 
-Trello board reflecting feeback captured from Demo-3-meeting in the area of UX improvements
+A Trello board was used to capture feedback from the Demo-3-meeting in the area of UX improvements
 
-</div>
 
-<div style="float: right; width: 50%;">
+![](ux-board.png){width=500}
+
+
+## 
+
+A set of layout fixes were implemented and rolled out to the [reference environment](https://shiny-2-r.referens.sys.kth.se/public)
+
 ![](gh-layout-fixes.png){width=300}
-
-A corresponding set of layout fixes implemented and rolled out to the [reference environment](https://shiny-2-r.referens.sys.kth.se/)
-
-</div>
 
 # Live demo
 
@@ -112,7 +112,7 @@ The feedback from Demo-3 instead suggested we should work on `r red("UX and data
 ## Questions to the Demo-4 group
 
 - Does the in-dashboard notes simplify **interpreting indicators**? Context help as tooltips, understanding of intervals for "Good / Moderate / Poor" etc.
-- More UX work - should we add more interactivity before rolling out the service update to production servers?
+- Next phase for UX work - should we add more interactivity to the dashboard sections (plots etc)?
 
 # What is planned next?
 
@@ -123,6 +123,7 @@ Going forward, we suggest that we focus on these areas of improvements:
 - Extending the ABM services with more functionality, such as more comprehensive co-publication information
 - Continue with more work to improve UX
 - Add an app for exploring research collaboration networks
-- Other apps to complement the existing ABM
+- Continue work on integration approach for Scopus data source
+- Continue work aiming at allowing managers to [view data at division level](https://kth-library.github.io/kthapi/articles/Potential-Heads.html#division-level-data)
 
 Please think about what would be **most useful to you** in the short run?
