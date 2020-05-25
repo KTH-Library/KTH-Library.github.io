@@ -35,7 +35,7 @@ suppressPackageStartupMessages(library(magick))
 
 **Goal:** 
 
-> Replace the previous ABM ie Annual Bibliometric Monitoring / Årlig Bibliometrisk Uppföljning at KTH
+> Replace the previous ABM i.e. Annual Bibliometric Monitoring / Årlig Bibliometrisk Uppföljning at KTH
 
 **Summary:**
 
@@ -57,7 +57,7 @@ The [ABM services at KTH](https://kth.se/abm) are operational and the "old" ABM 
 
 ## What is new? {data-background=assets/bg/plant.png data-background-size=cover}
 
-- The "old" ABM / ÅBU has been sunsetted / retired and [outreach communications was made about the new "ABM"](https://intra.kth.se/aktuellt/nyheter/kth-s-publiceringar-i-fokus-1.980728) on the KTH Intranet
+- The "old" ABM / ÅBU has been retired and [outreach communications was made about the new "ABM"](https://intra.kth.se/aktuellt/nyheter/kth-s-publiceringar-i-fokus-1.980728) on the KTH Intranet
 
 - We have spent time on capacity building for operations phase (KTHB + ITA)
 
@@ -66,6 +66,21 @@ The [ABM services at KTH](https://kth.se/abm) are operational and the "old" ABM 
 - We have also worked on integrating `r red("data from KTH APIs")` and style elements from KTHs graphical style
 
 - The main focus has been on `r red("UX / UI / Layout fixes")` in the user interface, based on feedback from Demo-3 with a complete [list of changes here](https://github.com/KTH-Library/bibliomatrix/milestone/4)
+
+## Data update
+
+### DiVA data
+New screening of probable KTH publications in Web of Science, and update of DiVA-data.
+
+- Manual controls by DiVA team at library
+- Overall coverage of KTH 72.8% --> 77.6% (at school level 3 - 8% increase)
+
+### Scopus addition
+
+- Data related to KTH-publications will be purchased with updates the coming years
+- Use in relation to coming RAE 
+- To complement WoS-data
+- Will require additional quality control of DiVA data
 
 ## New components integrated in ABM
 
