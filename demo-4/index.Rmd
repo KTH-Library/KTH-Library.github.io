@@ -73,7 +73,7 @@ The [ABM services at KTH](https://kth.se/abm) are operational and the "old" ABM 
 New screening of probable KTH publications in Web of Science, and update of DiVA-data.
 
 - Manual controls by DiVA team at library
-- Overall coverage of KTH 72.8% --> 77.6% (at school level 3 - 8% increase).
+- Overall coverage of KTH 72.8% --> 77.6% (at school level 3 - 8% increase)
 
 ### Scopus addition
 
