@@ -41,7 +41,7 @@ suppressPackageStartupMessages(library(magick))
 
 Our [previous demo meeting](https://KTH-Library.github.io/demo-3) was held 2020-03-24. Since then we have worked (remotely) on Sprints **12 to 16** (current).
 
-The [ABM services at KTH](https://kth.se/abm) are operational and the "old" ABM has been taken off-line. The team has now made a **service update (data and UX improvements)** and is building capacity for the operational / maintenance phase.
+The [ABM services at KTH](https://kth.se/abm) are operational and the "old" ABM has been taken off-line. The team has now made an **update (data and UX improvements)** and is building capacity for the operational / maintenance phase.
 
 ## Agenda {data-background=assets/bg/kth-6.png data-background-size=cover}
 
@@ -74,15 +74,17 @@ The [ABM services at KTH](https://kth.se/abm) are operational and the "old" ABM 
 New screening of probable KTH publications in Web of Science, and update of DiVA-data.
 
 - Manual controls by DiVA team at library
-- Overall coverage of KTH 72.8% --> 77.6% (at school level 3 - 8% increase)
-- OA data and associated Altmetric data has also been updated
+- Overall coverage of KTH 72.8% --> 77.6% (at school level 3 - 8% increase)  
+  (details can currently be compared between production server and reference server)
+- Open Access data and associated Altmetric data has also been updated
 
 ## Scopus addition
 
-- Data related to KTH-publications will be purchased with updates the coming years
-- Use in relation to coming RAE 
+- Data related to KTH-publications will be purchased from Elsevier, with updates the coming years
+- Use in relation to coming RAE 2021
 - To complement WoS-data
-- Will require additional quality control of DiVA data
+- Will require additional quality control of DiVA data  
+  (from now towards summer)
 
 ## New components integrated in ABM
 
