@@ -75,7 +75,7 @@ New screening of probable KTH publications in Web of Science, and update of DiVA
 
 - Manual controls by DiVA team at library
 - Overall coverage of KTH 72.8% --> 77.6% (at school level 3 - 8% increase)  
-  (details can currently be compared between production server and reference server)
+  (can currently be compared between production and reference servers)
 - Open Access data and associated Altmetric data has also been updated
 
 ## Scopus addition
@@ -122,7 +122,7 @@ Demo of Dashboard / Shiny App
 
 <iframe width="560" height="315" src="ABM_KTH_Demo_2020-05-26.mp4" frameborder="0" allowfullscreen></iframe>
 
-[Link to ABM on reference server](https://https://shiny-2-r.referens.sys.kth.se/app_direct/abm/)
+[Link to ABM on reference server](https://shiny-2-r.referens.sys.kth.se/app_direct/abm/)
 
 # Feedback and next steps
 
@@ -132,26 +132,32 @@ At the Demo-3 meeting we suggested that we would work on adding an about tab, mo
 
 The feedback from Demo-3 instead suggested we should work on `r red("UX and data improvements")` and look into how to add Scopus as a data source. 
 
-## Questions to Demo-4 group
-
-- Some of you requested UX improvements that have been implemented - in general, do these resolve your reported issues?
-- Does the in-dashboard notes simplify **interpreting indicators**? Context help as tooltips, understanding of intervals for "Good / Moderate / Poor" etc.
-- Next phase for UX work - should we add more interactivity to the dashboard sections (plots etc)?
-
 ##
 
 <iframe width="560" height="315" src="abm.html" frameborder="0" allowfullscreen></iframe>
 
 Launch in new window: [Interactive plots (NB: Work in progress)](abm.html){target="_blank"}
 
+
 ## Next steps for ABM
 
 Going forward, we suggest that we focus on these areas of improvements:
 
 - Extending the ABM services with more functionality, such as more comprehensive co-publication information
-- Continue with more work to improve UX
 - Add an app for exploring research collaboration networks
-- Continue work on integration approach for Scopus data source
-- Continue work aiming at allowing managers to [view data at division level](https://kth-library.github.io/kthapi/articles/Potential-Heads.html#division-level-data)
+- More work to improve UX
+- Continue work to integrate Scopus as a data source
+- Continue work to develop a [presentation at the division level](https://kth-library.github.io/kthapi/articles/Potential-Heads.html#division-level-data)
 
 Please think about what would be **most useful to you** in the short run?
+
+
+## Questions and feedback
+
+- Does the implemented UX improvements in general solve your reported issues?
+- Does the in-dashboard notes simplify **interpreting indicators**?   
+  Context help as tooltips, understanding of intervals for "Good / Moderate / Poor" etc.
+- **Future UX work** - should we add more interactivity to the dashboard sections (plots etc)?  
+  Other presentation issues to highlight?
+- What **additional functionality** would be most useful?
+- In which specific tasks could this type of data be **useful to you**?
