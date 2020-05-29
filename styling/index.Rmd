@@ -1,0 +1,73 @@
+---
+title: "Styling and UX in ABM"
+author: "KTH Library & ITA - ABM project"
+date: "2020-05-29"
+output:
+  ioslides_presentation: 
+    logo: kth-logo.png
+    transition: slower
+    mathjax: default
+    self-contained: true
+#    css: kth.css    
+    
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Styling
+
+For web content we use different framework in ABM:
+
+- shinydashboard (based on Admin LTE)
+- shinythemes for the "outer shell"
+- flexdashboard (web-content) for the "inner frame".
+
+We also use "ktheme" for ggplot2 (static images / plots / visuals), which can be used to style Rmarkdown content and PDF output.
+
+# `kth-style` vs `ktheme`
+
+## What is `kth-style`?
+
+## Using `ktheme`
+
+This is described at https://github.com/KTH-Library/ktheme
+
+## Using `kth-style`
+
+Integrating https://github.com/KTH/kth-style:
+
+kth-style is a customization of https://jhsware.github.io/inferno-bootstrap-docs/basic which is a custom bootstrap4-variant .... and ... https://github.com/KTH/kth-style/issues indicate that for Node JS usage internally at KTH there are very few usage examples that developers can look at, at least not yet, see for example the info at the end of this page:
+
+https://app.kth.se/style/
+
+## Styling flexdashboard web content {.smaller}
+
+One approach for integrating a KTH-like style into the R web frameworks used is to generate a bootswatch-like CSS for KTH and then tell the R web frameworks to use that CSS. It needs to use Bootstrap 3.4+ but not Bootstrap 4 styling.
+
+This can be accomplished by cloning the https://github.com/thomaspark/bootswatch.git - and checking out the "v3" branch. A set of LESS-files are then needed. Then the bootstrap.css that can be built from this can be used in the flexdashboard with the parameter "css".
+
+There is https://rmarkdown.rstudio.com/flexdashboard/using.html#css_styles which describes that bootswatch css can be used but in addition to flexdashboard-specifics here: https://github.com/rstudio/flexdashboard/tree/master/inst/rmarkdown/templates/flex_dashboard/resources
+
+# Example
+
+##
+
+[Click for example CSS-styled ABM flexdashboard](abm.html)
+
+## Modifying shinythemes
+
+Admin LTE can be modified:
+
+https://adminlte.io/blog/customizing-and-downsizing-adminlte-to-match-your-businsess
+
+"shinythemes" see https://github.com/rstudio/shinythemes/tree/master/inst/shinythemes/css which bundles bootswatch themes based on BS3.
+
+
+## Modifying shinywidgets
+
+See some of these css and JS assets:
+
+https://github.com/dreamRs/shinyWidgets/tree/master/inst/assets
+
