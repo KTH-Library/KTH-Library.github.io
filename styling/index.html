@@ -3144,39 +3144,39 @@ slide:not(.current) .plotly.html-widget{
 
 <slide class=""><hgroup><h2>Styling</h2></hgroup><article  id="styling">
 
-<p>For web content we use different framework in ABM:</p>
+<p>For web content we use different R-centric frameworks and components in ABM:</p>
 
 <ul>
 <li>shinydashboard (based on Admin LTE)</li>
 <li>shinythemes for the &ldquo;outer shell&rdquo;</li>
-<li>flexdashboard (web-content) for the &ldquo;inner frame&rdquo;.</li>
+<li>flexdashboard (web-content) for the &ldquo;inner frame&rdquo;</li>
 </ul>
 
 <p>We also use &ldquo;ktheme&rdquo; for ggplot2 (static images / plots / visuals), which can be used to style Rmarkdown content and PDF output.</p>
 
-</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2><code>kth-style</code> vs <code>ktheme</code></h2></hgroup><article  id="kth-style-vs-ktheme">
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2><code>kth-style</code> vs <code>ktheme</code> vs <code>bootswatch-kth</code></h2></hgroup><article  id="kth-style-vs-ktheme-vs-bootswatch-kth">
 
-</article></slide><slide class=""><hgroup><h2>What is <code>kth-style</code>?</h2></hgroup><article  id="what-is-kth-style">
+</article></slide><slide class=""><hgroup><h2>What is the difference?</h2></hgroup><article  id="what-is-the-difference">
+
+<ul>
+<li><code>ktheme</code> is for theming plots, visuals, graphs esp if made with ggplot2</li>
+<li><a href='https://github.com/kth/kth-style' title=''><code>kth-style</code></a> is primarily for central KTH web apps built with Node / React JS-stacks and provides the KTH official Bootstrap 4 styles</li>
+<li><code>bootswatch-kth</code> provides a Bootstrap v3 variant of the Bootswatch &ldquo;Flatly&rdquo; theme adapted to use KTH colors and fonts and which works better with R-centric stacks which favor BS3 styles in many cases</li>
+</ul>
 
 </article></slide><slide class=""><hgroup><h2>Using <code>ktheme</code></h2></hgroup><article  id="using-ktheme">
 
 <p>This is described at <a href='https://github.com/KTH-Library/ktheme' title=''>https://github.com/KTH-Library/ktheme</a></p>
 
-</article></slide><slide class=""><hgroup><h2>Using <code>kth-style</code></h2></hgroup><article  id="using-kth-style">
-
-<p>Integrating <a href='https://github.com/KTH/kth-style' title=''>https://github.com/KTH/kth-style</a>:</p>
-
-<p>kth-style is a customization of <a href='https://jhsware.github.io/inferno-bootstrap-docs/basic' title=''>https://jhsware.github.io/inferno-bootstrap-docs/basic</a> which is a custom bootstrap4-variant …. and … <a href='https://github.com/KTH/kth-style/issues' title=''>https://github.com/KTH/kth-style/issues</a> indicate that for Node JS usage internally at KTH there are very few usage examples that developers can look at, at least not yet, see for example the info at the end of this page:</p>
-
-<p><a href='https://app.kth.se/style/' title=''>https://app.kth.se/style/</a></p>
-
 </article></slide><slide class=""><hgroup><h2>Styling flexdashboard web content</h2></hgroup><article  id="styling-flexdashboard-web-content" class="smaller">
 
 <p>One approach for integrating a KTH-like style into the R web frameworks used is to generate a bootswatch-like CSS for KTH and then tell the R web frameworks to use that CSS. It needs to use Bootstrap 3.4+ but not Bootstrap 4 styling.</p>
 
-<p>This can be accomplished by cloning the <a href='https://github.com/thomaspark/bootswatch.git' title=''>https://github.com/thomaspark/bootswatch.git</a> - and checking out the &ldquo;v3&rdquo; branch. A set of LESS-files are then needed. Then the bootstrap.css that can be built from this can be used in the flexdashboard with the parameter &ldquo;css&rdquo;.</p>
+<p>This can be accomplished by cloning the <a href='https://github.com/thomaspark/bootswatch.git' title=''>https://github.com/thomaspark/bootswatch.git</a> - and checking out the &ldquo;v3&rdquo; branch. A set of LESS-files are then needed.</p>
 
-<p>There is <a href='https://rmarkdown.rstudio.com/flexdashboard/using.html#css_styles' title=''>https://rmarkdown.rstudio.com/flexdashboard/using.html#css_styles</a> which describes that bootswatch css can be used but in addition to flexdashboard-specifics here: <a href='https://github.com/rstudio/flexdashboard/tree/master/inst/rmarkdown/templates/flex_dashboard/resources' title=''>https://github.com/rstudio/flexdashboard/tree/master/inst/rmarkdown/templates/flex_dashboard/resources</a></p>
+<p>A repository is available at <a href='https://github.com/KTH-Library/bootswatch-kth' title=''>https://github.com/KTH-Library/bootswatch-kth</a> which does this customizations and provides the resulting CSS files. Use the v3 bootstrap.css in the flexdashboard with the parameter &ldquo;css&rdquo;.</p>
+
+<p>Further, there is <a href='https://rmarkdown.rstudio.com/flexdashboard/using.html#css_styles' title=''>https://rmarkdown.rstudio.com/flexdashboard/using.html#css_styles</a> which describes that bootswatch css can be used but in addition to flexdashboard-specifics here: <a href='https://github.com/rstudio/flexdashboard/tree/master/inst/rmarkdown/templates/flex_dashboard/resources' title=''>https://github.com/rstudio/flexdashboard/tree/master/inst/rmarkdown/templates/flex_dashboard/resources</a></p>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Example</h2></hgroup><article  id="example">
 
@@ -3184,19 +3184,13 @@ slide:not(.current) .plotly.html-widget{
 
 <p><a href='abm.html' title=''>Click for example CSS-styled ABM flexdashboard</a></p>
 
-</article></slide><slide class=""><hgroup><h2>Modifying shinythemes</h2></hgroup><article  id="modifying-shinythemes">
+</article></slide><slide class=""><hgroup><h2>Modifying the styles</h2></hgroup><article  id="modifying-the-styles">
 
-<p>Admin LTE can be modified:</p>
+<p>Visual examples of the Bootswatch KTH v3 and v4 styles can be inspected at:</p>
 
-<p><a href='https://adminlte.io/blog/customizing-and-downsizing-adminlte-to-match-your-businsess' title=''>https://adminlte.io/blog/customizing-and-downsizing-adminlte-to-match-your-businsess</a></p>
+<p><a href='https://KTH-Library.github.io/bootswatch-kth' title=''>https://KTH-Library.github.io/bootswatch-kth</a></p>
 
-<p>&ldquo;shinythemes&rdquo; see <a href='https://github.com/rstudio/shinythemes/tree/master/inst/shinythemes/css' title=''>https://github.com/rstudio/shinythemes/tree/master/inst/shinythemes/css</a> which bundles bootswatch themes based on BS3.</p>
-
-</article></slide><slide class=""><hgroup><h2>Modifying shinywidgets</h2></hgroup><article  id="modifying-shinywidgets">
-
-<p>See some of these css and JS assets:</p>
-
-<p><a href='https://github.com/dreamRs/shinyWidgets/tree/master/inst/assets' title=''>https://github.com/dreamRs/shinyWidgets/tree/master/inst/assets</a></p></article></slide>
+<p>Please look at the documentation at <a href='https://github.com/KTH-Library/bootswatch-kth' title=''>https://github.com/KTH-Library/bootswatch-kth</a> which provides instructions if you need to improve, change or modify the styles.</p></article></slide>
 
 
   <slide class="backdrop"></slide>
