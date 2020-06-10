@@ -62,3 +62,14 @@ https://KTH-Library.github.io/bootswatch-kth
 
 Please look at the documentation at https://github.com/KTH-Library/bootswatch-kth which provides instructions if you need to improve, change or modify the styles.
 
+# Resources
+
+## e-Book: "Outstanding User Interfaces with Shiny"
+
+This resource touches upon a lot of the styling/appearance aspect we have seen in the ABM app:
+
+https://divadnojnarg.github.io/outstanding-shiny-ui/
+
+For example:
+
+https://divadnojnarg.github.io/outstanding-shiny-ui/custom-templates-selection.html
