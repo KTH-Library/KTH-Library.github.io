@@ -1,6 +1,11 @@
-## Welcome to the GitHub Pages for the KTH Library
+## Welcome to the GitHub Pages for the KTH Library - Bibliometrics
 
 These GitHub pages contain POCs, presentations and other documentation related primarily to the Annual Bibliometric Monitoring project.
+
+Note that [several other public repositories from KTH](https://github.com/search?q=KTH) are available, for example:
+
+- https://github.com/KTH
+- https://github.com/KTH-biblioteket
 
 ### Annual Bibliometric Monitoring 
 
