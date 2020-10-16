@@ -1,0 +1,43 @@
+---
+title: 'ÅBU-projektet - uppdatering'
+author: ""
+date: '2020-10-12'
+output:
+  ioslides_presentation:
+    css: assets/css/styles.css
+    logo: assets/img/logo.svg
+    mathjax: default
+    self-contained: yes
+    transition: slower
+    widescreen: yes
+  beamer_presentation: default
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(ktheme)
+library(webshot)
+
+red <- function(txt) 
+  sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["cerise"]), txt)
+
+#webshot::install_phantomjs()
+#unlink("retrosearch-screenshot.png")
+
+suppressPackageStartupMessages(library(magick))
+
+# BG images that could be used
+
+```
+
+## Avdelningsbaserad ABM
+
+- "Rolling" ABM - baserad på i nuläget anställda på KTHs avdelningars, status: Work in progress, se [Trello-kort](https://trello.com/c/t5Xt48Td/293-ta-fram-individbaserad-rapport-med-tv%C3%A5-relevanta-avdelningar-och-g%C3%B6ra-dashboard-komplett)
+  - Uttag av data
+  - Rapport/dashboard på avdelningsnivå
+  - API
+- Utkast:
+  - [Översikt över avdelningar](abm_divisions.html)
+    - ["j/jj/jjn"](j_jj_jjn.html)
+    - ["j/jh/jhs"](j_jh_jhs.html)
