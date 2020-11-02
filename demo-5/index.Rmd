@@ -1,0 +1,92 @@
+---
+title: 'Demo #5 - ABM project'
+author: "KTH Library & ITA - ABM project"
+date: '2020-11-10'
+output:
+  ioslides_presentation:
+    css: assets/css/styles.css
+    logo: assets/img/logo.svg
+    mathjax: default
+    self-contained: yes
+    transition: slower
+    widescreen: yes
+  beamer_presentation: default
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(ktheme)
+library(webshot)
+
+red <- function(txt) 
+  sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["cerise"]), txt)
+
+#webshot::install_phantomjs()
+#unlink("retrosearch-screenshot.png")
+
+suppressPackageStartupMessages(library(magick))
+
+# BG images that could be used
+
+```
+
+## Background 
+
+**Goal:** 
+
+> Replace the previous ABM i.e. Annual Bibliometric Monitoring / Årlig Bibliometrisk Uppföljning at KTH
+
+**Summary:**
+
+Our [previous demo meeting](https://KTH-Library.github.io/demo-4) was held 2020-05-26. Since then we have worked (remotely) on Sprints **17 to 23** (current).
+
+The [ABM services at KTH](https://kth.se/abm) have been operational since the last demo meeting, with some operational maintenance involving rotation of certificates made during the autumn.
+
+## Agenda {data-background=assets/bg/kth-6.png data-background-size=cover}
+
+- Progress - What is **new** since last meeting?
+
+- Questions that we'd like to have your input on. (Use the Zoom chat function)
+
+- A short **demo** of the current work
+  - Introduction to ABM for new demo meeting attendees
+  - Demonstration of new researcher-based model at divisional level
+  - Comparison versus existing ABM model, with examples
+    - Two divisions
+    - Two institutions
+    - Explanation of difference
+
+- Data integrations (Scopus etc)
+
+- API for public data from ABM
+
+- Your **feedback** and your suggestions and comments to us
+
+- Future **directions**
+
+## What is new? {data-background=assets/bg/plant.png data-background-size=cover}
+
+- During the autumn, we have primarily worked on a new model with reporting at divisional level, based on currently employed researcher and their publication outputs.
+
+- Work has been initiated with regards to using `r red("Scopus data")` from Elsevier in order to complement the WoS data.
+
+- We have upgraded the stack that the software runs on and updated the server environment (with patches, new certificates and API keys).
+
+- We have separated operational ABM services from other Bibliometrics services and have allowed external users without KTH accounts to log in via the use of auth0
+
+- We have initiated a migration from Travis - a continuous integration provider Travis - to using GitHub Actions.
+
+
+## New components
+
+A new R package (`semanticscholar`) allows for experimenting with data integration against this data source which provides open data for publications from many researchers at KTH.
+
+### Data integrations
+
+- Further use of [`kthapi` R package](https://github.com/KTH-Library/kthapi) has been the basis for 
+
+### KTH styling
+
+- Continued work with the KTH Web team aiming to deeper align with the KTH style for web applications.
+
