@@ -45,48 +45,105 @@ The [ABM services at KTH](https://kth.se/abm) have been operational since the la
 
 ## Agenda {data-background=assets/bg/kth-6.png data-background-size=cover}
 
+> *Please use the Zoom chat for questions*
+
 - Progress - What is **new** since last meeting?
 
-- Questions that we'd like to have your input on. (Use the Zoom chat function)
-
 - A short **demo** of the current work
-  - Introduction to ABM for new demo meeting attendees
-  - Demonstration of new researcher-based model at divisional level
-  - Comparison versus existing ABM model, with examples
-    - Two divisions
-    - Two institutions
-    - Explanation of difference
 
-- Data integrations (Scopus etc)
+- Update about **data integration** (Scopus etc)
 
-- API for public data from ABM
+- Update about **other efforts** (API for public data from ABM etc)
 
-- Your **feedback** and your suggestions and comments to us
+- Your **questions and feedback**, suggestions and comments
 
 - Future **directions**
 
 ## What is new? {data-background=assets/bg/plant.png data-background-size=cover}
 
-- During the autumn, we have primarily worked on a new model with reporting at divisional level, based on currently employed researcher and their publication outputs.
+- During the autumn, we have primarily focused on a `r red("proof of concept for author based")` reporting showing results at divisional level, based on currently employed researcher and their publication outputs.
 
-- Work has been initiated with regards to using `r red("Scopus data")` from Elsevier in order to complement the WoS data.
-
-- We have upgraded the stack that the software runs on and updated the server environment (with patches, new certificates and API keys).
-
-- We have separated operational ABM services from other Bibliometrics services and have allowed external users without KTH accounts to log in via the use of auth0
-
-- We have initiated a migration from Travis - a continuous integration provider Travis - to using GitHub Actions.
+- Data integration work has been initiated with regards to using `r red("Scopus data")` from Elsevier in order to complement the WoS data.
 
 
-## New components
+## Demo
 
-A new R package (`semanticscholar`) allows for experimenting with data integration against this data source which provides open data for publications from many researchers at KTH.
+  - Introduction to ABM for new attendees
+  - Demonstration of new author based POC for KTH divisions
+  - Comparison versus existing ABM model, with examples
+    - Two divisions
+    - Two institutions
+    - Explanations 
 
-### Data integrations
+## Scopus (Peer-reviewed) {.smaller}
 
-- Further use of [`kthapi` R package](https://github.com/KTH-Library/kthapi) has been the basis for 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(readxl)
+library(dplyr)
+library(formattable)
+library(DT)
 
-### KTH styling
+versus <- bind_rows(
+  read_xlsx("Coverage.xlsx") %>%
+    mutate(peerreviewed = TRUE),
+  read_xlsx("Coverage.xlsx", sheet = 2) %>%
+    mutate(peerreviewed = FALSE)
+)
 
-- Continued work with the KTH Web team aiming to deeper align with the KTH style for web applications.
+d1 <- 
+  versus %>% select(-c("Department id")) %>% 
+  mutate_at(5:8, function(x) round(x, 1))
+  
+d2 <- d1 %>%
+  filter(peerreviewed == TRUE, `WoS coverage (%)` > 0) %>%
+  select(-c("peerreviewed"))
+  
+d3 <- d1 %>%
+  filter(peerreviewed == FALSE, `WoS coverage (%)` > 0) %>%
+  select(-c("peerreviewed"))
 
+color_tile_divergent <- function(x) ifelse(x <= 0, 
+  color_tile("lightpink", "transparent")(x * c(x <= 0)),
+  color_tile("transparent", "lightblue")(x * c(x > 0)))
+
+fdt <- function(data)
+  as.datatable(rownames = FALSE, options = list(
+    pageLength = 300L, bPaginate = FALSE, scrollY = 400,
+    dom = 'ftB'), x = formattable(data, list(
+    `Total publications` = color_bar("lightblue"),
+    `Publications in Scopus` = color_bar("lightblue"),
+    `Publications in WoS` = color_bar("lightblue"),
+    `Scopus coverage (%)` = color_bar("lightgray"),
+    `WoS coverage (%)` = color_bar("lightgray"),
+    `Scopus coverage gain (%)` = color_tile_divergent
+    )))
+
+dt1 <- fdt(d2)
+dt2 <- fdt(d3)
+
+```
+
+```{r}
+dt1
+```
+
+## Scopus (Non Peer-reviewed) {.smaller}
+
+```{r}
+dt2
+```
+
+## Data integration
+
+- Scopus data from Elsevier has been acquired
+- Further use of [`kthapi` R package](https://github.com/KTH-Library/kthapi) has been the basis for the POC
+- A new R package [`semanticscholar`](https://github.com/KTH-Library/semanticscholar) allows for experimenting with data integration against this data source which provides open data for publications from many researchers at KTH.
+
+## Other efforts
+
+- API for public data from ABM: https://bibliometrics.lib.kth.se/testapi
+- Operations and maintenance
+  - we have separated operational ABM services from other KTHB Bibliometrics services and have allowed external users without KTH accounts to log in via the use of auth0
+  - we have initiated a migration from Travis - a continuous integration provider Travis - to using GitHub Actions.
+  - we have upgraded the software stack and server environment (rotated certificates and API keys)
+  - we have continued to work with the KTH Web team aiming to align with the KTH style for web applications
