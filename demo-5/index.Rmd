@@ -67,23 +67,27 @@ The [ABM services at KTH](https://kth.se/abm) have been operational since the la
 
 ## Demo
 
-  - Introduction to current ABM for new attendees
-  - Background for new author based POC (Proof Of Concept) 
+  - Introduction to **current ABM** for new attendees
+  - Background for new **author based POC** (Proof Of Concept) 
   - Demonstration of author based reporting for KTH divisions
-    - Comparison versus existing ABM model, with examples
-      - Two divisions
-      - Two institutions
-    - Explanations and interpretation
+    - Examples
+      - Two **divisions**
+      - Two **departments** (sv. institutioner) versus current ABM
+    - Some observations and explanations of differences
 
-## Data integration efforts
+## Divisions
 
-- Further use of [`kthapi` R package](https://github.com/KTH-Library/kthapi) has been the basis for the POC
+TODO
 
-- A new R package [`semanticscholar`](https://github.com/KTH-Library/semanticscholar) allows for experimenting with data integration against this data source which provides open data for publications from many researchers at KTH.
+## Comparing departments
+
+TODO
+
+## Scopus data integration
 
 - **Scopus data** from Elsevier has been acquired 
-
   - Comparison of coverage versus WoS; [download here](Coverage.xlsx)
+  - Plans to integrate in existing ABM/ÅBU app as complement to WoS
 
 ## WoS vs Scopus (Peer-reviewed) {.smaller}
 
@@ -145,19 +149,34 @@ dt2 <- fdt(d3)
 dt1
 ```
 
-## WoS vs Scopus (Non Peer-reviewed) {.smaller}
-
-```{r}
-dt2
-```
-
 ## Other efforts
 
-- Operations and maintenance
-  - we have separated operational ABM services from other **KTHB Bibliometrics services** and have allowed external users without KTH accounts to log in via the use of auth0
-  - we have initiated a **migration away from Travis** - a continuous integration service provider - to using GitHub Actions.
-  - we have **upgraded** the software stack and server environment (and rotated certificates and API keys)
-  - we have continued to work with the KTH Web team on aligning with the **KTH style** for web applications
+- Further use of [`kthapi` R package](https://github.com/KTH-Library/kthapi) has been the basis for the POC
+
+- A new R package [`semanticscholar`](https://github.com/KTH-Library/semanticscholar) allows for experimenting with data integration against this data source which provides open data for publications from many researchers at KTH.
 
 - API for public data from ABM
   - https://bibliometrics.lib.kth.se/testapi
+
+## Operations and maintenance
+
+- we have separated operational ABM services from other **KTHB Bibliometrics services** and have allowed external users without KTH accounts to log in via the use of auth0
+
+- we have initiated a **migration away from Travis** - a continuous integration service provider - to using GitHub Actions.
+
+- we have **upgraded** the software stack and server environment (and rotated certificates and API keys)
+
+- we have continued to work with the KTH Web team on aligning with the **KTH style** for web applications
+
+# Questions and feedback
+
+
+## Questions and Answers
+
+Please provide your input!
+
+- Questions from the Zoom chat
+- Suggestions and comments
+- Future directions
+
+Thank you for attending!
