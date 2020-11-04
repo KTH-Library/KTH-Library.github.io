@@ -91,6 +91,7 @@ The [ABM services at KTH](https://kth.se/abm) have been operational since the la
   - Examples
     - Electrical engineering: ["j/jj"](j_jj.html)
     - Computer Science: ["j/jh"](j_jh.html)
+    - Applied Physics: ["s/sk"](s_sk.html)
 
 ## Scopus data integration
 
