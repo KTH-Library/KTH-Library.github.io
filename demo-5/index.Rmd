@@ -71,17 +71,26 @@ The [ABM services at KTH](https://kth.se/abm) have been operational since the la
   - Background for new **author based POC** (Proof Of Concept) 
   - Demonstration of author based reporting for KTH divisions
     - Examples
-      - Two **divisions**
+      - A few **divisions**
       - Two **departments** (sv. institutioner) versus current ABM
     - Some observations and explanations of differences
 
 ## Divisions
 
-TODO
-
+  - [Overview for KTH Divisions](abm_divisions.html)
+  
+  - Examples
+    - DIVISION OF ELECTRIC POWER AND ENERGY SYSTEMS: ["j/jj/jjn"](j_jj_jjn.html)
+    - DIVISION OF COMPUTATIONAL SCIENCE AND TECHNOLOGY: ["j/jh/jhs"](j_jh_jhs.html)
+    - DIVISION OF SPACE AND PLASMA PHYSICS: ["j/jj/jje"](j_jj_jje.html)
+    - NUCLEAR ENGINEERING: ["s/sh/shh"](s_sh_shh.html)
+    - MATERIALS AND NANOPHYSICS: ["s/sk/skq"](s_sk_skq.html)
+    
 ## Comparing departments
 
-TODO
+  - Examples
+    - Electrical engineering: ["j/jj"](j_jj.html)
+    - Computer Science: ["j/jh"](j_jh.html)
 
 ## Scopus data integration
 
