@@ -45,19 +45,15 @@ The [ABM services at KTH](https://kth.se/abm) have been operational since the la
 
 ## Agenda {data-background=assets/bg/kth-6.png data-background-size=cover}
 
-> *Please use the Zoom chat for questions*
-
 - Progress - What is **new** since last meeting?
 
 - A short **demo** of the current work
 
-- Update about **data integration** (Scopus etc)
+- Update about **Scopus data integration**
 
-- Update about **other efforts** (API for public data from ABM etc)
+- Update about **other efforts** (other data integration, APIs etc)
 
-- Your **questions and feedback**, suggestions and comments
-
-- Future **directions**
+- Your **questions and feedback**, suggestions for future directions
 
 ## What is new? {data-background=assets/bg/plant.png data-background-size=cover}
 
@@ -71,21 +67,19 @@ The [ABM services at KTH](https://kth.se/abm) have been operational since the la
   - Background for new **author based POC** (Proof Of Concept) 
   - Demonstration of author based reporting for KTH divisions
     - Examples
-      - A few **divisions**
-      - Two **departments** (sv. institutioner) versus current ABM
+      - A few **divisions** (sv. avdelningar)
+      - A few **departments** (sv. institutioner) versus current ABM
     - Some observations and explanations of differences
-
 
 ## Author based selection of publications
 
-- Organization based = affiliation when publication was written
+- Organization based = **organizational affiliation** when publication was written
   - Usually used for reporting etc
   - Publications directly tied to organizational unit
-- Author based = current affiliation of the publication's authors
+- Author based = publications made by **currently employed researchers** at the unit
   - Usually used for prospective analysis, current "brain power"
-- Aim in this case is still reporting
-  - Using only KTH publications
-  - Fetch employees from HR system and collect their publications
+- Aim in this case is still reporting for **KTH publications**
+  - Fetch employees from **HR system / KTH APIs** and collect their publications
   - Can be strongly influenced by staff turnover, and interact with staff groups
 
 ## Author-based: Divisions
@@ -99,9 +93,9 @@ The [ABM services at KTH](https://kth.se/abm) have been operational since the la
     - NUCLEAR ENGINEERING: ["s/sh/shh"](s_sh_shh.html)
     - MATERIALS AND NANOPHYSICS: ["s/sk/skq"](s_sk_skq.html)
     
-## Author-based: Departments & comparisons
+## Author-based: Departments
 
-  - Examples
+  - Examples - these can be compared against [current ABM](https://abm.sys.kth.se/public/)
     - Electrical engineering: ["j/jj"](j_jj.html)
     - Computer Science: ["j/jh"](j_jh.html)
     - Applied Physics: ["s/sk"](s_sk.html)
@@ -192,16 +186,26 @@ text(Data2b$`Scopus coverage gain (%)`, 9.5, paste("Coverage gain for all\nKTH p
 
 ## Other efforts
 
-- Further use of [`kthapi` R package](https://github.com/KTH-Library/kthapi) has been the basis for the POC
+- All efforts are available at [KTH-Library@GitHub](https://github.com/kth-library)
+
+- Further use of [`kthapi` R package](https://github.com/KTH-Library/kthapi) has been the basis for the author data in the POC
 
 - A new R package [`semanticscholar`](https://github.com/KTH-Library/semanticscholar) allows for experimenting with data integration against this data source which provides open data for publications from many researchers at KTH.
 
 - API for public data from ABM
-  - https://bibliometrics.lib.kth.se/testapi
+  - https://bibliometrics.lib.kth.se/testapi/__swagger__/
+
+- API for author based data (BETA)
+
+##
+
+<center>
+![API for author based data](poc_divisional_api.png){width=600}
+</center>
 
 ## Operations and maintenance
 
-- we have separated operational ABM services from other **KTHB Bibliometrics services** and have allowed external users without KTH accounts to log in via the use of auth0
+- we have separated operational ABM services from other **KTHB Bibliometrics services** and have allowed external users without KTH accounts to log in via the use of https://auth0.com
 
 - we have initiated a **migration away from Travis** - a continuous integration service provider - to using GitHub Actions.
 
@@ -210,7 +214,6 @@ text(Data2b$`Scopus coverage gain (%)`, 9.5, paste("Coverage gain for all\nKTH p
 - we have continued to work with the KTH Web team on aligning with the **KTH style** for web applications
 
 # Questions and feedback
-
 
 ## Questions and Answers
 
