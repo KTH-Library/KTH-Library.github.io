@@ -119,6 +119,8 @@ library(readxl)
 library(dplyr)
 library(formattable)
 library(DT)
+library(ggplot2)
+
 
 versus <- bind_rows(
   read_xlsx("Coverage.xlsx") %>%
@@ -166,11 +168,27 @@ fdt <- function(data)
 dt1 <- fdt(d2)
 dt2 <- fdt(d3)
 
+pr <- versus %>% filter(peerreviewed == TRUE)
+kthres <- pr %>% filter(`Department name`=="KTH Royal Institute of Technology")
+allpubres <- pr %>% filter(`Publication type`=="All types")
+Data1 <- kthres %>% filter(!`Publication type` %in% c("All types","Artikel i tidskrift","Artikel, forskningsöversikt","Artikel, recension"), `Publications in Scopus` > 0)
+Data1b <- kthres %>% filter(`Publication type`=="All types")
+Data2 <- allpubres %>% filter(!`Department id` %in% c("KTH","All"))
+Data2b <- allpubres %>% filter(`Department id`=="KTH")
 ```
 
 ```{r}
-dt1
+ggplot(Data1, aes(x = reorder(paste0(`Publication type`," (", `Total publications`," pub.)"),-`Total publications`), y = `Scopus coverage gain (%)`)) + geom_bar(stat="identity",fill="skyblue3", col="darkblue") + theme(axis.text.x = element_text(angle = 50, vjust = 0.95, hjust=1)) + xlab("") + geom_hline(yintercept=Data1b$`Scopus coverage gain (%)`,col="forestgreen",lwd=1,lty="longdash") + geom_text(data=data.frame(x=5.75,y=Data1b$`Scopus coverage gain (%)`-3), aes(x, y), label=paste("Coverage gain for all\nKTH publications:",round(Data1b$`Scopus coverage gain (%)`,1),"%"), vjust=-1, col="forestgreen", size=3) + ylim(0,50)
 ```
+
+
+## WoS vs Scopus (Peer-reviewed) {.smaller}
+```{r}
+hist(Data2$`Scopus coverage gain (%)`, main = "Distribution of KTH departments by\ncoverage gain for peer-reviewed\npublications (Scopus > Web of Science)", xlab="Scopus coverage gain (%) for all peer-reviewed publications", ylab="Number of departments", col='skyblue3', border='darkblue', ylim=c(0,10))
+abline(v=Data2b$`Scopus coverage gain (%)`,col="forestgreen",lwd=3,lty="longdash")
+text(Data2b$`Scopus coverage gain (%)`, 9.5, paste("Coverage gain for all\nKTH publications:",round(Data2b$`Scopus coverage gain (%)`,1),"%"), col="darkgreen", cex=0.8, pos=4)
+```
+
 
 ## Other efforts
 
