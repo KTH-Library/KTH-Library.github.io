@@ -88,7 +88,7 @@ The [ABM services at KTH](https://kth.se/abm) have been operational since the la
   - Fetch employees from HR system and collect their publications
   - Can be strongly influenced by staff turnover, and interact with staff groups
 
-## Divisions
+## Author-based: Divisions
 
   - [Overview for KTH Divisions](abm_divisions.html)
   
@@ -99,7 +99,7 @@ The [ABM services at KTH](https://kth.se/abm) have been operational since the la
     - NUCLEAR ENGINEERING: ["s/sh/shh"](s_sh_shh.html)
     - MATERIALS AND NANOPHYSICS: ["s/sk/skq"](s_sk_skq.html)
     
-## Comparing departments
+## Author-based: Departments & comparisons
 
   - Examples
     - Electrical engineering: ["j/jj"](j_jj.html)
