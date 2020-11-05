@@ -63,7 +63,7 @@ The [ABM services at KTH](https://kth.se/abm) have been operational since the la
 
 ## Demo
 
-  - Introduction to **current ABM** for new attendees
+  - Introduction to [**current ABM**](https://abm.sys.kth.se/public/) for new attendees
   - Background for new **author based POC** (Proof Of Concept) 
   - Demonstration of author based reporting for KTH divisions
     - Examples
