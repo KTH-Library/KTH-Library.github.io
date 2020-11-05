@@ -80,11 +80,13 @@ The [ABM services at KTH](https://kth.se/abm) have been operational since the la
 
 - Organization based = affiliation when publication was written
   - Usually used for reporting etc
+  - Publications directly tied to organizational unit
 - Author based = current affiliation of the publication's authors
   - Usually used for prospective analysis, current "brain power"
 - Aim in this case is still reporting
   - Using only KTH publications
   - Fetch employees from HR system and collect their publications
+  - Can be strongly influenced by staff turnover, and interact with staff groups
 
 ## Divisions
 
