@@ -75,6 +75,17 @@ The [ABM services at KTH](https://kth.se/abm) have been operational since the la
       - Two **departments** (sv. institutioner) versus current ABM
     - Some observations and explanations of differences
 
+
+## Author based selection of publications
+
+- Organization based = affiliation when publication was written
+  - Usually used for reporting etc
+- Author based = current affiliation of the publication's authors
+  - Usually used for prospective analysis, current "brain power"
+- Aim in this case is still reporting
+  - Using only KTH publications
+  - Fetch employees from HR system and collect their publications
+
 ## Divisions
 
   - [Overview for KTH Divisions](abm_divisions.html)
