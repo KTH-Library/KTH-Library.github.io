@@ -18,6 +18,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 library(ktheme)
 library(webshot)
+library(DT)
+library(ggplot2)
+library(reshape2)
+library(formattable)
+library(readxl)
+library(dplyr)
 
 red <- function(txt) 
   sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["cerise"]), txt)
@@ -99,6 +105,16 @@ The [ABM services at KTH](https://kth.se/abm) have been operational since the la
     - Electrical engineering: ["j/jj"](j_jj.html)
     - Computer Science: ["j/jh"](j_jh.html)
     - Applied Physics: ["s/sk"](s_sk.html)
+    
+## Author-based: Department summary
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+dept_summary<- read.csv2(file="compare.csv", header=TRUE)
+colnames(dept_summary)<- c("Department","Publ, frac", "cf 2015-2017", "Top10%", "jcf 2016-2018", "Int. co-pub", "Type")
+datatable(dept_summary, rownames=FALSE, options = list(dom = 't')) %>%
+  formatStyle(columns = colnames(.$x$data), `font-size` = "70%") %>%
+  formatStyle('Type', target = 'row', Color = styleEqual(c('org', 'staff'), c(palette_kth()["blue"], palette_kth()["cerise"])))
+```
 
 ## Scopus data integration
 
@@ -112,12 +128,6 @@ The [ABM services at KTH](https://kth.se/abm) have been operational since the la
 ## Scopus coverage gain: publication types {.smaller}
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-library(readxl)
-library(dplyr)
-library(formattable)
-library(DT)
-library(ggplot2)
-library(reshape2)
 
 versus <- bind_rows(
   read_xlsx("Coverage.xlsx") %>%
