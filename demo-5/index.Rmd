@@ -113,7 +113,7 @@ dept_summary<- read.csv2(file="compare.csv", header=TRUE)
 colnames(dept_summary)<- c("Department","Publ, frac", "cf 2015-2017", "Top10%", "jcf 2016-2018", "Int. co-pub", "Type")
 datatable(dept_summary, rownames=FALSE, options = list(dom = 't')) %>%
   formatStyle(columns = colnames(.$x$data), `font-size` = "70%") %>%
-  formatStyle('Type', target = 'row', Color = styleEqual(c('org', 'staff'), c(palette_kth()["blue"], palette_kth()["cerise"])))
+  formatStyle('Type', target = 'row', Color = styleEqual(c('org', 'author'), c(palette_kth()["blue"], palette_kth()["cerise"])))
 ```
 
 ## Scopus data integration
