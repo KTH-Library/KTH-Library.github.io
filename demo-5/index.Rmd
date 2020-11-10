@@ -116,6 +116,17 @@ datatable(dept_summary, rownames=FALSE, options = list(dom = 't')) %>%
   formatStyle('Type', target = 'row', Color = styleEqual(c('org', 'author'), c(palette_kth()["blue"], palette_kth()["cerise"])))
 ```
 
+## Author-based: Plan forward
+  
+  - Classify which are research "divisions"
+  - Evaluate differences between models  
+    - Trends across time
+    - Staff categories and staff turnover
+    - Interaction with length of author lists
+  - Better understand HR/UG data 
+  - Can people (and therefore publications) become ''lost'' in administative subunits
+    
+
 ## Scopus data integration
 
 - **Web of Science** data (Clarivate) used for ABM/ÅBU
