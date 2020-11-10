@@ -28,6 +28,7 @@ Presentations / Demos:
 - [Web slides - Demo 2 - 2019-12-05](/demo-2/)
 - [Web slides - Demo 3 - 2020-03-24](/demo-3/)
 - [Web slides - Demo 4 - 2020-05-26](/demo-4/)
+- [Web slides - Demo 5 - 2020-11-10](/demo-5/)
 
 __NB.__ Some presentations are outdated but are kept on record here.
 
@@ -42,6 +43,7 @@ Slides providing overviews:
 - [Overview slides for Operations and maintenance](/operations/)
 - [Documentation for performance optimization practices and tools](/performance/)
 - [Documentation for development workflow for ABM - using GitHub Flow](/workflow/)
+- [Documentation for styling in ABM](/styling/)
 
 Technical documentation for the components used in ABM:
 
