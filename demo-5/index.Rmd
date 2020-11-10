@@ -18,6 +18,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 library(ktheme)
 library(webshot)
+library(DT)
+library(ggplot2)
+library(reshape2)
+library(formattable)
+library(readxl)
+library(dplyr)
 
 red <- function(txt) 
   sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["cerise"]), txt)
@@ -99,22 +105,29 @@ The [ABM services at KTH](https://kth.se/abm) have been operational since the la
     - Electrical engineering: ["j/jj"](j_jj.html)
     - Computer Science: ["j/jh"](j_jh.html)
     - Applied Physics: ["s/sk"](s_sk.html)
+    
+## Author-based: Department summary
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+dept_summary<- read.csv2(file="compare.csv", header=TRUE)
+colnames(dept_summary)<- c("Department","Publ, frac", "cf 2015-2017", "Top10%", "jcf 2016-2018", "Int. co-pub", "Type")
+datatable(dept_summary, rownames=FALSE, options = list(dom = 't')) %>%
+  formatStyle(columns = colnames(.$x$data), `font-size` = "70%") %>%
+  formatStyle('Type', target = 'row', Color = styleEqual(c('org', 'author'), c(palette_kth()["blue"], palette_kth()["cerise"])))
+```
 
 ## Scopus data integration
 
-- **Scopus data** from Elsevier has been acquired 
-  - Comparison of coverage versus WoS; [download here](Coverage.xlsx)
-  - Plans to integrate in existing ABM/ÅBU app as complement to WoS
+- **Web of Science** data (Clarivate) used for ABM/ÅBU
 
-## WoS vs Scopus (Peer-reviewed) {.smaller}
+- **Scopus** data (Elsevier) has been acquired
+  - Better coverage of conference proceedings
+  - Comparison of coverage Scopus vs WoS (2012--2019); [download here](Coverage.xlsx)
+  - Plans to integrate in existing ABM app as complement to WoS
+
+## Scopus coverage gain: publication types {.smaller}
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-library(readxl)
-library(dplyr)
-library(formattable)
-library(DT)
-library(ggplot2)
-
 
 versus <- bind_rows(
   read_xlsx("Coverage.xlsx") %>%
@@ -166,21 +179,67 @@ pr <- versus %>% filter(peerreviewed == TRUE)
 kthres <- pr %>% filter(`Department name`=="KTH Royal Institute of Technology")
 allpubres <- pr %>% filter(`Publication type`=="All types")
 Data1 <- kthres %>% filter(!`Publication type` %in% c("All types","Artikel i tidskrift","Artikel, forskningsöversikt","Artikel, recension"), `Publications in Scopus` > 0)
+Data1disp <- Data1 %>% mutate(`Publication type` = case_when(
+         `Publication type`=="Kapitel i bok, del av antologi" ~ "Book chapters",
+         `Publication type`=="Bok" ~ "Books",
+         `Publication type`=="Konferensbidrag" ~ "Conference proceedings\n",
+         `Publication type`=="All journal articles" ~ "Journal articles\n",
+         `Publication type`=="Samlingsverk (redaktörskap)" ~ "Collections (editor)\n",
+         `Publication type`=="Proceedings (redaktörskap)" ~ "Conf. proceedings\n(editor)",
+         TRUE ~ `Publication type`))
 Data1b <- kthres %>% filter(`Publication type`=="All types")
+Data4 <- kthres %>% filter(!`Publication type` %in% c("Artikel i tidskrift","Artikel, forskningsöversikt","Artikel, recension"), `Publications in Scopus` > 0) %>% mutate(`Publication type` = case_when(
+         `Publication type`=="Kapitel i bok, del av antologi" ~ "Book chapter\n",
+         `Publication type`=="Bok" ~ "Book",
+         `Publication type`=="Konferensbidrag" ~ "Conference paper\n",
+         `Publication type`=="All journal articles" ~ "Journal article\n",
+         `Publication type`=="Samlingsverk (redaktörskap)" ~ "Collection (editor)\n",
+         `Publication type`=="Proceedings (redaktörskap)" ~ "Conf. proceedings\n(editor)",
+         TRUE ~ `Publication type`)) %>% select(c("Publication type","Total publications","WoS coverage (%)","Scopus coverage (%)")) %>% melt(id.vars = c("Publication type", "Total publications"), value.name = "Coverage (%)") %>% mutate(`variable`=case_when(`variable`=="WoS coverage (%)" ~ "WoS", TRUE ~ "Scopus"))
+
 Data2 <- allpubres %>% filter(!`Department id` %in% c("KTH","All"))
 Data2b <- allpubres %>% filter(`Department id`=="KTH")
+Data3 <- pr %>% filter(`Department name`=="Computer Science") %>% select(-c(`Department name`,`Department id`,`peerreviewed`)) %>%
+    mutate(`Publication type` = case_when(
+         `Publication type`=="Kapitel i bok, del av antologi" ~ "Book chapter",
+         `Publication type`=="Bok" ~ "Book",
+         `Publication type`=="Konferensbidrag" ~ "Conference paper",
+         `Publication type`=="Samlingsverk (redaktörskap)" ~ "Collection (editor)",
+         `Publication type`=="Proceedings (redaktörskap)" ~ "Conf. proceedings (editor)",
+         `Publication type`=="Artikel i tidskrift" ~ "Journal article, regular",
+         `Publication type`=="Artikel, forskningsöversikt" ~ "Journal article, review/survey",
+         `Publication type`=="Artikel, recension" ~ "Journal article, book review",
+         `Publication type`=="Övrigt" ~ "Other",         
+         TRUE ~ `Publication type`))
+dt3 <- fdt(Data3)
 ```
 
+- Coverage by publication type for all KTH peer-reviewed publications
+
 ```{r}
-ggplot(Data1, aes(x = reorder(paste0(`Publication type`," (", `Total publications`," pub.)"),-`Total publications`), y = `Scopus coverage gain (%)`)) + geom_bar(stat="identity",fill="skyblue3", col="darkblue") + theme(axis.text.x = element_text(angle = 50, vjust = 0.95, hjust=1)) + xlab("") + geom_hline(yintercept=Data1b$`Scopus coverage gain (%)`,col="forestgreen",lwd=1,lty="longdash") + geom_text(data=data.frame(x=5.75,y=Data1b$`Scopus coverage gain (%)`-3), aes(x, y), label=paste("Coverage gain for all\nKTH publications:",round(Data1b$`Scopus coverage gain (%)`,1),"%"), vjust=-1, col="forestgreen", size=3) + ylim(0,50)
+ggplot(Data4, aes(x = reorder(paste0(`Publication type`," (", `Total publications`," pub.)"),-`Total publications`), y = `Coverage (%)`, fill = factor(variable, levels=c("WoS", "Scopus")))) + geom_col(width = 0.5, position = position_dodge(width = 0.5)) + theme(axis.text.x = element_text(angle = 50, vjust = 0.95, hjust=1)) + xlab("") + scale_fill_manual(name = "", values=c("cadetblue", "coral")) + ylim(0,100) + geom_vline(xintercept=1.5,lty="longdash")
+#ggplot(Data1disp, aes(x = reorder(paste0(`Publication type`," (", `Total publications`," pub.)"),-`Total publications`), y = `Scopus coverage gain (%)`)) + geom_bar(stat="identity",fill="skyblue3", col="darkblue") + theme(axis.text.x = element_text(angle = 50, vjust = 0.95, hjust=1)) + xlab("") + geom_hline(yintercept=Data1b$`Scopus coverage gain (%)`,col="forestgreen",lwd=1,lty="longdash") + geom_text(data=data.frame(x=6.5,y=Data1b$`Scopus coverage gain (%)`-3), aes(x, y), label=paste("Coverage gain for all\nKTH publications:",round(Data1b$`Scopus coverage gain (%)`,1),"%"), vjust=-1, col="forestgreen", size=3) + ylim(0,50) + expand_limits(x= c(1,7.5))
 ```
 
 
-## WoS vs Scopus (Peer-reviewed) {.smaller}
+## Scopus coverage gain: KTH departments {.smaller}
+
+- Distribution of KTH departments by coverage gain for peer-reviewed publications (all publication types)
+
+    $\scriptstyle \text{coverage gain } = \text{ Scopus coverage } - \text{ WoS coverage}$
+    
 ```{r}
-hist(Data2$`Scopus coverage gain (%)`, main = "Distribution of KTH departments by\ncoverage gain for peer-reviewed\npublications (Scopus > Web of Science)", xlab="Scopus coverage gain (%) for all peer-reviewed publications", ylab="Number of departments", col='skyblue3', border='darkblue', ylim=c(0,10))
+hist(Data2$`Scopus coverage gain (%)`, main = "", xlab="Scopus coverage gain (%) for peer-reviewed publications", ylab="Number of departments", col='skyblue3', border='darkblue', ylim=c(0,10))
 abline(v=Data2b$`Scopus coverage gain (%)`,col="forestgreen",lwd=3,lty="longdash")
 text(Data2b$`Scopus coverage gain (%)`, 9.5, paste("Coverage gain for all\nKTH publications:",round(Data2b$`Scopus coverage gain (%)`,1),"%"), col="darkgreen", cex=0.8, pos=4)
+```
+
+## Scopus coverage gain: example
+
+- Department of Computer Science
+
+```{r}
+dt3
 ```
 
 
