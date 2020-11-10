@@ -124,7 +124,7 @@ datatable(dept_summary, rownames=FALSE, options = list(dom = 't')) %>%
     - Staff categories and staff turnover
     - Interaction with length of author lists
   - Better understand HR/UG data 
-  - Can people (and therefore publications) become ''lost'' in administative subunits
+  - Can people (and therefore publications) become ''lost'' in administative subunits?
     
 
 ## Scopus data integration
