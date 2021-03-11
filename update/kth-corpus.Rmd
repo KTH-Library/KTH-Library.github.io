@@ -1,0 +1,100 @@
+---
+title: 'KTH Corpus Data Curation'
+author: ""
+date: '2021-03-10'
+output:
+  ioslides_presentation:
+    css: assets/css/styles.css
+    logo: assets/img/logo.svg
+    mathjax: default
+    self-contained: yes
+    transition: slower
+    widescreen: yes
+  beamer_presentation: default
+---
+
+## Considerations
+
+- Support **data curation and QA checks** for KTH Corpus data through automation and tooling allowing batch updates
+- Support **existing dataflows** with ability to feed to BIBCAP/BIBMET; sync to MSSQL
+- Use automated data flows / **harvesters** to mirror / harvest relevant slices for data integration
+- Offload some analytical processing (heavy reads and calculations) to **columnar dbs**
+- Deal with bigger data and support portable data export formats such as **parquet**
+- Access from R / Python and other environments w support for **SQL and Cypher**
+- Hybrid cloud deployments -> container based object storage **https://min.io**
+
+## Column-oriented analytics backends
+
+Click below for links to column-oriented analytics data engines Apache Spark, DuckDB and Clickhouse, which all checks the boxes on the wishlist: 
+
+[![Apache Spark](http://spark.apache.org/images/spark-logo-trademark.png){width=100}](http://spark.apache.org/)
+[![DuckDB](https://duckdb.org/images/DuckDB_Logo_dl.png){width=100}](https://duckdb.org/docs/why_duckdb)
+[![Clickhouse](https://clickhouse.tech/images/logo.svg){width=100}](https://clickhouse.tech/)
+
+These are SQL-compatible, open source and widely used for analytics, and available for containers and embedding. For graph/network analytics and CYPHER queries:
+
+[![neo4j](https://upload.wikimedia.org/wikipedia/commons/f/fd/Neo4j-2015-logo.png){width=100}](https://neo4j.com/) with extensions for neosemantics, graph data science and "apoc".
+
+# Suggestion to support data flow needs
+
+## Stakeholders and gateways
+
+Different stakeholders:
+
+- Consumers of data - KTH researchers/staff (authentication w OIDC or SAML)
+- Producers of data - KTH Library staff (db connections, API access)
+- "General Public" - open data (get to public data, data archives)
+
+Gateways/access:
+
+- Apps, APIs and data assets ("archives" of data dumps, reports)
+- Toolbox for data curation
+
+## Managing data flows
+
+> See overview/diagram at https://kth-library.github.io/open-datascience-platforms/#20 - Batch/bulk changes based on KTH DiVA data (QA work etc) can be written back to KTH curated data source, and exposed to global aggregators (SwePub, Semantic Scholar etc)
+
+- Data integration infrastructure component Apache Spark for data integration against several sources
+
+- Data processing components to meet specific needs, such as dockerized neo4j setup with neosemantics, gds and apoc, with CLI tools like neo4j-admin which allows bulk loading, from "diva" R-package
+
+- "Jobs" / processes to sync data, using "harvesters" to automate scheduled data flows from data sources into data backend
+
+- Tools such as "diva" R package deployed on "kontarion" stack
+
+## 
+
+![Example flows for "bibib" setup](bibib.svg){height=500;}
+
+[The overview.drawio file can be edited at https://app.diagrams.net/](bibib.drawio)
+
+## Demo of existing tooling
+
+- `diva`, at https://gita.sys.kth.se/kthb/diva, could be deployed in a similar way, has a draft API included
+
+- neo4j with KTH corpus data (publications, authors)
+
+- `cordis`, at https://github.com/KTH-Library/cordis, deployed at https://shiny-2-r.referens.sys.kth.se/ide using "kontarion" base image
+
+- `duckstream.R`, at https://gist.github.com/mskyttner/46601e60138a886cdfbfc81067c71725, allows to stream data to parquet
+
+## KTH Corpus API 
+
+![Experimental API modelled after Semantic Scholar, adds "qa checks"](diva-api.png){height=400}
+
+Can meet needs from other apps/tools/services, such as "DiVA apan"...
+
+## Missing pieces
+
+- A data backend server for hosting Apache Spark (for more info see https://blog.min.io/modern-data-lake-with-minio-part-1/ and https://blog.min.io/modern-data-lake-with-minio-part-2/)
+
+- Object storage, using https://min.io (for more info see https://min.io/product/integrations)
+
+## How to use MSSQL SPs in apps/APIs
+
+- Suggestion: harvesters and/or connection -> Apache Spark [w MS SQL Server connector](https://docs.microsoft.com/en-us/sql/big-data-cluster/sparklyr-from-rstudio?view=sql-server-ver15)
+- Harvesters can work with Parquet, CSV, JSON from APIs or data from S3 or file storage
+- Or with dbconnection: https://github.com/microsoft/sql-spark-connector and sparklyr::spark_read_jdbc()
+- API (python/R) can now connect to and expose data from Apache Spark or parquet exports (and from other data sources/APIs etc)
+- Allows scaling up and can run in hybrid cloud deployments
+
