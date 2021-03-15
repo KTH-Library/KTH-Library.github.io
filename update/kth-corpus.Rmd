@@ -60,13 +60,45 @@ Gateways/access:
 
 - "Jobs" / processes to sync data, using "harvesters" to automate scheduled data flows from data sources into data backend
 
-- Tools such as "diva" R package deployed on "kontarion" stack
+- Tools such as "diva" R package bundled in "kontarion" stack
+
+##
+
+![Object storage for "kth-corpus" data](https://cdn-images-1.medium.com/max/2400/1*J2HzmPjqrShI6y19UlC0qg.png){height=500}
 
 ## 
 
-![Example flows for "bibib" setup](bibib.svg){height=500;}
+![Example flows for "bibib" setup](bibib.svg){height=400;}
 
 [The overview.drawio file can be edited at https://app.diagrams.net/](bibib.drawio)
+
+## KTH Corpus API 
+
+![Experimental API modelled after Semantic Scholar, adds "qa checks"](diva-api.png){height=400}
+See Trello ticket [here](https://trello.com/c/PTzp0VYm/458-data-quality-curation-tool-for-publication-data)
+
+## Suggested steps (1)
+
+- Change "diva" R-package to have a broader scope -> "bibib" or "kth-corpus"
+  - Rename to signal wider scope
+  - Include data for KTH-researchers, such as hrplus data management support
+  - Include additional reference data for example from UKÄ
+  - Include integration with KTHB python utils (see kthb_reticulate.R)
+  - Add more checks (for example age, UKÄ codes 2011+)
+  - Support other integrations with in-house apps/tools/services, such as "DiVA apan"...
+
+## Suggested steps (2)
+  
+- Integrations with open source data wrangling tools
+  - Include in "kontarion" for web-based IDE
+  - Include neo4j bulk extract functionality
+    - Provide docker image with neo4j db (server)
+    - Tooling: use https://neo4j.com/download/ Neo4J Desktop (frontend)
+  - Additional web-enabled data management tool support
+
+- Schedule data flow jobs
+  - Daily job to sync (incoming and outgoing) / harvesters
+  - Add scheduled reports (such as in the "diva" R-package API)
 
 ## Demo of existing tooling
 
@@ -78,15 +110,13 @@ Gateways/access:
 
 - `duckstream.R`, at https://gist.github.com/mskyttner/46601e60138a886cdfbfc81067c71725, allows to stream data to parquet
 
-## KTH Corpus API 
-
-![Experimental API modelled after Semantic Scholar, adds "qa checks"](diva-api.png){height=400}
-
-Can meet needs from other apps/tools/services, such as "DiVA apan"...
+- Using Apache Spark - see `repos/auth0poc/import_spark_simplified.R`
 
 ## Missing pieces
 
-- A data backend server for hosting Apache Spark (for more info see https://blog.min.io/modern-data-lake-with-minio-part-1/ and https://blog.min.io/modern-data-lake-with-minio-part-2/)
+- A data backend server for hosting Apache Spark
+  - https://blog.min.io/modern-data-lake-with-minio-part-1/
+  - https://blog.min.io/modern-data-lake-with-minio-part-2/
 
 - Object storage, using https://min.io (for more info see https://min.io/product/integrations)
 
@@ -97,4 +127,3 @@ Can meet needs from other apps/tools/services, such as "DiVA apan"...
 - Or with dbconnection: https://github.com/microsoft/sql-spark-connector and sparklyr::spark_read_jdbc()
 - API (python/R) can now connect to and expose data from Apache Spark or parquet exports (and from other data sources/APIs etc)
 - Allows scaling up and can run in hybrid cloud deployments
-
