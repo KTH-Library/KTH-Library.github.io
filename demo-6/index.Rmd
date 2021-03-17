@@ -1,0 +1,131 @@
+---
+title: 'Demo #6 - ABM project'
+author: "KTH Library & ITA - ABM project"
+date: '2021-03-17'
+output:
+  ioslides_presentation:
+    css: assets/css/styles.css
+    logo: assets/img/logo.svg
+    mathjax: default
+    self-contained: yes
+    transition: slower
+    widescreen: yes
+  beamer_presentation: default
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(ktheme)
+library(webshot)
+library(DT)
+library(ggplot2)
+library(reshape2)
+library(formattable)
+library(readxl)
+library(dplyr)
+
+red <- function(txt) 
+  sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["cerise"]), txt)
+
+#webshot::install_phantomjs()
+#unlink("retrosearch-screenshot.png")
+
+suppressPackageStartupMessages(library(magick))
+
+# BG images that could be used
+
+```
+
+## Background for ABM project
+
+**Goal:** 
+
+> Replace the previous ABM i.e. Annual Bibliometric Monitoring / Årlig Bibliometrisk Uppföljning at KTH
+
+**Summary:**
+
+Our [previous demo meeting](https://KTH-Library.github.io/demo-5) was held 2020-11-10. After christmas vacations we have worked on Sprints **24 to 31** (current).
+
+**Netiquette:**
+
+Please use Zoom, raise hand for questions, mute if not speaking, and think about questions to raise in the Q&A session towards the end.
+
+## Agenda {data-background=assets/bg/kth-6.png data-background-size=cover}
+
+- Recap from previous meetings - What **feedback** has been given so far in the project?
+
+- Progress - What is **new** since last meeting?
+
+- A **demo** presenting new work (based on 2020 data update)
+
+- Update about **other efforts** (data integration, APIs etc)
+
+- Your **questions and feedback**
+
+## Feedback Recap
+
+Mostly suggestions about steps forward, beyond the "old" ABM application
+
+- One theme has been **Scopus data** and its inclusion in ABM
+
+- Another theme has been about presenting **results at division level** in an author-based variant of ABM that focuses a "current view"
+
+- Data integration against **other (non-WoS) sources** has been a reoccurring theme
+  - Google Scholar, Microsoft Academic, Semantic Scholar etc and ORCID matching
+  - Coverage for conference proceedings in CS
+  - Custom "divisions" with arbitrary researchers
+
+## Feedback Recap (continued ...)
+
+- Another theme has been ideas about new ways to interactively access, view and explore the ÅBU data
+  - Data Quality and Curation aspects, for example for usage of HR / researcher data from KTH
+  - Raw data access, APIs
+  - Interactive Data Exploration functionality
+
+## Progress - What is new? {data-background=assets/bg/plant.png data-background-size=cover}
+
+- So far during Q1, we have focused on a `r red("updated data incl Scopus/Elsevier indicators for KTH")` 
+
+- Another focus has been on providing an `r red("author-based report with output at divisional level")`
+  - Based on HR-data for currently employed researchers and their publication outputs.
+
+- Brief `r red("interpretation and comparison of results")` based on new data for 2020
+
+- New `r red("Open Access report")` included - what does it say?
+
+- Co-publication `r red("networks")` (KTH co-publication with other countries and institutions)
+
+## Demo
+
+  - **ABM updated with data for 2020**](https://abm.sys.kth.se/public/)
+  - **Author-based ABM** (https://bibliometrics.lib.kth.se/beta/authorbased) 
+  - Interpretation and comparison of **results**
+
+# Demo
+
+## HR/UG data for author-based ABM
+  
+  - What divisions are relevant (research-oriented)?
+  - Understanding HR/UG data and "administrative divisions" versus "research divisions"
+    
+## Other efforts
+
+- All efforts are available at [KTH-Library@GitHub](https://github.com/kth-library)
+
+- A new R package [`cordis`](https://github.com/KTH-Library/cordis) provides data access to EU data for research projects.
+
+- API and Static site generation for author-based ABM
+
+# Questions and feedback
+
+## Questions and Answers
+
+Please provide your input!
+
+- Do you think the what was presented in the demonstration meets your needs for Scopus data in ABM?
+- What advantages and disadvantages do you see with introducing these additional dimensions into ABM (more data sources, author-based variant)?
+- Other questions from the Zoom chat
+- Suggestions and comments
+
+Thank you for attending!

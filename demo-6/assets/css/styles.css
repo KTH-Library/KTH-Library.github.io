@@ -1,0 +1,6 @@
+@import url(//fonts.googleapis.com/css?family=Open%20Sans:200,300,400,500,600);
+
+slides > slide {
+  font-family: "Open Sans", Sans, serif;
+  color: black;
+}
