@@ -63,6 +63,8 @@ Please use Zoom, raise hand for questions, mute if not speaking, and think about
 
 - Your **questions and feedback**
 
+> *We hope to cover these topics in 45 minutes, with 10 minutes at the end for feedback/Q&A*
+
 ## Feedback Recap
 
 Mostly suggestions about steps forward, beyond the "old" ABM application
@@ -94,7 +96,7 @@ Mostly suggestions about steps forward, beyond the "old" ABM application
 
 - New `r red("Open Access report")` included - what does it say?
 
-- Co-publication `r red("networks")` (KTH co-publication with other countries and institutions)
+- Other `r red("related efforts")` (non-app-specific)
 
 ## Demo
 
@@ -113,9 +115,15 @@ Mostly suggestions about steps forward, beyond the "old" ABM application
 
 - All efforts are available at [KTH-Library@GitHub](https://github.com/kth-library)
 
+- API and Static site generation used for deploying author-based ABM
+
+- New python tools ['bibutils'](https://github.com/KTH-Library/bibutils) for Data Quality and Curation
+
+- A new R package [`diva`](https://gita.sys.kth.se/kthb/diva) with Data Quality/Curation tooling for the KTH corpus (publications and authors)
+
 - A new R package [`cordis`](https://github.com/KTH-Library/cordis) provides data access to EU data for research projects.
 
-- API and Static site generation for author-based ABM
+- A new data-only repository ['cordis-data`](https://github.com/KTH-Library/cordis-data), piggybacking on GitHub, using it for storing releases of versioned data publicly.
 
 # Questions and feedback
 
