@@ -41,7 +41,8 @@ suppressPackageStartupMessages(library(magick))
 
 **Goal:** 
 
-> Replace the previous ABM i.e. Annual Bibliometric Monitoring / Årlig Bibliometrisk Uppföljning at KTH
+> 1. Replace the previous ABM i.e. Annual Bibliometric Monitoring / Årlig Bibliometrisk Uppföljning at KTH
+> 2. Further develop the ABM based on input from this group
 
 **Summary:**
 
@@ -49,7 +50,7 @@ Our [previous demo meeting](https://KTH-Library.github.io/demo-5) was held 2020-
 
 **Netiquette:**
 
-Please use Zoom, raise hand for questions, mute if not speaking, and think about questions to raise in the Q&A session towards the end.
+Please use Zoom, raise hand for questions or write in the chat, mute if not speaking, and think about questions to raise in the Q&A session towards the end.
 
 ## Agenda {data-background=assets/bg/kth-6.png data-background-size=cover}
 
@@ -63,34 +64,37 @@ Please use Zoom, raise hand for questions, mute if not speaking, and think about
 
 - Your **questions and feedback**
 
-> *We hope to cover these topics in 45 minutes, with 10 minutes at the end for feedback/Q&A*
+## Demo group feedback
 
-## Feedback Recap
+You have provided many suggestions about steps forward, beyond the "old" ABM application.
 
-Mostly suggestions about steps forward, beyond the "old" ABM application
+Here is a rough attempt to summarize input since the project start into some themes:
 
 - One theme has been **Scopus data** and its inclusion in ABM
 
-- Another theme has been about presenting **results at division level** in an author-based variant of ABM that focuses a "current view"
+- Another theme has been about presenting **results at division level** in an author-based variant of ABM that focuses more a "current view"
 
-- Data integration against **other (non-WoS) sources** has been a reoccurring theme
-  - Google Scholar, Microsoft Academic, Semantic Scholar etc and ORCID matching
-  - Coverage for conference proceedings in CS
-  - Custom "divisions" with arbitrary researchers
+- User Experience improvements
 
 ## Feedback Recap (continued ...)
+
+- Data integration against **other (non-WoS) sources** has been a reoccurring theme
+  - Altmetrics, Google Scholar, Microsoft Academic, Semantic Scholar etc and ORCID matching
+  - Coverage for conference proceedings in CS
+  - Custom "divisions" with arbitrary researchers
 
 - Another theme has been ideas about new ways to interactively access, view and explore the ÅBU data
   - Data Quality and Curation aspects, for example for usage of HR / researcher data from KTH
   - Raw data access, APIs
   - Interactive Data Exploration functionality
 
-## Progress - What is new? {data-background=assets/bg/plant.png data-background-size=cover}
+## Progress - What is new during Q1? {data-background=assets/bg/plant.png data-background-size=cover}
 
-- So far during Q1, we have focused on a `r red("updated data incl Scopus/Elsevier indicators for KTH")` 
+- Data update with `r red("updated data for 2013-2019")` including RAE data delivery
 
-- Another focus has been on providing an `r red("author-based report with output at divisional level")`
-  - Based on HR-data for currently employed researchers and their publication outputs.
+- Scopus data integration added
+
+- Addition of `r red("author-based report with output at divisional level")` based on KTH HR-data
 
 - Brief `r red("interpretation and comparison of results")` based on new data for 2020
 
@@ -98,19 +102,23 @@ Mostly suggestions about steps forward, beyond the "old" ABM application
 
 - Other `r red("related efforts")` (non-app-specific)
 
-## Demo
-
-  - **ABM updated with data for 2020**](https://abm.sys.kth.se/public/)
-  - **Author-based ABM** (https://bibliometrics.lib.kth.se/beta/authorbased) 
-  - Interpretation and comparison of **results**
-
 # Demo
 
-## HR/UG data for author-based ABM
-  
-  - What divisions are relevant (research-oriented)?
-  - Understanding HR/UG data and "administrative divisions" versus "research divisions"
-    
+  - **ABM updated with data for 2013-2019**(https://abm.sys.kth.se/public/)
+  - **Scopus** in ABM
+  - **Author-based ABM** (https://bibliometrics.lib.kth.se/beta/authorbased)
+  - Research-oriented divisions based on HR/UG-data
+
+## Interpretation and comparison of **results**
+
+TODO: revise and adapt this...
+
+- How does results based on Scopus and WoS differ - beyond coverage? Explanation?
+- Comparison organizational based ABM vs author-based - follow-up to previous comparison?
+- What patterns can we see? Trends over time?
+- Highlights and deviations
+- Merging organizational units - how does it affect results?
+
 ## Other efforts
 
 - All efforts are available at [KTH-Library@GitHub](https://github.com/kth-library)
@@ -131,8 +139,11 @@ Mostly suggestions about steps forward, beyond the "old" ABM application
 
 Please provide your input!
 
-- Do you think the what was presented in the demonstration meets your needs for Scopus data in ABM?
-- What advantages and disadvantages do you see with introducing these additional dimensions into ABM (more data sources, author-based variant)?
+- Do you think the what was presented in the demonstration meets your needs for **Scopus data** in ABM?
+- What advantages and disadvantages do you see with introducing these **additional dimensions** into ABM (more data sources, author-based variant)?
+- What are the most important questions you think needs answering for [network style ABM data](https://www.vinnova.se/contentassets/07922986451f47ee865ff754707a4ab9/va-11-09.pdf) (co-publication, subject areas etc)?
+- Example: https://www.kth.se/bibliometrics/projects/mine_and_minerals/network_total_MM_publ/index.html
+
 - Other questions from the Zoom chat
 - Suggestions and comments
 
