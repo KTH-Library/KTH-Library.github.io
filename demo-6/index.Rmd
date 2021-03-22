@@ -50,7 +50,7 @@ Our [previous demo meeting](https://KTH-Library.github.io/demo-5) was held 2020-
 
 **Netiquette:**
 
-Please use Zoom, raise hand for questions or write in the chat, mute if not speaking, and think about questions to raise in the Q&A session towards the end.
+Please use Zoom, raise hand for questions or write in the chat, mute if not speaking, and think about questions for the Q&A session at the end.
 
 ## Agenda {data-background=assets/bg/kth-6.png data-background-size=cover}
 
@@ -74,25 +74,26 @@ Here is a rough attempt to summarize input since the project start into some the
 
 - Another theme has been about presenting **results at division level** in an author-based variant of ABM that focuses more a "current view"
 
-- User Experience improvements
+- **User Experience improvements** with closer alignment with KTH Style on the web
+
+- Addition of **Open Access data/reports** including Altmetric integration
 
 ## Feedback Recap (continued ...)
 
 - Data integration against **other (non-WoS) sources** has been a reoccurring theme
-  - Altmetrics, Google Scholar, Microsoft Academic, Semantic Scholar etc and ORCID matching
-  - Coverage for conference proceedings in CS
-  - Custom "divisions" with arbitrary researchers
+  - Requests regarding Google Scholar, Microsoft Academic, Semantic Scholar etc and ORCID matching (added in Kontarion and DiVA package)
+  - Coverage for conference proceedings in CS (partially addressed by Scopus)
+  - Custom "divisions" with arbitrary researchers (a POC experiment made in separate app)
 
-- Another theme has been ideas about new ways to interactively access, view and explore the ÅBU data
-  - Data Quality and Curation aspects, for example for usage of HR / researcher data from KTH
-  - Raw data access, APIs
-  - Interactive Data Exploration functionality
+- Another theme has been ideas about new ways to interactively **access, view and explore** the ÅBU data
+  - Data Quality and Curation aspects, for example for usage of HR / researcher data from KTH 
+  - Raw data access, APIs (mostly non-public APIs due to usage rights for WoS and Scopus data)
 
 ## Progress - What is new during Q1? {data-background=assets/bg/plant.png data-background-size=cover}
 
 - Data update with `r red("updated data for 2013-2019")` including RAE data delivery
 
-- Scopus data integration added
+- Data integration for `r red("Scopus data")` added
 
 - Addition of `r red("author-based report with output at divisional level")` based on KTH HR-data
 
@@ -125,13 +126,14 @@ TODO: revise and adapt this...
 
 - API and Static site generation used for deploying author-based ABM
 
-- New python tools ['bibutils'](https://github.com/KTH-Library/bibutils) for Data Quality and Curation
+- New python tools [`bibutils`](https://github.com/KTH-Library/bibutils) for Data Quality and Curation
 
 - A new R package [`diva`](https://gita.sys.kth.se/kthb/diva) with Data Quality/Curation tooling for the KTH corpus (publications and authors)
 
-- A new R package [`cordis`](https://github.com/KTH-Library/cordis) provides data access to EU data for research projects.
+- A new R package [`cordis`](https://github.com/KTH-Library/cordis) provides data access to EU data for research projects, including a new data-only repository ['cordis-data`](https://github.com/KTH-Library/cordis-data), piggybacking on GitHub, using it for storing releases of versioned data publicly.
 
-- A new data-only repository ['cordis-data`](https://github.com/KTH-Library/cordis-data), piggybacking on GitHub, using it for storing releases of versioned data publicly.
+- Integration with HR data (SFTP site with extracts) flowing into https://min.io/
+
 
 # Questions and feedback
 
@@ -141,9 +143,6 @@ Please provide your input!
 
 - Do you think the what was presented in the demonstration meets your needs for **Scopus data** in ABM?
 - What advantages and disadvantages do you see with introducing these **additional dimensions** into ABM (more data sources, author-based variant)?
-- What are the most important questions you think needs answering for [network style ABM data](https://www.vinnova.se/contentassets/07922986451f47ee865ff754707a4ab9/va-11-09.pdf) (co-publication, subject areas etc)?
-- Example: https://www.kth.se/bibliometrics/projects/mine_and_minerals/network_total_MM_publ/index.html
-
 - Other questions from the Zoom chat
 - Suggestions and comments
 
