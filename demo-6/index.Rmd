@@ -121,6 +121,17 @@ TODO: revise and adapt this...
 - Highlights and deviations
 - Merging organizational units - how does it affect results?
 
+## WoS vs Scopus
+
+- Additional help in interpretation 
+- Differences in coverage
+- Note different standardization groups - what does different indicator values mean?
+
+## Regular ABM vs staff-based version
+
+- Different scopes of applications
+- ...
+
 ## Other efforts
 
 - All efforts are available at [KTH-Library@GitHub](https://github.com/kth-library)
@@ -134,6 +145,14 @@ TODO: revise and adapt this...
 - A new R package [`cordis`](https://github.com/KTH-Library/cordis) provides data access to EU data for research projects, including a new data-only repository ['cordis-data`](https://github.com/KTH-Library/cordis-data), piggybacking on GitHub, using it for storing releases of versioned data publicly.
 
 - Integration with HR data (SFTP site with extracts) flowing into modern object storage (using https://min.io/).
+
+# Going forward
+
+## Going forward
+
+- Focusing on additions to collaboration data
+- Suggestion to add coarse organization overview (as table) to ABM
+- Further collaboration data presented through separate application.
 
 # Questions and feedback
 
