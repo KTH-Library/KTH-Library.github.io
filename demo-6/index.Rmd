@@ -151,8 +151,10 @@ TODO: revise and adapt this...
 ## Going forward
 
 - Focusing on additions to collaboration data
-- Suggestion to add coarse organization overview (as table) to ABM
-- Further collaboration data presented through separate application.
+- Suggestion:   
+    * Add coarse organization overview (as table) to ABM
+    * Further collaboration data presented through separate application
+- Working more in practice with new HR-data resource
 
 # Questions and feedback
 
