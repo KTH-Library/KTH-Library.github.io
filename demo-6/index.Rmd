@@ -1,7 +1,7 @@
 ---
 title: 'Demo #6 - ABM project'
 author: "KTH Library & ITA - ABM project"
-date: '2021-03-17'
+date: '2021-03-25'
 output:
   ioslides_presentation:
     css: assets/css/styles.css
@@ -109,8 +109,9 @@ Here is a rough attempt to summarize input since the project start into some the
   - **Scopus** in ABM
   - **Author-based ABM** (https://bibliometrics.lib.kth.se/beta/authorbased)
   - Research-oriented divisions based on HR/UG-data
+  - New OA report - link added
 
-## Interpretation and comparison of **results**
+## Interpretation of **results**
 
 TODO: revise and adapt this...
 
@@ -132,8 +133,7 @@ TODO: revise and adapt this...
 
 - A new R package [`cordis`](https://github.com/KTH-Library/cordis) provides data access to EU data for research projects, including a new data-only repository ['cordis-data`](https://github.com/KTH-Library/cordis-data), piggybacking on GitHub, using it for storing releases of versioned data publicly.
 
-- Integration with HR data (SFTP site with extracts) flowing into https://min.io/
-
+- Integration with HR data (SFTP site with extracts) flowing into modern object storage (using https://min.io/).
 
 # Questions and feedback
 
