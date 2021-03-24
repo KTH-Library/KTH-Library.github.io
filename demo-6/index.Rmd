@@ -160,7 +160,7 @@ Here is a rough attempt to summarize input since the project start into some the
   * staff-based: selection based on current staff and all their publications
 - ...
 
-## Regular ABM vs staff-based, number of publications
+## Regular ABM vs staff-based, publications
 
 ![Applied Physics](assets/img/counts_AppPhys.png){width=400}
 ![Computer Science](assets/img/counts_CompSci.png){width=400}
