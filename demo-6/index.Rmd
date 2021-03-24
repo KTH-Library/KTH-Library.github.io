@@ -119,13 +119,15 @@ TODO: revise and adapt this...
 - Comparison organizational based ABM vs author-based - follow-up to previous comparison?
 - What patterns can we see? Trends over time?
 - Highlights and deviations
-- Merging organizational units - how does it affect results?
+- Merging organizational units - how does it affect results? (*!! Vad menar vi här?*)
 
 ## WoS vs Scopus
 
 - Additional help in interpretation 
-- Differences in coverage
-- Note different standardization groups - what does different indicator values mean?
+- Differences in coverage, depents on subject field and publication profile
+- Field-normalization done against different standardization groups 
+  * what does different indicator values mean?
+-
 
 ## WoS vs Scopus, citations
 
@@ -156,6 +158,8 @@ TODO: revise and adapt this...
 ## Regular ABM vs staff-based version
 
 - Different scopes of applications
+  * Regular ABM: selection based on links between units and publications (address affiliations)
+  * staff-based: selection based on current staff and all their publications
 - ...
 
 ## Other efforts
@@ -178,7 +182,7 @@ TODO: revise and adapt this...
 
 - Focusing on additions to collaboration data
 - Suggestion:   
-    * Add coarse organization overview (as table) to ABM
+    * Add coarse overview of collaborating organizations (as table) to ABM
     * Further collaboration data presented through separate application
 - Working more in practice with new HR-data resource
 
