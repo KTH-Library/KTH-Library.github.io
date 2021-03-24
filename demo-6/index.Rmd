@@ -141,15 +141,17 @@ TODO: revise and adapt this...
 ![Normalized citations, WoS](assets/img/Normcit_Wos.PNG){width=450}
 ![Normalized citations, Scopus](assets/img/Normcit_Scop.PNG){width=450}
 
-- Conference papers included in Scopus (FWCI), not in Cf (WoS)
-- Cf is normalized on Web of Science subject categories
-- FWCI is normalized by Scopus
+- Conference papers included from Scopus (FWCI), not from WoS (Cf)
 - Papers are compared to other papers in the same data source, which are different
+- Cf is normalized by KTHB on Web of Science subject categories
+- FWCI is normalized by Scopus
 
 ## WoS vs Scopus, journal impact
 
 ![Journal impact, WoS](assets/img/Jour_Wos.PNG){width=450}
 ![Journal impact, Scopus](assets/img/Jour_Scop.PNG){width=450}
+
+- Conference papers included from Scopus, but many have no SNIP
 
 ## Regular ABM vs staff-based version
 
