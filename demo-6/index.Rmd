@@ -60,6 +60,10 @@ Please use Zoom, raise hand for questions or write in the chat, mute if not spea
 
 - A **demo** presenting new work (based on 2020 data update)
 
+- (short break, with possibility to look at applications)
+
+- Some comparisons between data sources and models for ABM
+
 - Update about **other efforts** (data integration, APIs etc)
 
 - Your **questions and feedback**
@@ -109,7 +113,8 @@ Here is a rough attempt to summarize input since the project start into some the
   - **Scopus** in ABM
   - **Author-based ABM** (https://bibliometrics.lib.kth.se/beta/authorbased)
   - Research-oriented divisions based on HR/UG-data
-  - New OA report - link added
+  - New OA report - link added in application:  
+    (https://kth-library.github.io/abm/OARapport.pdf)
 
 ## Interpretation of **results**
 
@@ -117,15 +122,14 @@ Here is a rough attempt to summarize input since the project start into some the
 - Comparison organizational-based ABM vs author-based
 - What patterns can we see? Trends over time?
 - Highlights and deviations
-- Merging organizational units - how does it affect results? (**!! Vad menar vi här?**)
 
 ## WoS vs Scopus
 
 - Additional help in interpretation, e.g. corroborating trends
-- Differences in coverage, depents on subject field and publication profile
+- Differences in coverage, depends on subject field and publication profile
 - Field-normalization done against different standardization groups 
   * what does different indicator values mean?
-  * alternatives for field-normalization
+  * alternative ways to field-normalization
   * can interact with subject profile, especially for narrower selections (e.g. divisions)
 - Other benchmark needed(?)
 
@@ -157,11 +161,11 @@ Here is a rough attempt to summarize input since the project start into some the
 - In general, journal indicators from Scopus much higher than those based on WoS
 - KTH average relatively high, based on both data sources
 
-## Regular ABM vs staff-based version
+## Regular ABM vs author-based version
 
 - Different scope of applications
   * Regular ABM: selection based on links between units and publications (address affiliations)
-  * staff-based: selection based on current staff and all their KTH publications
+  * author-based: selection based on current staff and all their KTH publications
 - Probably biased selection of staff categories, due to levels of turnover
 - In general, lower volumes in staff-based version
 - Citation indicators with varying effects between selections 
@@ -182,6 +186,16 @@ Here is a rough attempt to summarize input since the project start into some the
 ![Electrical Engineering](assets/img/cf_ElEng.png){width=400}
 ![Gene Technology](assets/img/cf_GeneTech.png){width=400}
 
+# Going forward
+
+## Going forward
+
+- Focusing on additions to collaboration data
+- Suggestion:   
+    * Add coarse overview of collaborating organizations (as table) to ABM
+    * Further collaboration data presented through separate application
+- Working more in practice with new HR-data resource
+
 ## Other efforts
 
 - All efforts are available at [KTH-Library@GitHub](https://github.com/kth-library)
@@ -196,15 +210,6 @@ Here is a rough attempt to summarize input since the project start into some the
 
 - Integration with HR data (SFTP site with extracts) flowing into modern object storage (using https://min.io/).
 
-# Going forward
-
-## Going forward
-
-- Focusing on additions to collaboration data
-- Suggestion:   
-    * Add coarse overview of collaborating organizations (as table) to ABM
-    * Further collaboration data presented through separate application
-- Working more in practice with new HR-data resource
 
 # Questions and feedback
 
@@ -214,6 +219,8 @@ Please provide your input!
 
 - Do you think the what was presented in the demonstration meets your needs for **Scopus data** in ABM?
 - What advantages and disadvantages do you see with introducing these **additional dimensions** into ABM (more data sources, author-based variant)?
+- What type of additional collaboration and co-publication do you need?  
+  Summary tables, networks, author-networks etc.
 - Other questions from the Zoom chat
 - Suggestions and comments
 
