@@ -113,10 +113,8 @@ Here is a rough attempt to summarize input since the project start into some the
 
 ## Interpretation of **results**
 
-TODO: revise and adapt this...
-
-- How does results based on Scopus and WoS differ - beyond coverage? Explanation?
-- Comparison organizational based ABM vs author-based - follow-up to previous comparison?
+- How does results based on Scopus and WoS differ
+- Comparison organizational based ABM vs author-based
 - What patterns can we see? Trends over time?
 - Highlights and deviations
 - Merging organizational units - how does it affect results?
@@ -142,7 +140,7 @@ TODO: revise and adapt this...
 ![Normalized citations, Scopus](assets/img/Normcit_Scop.PNG){width=450}
 
 - Conference papers included from Scopus (FWCI), not from WoS (Cf)
-- Papers are compared to other papers in the same data source, which are different
+- Papers are compared to other papers in the same data source
 - Cf is normalized by KTHB on Web of Science subject categories
 - FWCI is normalized by Scopus
 
@@ -157,6 +155,15 @@ TODO: revise and adapt this...
 
 - Different scopes of applications
 - ...
+
+## Regular ABM vs staff-based, number of publications
+
+![Applied Physics](assets/img/counts_AppPhys.png){width=400}
+![Computer Science](assets/img/counts_CompSci.png){width=400}
+
+![Electrical Engineering](assets/img/counts_ElEng.png){width=400}
+![Gene Technology](assets/img/counts_GeneTech.png){width=400}
+
 
 ## Other efforts
 
