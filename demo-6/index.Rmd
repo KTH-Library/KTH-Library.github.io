@@ -168,6 +168,13 @@ Here is a rough attempt to summarize input since the project start into some the
 ![Electrical Engineering](assets/img/counts_ElEng.png){width=400}
 ![Gene Technology](assets/img/counts_GeneTech.png){width=400}
 
+## Regular ABM vs staff-based, Cf
+
+![Applied Physics](assets/img/cf_AppPhys.png){width=400}
+![Computer Science](assets/img/cf_CompSci.png){width=400}
+
+![Electrical Engineering](assets/img/cf_ElEng.png){width=400}
+![Gene Technology](assets/img/cf_GeneTech.png){width=400}
 
 ## Other efforts
 
