@@ -113,11 +113,11 @@ Here is a rough attempt to summarize input since the project start into some the
 
 ## Interpretation of **results**
 
-- How does results based on Scopus and WoS differ
-- Comparison organizational based ABM vs author-based
+- How does results based on Scopus and WoS differ?
+- Comparison organizational-based ABM vs author-based
 - What patterns can we see? Trends over time?
 - Highlights and deviations
-- Merging organizational units - how does it affect results? (*!! Vad menar vi här?*)
+- Merging organizational units - how does it affect results? (**!! Vad menar vi här?**)
 
 ## WoS vs Scopus
 
@@ -127,7 +127,7 @@ Here is a rough attempt to summarize input since the project start into some the
   * what does different indicator values mean?
   * alternatives for field-normalization
   * can interact with subject profile, especially for narrower selections (e.g. divisions)
--
+- Other benchmark needed(?)
 
 ## WoS vs Scopus, citations
 
