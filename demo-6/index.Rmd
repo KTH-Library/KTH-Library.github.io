@@ -127,6 +127,30 @@ TODO: revise and adapt this...
 - Differences in coverage
 - Note different standardization groups - what does different indicator values mean?
 
+## WoS vs Scopus, citations
+
+![Citations, WoS](assets/img/Cit_Wos.PNG){width=450}
+![Citations, Scopus](assets/img/Cit_Scop.PNG){width=450}
+
+- WoS is 3 year citation window, Scopus is open citation window
+- Conference papers included in both
+- Neither include self-citations
+
+## WoS vs Scopus, normalized citations
+
+![Normalized citations, WoS](assets/img/Normcit_Wos.PNG){width=450}
+![Normalized citations, Scopus](assets/img/Normcit_Scop.PNG){width=450}
+
+- Conference papers included in Scopus (FWCI), not in Cf (WoS)
+- Cf is normalized on Web of Science subject categories
+- FWCI is normalized by Scopus
+- Papers are compared to other papers in the same data source, which are different
+
+## WoS vs Scopus, journal impact
+
+![Journal impact, WoS](assets/img/Jour_Wos.PNG){width=450}
+![Journal impact, Scopus](assets/img/Jour_Scop.PNG){width=450}
+
 ## Regular ABM vs staff-based version
 
 - Different scopes of applications
