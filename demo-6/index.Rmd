@@ -121,10 +121,12 @@ Here is a rough attempt to summarize input since the project start into some the
 
 ## WoS vs Scopus
 
-- Additional help in interpretation 
+- Additional help in interpretation, e.g. corroborating trends
 - Differences in coverage, depents on subject field and publication profile
 - Field-normalization done against different standardization groups 
   * what does different indicator values mean?
+  * alternatives for field-normalization
+  * can interact with subject profile, especially for narrower selections (e.g. divisions)
 -
 
 ## WoS vs Scopus, citations
@@ -152,13 +154,17 @@ Here is a rough attempt to summarize input since the project start into some the
 ![Journal impact, Scopus](assets/img/Jour_Scop.PNG){width=450}
 
 - Conference papers included from Scopus, but many have no SNIP
+- In general, journal indicators from Scopus much higher than those based on WoS
+- KTH average relatively high, based on both data sources
 
 ## Regular ABM vs staff-based version
 
-- Different scopes of applications
+- Different scope of applications
   * Regular ABM: selection based on links between units and publications (address affiliations)
-  * staff-based: selection based on current staff and all their publications
-- ...
+  * staff-based: selection based on current staff and all their KTH publications
+- Probably biased selection of staff categories, due to levels of turnover
+- In general, lower volumes in staff-based version
+- Citation indicators with varying effects between selections 
 
 ## Regular ABM vs staff-based, publications
 
