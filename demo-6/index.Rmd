@@ -60,9 +60,9 @@ Please use Zoom, raise hand for questions or write in the chat, mute if not spea
 
 - A **demo** presenting new work (based on 2020 data update)
 
-- (short break, with possibility to look at applications)
+> *Short break, with possibility to look at applications*
 
-- Some comparisons between data sources and models for ABM
+- Some interpretations and **comparisons** between data sources and models for ABM
 
 - Update about **other efforts** (data integration, APIs etc)
 
@@ -70,9 +70,7 @@ Please use Zoom, raise hand for questions or write in the chat, mute if not spea
 
 ## Demo group feedback
 
-You have provided many suggestions about steps forward, beyond the "old" ABM application.
-
-Here is a rough attempt to summarize input since the project start into some themes:
+You have provided many suggestions about steps forward, beyond the "old" ABM application. Here is a rough attempt to summarize input since the project start into some themes:
 
 - One theme has been **Scopus data** and its inclusion in ABM
 
@@ -84,8 +82,8 @@ Here is a rough attempt to summarize input since the project start into some the
 
 ## Feedback Recap (continued ...)
 
-- Data integration against **other (non-WoS) sources** has been a reoccurring theme
-  - Requests regarding Google Scholar, Microsoft Academic, Semantic Scholar etc and ORCID matching (added in Kontarion and DiVA package)
+- Data integration against **other (non-WoS) sources**
+  - Requests regarding Microsoft Academic, Semantic Scholar, Google Scholar etc and ORCID matching (added in Kontarion and DiVA package)
   - Coverage for conference proceedings in CS (partially addressed by Scopus)
   - Custom "divisions" with arbitrary researchers (a POC experiment made in separate app)
 
@@ -198,9 +196,7 @@ Here is a rough attempt to summarize input since the project start into some the
 
 ## Other efforts
 
-- All efforts are available at [KTH-Library@GitHub](https://github.com/kth-library)
-
-- API and Static site generation used for deploying author-based ABM
+- Efforts made are available at [KTH-Library@GitHub](https://github.com/kth-library), including [`bibliomatrix`](https://github.com/kth-library/bibliomatrix) now with an API and Static site generation tool used for deploying author-based ABM
 
 - New python tools [`bibutils`](https://github.com/KTH-Library/bibutils) for Data Quality and Curation
 
@@ -208,7 +204,7 @@ Here is a rough attempt to summarize input since the project start into some the
 
 - A new R package [`cordis`](https://github.com/KTH-Library/cordis) provides data access to EU data for research projects, including a new data-only repository ['cordis-data`](https://github.com/KTH-Library/cordis-data), piggybacking on GitHub, using it for storing releases of versioned data publicly.
 
-- Integration with HR data (SFTP site with extracts) flowing into modern object storage (using https://min.io/).
+- Integration with HR data (extract to SFTP site) flowing into modern object storage (using https://min.io/).
 
 
 # Questions and feedback
@@ -219,9 +215,8 @@ Please provide your input!
 
 - Do you think the what was presented in the demonstration meets your needs for **Scopus data** in ABM?
 - What advantages and disadvantages do you see with introducing these **additional dimensions** into ABM (more data sources, author-based variant)?
-- What type of additional collaboration and co-publication do you need?  
-  Summary tables, networks, author-networks etc.
-- Other questions from the Zoom chat
-- Suggestions and comments
+- What needs do you see for presenting **collaboration and co-publication** data in ABM? Summary tables, networks, author-networks etc.
+- **Other questions** from the Zoom chat
+- Suggestions and **comments**
 
 Thank you for attending!
