@@ -1,0 +1,122 @@
+---
+title: 'KTH Corpus data in neo4j'
+author: ""
+date: '2021-04-22'
+output:
+  ioslides_presentation:
+  css: assets/css/styles.css
+logo: assets/img/logo.svg
+mathjax: default
+self-contained: yes
+transition: slower
+widescreen: yes
+beamer_presentation: default
+---
+  
+## Agenda
+  
+- Why neo4j?
+- Downloading and getting started
+- What is CYPHER?
+- Demo: Loading KTH data into neo4j
+- Get started
+
+## Why neo4j?
+
+Some legacy RDBMS are poor at handling data relationships.
+
+Often "rigid schemas" can make it difficult to add relationships connecting entities.
+
+A graph database treats relationships as data, so you can add and query on relationships "as you go".
+
+## Graph structure
+
+A graph is composed of two elements: a node (or vertex) and a relationship (or edge). 
+
+- Each *node* represents an entity (a person, place, thing, category or other piece of data).
+- Each *relationship* ("edge") represents how two nodes are associated. 
+
+This general-purpose structure allows you to model all kinds of scenarios.
+
+## CYPHER vs SQL
+
+See this [primer](https://medium.com/neo4j/neo4j-data-modelling-2982bd90aa0c). From SQL to Cypher:
+
+    - Table to "Node Label"
+    - Row to "Node"
+    - Column to "Node Property"
+    - Keys - use Business primary keys only
+       - remove technical primary keys, keep business primary keys.
+    - Foreign keys to Relationships
+      - replace foreign keys to the other table with relationships, remove them afterwards.
+    - No defaults / NULLs 
+      - remove data with default values, no need to store those.
+    - Clean up data 
+      - duplicate data in denormalized tables might have to be pulled out into separate nodes to get a cleaner model.
+    - Index Columns to Array
+      - indexed column names (like email1, email2, email3) might indicate an array property.
+    - Join tables to Relationships
+      - join tables are transformed into relationships, columns on those tables become relationship properties.
+
+## Downloading and getting started
+
+For neo4j there are several components:
+
+- a *server*, the "graph database" (can be extended with plugins/add-ons, like "apoc" and "GDS" etc)
+- a *desktop client*, an environment for writing queries and working with data
+- various *bindings*, making it possible to write and read data from R, python, databases etc
+
+A customized container image for KTH can be found here:
+
+- <https://github.com/KTH-Library/neo4kth>
+
+## Loading data
+
+Can be loaded from Desktop client, using bindings or bulk loaded on server.
+
+Using R: https://github.com/neo4j-rstats/neo4r
+
+Using Python: https://towardsdatascience.com/neo4j-cypher-python-7a919a372be7
+
+Using CLI: https://neo4j.com/developer/guide-import-csv/  
+
+## neo4j with KTH data
+
+- `neo4j` can be used as a data processing components to meet specific needs for "graph analytics"
+
+- similar to what `igraph` (Python, R) offers
+
+- in this case using dockerized `neo4j` setup with `neosemantics/n10s`, `gds` and `apoc`
+
+- CLI tools like `neo4j-admin` which allows bulk loading, using data provided from "diva" R-package
+
+- Loading data from "object storage", in our case minio at bibliometrics.lib.kth.se
+
+##
+
+![Object storage for "kth-corpus" data](https://cdn-images-1.medium.com/max/2400/1*J2HzmPjqrShI6y19UlC0qg.png){height=500}
+
+## Loading data w CYPHER
+
+CYPHER; Load from S3 url (minio) and write to database using label "Issue":
+
+    LOAD CSV WITH HEADERS FROM "http://bibliometrics.lib.kth.se:9000/bibliometrics/swepub-checks.tsv?Content-Disposition=attachment%3B%20filename%3D%22swepub-checks.tsv%22&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=librarian%2F20210421%2F%2Fs3%2Faws4_request&X-Amz-Date=20210421T123325Z&X-Amz-Expires=432000&X-Amz-SignedHeaders=host&X-Amz-Signature=464d66fa726500b7822674f19c2636aa56d2103ff2929cd5b55311063ecc6251"  as row FIELDTERMINATOR '\t' 
+    CREATE (:Issue {result: row.validation_result, year: toInteger(row.publication_year), flag: row.flag_type, old: row.value, new: row.new_value})
+
+    # inspect results
+    MATCH (n:Issue) RETURN n LIMIT 25
+
+## Bulk loading (larger data)
+
+See `diva::neo4j_bulk_extract()` for steps required for bulk loading corpus data from KTH.
+
+This provides the data files used by docker image `kthb/neo4kth` used in its [startup command](https://github.com/KTH-Library/neo4kth/blob/main/docker-compose.yml#L15)
+
+## Next steps
+
+Learning by doing:
+
+- Install neo4j 
+- Load some data
+- Make a query
+- List questions, needs, thoughts
