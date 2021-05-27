@@ -73,18 +73,18 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 
 ##
 
+![Analytical data flow](overview.svg){width=800;}
+
+##
+
 ![Källa: KTHB/PIMS](data-overview-kthb.png){height=500px}
 
 ## Exempel på dataflöde
 
 - Lägg upp data
 - Använd i en app
-- Följ länk till https://kth-library.github.io/update/analytics.html#9 (kräver lösen)
 
-##
-
-![Analytical data flow](overview.svg){width=800;}
-
+![S3 Object Storage](minio.png)
 
 ## Gruppdiskussion
 
