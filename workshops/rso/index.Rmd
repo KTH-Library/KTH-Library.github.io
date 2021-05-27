@@ -81,6 +81,11 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 - Använd i en app
 - Följ länk till https://kth-library.github.io/update/analytics.html#9 (kräver lösen)
 
+##
+
+![Analytical data flow](overview.svg){width=800;}
+
+
 ## Gruppdiskussion
 
   - Hur arbetar projektet med data/dataflöden? (10 min) 
