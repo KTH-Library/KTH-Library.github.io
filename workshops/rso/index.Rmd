@@ -1,0 +1,95 @@
+---
+title: 'Workshop RSO / KTHB'
+author: ""
+date: '2021-05-27'
+output:
+  ioslides_presentation:
+    css: assets/css/styles.css
+    logo: assets/img/logo.svg
+    mathjax: default
+    self-contained: yes
+    transition: slower
+    widescreen: yes
+  beamer_presentation: default
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(ktheme)
+library(webshot)
+
+red <- function(txt) 
+  sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["cerise"]), txt)
+
+#webshot::install_phantomjs()
+#unlink("retrosearch-screenshot.png")
+
+suppressPackageStartupMessages(library(magick))
+
+# BG images that could be used
+
+```
+
+## Agenda
+
+- ÅBU-appen
+- Dataflöden
+- Gruppdiskussion i smågrupper
+  - Kan vi komplettera appen med andra datakällor/dataflöden?
+  - Vilka andra manuella analyser skulle vi kunna automatisera på liknande sätt?
+- Summering
+
+<!--
+https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812 
+-->
+
+# Demo av ÅBU-appen
+
+- Normering
+- Fokus för olika delar av appen
+- Författarbaserad/authorbased [authorbased ABM](https://bibliometrics.lib.kth.se/beta/authorbased)
+
+## Dataflöden
+
+- Datakällor som används är exv:
+
+  - BIBMET-databaser
+  - DiVA
+  - Altmetrics
+  - HR-data från KTHs APIer och HR-export
+  - Object storage (med minio)
+
+- Entiteter:
+
+  - Forskare
+  - Organisationer på KTH
+  - Publikationer
+
+##
+
+![Källa: https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007](https://cdn.hackernoon.com/hn-images/1*7IMev5xslc9FLxr9hHhpFw.png){height=500px}
+#
+
+##
+
+![Källa: KTHB/PIMS](data-overview-kthb.png){height=500px}
+
+## Exempel på dataflöde
+
+- Lägg upp data
+- Använd i en app
+- Följ länk till https://kth-library.github.io/update/analytics.html#9 (kräver lösen)
+
+## Gruppdiskussion
+
+  - Hur arbetar projektet med data/dataflöden? (10 min) 
+  - Vilka datakällor används?
+  - Hur kan de återanvändas i RSO-sammanhang?
+  - Exempel (hur kombinera datakällor, göra en ny app)
+  
+## Automatiserade analyser
+
+## Summering
+
+Presentation av gruppdiskussion
