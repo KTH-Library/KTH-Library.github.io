@@ -36,8 +36,8 @@ suppressPackageStartupMessages(library(magick))
 - ÅBU-appen
 - Dataflöden
 - Gruppdiskussion i smågrupper
-  - Kan vi komplettera appen med andra datakällor/dataflöden?
-  - Vilka andra manuella analyser skulle vi kunna automatisera på liknande sätt?
+  - Vilka datakällor/dataflöden använder du som vore intressanta att samköra med det som visats?
+  - Vilka manuella analyser och rapporter producerar du som vore intressanta att automatisera?
 - Summering
 
 <!--
@@ -82,7 +82,9 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 - Analysbehov  
   Mottagare/använder 
 
+## Exempel på dataflöde (data om forskare från HR)
 
+![Data från HR](buckets.png){height=500px}
 
 ## Nätverksbild (flöden)
 
