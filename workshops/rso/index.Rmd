@@ -46,12 +46,16 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 
 ## Bakgrund & bibliometrisk användning
 
-- Resursfördelning
+Exempel på användning av bibiometriska data
+
+- Resursfördelning (nationellt och inom KTH)
 - Ranking
 - Uppföljning inom KTH
 - RAE
+- Projektansökningar
 
-*Leveranser*:
+**Leveranser**:  
+
 - Rapportunderlag
 - ÅBU (app)
 - Ad-hoc analys
@@ -60,8 +64,8 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 
 - Normering
 - Fokus för olika delar av appen
-- [ÅBU](https://kth.se/abm)
-- Författarbaserad/authorbased [authorbased ABM](https://bibliometrics.lib.kth.se/beta/authorbased)
+- Årlig bibliometrisk uppföljning: [ÅBU/ABM](https://kth.se/abm)
+- Personalbaserad ÅBU: [authorbased ABM](https://bibliometrics.lib.kth.se/beta/authorbased)
 
 ## Dataflöden (intro)
 
@@ -72,43 +76,38 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
   Hur flyttar/reser data inom organisationen eller för olika behov.
   
 - Entiteter  
-  Vad har vi data om?
-
   - Forskare
   - Organisationer på KTH
   - Publikationer
   - Indikatorer
   
 - Analysbehov  
-  Mottagare/använder 
-
+ "Slutanvändare" och beroende av data och fungerande dataflöden 
 
 
 ## Nätverksbild (flöden)
 
 (edotor-bild)
 
-## Framtidsblick (dataflöden/tjänster)
+## Utblick - dataflöden & tjänster
 
-- Vad är poängen med dataflöden?  
+- Vad är poängen med dataflöden?  <img align="right" height="200" src="minio.png">
     - transparens & tillgänglighet
     - reproducerbarhet
-    - analys
+    - analytics
     - standardisering
-- Infrastruktur
+- Infrastruktur   <img align="right" height="300" src="https://cdn.hackernoon.com/hn-images/1*7IMev5xslc9FLxr9hHhpFw.png">
   - Datatillgänglighet
   - Object storage (S3)
+  - Knyta samman datakällor
 
-![S3 Object Storage](minio.png){height=200px}
-![Källa: https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007](https://cdn.hackernoon.com/hn-images/1*7IMev5xslc9FLxr9hHhpFw.png){height=200px}
+<!-- ![Källa: https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007](https://cdn.hackernoon.com/hn-images/1*7IMev5xslc9FLxr9hHhpFw.png){height=200px} -->
 
 ## Gruppdiskussion
 
-  - Hur arbetar projektet med data/dataflöden? (10 min) 
-  - Vilka datakällor används?
-  - Hur kan de återanvändas i RSO-sammanhang?
-  - Exempel (hur kombinera datakällor, göra en ny app)
-  - Vad har ni som kan lägga in i Minio för tester?
+  - Kan vi komplettera vår app eller andra appar med era datakällor?
+  - Vilka manuella analyser kan automatiseras på liknande sätt?
+  - Vilka data har ni att lägga in i Minio för tester (som kopplar KTHs grundenheter; kthid, org-sluggar etc)?
 
 ##
 
