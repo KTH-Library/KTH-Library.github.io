@@ -88,7 +88,7 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 
 ## Nätverksbild (flöden)
 
-(edotor-bild)
+![Dataflöden](dataflow.png){height=500px}
 
 ## Framtidsblick (dataflöden/tjänster)
 
