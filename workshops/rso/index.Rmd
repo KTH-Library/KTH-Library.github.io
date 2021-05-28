@@ -36,8 +36,8 @@ suppressPackageStartupMessages(library(magick))
 - ÅBU-appen
 - Dataflöden
 - Gruppdiskussion i smågrupper
-  - Kan vi komplettera appen med andra datakällor/dataflöden?
-  - Vilka andra manuella analyser skulle vi kunna automatisera på liknande sätt?
+  - Vilka datakällor/dataflöden använder du som vore intressanta att samköra med det som visats?
+  - Vilka manuella analyser och rapporter producerar du som vore intressanta att automatisera?
 - Summering
 
 <!--
@@ -62,8 +62,6 @@ Exempel på användning av bibiometriska data
 
 # Demo av ÅBU-appen
 
-- Normering
-- Fokus för olika delar av appen
 - Årlig bibliometrisk uppföljning: [ÅBU/ABM](https://kth.se/abm)
 - Personalbaserad ÅBU: [authorbased ABM](https://bibliometrics.lib.kth.se/beta/authorbased)
 
@@ -84,10 +82,13 @@ Exempel på användning av bibiometriska data
 - Analysbehov  
  "Slutanvändare" och beroende av data och fungerande dataflöden 
 
+## Exempel på dataflöde (data om forskare från HR)
+
+![Data från HR](buckets.png){height=500px}
 
 ## Nätverksbild (flöden)
 
-(edotor-bild)
+![Dataflöden](dataflow.png){height=500px}
 
 ## Utblick - dataflöden & tjänster
 
