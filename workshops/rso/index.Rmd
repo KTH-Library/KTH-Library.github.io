@@ -65,27 +65,22 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 
 ## Dataflöden (intro)
 
-- Datakällor
+- Datakällor  
   Strukturerade data inom och utanför KTH
 
-- Dataflöden 
+- Dataflöden   
   Hur flyttar/reser data inom organisationen eller för olika behov.
   
-- Entiteter
-  Data
+- Entiteter  
+  Vad har vi data om?
 
   - Forskare
   - Organisationer på KTH
   - Publikationer
-
-
-- Datakällor som används är exv:
-
-  - BIBMET-databaser
-  - DiVA
-  - Altmetrics
-  - HR-data från KTHs APIer och HR-export
-  - Object storage (med minio)
+  - Indikatorer
+  
+- Analysbehov  
+  Mottagare/använder 
 
 
 
@@ -95,8 +90,17 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 
 ## Framtidsblick (dataflöden/tjänster)
 
-- Miniobild?
-- hierarchy of needs
+- Vad är poängen med dataflöden?  
+    - transparens & tillgänglighet
+    - reproducerbarhet
+    - analys
+    - standardisering
+- Infrastruktur
+  - Datatillgänglighet
+  - Object storage (S3)
+
+![S3 Object Storage](minio.png){height=200px}
+![Källa: https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007](https://cdn.hackernoon.com/hn-images/1*7IMev5xslc9FLxr9hHhpFw.png){height=200px}
 
 ## Gruppdiskussion
 
@@ -107,7 +111,7 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 
 ##
 
-![Källa: https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007](https://cdn.hackernoon.com/hn-images/1*7IMev5xslc9FLxr9hHhpFw.png){height=500px}
+
 #
 
 ##
@@ -123,7 +127,7 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 - Lägg upp data
 - Använd i en app
 
-![S3 Object Storage](minio.png)
+
 
 
   
