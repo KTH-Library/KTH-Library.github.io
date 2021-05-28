@@ -86,7 +86,7 @@ Exempel på användning av bibiometriska data
 
 ![Data från HR](buckets.png){height=500px}
 
-## Nätverksbild (flöden)
+## Dataflöden i ÅBU-projektet
 
 ![Dataflöden](dataflow.png){height=500px}
 
