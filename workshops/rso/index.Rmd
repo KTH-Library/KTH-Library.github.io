@@ -44,13 +44,25 @@ suppressPackageStartupMessages(library(magick))
 https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812 
 -->
 
+## Bakgrund & bibliometrisk användning
+
+- Resursfördelning
+- Ranking
+- Uppföljning inom KTH
+- RAE
+
+*Leveranser*:
+- Rapportunderlag
+- ÅBU (app)
+- Ad-hoc analys
+
 # Demo av ÅBU-appen
 
 - Normering
 - Fokus för olika delar av appen
 - Författarbaserad/authorbased [authorbased ABM](https://bibliometrics.lib.kth.se/beta/authorbased)
 
-## Dataflöden
+## Dataflöden (intro)
 
 - Datakällor som används är exv:
 
@@ -65,6 +77,15 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
   - Forskare
   - Organisationer på KTH
   - Publikationer
+
+## Nätverksbild (flöden)
+
+(edotor-bild)
+
+## Framtidsblick (dataflöden/tjänster)
+
+- Miniobild?
+- hierarchy of needs
 
 ##
 
