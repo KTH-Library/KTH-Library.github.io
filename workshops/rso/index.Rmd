@@ -60,9 +60,24 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 
 - Normering
 - Fokus för olika delar av appen
+- [ÅBU](https://kth.se/abm)
 - Författarbaserad/authorbased [authorbased ABM](https://bibliometrics.lib.kth.se/beta/authorbased)
 
 ## Dataflöden (intro)
+
+- Datakällor
+  Strukturerade data inom och utanför KTH
+
+- Dataflöden 
+  Hur flyttar/reser data inom organisationen eller för olika behov.
+  
+- Entiteter
+  Data
+
+  - Forskare
+  - Organisationer på KTH
+  - Publikationer
+
 
 - Datakällor som används är exv:
 
@@ -72,11 +87,7 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
   - HR-data från KTHs APIer och HR-export
   - Object storage (med minio)
 
-- Entiteter:
 
-  - Forskare
-  - Organisationer på KTH
-  - Publikationer
 
 ## Nätverksbild (flöden)
 
@@ -86,6 +97,13 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 
 - Miniobild?
 - hierarchy of needs
+
+## Gruppdiskussion
+
+  - Hur arbetar projektet med data/dataflöden? (10 min) 
+  - Vilka datakällor används?
+  - Hur kan de återanvändas i RSO-sammanhang?
+  - Exempel (hur kombinera datakällor, göra en ny app)
 
 ##
 
@@ -107,12 +125,7 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 
 ![S3 Object Storage](minio.png)
 
-## Gruppdiskussion
 
-  - Hur arbetar projektet med data/dataflöden? (10 min) 
-  - Vilka datakällor används?
-  - Hur kan de återanvändas i RSO-sammanhang?
-  - Exempel (hur kombinera datakällor, göra en ny app)
   
 ## Automatiserade analyser
 
