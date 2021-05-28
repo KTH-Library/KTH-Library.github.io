@@ -108,6 +108,7 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
   - Vilka datakällor används?
   - Hur kan de återanvändas i RSO-sammanhang?
   - Exempel (hur kombinera datakällor, göra en ny app)
+  - Vad har ni som kan lägga in i Minio för tester?
 
 ##
 
