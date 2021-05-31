@@ -31,7 +31,7 @@ suppressPackageStartupMessages(library(magick))
 
 ```
 
-## Agenda
+## Agenda {data-background=assets/bg/kth-6.png data-background-size=cover}
 
 - ÅBU-appen (10 min)
 - Dataflöden (10 min)
@@ -80,19 +80,23 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
   
 ## Dataflöden i ÅBU-projektet
 
+<center>
 ![Dataflöden](dataflow.png){height=500px;align='middle'}
+</center>
 
-## Externa datakällor
+## Andra tillgängliga datakällor
 
+<center>
 ![](kth-datasources.png){height=500px}
+</center>
 
-## Gruppdiskussion (15 min)
+## Gruppdiskussion (15 min) {data-background=assets/bg/office-workspace.png data-background-size=cover}
 
 "Break-out rooms" i Zoom, med frågeställningar:
 
-- Vilken data använder du som vore intressant att samköra eller kombinera med det som visats?
+- __Vilken data använder du som vore intressant att samköra eller kombinera med det som visats?__
 
-- Vilka rutinmässiga underlag, analyser och rapporter producerar du som vore intressanta att automatisera?
+- __Vilka rutinmässiga underlag, analyser och rapporter producerar du som vore intressanta att automatisera?__
 
 Grupperna modereras av Pernilla, Maria, Sofi, Agne, Gaël, Tobias och Markus.
 
@@ -114,14 +118,16 @@ Grupperna modereras av Pernilla, Maria, Sofi, Agne, Gaël, Tobias och Markus.
 <!-- ![Källa: https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007](https://cdn.hackernoon.com/hn-images/1*7IMev5xslc9FLxr9hHhpFw.png){height=200px} -->
 
 
-## Exempel på dataflöde (data om forskare från HR)
+## Exempel på dataflöde
 
-- Infrastruktur   <img align="right" height="200" src="minio.png">
+- Infrastruktur   <img align="right" height="150" src="minio.png">
   - Datatillgänglighet
-  - Object storage (S3)
+  - Mellanlager för data (S3)
   - Knyta samman datakällor
-  
-![HR-data i Minio](buckets.png){height=500px}
+
+<center>
+![HR-data i Minio](buckets.png){height=300px}
+</center>
 
 #
 
