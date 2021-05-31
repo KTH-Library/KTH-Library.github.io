@@ -65,15 +65,16 @@ Exempel på användning av bibiometriska data
 - Årlig bibliometrisk uppföljning: [ÅBU/ABM](https://kth.se/abm)
 - Personalbaserad ÅBU: [authorbased ABM](https://bibliometrics.lib.kth.se/beta/authorbased)
 
-## Dataflöden (intro)
+## Dataflöden
 
 - Datakällor  
   Strukturerade data inom och utanför KTH
 
 - Dataflöden   
-  Hur flyttar/reser data inom organisationen eller för olika behov.
+  Hur flyttar/reser data inom organisationen eller för olika behov?
   
-- Entiteter  
+- Entiteter
+  Används som noder vid analys eller för att knyta ihop data
   - Forskare
   - Organisationer på KTH
   - Publikationer
@@ -84,7 +85,7 @@ Exempel på användning av bibiometriska data
 
 ## Exempel på dataflöde (data om forskare från HR)
 
-![Data från HR](buckets.png){height=500px}
+![HR-data i Minio](buckets.png){height=500px}
 
 ## Dataflöden i ÅBU-projektet
 
