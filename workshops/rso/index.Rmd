@@ -36,9 +36,10 @@ suppressPackageStartupMessages(library(magick))
 - ÅBU-appen
 - Dataflöden
 - Gruppdiskussion i smågrupper
-  - Vilka datakällor/dataflöden använder du som vore intressanta att samköra med det som visats?
-  - Vilka manuella analyser och rapporter producerar du som vore intressanta att automatisera?
-- Summering
+  - Vilka dataset/dataflöden använder du som vore intressanta att samköra med det som visats?
+  - Vilka rutinmässiga underlag, analyser och rapporter producerar du som vore intressanta att automatisera?
+- Presentation av gruppdiskussion
+- Summering & uppsamlande diskussion
 
 <!--
 https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812 
@@ -46,7 +47,7 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 
 ## Bakgrund & bibliometrisk användning
 
-Exempel på användning av bibiometriska data
+**Exempel på användning av bibliometriska data:** 
 
 - Resursfördelning (nationellt och inom KTH)
 - Ranking
@@ -58,14 +59,14 @@ Exempel på användning av bibiometriska data
 
 - Rapportunderlag
 - ÅBU (app)
-- Ad-hoc analys
+- Besvara skräddarsydda analysförfrågningar
 
 # Demo av ÅBU-appen
 
 - Årlig bibliometrisk uppföljning: [ÅBU/ABM](https://kth.se/abm)
 - Personalbaserad ÅBU: [authorbased ABM](https://bibliometrics.lib.kth.se/beta/authorbased)
 
-## Dataflöden
+## Data
 
 - Datakällor  
   Strukturerade data inom och utanför KTH
@@ -73,7 +74,7 @@ Exempel på användning av bibiometriska data
 - Dataflöden   
   Hur flyttar/reser data inom organisationen eller för olika behov?
   
-- Entiteter
+- Dataklasser / entiteter  
   Används som noder vid analys eller för att knyta ihop data
   - Forskare
   - Organisationer på KTH
@@ -81,7 +82,7 @@ Exempel på användning av bibiometriska data
   - Indikatorer
   
 - Analysbehov  
- "Slutanvändare" och beroende av data och fungerande dataflöden 
+ "Slutanvändare"; är beroende av data och fungerande dataflöden för att besvara frågeställningar 
 
 ## Exempel på dataflöde (data om forskare från HR)
 
@@ -90,6 +91,7 @@ Exempel på användning av bibiometriska data
 ## Dataflöden i ÅBU-projektet
 
 ![Dataflöden](dataflow.png){height=500px}
+Lägg till Github-bild av repon
 
 ## Utblick - dataflöden & tjänster
 
@@ -109,7 +111,7 @@ Exempel på användning av bibiometriska data
 
   - Kan vi komplettera vår app eller andra appar med era datakällor?
   - Vilka manuella analyser kan automatiseras på liknande sätt?
-  - Vilka data har ni att lägga in i Minio för tester (som kopplar KTHs grundenheter; kthid, org-sluggar etc)?
+  - Vilka data har ni att dela med oss (som kopplar KTHs grundenheter; kthid, org-sluggar etc)?
 
 ##
 
