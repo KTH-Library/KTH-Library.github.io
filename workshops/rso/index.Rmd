@@ -1,7 +1,7 @@
 ---
 title: 'Workshop RSO / KTHB'
 author: ""
-date: '2021-05-27'
+date: '2021-06-01'
 output:
   ioslides_presentation:
     css: assets/css/styles.css
@@ -33,13 +33,13 @@ suppressPackageStartupMessages(library(magick))
 
 ## Agenda
 
-- ÅBU-appen
-- Dataflöden
-- Gruppdiskussion i smågrupper
+- ÅBU-appen (10 min)
+- Dataflöden (10 min)
+- Gruppdiskussion i smågrupper (15 min)
   - Vilka dataset/dataflöden använder du som vore intressanta att samköra med det som visats?
   - Vilka rutinmässiga underlag, analyser och rapporter producerar du som vore intressanta att automatisera?
-- Presentation av gruppdiskussion
-- Summering & uppsamlande diskussion
+- Presentation av gruppdiskussion (3 min per grupp)
+  - Summering & uppsamlande diskussion
 
 <!--
 https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812 
@@ -66,77 +66,65 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 - Årlig bibliometrisk uppföljning: [ÅBU/ABM](https://kth.se/abm)
 - Personalbaserad ÅBU: [authorbased ABM](https://bibliometrics.lib.kth.se/beta/authorbased)
 
-## Data
+## Data för verksamhetens behov
 
-- Datakällor  
-  Strukturerade data inom och utanför KTH
+- Datakällor - Strukturerade data inom och utanför KTH
 
-- Dataflöden   
-  Hur flyttar/reser data inom organisationen eller för olika behov?
+- Dataflöden - Hur flyttar/reser data inom organisationen eller för olika behov?
   
-- Dataklasser / entiteter  
-  Används som noder vid analys eller för att knyta ihop data
-  - Forskare
-  - Organisationer på KTH
-  - Publikationer
-  - Indikatorer
+- Dataklasser / entiteter - Används som noder vid analys eller för att knyta ihop data
+  - **Forskare**
+  - **Organisationer på KTH**
+  - **Publikationer**
+  - **Indikatorer**
   
-- Analysbehov  
- "Slutanvändare"; är beroende av data och fungerande dataflöden för att besvara frågeställningar 
-
-## Exempel på dataflöde (data om forskare från HR)
-
-![HR-data i Minio](buckets.png){height=500px}
-
 ## Dataflöden i ÅBU-projektet
 
-![Dataflöden](dataflow.png){height=500px}
-Lägg till Github-bild av repon
+![Dataflöden](dataflow.png){height=500px;align='middle'}
+
+## Externa datakällor
+
+![](kth-datasources.png){height=500px}
+
+## Gruppdiskussion (15 min)
+
+"Break-out rooms" i Zoom, med frågeställningar:
+
+- Vilken data använder du som vore intressant att samköra eller kombinera med det som visats?
+
+- Vilka rutinmässiga underlag, analyser och rapporter producerar du som vore intressanta att automatisera?
+
+Grupperna modereras av Pernilla, Maria, Sofi, Agne, Gaël, Tobias och Markus.
+
+> Förbered i gruppen en 3 min presentation av diskussionerna.
+
+# Presentation av gruppdiskussion och summering
+
+
 
 ## Utblick - dataflöden & tjänster
 
-- Vad är poängen med dataflöden?  <img align="right" height="200" src="minio.png">
+- Vad är poängen med dataflöden?  <img align="right" height="300" src="https://cdn.hackernoon.com/hn-images/1*7IMev5xslc9FLxr9hHhpFw.png">
     - transparens & tillgänglighet
     - reproducerbarhet
     - analytics
     - standardisering
-- Infrastruktur   <img align="right" height="300" src="https://cdn.hackernoon.com/hn-images/1*7IMev5xslc9FLxr9hHhpFw.png">
-  - Datatillgänglighet
-  - Object storage (S3)
-  - Knyta samman datakällor
+
 
 <!-- ![Källa: https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007](https://cdn.hackernoon.com/hn-images/1*7IMev5xslc9FLxr9hHhpFw.png){height=200px} -->
 
-## Gruppdiskussion
 
-  - Kan vi komplettera vår app eller andra appar med era datakällor?
-  - Vilka manuella analyser kan automatiseras på liknande sätt?
-  - Vilka data har ni att dela med oss (som kopplar KTHs grundenheter; kthid, org-sluggar etc)?
+## Exempel på dataflöde (data om forskare från HR)
 
-##
-
+- Infrastruktur   <img align="right" height="200" src="minio.png">
+  - Datatillgänglighet
+  - Object storage (S3)
+  - Knyta samman datakällor
+  
+![HR-data i Minio](buckets.png){height=500px}
 
 #
 
 ##
 
-![Analytical data flow](overview.svg){width=800;}
-
-##
-
 ![Källa: KTHB/PIMS](data-overview-kthb.png){height=500px}
-
-## Exempel på dataflöde
-
-- Lägg upp data
-- Använd i en app
-
-
-
-
-  
-## Automatiserade analyser
-
-## Summering
-
-Presentation av gruppdiskussion
