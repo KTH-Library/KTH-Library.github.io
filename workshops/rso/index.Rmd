@@ -49,7 +49,7 @@ https://intra.kth.se/itm/nyheter/mikael-ostling-rankingens-krigare-1.1075812
 
 **Exempel på användning av bibliometriska data:** 
 
-- Resursfördelning (nationellt och inom KTH)
+- Resursfördelning (internationellt, nationellt och inom KTH)
 - Ranking
 - Uppföljning inom KTH
 - RAE
