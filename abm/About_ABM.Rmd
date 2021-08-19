@@ -1,0 +1,80 @@
+---
+title: "About ABM"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::robobook:
+    highlight: kate
+---
+
+
+```{r setup, include=FALSE}
+library(knitr)
+library(rmdformats)
+
+## Global options
+options(max.print="75")
+opts_chunk$set(echo=FALSE,
+	             cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+opts_knit$set(width=75)
+```
+
+# Background and contact information
+
+
+## What is the aim of Annual Bibliometric Monitoring at KTH?
+
+The ABM at KTH contains statistics on publication output, citation impact and co-publishing.
+
+In the KTH strategic plan 2013-2016 it is stated that the number of citations should increase by 25%. ABM can then be used as a basis for understanding how one’s own activities contribute to this goal. The ABM, together with goals regarding publishing and citation will be a part of the schools’ operational agreements and to be followed up in the school dialogues.
+
+- https://intra.kth.se/en/forskning/publicering-och-bibl/arlig-bibliometrisk-uppfoljning-1.549239
+
+## Organizational levels
+
+The ABM is available at different levels, for KTH in total, schools, departments and individual researchers. Results for the schools and departments are open for all, but to see the individual ABM you will need to login. The report is the same at all levels.
+
+## Which publications are included in ABM?
+
+Only publications registered in DiVA that researchers have published when working at KTH are included. Only KTH-affiliated publications are taken into account.
+
+## Contact information
+
+If you have questions about the ABM at KTH please contact <mailto:biblioteket@kth.se>
+
+This form can also be used to submit a question:
+
+- https://www.kth.se/biblioteket/anvanda-biblioteket/oppettider-kontakt/kontaktformular-1.863120
+
+Read more about other ways to get in touch here:
+
+- https://www.kth.se/biblioteket/anvanda-biblioteket/oppettider-kontakt
+
+# Data sources and attribution
+
+ABM is based on data in BIBMET, which in turn collates data from other reference sources, including Web Of Science and Scopus.
+
+The bibliometric indicators referred are based on publications registered in DiVA and published 2013 to 2019. Only publications which have been affiliated to KTH are included. This means that publications written by a researcher before she/he was employed at KTH, and that are not affiliated to KTH, will not be included in the statistics.
+
+Statistics regarding citations and co‑publishing are based on the subset of publications in DiVA that are registered in Web of Science (Citation impact, Journal impact and Co‑publishing tabs) or Scopus (Scopus tab).
+
+## Attribution and redistribution rights for Web Of Science data
+
+Certain data included in the Annual Bibliometric Monitoring report are derived from the © Science Citation Index Expended (SCIE), Social Sciences Citation Index (SSCI), Arts & Humanities Citation Index (AHCI), Conference Proceedings Citation Index - Sciences (CPCI-S) and Conference Proceedings Citation Index - Social Sciences & Humanities (CPCI -SSH) (2021) of Clarivate Analytics (US) LLC. All rights reserved. No part of these materials may be reproduced, stored in a retrieval system or transmitted in any form or by any means, including electronic, mechanical, photographic, magnetic or other means without the expressed permission of the KTH Library.
+
+
+# Further information
+
+- [Guide to the Annual Bibliometric Monitoring at KTH](ABM_guide.html){target="_blank"}
+- [Description of data, methods and indicators in KTH Annual Bibliometric Monitoring](Description_data_and_methods_ABM.pdf){target="_blank"}
+- [Formal definitions of field normalized citation indicators at KTH](Formal_definitions_field_normalized_citation.pdf){target="_blank"}
+- [Information about DiVA and the registration process - Handle publications in DiVA](https://www.kth.se/en/biblioteket/publicera-analysera/hantera-publikationer){target="_blank"}
+- [President decision about the Annual Bibliometric Monitoring](Beslut_ABM.html){target="_blank"}
+- [Report on Open Access publishing at KTH](OARapport.pdf){target="_blank"}
+
+For further questions, contact the KTH Library at [biblioteket@kth.se](mailto:biblioteket@kth.se).
+
