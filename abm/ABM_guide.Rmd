@@ -1,13 +1,19 @@
 ---
-title: ""
+title: "ABM User Guide"
 date: "`r Sys.Date()`"
 output:
-  rmdformats::robobook:
-    highlight: kate
+  rmdformats::html_clean:
+    theme:
+      base_font: !expr bslib::font_google("Open Sans")
+    toc: true
 ---
 
-
 ```{r setup, include=FALSE}
+
+# output:
+#   rmdformats::robobook:
+#     highlight: kate
+
 library(knitr)
 library(rmdformats)
 
@@ -82,12 +88,12 @@ The overview at the KTH, school and department level is available to
 everyone, except for the button for publication list download which is
 only available for logged in KTH users.
 
-![](media/image1.png)
+![](media/image1.png){width=100%}
 
 The individual view, only available to the researcher, also includes a
 link to edit publications in DiVA.
 
-![](media/image2.png)
+![](media/image2.png){width=100%}
 
 ## Publications in DiVA
 
@@ -102,7 +108,7 @@ treated with caution.
 All numbers on this tab are based on fractionalized counts. The graphs
 show the same information as the table.
 
-![](media/image3.png)
+![](media/image3.png){width=100%}
 
 ## Citation impact
 
@@ -138,7 +144,7 @@ table is presented with overlapping three-year periods. Indicators based
 on a small number of publications should still be interpreted with
 caution.
 
-![](media/image4.png)
+![](media/image4.png){width=100%}
 
 ## Journal impact
 
@@ -159,7 +165,7 @@ indicators are often seen as a proxy of the quality of publication
 channels. JCf is also used as a part of the model for allocating KTH
 funding to the schools.
 
-![](media/image5.png)
+![](media/image5.png){width=100%}
 
 ## Co-publishing 
 
@@ -173,7 +179,7 @@ at least one address belonging to a Swedish organization outside
 academia while an International co-publication is a publication with at
 least two countries in the Web of Science addresses field.
 
-![](media/image6.png)
+![](media/image6.png){width=100%}
 
 ## Open Access
 
@@ -187,7 +193,7 @@ The statuses are presented as defined by Unpaywall. For further
 information, see "[What do the types of oa status
 mean?](https://support.unpaywall.org/support/solutions/articles/44001777288-what-do-the-types-of-oa-status-green-gold-hybrid-and-bronze-mean-)" at the unpaywall.org support portal.
 
-![](media/image7.png)
+![](media/image7.png){width=100%}
 
 [^1]: Included indices: Science Citation Index Expended (SCIE), Social
     Sciences Citation Index (SSCI), Arts &Humanities Citation Index

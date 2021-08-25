@@ -8,6 +8,12 @@ rmd <- fs::path_abs("abm/ABM_guide.Rmd")
 pandoc_convert(docx, to = "markdown", output = rmd, options=c("--extract-media=."))
 render(rmd, output_format = "html_document")
 
+docx <- fs::path_abs("abm/Formal definitions of field normalized citation indicators at KTH.docx")
+rmd <- fs::path_abs("abm/indicators.Rmd")
+pandoc_convert(docx, to = "markdown", output = rmd, options=c("--extract-media=."))
+render(rmd, output_format = "html_document")
+
+
 # OCR and conversion of PDF file to HTML
 
 library(magick)
@@ -29,8 +35,6 @@ cat(beslut[1])
 
 # [x] Guide to the Annual Bibliometric Monitoring at KTH
 # [x] President decision about the Annual Bibliometric Monitoring
-
-
 
 # [] Description of data, methods and indicators in KTH Annual Bibliometric Monitoring
 # [] Formal definitions of field normalized citation indicators at KTH

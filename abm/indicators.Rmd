@@ -1,0 +1,277 @@
+---
+title: "Field normalized citation indicators"
+date: "Per Ahlgren and Peter Sjögårde, 2015-02-17"
+output:
+  rmdformats::html_clean:
+    theme:
+      base_font: !expr bslib::font_google("Open Sans")
+    toc: true
+---
+
+> Formal definitions of field normalized citation indicators and their implementation at KTH Royal Institute of Technology
+
+# Introduction
+
+This document describes the calculation of bibliometric indicators based
+on field normalization in the bibliometric database at KTH (Bibmet),
+which is based on Web of Science data. The indicators are described in
+Part 1 and aspects regarding implementation in the KTH database are
+addressed in Part 2.
+
+The following indicators are defined in this document:
+
+-   mean field normalized citation rate (cf)
+
+-   top10% publications (ptop10%)
+
+-   mean field normalized journal impact (jcf)
+
+-   proportion publications in the 20% most frequently cited journals in
+    the field (jtop20%)
+
+# Part 1 Definitions
+
+This document treats the case, in which fractional counts are used in
+the calculations of indicator values. In case whole counts should be
+used in the calculations, *a~i~* in Eq. (1) below is set to unity.
+
+Let A be a unit of analysis, and *n* the number of publications for A.
+Let *r~i~* be the number of authors of the *i*th publication for A. Let
+*a~i~* be the *fraction* A has of the *i*th publication. We consider two
+cases.
+
+(**1**) A is an organization. We treat two subcases. (**1.1**) *a~i~* is
+the *author* fraction A has of the *i*th publication and is defined as
+
+where *m~i~* is the number of authors affiliated to A regarding the
+*i*th publication, and *s~j~* the number of affiliations of the *j*th of
+these A authors. Note that the right-hand side in Eq. (1) is equal to
+when each A author has exactly one affiliation. (**1.2**) *a~i~* is the
+*organization* fraction A has of the *i*th publication and is defined as
+the number of occurrences of A's name in the address field of the *i*th
+publication divided by the total number organization name occurrences in
+the address field in question.
+
+(**2**) A is an individual author. *a~i~* is the *author* fraction A has
+of the *i*th publication and is in this case defined as.
+
+**1.1 Mean field normalized citation rate**
+
+We define the *mean field normalized citation rate* for A, *mcf*(A), as
+
+\(2\)
+
+where *q~i~* (*c~i~*) is the number of subject categories (the citation
+rate) of the *i*th publication for A, *m~iq~* is the number of
+publications, with the same publication year and of the same document
+type as the *i*th publication for A, in the *q*th subject category of
+the *i*th publication of A, and *c~j~* (*F~j~*) the citation rate of the
+*j*th of these publications (the number of subject categories of the
+*j*th of these publications). *µ~iq~* is the *field reference value*
+that the citation rate of the *i*th publication, *c~i~*, is normalized
+against regarding the *q*th subject category of the publication, and the
+normalization gives rise to a *field normalized citation rate* for the
+publication.
+
+**1.2. ptop10%**
+
+We define *ptop10%* for A, *ptop10%(*A), as
+
+\(3\)
+
+where *q~i~* (*c~i~*) is the number of subject categories (the citation
+rate) of the *i*th publication for A, () the proportion
+publications--with respect to the citation distribution, which concerns
+publications with the same publication year and of the same document
+type as the *i*th publication for A, and belonging to the *q*th subject
+category of this publication--with less than *c~i~* (*c~i~* + 1)
+citations.[^1] is the fraction of the *i*th publication with which the
+publication is assigned to the 10% most cited publications. Observe that
+this fraction is weighted by 1/*q~i~*, i.e., by the fraction of the
+publication that belongs to the *q*th subject category. The approach to
+assign fractions of publications to the (for instance) 10% most cited
+publications is described and discussed by Waltman and Schreiber (2013).
+
+**1.3 Mean field normalized journal impact**
+
+We define the *mean field normalized journal impact* for A, *mjcf*(A),
+as
+
+\(4\)
+
+where *jcf~i~* is the *mean field normalized citation rate of the
+journal*, say *J~i~*, *of the i*th *publication*, *p~i~* the number of
+publications in *J~i~*, *c~j~* the citation rate of the *j*th
+publication in *J~i~*, say *P~j~*, *F~ij~* the number of subject
+categories of *P~j~*, *m~jq~* the number of publications, with the same
+publication year and of the same document type as *P~j~*, in the *q*th
+subject category of *P~j~*, and *c~k~* (*F~k~*) the citation rate (the
+number of subject categories) of the *k*th of these publications.
+*µ~jq~* is the field reference value that the citation rate of *P~j~*,
+*c~j~*, is normalized against regarding the *q*th subject category of
+*P~j~*, and the normalization gives rise to a field normalized citation
+rate for *P~j~* (cf. the definition of mean field normalized citation
+rate above). (If *J~i~* is a non-multidisciplinary journal, *F~ij~* =
+*F~i~*~(*j*+1)~ (*j* = 0, 1, ..., *p~i~* -- 1), since the number of
+subject categories of a publication in *J~i~* is then equal to the
+number of subject categories of *J~i~*.)[^2]
+
+**1.4 Proportion publications in the 20% most frequently cited journals
+in the field**
+
+We define the *proportion publications in the 20% most frequently cited
+journals in the field* for A, *jtop20%*(A), as
+
+\(5\)
+
+where *F~i~* is the number of subject categories of the journal, say
+*J~i~*, of the *i*th publication of A, *r~iq~* the rank of *J~i~* in the
+ranking of the journals in the *q*th subject category of *J~i~*, where
+the journals are ranked descending after their mean field normalized
+citation rates[^3], () the proportion publications appearing in the
+journals--regarding the ranking of the journals in the *q*th subject
+category of *J~i~*--with a rank less than or equal to *r~iq~*
+(*r~iq~*--1).[^4] The rightmost factor in is the fraction of *J~i~* with
+which *J~i~* is assigned to the 20% most frequently cited journals in
+the *q*th subject category of *J~i~*. Observe that this fraction is
+weighted by 1/*F~i~*, i.e., by the fraction of *J~i~* that belongs to
+the *q*th subject category. The approach to assign fractions of journals
+to the (for instance) 20% most cited journals is basically the same as
+the assignment approach used in the definition of *ptop10%* (Eq. (3)).
+
+# Part 2 Implementation at KTH Royal Institute of Technology
+
+## 2.1 Database contents
+
+The bibliometric database at KTH (Bibmet) contains the following
+indexes:
+
+-   Science Citation Index Expended (SCIE)
+
+-   Social Sciences Citation Index (SSCI)
+
+-   Arts & Humanities Citation Index (AHCI)
+
+-   Conference Proceedings Citation Index - Sciences (CPCI-S)
+
+-   Conference Proceedings Citation Index - Social Sciences & Humanities
+    (CPCI -SSH)).
+
+SCIE, SSCI, AHCI from 1980 and CPCI-S and CPCI-SSH from 1990.
+
+## 2.2 Document types included in calculations
+
+In Bibmet, calculations are made for all combinations of document types,
+publication years and Web of Science categories. However, the default
+presentation of field normalized citation indicators concern only
+articles and reviews. The reason for excluding other document types is
+the risk for anomalies caused by a low number of publications in the
+reference groups and question marks regarding data quality and citation
+matching (this especially applies to proceedings papers).
+
+## 2.3 Citations included
+
+Citations from all records in the database are included in the
+calculations. The indicators are calculated both with self-citations
+included and excluded. The default presentation is made with
+self-citations excluded, since the intention when calculating citation
+indicators is to see what impact a publication has had on other
+researchers than those who wrote the publication. Furthermore, one
+should avoid giving incentives to systematic self-quotation.
+
+## 2.4 Retroactive changes of the Web of Science subject category assigned to journals
+
+If a journal is reclassified from one Web of Science subject category to
+another by Thomson Reuters (TR), no retroactive changes are made in the
+delivered raw data. However, in Web of Science TR changes the
+classification retroactively. Changes of the classification affect the
+field reference values and consequently the outcome of the calculations
+described in this document. For Bibmet to be consistent with Web of
+Science, retroactive changes of the Web of Science subject categories
+assigned to journals are made in Bibmet.
+
+## 2.5 Reclassification of journals categorized as Multidisciplinary in Web of Science
+
+The large (in terms of publications output) and highly prestigious
+journals Nature, Science and PNAS are classified by TR as
+multidisciplinary. When field normalization is applied the
+classification of these highly cited journals into the same category
+results in very high field reference values for this \"field\". By
+reclassifying publications in journals within the multidisciplinary
+subject category according to their \"real\" topics the publications are
+instead compared to other publications within the same subject field.
+The Swedish Research Council has developed and applied a methodology for
+reclassification of publications within the multidisciplinary Web of
+Science subject category into other categories based on citations
+(Gunnarsson, Fröberg, Jacobsson, & Karlsson, 2011). It enables a higher
+degree of like-to-like comparison. The same methodology is used at KTH.
+
+## 2.6 Exclusion of publication fractions with low field reference values
+
+For all the four indicators defined in Part 1, publication fractions
+with field reference values less than 0.5 are excluded.[^5]
+
+**Example 2.1** (*mcf* and *ptop10%*). Assume that the *i*th publication
+of A, say *P~i~*, belongs to three subject categories and that exactly
+one of these categories has a field reference value less than 0.5
+(regarding publications with the same publication year and of the same
+document type as *P~i~*). For Eq. (2), *a~i~* in the denominator and in
+the numerator are then multiplied by 2/3, and *q~i~* is equal to 2 (and
+not to 3). Thus, the sum of concerns two field normalized citation rates
+for *P~i~*, and the sum is multiplied by 1/2 (and not by
+1/3)$\text{.\ }$
+
+For Eq. (3), under the assumptions given, *a~i~* in the denominator and
+the rightmost sum in the numerator are multiplied by 2/3, and *q~i~* is
+equal to 2 (and not to 3). Thus, the sum concerns two ratios, both of
+which are weighted by 1/2 (and not by 1/3). $\blacksquare$
+
+**Example 2.2** (*mjcf* and *jtop20%*). Assume that the journal, *J~i~*,
+of the *i*th A publication belongs to four subject categories. Assume
+that for the *j*th publication in *J~i~*, say *P~j~*, published a given
+year and of a given document type, two of the four subject categories
+have a field reference value less than 0.5. For Eq. (4), 2/4 is
+subtracted from the denominator of *jcf~i~*, and in its numerator is
+multiplied by 2/4. *F~ij~* is equal to 2 (and not to 4). Thus, the sum
+of concerns two field normalized citation rates for *P~j~*, and the sum
+is multiplied by 1/2 (and not by 1/4).
+
+For *jtop-20%* (Eq. (5)), under the assumptions given, two of the four
+rankings in which *J~i~* occurs are such that *P~j~* does not contribute
+to the mean field normalized citation rates of *J~i~* in the rankings.
+$\blacksquare$
+
+## References
+
+Gunnarsson, M., Fröberg, J., Jacobsson, C., & Karlsson, S. (2011).
+*Subject classification of publications in the ISI database based on
+references and citations* (No. 4).
+
+Waltman, L., & Schreiber, M. (2013). On the calculation of
+percentile-based bibliometric indicators. *Journal of the American
+Society for Information Science and Technology, 64*(2), 372-379.
+
+[^1]: Weights are used for the citation distributions at stake. Each
+    citation value in a given distribution is assigned the weight 1/*k*,
+    where *k* is the number of subject categories of the corresponding
+    publication. The weight is the fraction with which the publication
+    contributes to each of its subject categories. The proportion
+    publications with less than *c* citations is then the sum of the
+    weights for the citation values that are less than *c*, divided by
+    the sum of weights for all the citation values in the distribution.
+
+[^2]: Cf. Section 2.5 below.
+
+[^3]: Note that for a given journal in the ranking, these rates may vary
+    across the different rankings, corresponding to different subject
+    categories, in which the journal occurs.
+
+[^4]: A non-multidisciplinary journal in the ranking contributes, if
+    each of its publications has a field reference value, with respect
+    to the *q*th subject category of *J~i~*, greater than or equal to
+    0.5 (see Section 2 below), with (1/*k*)*m* publications to the
+    ranking, where *k* is the number of subject categories of the
+    journal and *m* the number of publications of the journal.
+
+[^5]: Such field reference values might give rise to very large field
+    normalized citation rates in spite of few citations.

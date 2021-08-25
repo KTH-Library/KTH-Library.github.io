@@ -2,10 +2,11 @@
 title: "Årlig bibliometrisk uppföljning"
 date: "`r Sys.Date()`"
 output:
-  rmdformats::robobook:
-    highlight: kate
+  rmdformats::html_clean:
+    theme:
+      base_font: !expr bslib::font_google("Open Sans")
+    toc: true
 ---
-
 
 ```{r setup, include=FALSE}
 library(knitr)
@@ -265,10 +266,10 @@ presentation of this indicator is by full counts.
 
 # Originalhandlingar
 
-![](media/b2.png)
-![](media/b3.png)
-![](media/b4.png)
-![](media/b5.png)
-![](media/b6.png)
-![](media/b7.png)
-![](media/b8.png)
+![](media/b2.png){width=100%}
+![](media/b3.png){width=100%}
+![](media/b4.png){width=100%}
+![](media/b5.png){width=100%}
+![](media/b6.png){width=100%}
+![](media/b7.png){width=100%}
+![](media/b8.png){width=100%}
