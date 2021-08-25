@@ -1,0 +1,92 @@
+---
+title: "Introduction to Bibliometrics"
+output:
+  rmdformats::html_clean:
+    theme:
+      base_font: !expr bslib::font_google("Open Sans")
+    toc: true  
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(fig.retina=2)
+```
+
+```{r kth_setup, message=FALSE, warning=FALSE, cache=FALSE, echo=FALSE}
+library(ktheme)
+library(tidyverse)
+
+update_geom_font_defaults(font_os)
+```
+
+### Key takeaways
+
+After finishing this module you can expect to:
+
+- Know how both classic bibliometric measurements and altmetrics can be influenced by Open science practices.
+- Be aware of the pitfalls and the advantages of common indicators
+
+### Reflection
+
+What is considered important impact in your field of research? Do you have experience with bibliometric or altmetric evaluation? Write down what the pro:s and con:s are, in your opinion.
+
+Do you believe open science practices influence the impact of a research project in your field?
+
+### Bibliometrics, altmetrics and impact
+
+Research is measured and ranked in a number of different ways. In general, the aim of this is to evaluate research quality. Different research fields and institutions do their assessments in different ways. The impact of a study usually refers to how it influences not only further research, but also how it influences practice and development of products. Depending on your research fields, different things are considered important parts of your impact, including research articles, patents, algorithms, medical treatments, standards and procedures and more. When it comes to measuring the publication output, this is usually referred to as an bibliometricsbibliometric evaluation.
+
+### Bibliometrics
+
+Bibliometrics refers to the practice of applying statistical analysis to publications and citations. Bibliometrics analysis is dependent on good sources of data. The most common database sources are the Clarivate Web of Science from Clarivate and the Elsevier Scopus from Elsevierdatabases. The KTH Bibliometrics team also uses data from the KTH publication repository DiVA to complement these sources.
+
+### Counting publications
+
+The most basic indicator is simply the number of publications. Using the number of publications as a performance indicator is usually combined with lists of publication outlets that are included in the count. An example of a publication count indicator is used in Norway. The Norwegian National Board of Scholarly Publishing (NPU) and NSD - Norwegian Centre for Research Data supply a [list of scientific journals, series and publishers](https://dbh.nsd.uib.no/publiseringskanaler/Forside). Norwegian scholars receive funding based on their number of publications that appear in this list. At KTH, most weight has usually been given to publication channels covered by Web of Science. When comparing publication volumes between scientific fields it is important to keep in mind that publication frequencies differ widely between fields, and this must be kept in mind during evaluations.
+
+### Counting citations
+
+The most straightforwardperhaps most common indicator of impact for research articles is the number of citations the article has received. However, since the citation density differs a lot between scientific fields and are dependent on the time since publication, citation counts are difficult to use for comparisons. Therefore, Ccitation indicators that take have many different variations, the most important being field- normalisationnormalization, and time windows, and document types into account are often used. Field- normalisation means that the number of citation an item has recieved is normalised by the average number of citations for item in that field. Non field- normalised citation indicators cannot be compared between fields. Citation indicators based on different citation databases are also hard to compare, since they will normalize against different publication sets with different inclusion and exclusion criteria.
+
+### h-index
+
+The h-index is another common citation based metric. The h-index of a researcher is the largest number _n_ such that the researcher has at least _n _publications that has been cited at least _n_ times. The calculation of the h-index of a journal or a research group is similar. Proponents of the H-index highlight that it strikes a balance between publication volume and citation impact, but it has also been widely criticized for being easy to manipulate and dependent on age, subject field and data source, which makes it hard to use in practice. [2]
+
+### Journal ranking
+
+Most journal rankings are based on the average number of citations an article in a journal receives. The most well-known journal ranking is the Journal Impact factor issued by Clarivate. Field-normalized versions of the Journal impact factor are also used, to provide a way to compare publication channels between different scientific fields. In general, the ranking of the journal in which it is published is considered a poor measure of the quality of individual an articles found within the journal. [Read more about the reasoning behind this in the San Fransisco Declaration of Research Assessment (DORA)](https://sfdora.org/read/).
+
+### Altmetrics
+
+Alternative metrics, or altmetrics, is a term used to describe attempts to measure other impacts of research other than traditional metrics based on citations and journals. Altmetric indicators can in general be applied to a broader range of resources, i. e. research data, source code repositories, presentations and more. Altmetric indicators can measure downloads, media mentions, social media mentions, usage by online reference management tools. As with traditional bibliometrics, the effects of open access on altmetrics is not entirely clear, but research suggests that there is an open access advantage for some altmetric indicators in some fields. [1]
+
+Another aspect to consider is the time frame of use. While traditional bibliometric indicators focus on retrospective evaluation of impact, that takes time to accumulate, some aspects of Altmetrics, on the other hand, can be used to measure shorter term &quot;impact&quot; (such are downloads and media attention).
+
+### KTH ÅBU/ABM
+
+ABM stands for the Annual Bibliometric Monitoring at KTH.
+
+[Log in to KTH ABM](https://kth.se/abm)
+
+The KTH ABM is based on the data registered in DiVA, the KTH publication repository. When you log into the system, you are first shown publication data for your personal research output, but you can change the view to show data for a department or school.
+
+[Manual for KTH ABM](https://kth-library.github.io/abm/ABM_guide.html)
+
+The KTH ABM is provides data for monitoring, evaluating research and quality assurance at KTH, as well as information related to publications for KTH researchers and organisations.
+
+### Responsible use of metrics
+
+When using numeric indicators such such as citation counts for decision making, it is important to understand when, how and why they do and do not add useful information. Citations (or other indicators) do not perfectly count the quality of an article, and shouldn&#39;t be used on small sample sizes. For a larger group of people, citation measures can be used for measuring research output, but for a small group such measures will be very unstable. Whenever you make comparisons between disciplines, you must make sure to use field normalised data and that your analysis takes into account the limitations of such comparisons.
+
+In general, bibliometrics is thought to be most useful at the macro-level, using aggregated data where expert evaluation of research is difficult or not feasible, while evaluation at the micro-level should be mostly based on expert evaluation through peer-review.
+
+### Open science and impact
+
+Does open science practices actually improve your impact? There are no clear answers to this, since it depends on what kinds of impact your main goal is. It is clear however, that open access publishing will improve the availability of your results to anyone working outside the academic sector, and also to researchers in low and middle income countries (or anywhere where university library budgets limit their access to subscription materials). Traditional journals still have a longer history and have clear advantages when it comes to reputation and being familiar outlets, but most of them now offer options for open access as well. At the same time, fully open access journals are establishing themselves, and in a few years, hopefully more data on how open access affects citations and other bibliometric indicators will be available.
+
+Open data and open source practices can also improve your impact when your data or your source code is reused. Different fields have adopted different strategies for how to cite data and code. Some practices lends themselves easily to measuring impact with bibliometrics tools, such as publishing data articles in data journals (which can then be analysed with traditional and alternative metrics), or requesting that researchers that reuse your data or code cite your original publication.
+
+### References
+
+[1] Kim Holmberg, Juha Hedman, Timothy D. Bowman, Fereshteh Didegah, and Mikael Laakso, &#39;Do articles in open access journals have more frequent altmetric activity than articles in subscription-based journals? An investigation of the research output of Finnish universities&#39;, _Scientometrics_, vol. 122, pp. 645–659, 2020, doi:[10.1007/s11192-019-03301-x](https://doi.org/10.1007/s11192-019-03301-x).
+
+[2] Cameron Barnes. &#39;The h-index Debate: An Introduction for Librarians&#39;, [https://doi.org/10.1016/j.acalib.2017.08.013](https://doi.org/10.1016/j.acalib.2017.08.013)
