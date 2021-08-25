@@ -48,7 +48,7 @@ APIs and additional apps:
 
 Currently configured for integration against load balancer and using KTH OIDC auth:
 
-- [Integrated w traefik and KTH OIDC](https://www-r.referens.sys.kth.se/abm/app/showenv)
+- [Integrated w traefik and KTH OIDC](https://www-r.referens.sys.kth.se/abm/app/showenv) NB: _needs VPN_
 - [Corresponding gita repo w configs](https://gita.sys.kth.se/kthb/shinyproxy-debug)
 
 ## Documentation and configurations
@@ -83,7 +83,7 @@ The KTH Library also have data curators on the DiVA team, involved in curating d
 
 - [Report with checks](https://bibliometrics.lib.kth.se/qc/v1/check/report)
 - [API Documentation](https://bibliometrics.lib.kth.se/qc/__docs__/)
-- [Source code](https.//github.com/kth-library/kthcorpus)
+- [Source code](https://github.com/kth-library/kthcorpus)
 
 ## HR + DiVA Team tools/services
 
