@@ -1,0 +1,99 @@
+---
+title: "KTH Library - Bibliometrics services"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::html_clean:
+    highlight: kate
+    theme:
+      base_font: !expr bslib::font_google("Open Sans")
+    toc: true    
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(rmdformats)
+
+## Global options
+options(max.print="75")
+opts_chunk$set(echo=FALSE,
+	             cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE)
+opts_knit$set(width=75)
+```
+
+# ABM / ÅBU links
+
+## Production environment
+
+- [Authed ABM app](https://kth.se/abm)
+- [Public ABM app](https://kth.se/abm/public)
+- [Monitoring endpoint](https://abm.sys.kth.se/_monitor)
+
+## Staging environment
+
+- [Authed ABM app](https://shiny-2-r.referens.sys.kth.se/app/abm)
+- [Public ABM app](https://shiny-2-r.referens.sys.kth.se/public/)
+- [Monitoring endpoint](https://shiny-2-r.referens.sys.kth.se/app_direct/_monitor)
+
+APIs and additional apps:
+
+- [Authorbased ABM app](https://bibliometrics.lib.kth.se/beta/authorbased/)
+- [Public API for ABM data](https://bibliometrics.lib.kth.se/testapi/__docs__/)
+
+## Development environment
+
+Currently configured for integration against load balancer and using KTH OIDC auth:
+
+- [Integrated w traefik and KTH OIDC](https://www-r.referens.sys.kth.se/abm/app/showenv)
+- [Corresponding gita repo w configs](https://gita.sys.kth.se/kthb/shinyproxy-debug)
+
+## Documentation and configurations
+
+The ABM services are documented here (links from Confluence):
+
+- [Project Documentation](https://kth-library.github.io/)
+- [Documentation repo](https://github.com/kth-library/KTH-Library.github.io)
+- [Source code](https://github.com/kth-library/bibliomatrix)
+- [Configurations](https://gita.sys.kth.se/kthb/kontarion-bundle)
+
+# Library apps and APIs
+
+There are some apps and APIs available for non-KTH external partners (Vinnova/BibCap) and for supporting workflows for teams at the KTH Library (data curation, data flows) and for KTH data integrations (HR).
+
+## Vinnova / BibCap
+
+The KTH Library have some non-KTH users (Vinnova / BibCap) which require authed access to apps and APIs.
+
+- [Vinnova and BibCap apps](https://bibliometrics.lib.kth.se/apps) *shinyauth0 used to support non-KTH OIDC logins*
+- [Authed BibCap API](https://bibliometrics.lib.kth.se/bibcap/__docs__/) *JWT tokens used for non-KTH API access*
+
+CI: A webhook at gita redeploys BibCap apps and API on push
+
+  - lives at https://bibliometrics.lib.kth.se/hooks/
+  - settings for webhook are at https://gita.sys.kth.se/kthb/bibliotools/settings/hooks
+  - [Configurations](https://gita.sys.kth.se/kthb/auth0poc)
+
+## Quality Control API and report
+
+The KTH Library also have data curators on the DiVA team, involved in curating data flow.
+
+- [Report with checks](https://bibliometrics.lib.kth.se/qc/v1/check/report)
+- [API Documentation](https://bibliometrics.lib.kth.se/qc/__docs__/)
+- [Source code](https.//github.com/kth-library/kthcorpus)
+
+## HR + DiVA Team tools/services
+
+- [Object storage for data](https://data.lib.kth.se) *minio used*
+- [SFTP acccess for HR](https://bibliometrics.lib.kth.se)
+
+## Source code and CI
+
+Source code for tools/apps/APIs are open source at GitHub wherever possible:
+
+- [GitHub Repo with all public tools / packages](https://github.com/kth-library)
+
+For packages, GitHub Action triggers CI for running tests and checks on commit/push/merge. For more information, see https://www.jimhester.com/talk/2020-rsc-github-actions/.
