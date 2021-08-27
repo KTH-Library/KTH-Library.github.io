@@ -25,7 +25,7 @@ opts_chunk$set(echo=FALSE,
 opts_knit$set(width=75)
 ```
 
-# FAQ
+# Background
 
 ## What is the aim of ABM at KTH?
 
@@ -61,19 +61,22 @@ Read more about other ways to get in touch here:
 
 # Further information
 
+- [Introduction to bibliometrics at KTH](Bibliometrics.html){target="_blank"}
 - [Description of data, methods and indicators in KTH Annual Bibliometric Monitoring](Description_data_and_methods_ABM.pdf){target="_blank"}
-- [Formal definitions of field normalized citation indicators at KTH](Formal_definitions_field_normalized_citation.pdf){target="_blank"}
 - [Information about DiVA and the registration process - Handle publications in DiVA](https://www.kth.se/en/biblioteket/publicera-analysera/hantera-publikationer){target="_blank"}
 - [President decision about the Annual Bibliometric Monitoring](Beslut_ABM.html){target="_blank"}
 - [Report on Open Access publishing at KTH](OARapport.pdf){target="_blank"}
+- [Formal definitions of field normalized citation indicators at KTH](indicators.html){target="_blank"}
 
 For further questions, contact the KTH Library at [biblioteket@kth.se](mailto:biblioteket@kth.se).
 
-## Attribution and redistribution rights for Web Of Science data
+## Attribution for third-party data sources
+
+### Redistribution rights for Web Of Science data
 
 Certain data included in the Annual Bibliometric Monitoring report are derived from the © Science Citation Index Expended (SCIE), Social Sciences Citation Index (SSCI), Arts & Humanities Citation Index (AHCI), Conference Proceedings Citation Index - Sciences (CPCI-S) and Conference Proceedings Citation Index - Social Sciences & Humanities (CPCI -SSH) (2021) of Clarivate Analytics (US) LLC. All rights reserved. No part of these materials may be reproduced, stored in a retrieval system or transmitted in any form or by any means, including electronic, mechanical, photographic, magnetic or other means without the expressed permission of the KTH Library.
 
-# Guide to the Annual Bibliometric Monitoring at KTH
+# User Guide
 
 This guide gives an introduction to the Annual Bibliometric Monitoring
 (ABM) at KTH Royal Institute of Technology. The purpose of the guide is
