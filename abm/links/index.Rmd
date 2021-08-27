@@ -1,5 +1,5 @@
 ---
-title: "KTH Library - Bibliometrics services"
+title: "KTH Library - Bibliometric services"
 date: "`r Sys.Date()`"
 output:
   rmdformats::html_clean:
@@ -29,13 +29,13 @@ opts_knit$set(width=75)
 
 ## Production environment
 
-- [Authed ABM app](https://kth.se/abm)
+- [Authenticated ABM app](https://kth.se/abm)
 - [Public ABM app](https://kth.se/abm/public)
 - [Monitoring endpoint](https://abm.sys.kth.se/_monitor)
 
 ## Staging environment
 
-- [Authed ABM app](https://shiny-2-r.referens.sys.kth.se/app/abm)
+- [Authenticated ABM app](https://shiny-2-r.referens.sys.kth.se/app/abm)
 - [Public ABM app](https://shiny-2-r.referens.sys.kth.se/public/)
 - [Monitoring endpoint](https://shiny-2-r.referens.sys.kth.se/app_direct/_monitor)
 
@@ -62,7 +62,7 @@ The ABM services are documented here (links from Confluence):
 
 # Library apps and APIs
 
-There are some apps and APIs available for non-KTH external partners (Vinnova/BibCap) and for supporting workflows for teams at the KTH Library (data curation, data flows) and for KTH data integrations (HR).
+Listed here are some apps and APIs used to support workflows within the KTH Library (data curation, data flows), data integrations within KTH (HR), and apps used together with non-KTH external partners (Vinnova/BibCap).
 
 ## Vinnova / BibCap
 
@@ -92,8 +92,9 @@ The KTH Library also have data curators on the DiVA team, involved in curating d
 
 ## Source code and CI
 
-Source code for tools/apps/APIs are open source at GitHub wherever possible:
-
-- [GitHub Repo with all public tools / packages](https://github.com/kth-library)
+Source code for tools/apps/APIs are [open source at GitHub](https://github.com/kth-library) wherever possible. 
+However, code for some apps and deployments are located at [KTHs local git instance, Gita](https://gita.sys.kth.se/kthb/).
 
 For packages, GitHub Action triggers CI for running tests and checks on commit/push/merge. For more information, see https://www.jimhester.com/talk/2020-rsc-github-actions/.
+
+
