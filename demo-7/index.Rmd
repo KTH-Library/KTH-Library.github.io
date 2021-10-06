@@ -69,6 +69,12 @@ Please use Zoom, raise hand for questions or write in the chat, mute if not spea
 
 # Demo of KTH co-publication draft app
 
+[Draft app for Co-pubs@KTH at https://bibliometrics.lib.kth.se/apps/reports/bibliotools/kth_copub/](https://bibliometrics.lib.kth.se/apps/reports/bibliotools/kth_copub/)
+
+
+## Screenshot
+
+![](nw-screenshot-01.png){height=500px}
 
 # Questions and feedback
 
