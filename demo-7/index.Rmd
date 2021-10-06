@@ -1,0 +1,83 @@
+---
+title: 'Demo #7 - Copublication networks at KTH'
+author: "KTH Library & ITA"
+date: '2021-10-12'
+output:
+  ioslides_presentation:
+    css: assets/css/styles.css
+    logo: assets/img/logo.svg
+    mathjax: default
+    self-contained: yes
+    transition: slower
+    widescreen: yes
+  beamer_presentation: default
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(ktheme)
+library(webshot)
+library(DT)
+library(ggplot2)
+library(reshape2)
+library(formattable)
+library(readxl)
+library(dplyr)
+
+red <- function(txt) 
+  sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["cerise"]), txt)
+
+#webshot::install_phantomjs()
+#unlink("retrosearch-screenshot.png")
+
+suppressPackageStartupMessages(library(magick))
+
+# BG images that could be used
+
+```
+
+## Background for Copublications app
+
+**Goal:** 
+
+> 1. Present co-publication from KTH through an interactive app
+> 2. Answer frequently posed questions related to networks of KTH publications
+
+**Summary:**
+
+Our [previous demo meeting](https://KTH-Library.github.io/demo-6) was held 2021-03-25. After summer vacations we have worked on Sprints **32 to 41** (current).
+
+**Netiquette:**
+
+Please use Zoom, raise hand for questions or write in the chat, mute if not speaking, and think about questions for the Q&A session at the end.
+
+## Agenda {data-background=assets/bg/kth-6.png data-background-size=cover}
+
+- Progress - What is **new** since last meeting?
+
+  - Update for existing ABM app (updated about page, new data)
+  - Focus on new app based on KTH co-publication network data
+  - New demo group and product owners (PA has changed roles)
+
+- A **demo** presenting basic draft co-publication app
+
+- Your **questions and feedback**
+
+## Progress - What is new during Q3? {data-background=assets/bg/plant.png data-background-size=cover}
+
+
+# Demo of KTH co-publication draft app
+
+
+# Questions and feedback
+
+## Questions and Answers
+
+Please provide your input!
+
+- What needs do you see for presenting **collaboration and co-publication** data in ABM?
+- **Other questions** from the Zoom chat
+- Suggestions and **comments**
+
+Thank you for attending!
