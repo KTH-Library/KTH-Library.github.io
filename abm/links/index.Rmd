@@ -59,6 +59,7 @@ The ABM services are documented here (links from Confluence):
 - [Documentation repo](https://github.com/kth-library/KTH-Library.github.io)
 - [Source code](https://github.com/kth-library/bibliomatrix)
 - [Configurations](https://gita.sys.kth.se/kthb/kontarion-bundle)
+- [Systems configuration (confluence, authenticated)](https://confluence.sys.kth.se/confluence/pages/viewpage.action?pageId=70784672)
 
 # Library apps and APIs
 
