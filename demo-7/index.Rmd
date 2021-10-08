@@ -100,7 +100,7 @@ How much is KTH collaborating with country Y?
 :::
   
 ::: { style="gap: 5px;"}
-Note...
+Note: Including some bibliometric indicators along with publication volumes.
 :::
 
 ::::
