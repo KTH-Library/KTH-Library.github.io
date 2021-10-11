@@ -1,6 +1,6 @@
 ---
-title: 'Demo #7 - Copublication networks at KTH'
-author: "KTH Library & ITA"
+title: 'Requirements for co-publication app at KTH'
+author: "KTH Library & ITA; Tobias Jeppsson & Agne Larsson"
 date: '2021-10-12'
 output:
   ioslides_presentation:
@@ -163,6 +163,8 @@ Draft co-publication app for KTH at [https://bibliometrics.lib.kth.se/apps/repor
 We will gather input and might contact some of you for further information
 
 Other comments?
+
+tjep@kth.se, lidehn@kth.se
 
 Thank you for attending!
 
