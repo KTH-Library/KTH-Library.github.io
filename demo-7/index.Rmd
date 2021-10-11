@@ -109,23 +109,29 @@ How much is KTH collaborating with country Y?
 :::
   
 ::: { style="gap: 5px;"}
-Note: Including some bibliometric indicators along with publication volumes.
+**Note**: Including some bibliometric indicators along with publication volumes.  
+</br>
+Lacking author number bins
 :::
 
 ::::
 
 
-## Networks, organization-level
+## Networks, organization-level {.centered}
 
 ![](assets/img/net_org_2014-17_EECS_crop.PNG){width=750}
 
-## Networks, within collaboration
+## Networks, within collaboration {.centered}
 
-![](assets/img/nw_saab-kth_2010-2019.PNG){width=900}
+![](assets/img/nw_saab-kth_2010-2019.PNG){width=850}
 
-## Networks, subject-wise / keywords
+## Networks, organization with bibl. indicators {.centered}
 
-![](assets/img/net_coocc_KW_AstraZ_example_v2.PNG){width=900} 
+![](assets/img/nw_copub_jcf.PNG){width=550}
+
+## Networks, subject-wise / keywords {.centered}
+
+![](assets/img/net_coocc_KW_AstraZ_example_v2.PNG){width=730} 
 
 # Questions 
 
