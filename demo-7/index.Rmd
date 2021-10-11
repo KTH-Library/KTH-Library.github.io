@@ -97,13 +97,18 @@ Now with basic co-publication data added .
 How much is KTH collaborating with organization X, and which departments and researchers are involved?  
 How much is KTH collaborating with country Y?
 
+:::: {style="display: flex;gap: 25px;"}
+::: {}
 ![](assets/img/excel_UTokyo_1.PNG){width=600}
-
+:::
+::: { style="gap: 5px;"}
 ![](assets/img/excel_UTokyo_2.PNG){width=300}
+:::
 
+::::
 
 ## "Standard" co-publication request 2
-:::: {style="display: flex;gap: 20px;"}
+:::: {style="display: flex;gap: 25px;"}
 ::: {}
 ![](assets/img/excel_India_1.PNG){width=600}
 :::
