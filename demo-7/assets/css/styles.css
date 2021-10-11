@@ -4,3 +4,7 @@ slides > slide {
   font-family: "Open Sans", Sans, serif;
   color: black;
 }
+
+.section_alt {
+  color: white;  
+}

@@ -39,15 +39,17 @@ suppressPackageStartupMessages(library(magick))
 
 ## Agenda {data-background=assets/bg/kth-6.png data-background-size=cover}
 
-- Progress - What is **new** since last meeting?
+- Background
 
-  - Update for existing ABM app (updated about page, new data)
-  - Focus on new app based on KTH co-publication network data
-  - New demo group and product owners (PA has changed roles)
+- Brief demo of current ABM
 
-- A **demo** presenting basic draft co-publication app
+- Earlier/current ways to get co-publication data at KTH
 
 - Your **questions and feedback**
+
+- Proof-of-concept for co-publication app
+
+- Wrap-up
 
 **Netiquette:**
 
@@ -57,8 +59,8 @@ Please use Zoom, raise hand for questions or write in the chat, mute if not spea
 
 **Aim**
 
-- To show previous examples of copublication data and how it can be used
-- To discuss needs and use cases that should be covered by an application
+- To show previous examples of co-publication data
+- To discuss needs and use-cases that should be covered by an application
 
 **About the project** 
 
@@ -73,13 +75,13 @@ From this summer the project has worked with a wider scope, to include more data
 
 > 1. Present co-publication from KTH through an interactive app
 > 2. Answer frequently posed questions related to networks of KTH publications
-> 3. Allow the ability to view data at different organization levels and at author-name level
+> 3. Allow the ability to view data at different organization levels and at author-name level<br/><br/><br/>...
+> 4. Automate and simplify analysis
 
 
+# Current ABM {.section_alt}
 
-# Current ABM
-
-- **ABM updated with data for 2013-2019**(https://abm.sys.kth.se/public/)
+**ABM 2019** (2013-2019): https://abm.sys.kth.se/public/
 
 Now with basic co-publication data added .
 
@@ -139,20 +141,24 @@ Note: Including some bibliometric indicators along with publication volumes.
 What needs do you see for presenting **collaboration and co-publication** data?  
 Suggestions and **comments**
 
-# Demo of KTH co-publication draft app
+# Demo of KTH co-publication app {.section_alt}
 
-[Draft app for Co-pubs@KTH at https://bibliometrics.lib.kth.se/apps/reports/bibliotools/kth_copub/](https://bibliometrics.lib.kth.se/apps/reports/bibliotools/kth_copub/)  
-- Early proof on concept
+Draft co-publication app for KTH at [https://bibliometrics.lib.kth.se/apps/reports/bibliotools/kth_copub/](https://bibliometrics.lib.kth.se/apps/reports/bibliotools/kth_copub/)  
+- Early proof-on-concept
+- Basic functionality, publishing and data flow.
 
 
-## Screenshot
+## Co-publ app - screenshot
+
+
 
 ![](nw-screenshot-01.png){height=500px}
 
-# Feedback
-
-## Questions and Answers
+# Feedback {.section_alt}
 
 **Questions** from the Zoom chat
 
 Thank you for attending!
+
+
+
