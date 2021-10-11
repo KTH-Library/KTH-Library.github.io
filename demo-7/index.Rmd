@@ -125,7 +125,7 @@ Note: Including some bibliometric indicators along with publication volumes.
 
 ## Networks, subject-wise / keywords
 
-![](nw-subject.PNG){width=900}
+![](net_coocc_KW_AstraZ_example_v2.PNG){width=900} 
 
 # Questions 
 
@@ -136,16 +136,20 @@ Note: Including some bibliometric indicators along with publication volumes.
 - Filter on subject category?
 - Use of maps and networks?
 - Need for citation and journal indicators?
+- App for interal or external use (or both)?
 
 
 What needs do you see for presenting **collaboration and co-publication** data?  
 Suggestions and **comments**
 
+**Questions** from the Zoom chat
+
 # Demo of KTH co-publication app {.section_alt}
 
 Draft co-publication app for KTH at [https://bibliometrics.lib.kth.se/apps/reports/bibliotools/kth_copub/](https://bibliometrics.lib.kth.se/apps/reports/bibliotools/kth_copub/)  
-- Early proof-on-concept
-- Basic functionality, publishing and data flow.
+
+- Early proof-on-concept  
+- Basic functionality, app-publishing and data flow.
 
 
 ## Co-publ app - screenshot
@@ -154,9 +158,11 @@ Draft co-publication app for KTH at [https://bibliometrics.lib.kth.se/apps/repor
 
 ![](nw-screenshot-01.png){height=500px}
 
-# Feedback {.section_alt}
+# Next steps {.section_alt}
 
-**Questions** from the Zoom chat
+We will gather input and might contact some of you for further information
+
+Other comments?
 
 Thank you for attending!
 
