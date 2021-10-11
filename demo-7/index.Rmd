@@ -125,7 +125,7 @@ Note: Including some bibliometric indicators along with publication volumes.
 
 ## Networks, subject-wise / keywords
 
-![](net_coocc_KW_AstraZ_example_v2.PNG){width=900} 
+![](assets/img/net_coocc_KW_AstraZ_example_v2.PNG){width=900} 
 
 # Questions 
 
