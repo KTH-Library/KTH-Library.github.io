@@ -43,7 +43,7 @@ suppressPackageStartupMessages(library(magick))
 
 - Brief demo of current ABM
 
-- Earlier/current ways to get co-publication data at KTH
+- Examples of co-publication data at KTH
 
 - Your **questions and feedback**
 
@@ -74,7 +74,7 @@ From this summer the project has worked with a wider scope, to include more data
 **Goal:** 
 
 > 1. Present co-publication from KTH through an interactive app
-> 2. Answer frequently posed questions related to networks of KTH publications
+> 2. Answer frequently posed questions related to KTH co-publishing
 > 3. Allow the ability to view data at different organization levels and at author-name level<br/><br/><br/>...
 > 4. Automate and simplify analysis
 
@@ -143,8 +143,8 @@ Lacking author number bins
 ## What are your needs?   
 
 - Filter on other organization?
-- Limit on colloboration size?
-- Filter on subject category?
+- Limit on collaboration size?
+- Filter on subject category, publication years, etc?
 - Use of maps and networks?
 - Need for citation and journal indicators?
 - App for interal or external use (or both)?
@@ -175,7 +175,7 @@ We will gather input and might contact some of you for further information
 
 Other comments?
 
-tjep@kth.se, lidehn@kth.se
+Contact for further questions and comments: lidehn@kth.se tjep@kth.se
 
 Thank you for attending!
 
