@@ -29,6 +29,8 @@ Presentations / Demos:
 - [Web slides - Demo 3 - 2020-03-24](/demo-3/)
 - [Web slides - Demo 4 - 2020-05-26](/demo-4/)
 - [Web slides - Demo 5 - 2020-11-10](/demo-5/)
+- [Web slides - Demo 6 - 2021-03-15](/demo-6/)
+- [Web slides - Demo 7, Co-publication app - 2021-10-12](/demo-7/)
 
 __NB.__ Some presentations are outdated but are kept on record here.
 
