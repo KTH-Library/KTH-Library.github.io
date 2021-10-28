@@ -80,9 +80,10 @@ CI: A webhook at gita redeploys BibCap apps and API on push
 
 ## Quality Control API and report
 
-The KTH Library also have data curators on the DiVA team, involved in curating data flow.
+The KTH Library also have data curators for DiVA within the PIM unit, involved in curating data flow.
+An application and API is used to simplify and automate this process.
 
-- [Report with checks](https://bibliometrics.lib.kth.se/qc/v1/check/report)
+- ["Verktyget" - Report with checks](https://bibliometrics.lib.kth.se/qc/v1/check/report)
 - [API Documentation](https://bibliometrics.lib.kth.se/qc/__docs__/)
 - [Source code](https://github.com/kth-library/kthcorpus)
 
