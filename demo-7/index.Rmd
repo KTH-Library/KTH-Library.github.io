@@ -1,6 +1,6 @@
 ---
-title: 'Demo #7 - Copublication networks at KTH'
-author: "KTH Library & ITA"
+title: 'Requirements for co-publication app at KTH'
+author: "KTH Library & ITA; Tobias Jeppsson & Agne Larsson"
 date: '2021-10-12'
 output:
   ioslides_presentation:
@@ -37,53 +37,147 @@ suppressPackageStartupMessages(library(magick))
 
 ```
 
-## Background for Copublications app
+## Agenda {data-background=assets/bg/kth-6.png data-background-size=cover}
 
-**Goal:** 
+- Background
 
-> 1. Present co-publication from KTH through an interactive app
-> 2. Answer frequently posed questions related to networks of KTH publications
+- Brief demo of current ABM
 
-**Summary:**
+- Examples of co-publication data at KTH
 
-Our [previous demo meeting](https://KTH-Library.github.io/demo-6) was held 2021-03-25. After summer vacations we have worked on Sprints **32 to 41** (current).
+- Your **questions and feedback**
+
+- Proof-of-concept for co-publication app
+
+- Wrap-up
 
 **Netiquette:**
 
 Please use Zoom, raise hand for questions or write in the chat, mute if not speaking, and think about questions for the Q&A session at the end.
 
-## Agenda {data-background=assets/bg/kth-6.png data-background-size=cover}
+## Background for this meeting 
 
-- Progress - What is **new** since last meeting?
+**Aim**
 
-  - Update for existing ABM app (updated about page, new data)
-  - Focus on new app based on KTH co-publication network data
-  - New demo group and product owners (PA has changed roles)
+- To show previous examples of co-publication data
+- To discuss needs and use-cases that should be covered by an application
 
-- A **demo** presenting basic draft co-publication app
+**About the project** 
 
-- Your **questions and feedback**
-
-## Progress - What is new during Q3? {data-background=assets/bg/plant.png data-background-size=cover}
-
-
-# Demo of KTH co-publication draft app
-
-[Draft app for Co-pubs@KTH at https://bibliometrics.lib.kth.se/apps/reports/bibliotools/kth_copub/](https://bibliometrics.lib.kth.se/apps/reports/bibliotools/kth_copub/)
+In the ABM-project, we have had [previous demo meetings](https://KTH-Library.github.io/demo-6), the latest at 2021-03-25.  
+The project is working by an agile model with 2 week sprints.  
+From this summer the project has worked with a wider scope, to include more data sources and data flows.
 
 
-## Screenshot
+## Copublications app
+
+**Goal:** 
+
+> 1. Present co-publication from KTH through an interactive app
+> 2. Answer frequently posed questions related to KTH co-publishing
+> 3. Allow the ability to view data at different organization levels and at author-name level<br/><br/><br/>...
+> 4. Automate and simplify analysis
+
+
+# Current ABM {.section_alt}
+
+**ABM 2019** (2013-2019): https://abm.sys.kth.se/public/
+
+Now with basic co-publication data added .
+
+## Earlier examples of presentations and access
+
+- [KTH Co-publication page](https://www.kth.se/bibliometrics/KTH/copublishing/KTH_countries_2015_2019/index.html)
+- Specific requests to the bibliometric group
+- Bibliometric presentations to departments
+- Online publication databases(?) 
+
+## "Standard" co-publication request
+
+How much is KTH collaborating with organization X, and which departments and researchers are involved?  
+How much is KTH collaborating with country Y?
+
+:::: {style="display: flex;gap: 25px;"}
+::: {}
+![](assets/img/excel_UTokyo_1.PNG){width=600}
+:::
+::: { style="gap: 5px;"}
+![](assets/img/excel_UTokyo_2.PNG){width=300}
+:::
+
+::::
+
+## "Standard" co-publication request 2
+:::: {style="display: flex;gap: 25px;"}
+::: {}
+![](assets/img/excel_India_1.PNG){width=600}
+:::
+  
+::: { style="gap: 5px;"}
+**Note**: Including some bibliometric indicators along with publication volumes.  
+</br>
+Lacking author number bins
+:::
+
+::::
+
+
+## Networks, organization-level {.centered}
+
+![](assets/img/net_org_2014-17_EECS_crop.PNG){width=750}
+
+## Networks, within collaboration {.centered}
+
+![](assets/img/nw_saab-kth_2010-2019.PNG){width=850}
+
+## Networks, organization with bibl. indicators {.centered}
+
+![](assets/img/nw_copub_jcf.PNG){width=550}
+
+## Networks, subject-wise / keywords {.centered}
+
+![](assets/img/net_coocc_KW_AstraZ_example_v2.PNG){width=730} 
+
+# Questions 
+
+## What are your needs?   
+
+- Filter on other organization?
+- Limit on collaboration size?
+- Filter on subject category, publication years, etc?
+- Use of maps and networks?
+- Need for citation and journal indicators?
+- App for interal or external use (or both)?
+
+
+What needs do you see for presenting **collaboration and co-publication** data?  
+Suggestions and **comments**
+
+**Questions** from the Zoom chat
+
+# Demo of KTH co-publication app {.section_alt}
+
+Draft co-publication app for KTH at [https://bibliometrics.lib.kth.se/apps/reports/bibliotools/kth_copub/](https://bibliometrics.lib.kth.se/apps/reports/bibliotools/kth_copub/)  
+
+- Early proof-on-concept  
+- Basic functionality, app-publishing and data flow.
+
+
+## Co-publ app - screenshot
+
+
 
 ![](nw-screenshot-01.png){height=500px}
 
-# Questions and feedback
+# Next steps {.section_alt}
 
-## Questions and Answers
+We will gather input and might contact some of you for further information
 
-Please provide your input!
+Other comments?
 
-- What needs do you see for presenting **collaboration and co-publication** data in ABM?
-- **Other questions** from the Zoom chat
-- Suggestions and **comments**
+Contact for further questions and comments: lidehn@kth.se tjep@kth.se
 
 Thank you for attending!
+
+
+
