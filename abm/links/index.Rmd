@@ -29,8 +29,8 @@ opts_knit$set(width=75)
 
 ## Production environment
 
-- [Authenticated ABM app](https://kth.se/abm){target="_blank"}
-- [Public ABM app](https://kth.se/abm/public){target="_blank"}
+- [Authenticated ABM app](https://abm.sys.kth.se/app_direct/abm/){target="_blank"}
+- [Public ABM app](https://kth.se/abm){target="_blank"}
 - [Monitoring endpoint](https://abm.sys.kth.se/_monitor){target="_blank"}
 
 ## Staging environment
@@ -53,6 +53,8 @@ Runing on the server shiny-1 (shiny-1-r.referens.sys.kth.se).
 Currently configured for integration against load balancer and using KTH OIDC auth:
 
 - ["shiny-1" - Integrated w traefik and KTH OIDC](https://www-r.referens.sys.kth.se/abm){target="_blank"} NB: _needs VPN_
+- ["shiny-1" - Non-authed apps](https://www-r.referens.sys.kth.se/abm/public){target="_blank"} NB: _needs VPN_
+- ["shiny-1" - Traefik dashboard](https://shiny-1-r.referens.sys.kth.se/dashboard/){target="_blank"} NB: _needs VPN and auth_ 
 - [Corresponding gita repo w configs](https://gita.sys.kth.se/kthb/shinyproxy-debug){target="_blank"}
 
 ## Documentation and configurations
@@ -63,7 +65,7 @@ The ABM services are documented here (links from Confluence):
 - [Documentation repo](https://github.com/kth-library/KTH-Library.github.io){target="_blank"}
 - [Source code](https://github.com/kth-library/bibliomatrix){target="_blank"}
 - [Configurations](https://gita.sys.kth.se/kthb/kontarion-bundle){target="_blank"}
-- [Systems configuration (confluence, authenticated)](https://confluence.sys.kth.se/confluence/pages/viewpage.action?pageId=70784672){target="_blank"}
+- [Systems configuration (confluence, authenticated)](https://confluence.sys.kth.se/confluence/pages/viewpage.action?pageId=118036693){target="_blank"}
 
 # Library apps and APIs
 
@@ -88,12 +90,14 @@ The KTH Library also have data curators for DiVA within the PIM unit, involved i
 An application and API is used to simplify and automate this process.
 
 - [Report with checks](https://bibliometrics.lib.kth.se/qc/v1/check/report){target="_blank"}
-- [API Documentation](https://bibliometrics.lib.kth.se/qc/__docs__/){target="_blank"}
+- [Checks API Documentation](https://bibliometrics.lib.kth.se/qc/__docs__/){target="_blank"}
+- [Curation API Documentation](https://bibliometrics.lib.kth.se/curator/__docs__/){target="_blank"}
 - [Source code](https://github.com/kth-library/kthcorpus){target="_blank"}
 
 ## HR + DiVA Team tools/services
 
 - [Object storage for data](https://data.lib.kth.se){target="_blank"} *minio used*
+- [Search engine for internal use](https://search.lib.kth.se){target="_blank"} *meilisearch used*
 - [SFTP acccess for HR](https://bibliometrics.lib.kth.se){target="_blank"}
 
 ## Source code and CI

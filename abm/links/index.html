@@ -6,7 +6,7 @@
     <meta name="generator" content="pandoc" />
 
     
-        <meta name="date" content="2021-11-08" />
+        <meta name="date" content="2021-12-14" />
     
     <title>KTH Library - Bibliometric services</title>
 
@@ -124,7 +124,7 @@
         
 
       <!-- html_clean authors -->
-         <h4 class="date"><em>2021-11-08</em></h4>
+         <h4 class="date"><em>2021-12-14</em></h4>
       
       
    
@@ -135,8 +135,8 @@
 <div id="production-environment" class="section level2">
 <h2>Production environment</h2>
 <ul>
-<li><a href="https://kth.se/abm" target="_blank">Authenticated ABM app</a></li>
-<li><a href="https://kth.se/abm/public" target="_blank">Public ABM app</a></li>
+<li><a href="https://abm.sys.kth.se/app_direct/abm/" target="_blank">Authenticated ABM app</a></li>
+<li><a href="https://kth.se/abm" target="_blank">Public ABM app</a></li>
 <li><a href="https://abm.sys.kth.se/_monitor" target="_blank">Monitoring endpoint</a></li>
 </ul>
 </div>
@@ -160,6 +160,8 @@
 <p>Currently configured for integration against load balancer and using KTH OIDC auth:</p>
 <ul>
 <li><a href="https://www-r.referens.sys.kth.se/abm" target="_blank">“shiny-1” - Integrated w traefik and KTH OIDC</a> NB: <em>needs VPN</em></li>
+<li><a href="https://www-r.referens.sys.kth.se/abm/public" target="_blank">“shiny-1” - Non-authed apps</a> NB: <em>needs VPN</em></li>
+<li><a href="https://shiny-1-r.referens.sys.kth.se/dashboard/" target="_blank">“shiny-1” - Traefik dashboard</a> NB: <em>needs VPN and auth</em></li>
 <li><a href="https://gita.sys.kth.se/kthb/shinyproxy-debug" target="_blank">Corresponding gita repo w configs</a></li>
 </ul>
 </div>
@@ -171,7 +173,7 @@
 <li><a href="https://github.com/kth-library/KTH-Library.github.io" target="_blank">Documentation repo</a></li>
 <li><a href="https://github.com/kth-library/bibliomatrix" target="_blank">Source code</a></li>
 <li><a href="https://gita.sys.kth.se/kthb/kontarion-bundle" target="_blank">Configurations</a></li>
-<li><a href="https://confluence.sys.kth.se/confluence/pages/viewpage.action?pageId=70784672" target="_blank">Systems configuration (confluence, authenticated)</a></li>
+<li><a href="https://confluence.sys.kth.se/confluence/pages/viewpage.action?pageId=118036693" target="_blank">Systems configuration (confluence, authenticated)</a></li>
 </ul>
 </div>
 </div>
@@ -197,7 +199,8 @@
 <p>The KTH Library also have data curators for DiVA within the PIM unit, involved in curating data flow. An application and API is used to simplify and automate this process.</p>
 <ul>
 <li><a href="https://bibliometrics.lib.kth.se/qc/v1/check/report" target="_blank">Report with checks</a></li>
-<li><a href="https://bibliometrics.lib.kth.se/qc/__docs__/" target="_blank">API Documentation</a></li>
+<li><a href="https://bibliometrics.lib.kth.se/qc/__docs__/" target="_blank">Checks API Documentation</a></li>
+<li><a href="https://bibliometrics.lib.kth.se/curator/__docs__/" target="_blank">Curation API Documentation</a></li>
 <li><a href="https://github.com/kth-library/kthcorpus" target="_blank">Source code</a></li>
 </ul>
 </div>
@@ -205,6 +208,7 @@
 <h2>HR + DiVA Team tools/services</h2>
 <ul>
 <li><a href="https://data.lib.kth.se" target="_blank">Object storage for data</a> <em>minio used</em></li>
+<li><a href="https://search.lib.kth.se" target="_blank">Search engine for internal use</a> <em>meilisearch used</em></li>
 <li><a href="https://bibliometrics.lib.kth.se" target="_blank">SFTP acccess for HR</a></li>
 </ul>
 </div>
