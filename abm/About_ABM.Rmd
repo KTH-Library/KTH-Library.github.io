@@ -59,6 +59,12 @@ Read more about other ways to get in touch here:
 
 - https://www.kth.se/biblioteket/anvanda-biblioteket/oppettider-kontakt
 
+# Accessibility
+
+We aim at providing content in an accessible fashion in compliance with [WCAG 2.1](https://www.w3.org/TR/WCAG21/){target="_blank"}, and are aware that there is room for improvement for some of the content.
+
+If you require access to content not provided in a format that is accessible for you, please contact us at [biblioteket@kth.se](mailto:biblioteket@kth.se). Please find more information about accessibility at KTH here: [KTH Web Accessibility Web Page](https://www.kth.se/gemensamt/tillganglighet){target="_blank"}
+
 # Further information
 
 - [Introduction to bibliometrics at KTH](Bibliometrics.html){target="_blank"}
