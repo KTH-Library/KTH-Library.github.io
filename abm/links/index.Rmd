@@ -37,7 +37,7 @@ Running on abm.sys.kth.se.
 
 ## Staging environment
 
-Running on the server shiny-2.
+Running on the server shiny-2 (shiny-2-r.referens.sys.kth.se).
 
 - [Authenticated ABM app](https://shiny-2-r.referens.sys.kth.se/app/abm)
 - [Public ABM app](https://shiny-2-r.referens.sys.kth.se/public/)
