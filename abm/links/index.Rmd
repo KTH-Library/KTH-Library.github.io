@@ -29,24 +29,22 @@ opts_knit$set(width=75)
 
 ## Production environment
 
-- [Authenticated ABM app](https://kth.se/abm)
-- [Public ABM app](https://kth.se/abm/public)
-- [Monitoring endpoint](https://abm.sys.kth.se/_monitor)
-
-Running on abm.sys.kth.se.
+- [Authenticated ABM app](https://abm.sys.kth.se/app_direct/abm/){target="_blank"}
+- [Public ABM app](https://kth.se/abm){target="_blank"}
+- [Monitoring endpoint](https://abm.sys.kth.se/_monitor){target="_blank"}
 
 ## Staging environment
 
 Running on the server shiny-2 (shiny-2-r.referens.sys.kth.se).
 
-- [Authenticated ABM app](https://shiny-2-r.referens.sys.kth.se/app/abm)
-- [Public ABM app](https://shiny-2-r.referens.sys.kth.se/public/)
-- [Monitoring endpoint](https://shiny-2-r.referens.sys.kth.se/app_direct/_monitor)
+- [Authenticated ABM app](https://shiny-2-r.referens.sys.kth.se/app/abm){target="_blank"}
+- [Public ABM app](https://shiny-2-r.referens.sys.kth.se/public/){target="_blank"}
+- [Monitoring endpoint](https://shiny-2-r.referens.sys.kth.se/app_direct/_monitor){target="_blank"}
 
 APIs and additional apps:
 
-- [Authorbased ABM app](https://bibliometrics.lib.kth.se/beta/authorbased/)
-- [Public API for ABM data](https://bibliometrics.lib.kth.se/testapi/__docs__/)
+- [Authorbased ABM app](https://bibliometrics.lib.kth.se/beta/authorbased/){target="_blank"}
+- [Public API for ABM data](https://bibliometrics.lib.kth.se/testapi/__docs__/){target="_blank"}
 
 ## Development environment
 
@@ -54,18 +52,20 @@ Running on the server shiny-1 (shiny-1-r.referens.sys.kth.se).
 
 Currently configured for integration against load balancer and using KTH OIDC auth:
 
-- [Integrated w traefik and KTH OIDC](https://www-r.referens.sys.kth.se/abm/app/showenv) NB: _needs VPN_
-- [Corresponding gita repo w configs](https://gita.sys.kth.se/kthb/shinyproxy-debug)
+- ["shiny-1" - Integrated w traefik and KTH OIDC](https://www-r.referens.sys.kth.se/abm){target="_blank"} NB: _needs VPN_
+- ["shiny-1" - Non-authed apps](https://www-r.referens.sys.kth.se/abm/public){target="_blank"} NB: _needs VPN_
+- ["shiny-1" - Traefik dashboard](https://shiny-1-r.referens.sys.kth.se/dashboard/){target="_blank"} NB: _needs VPN and auth_ 
+- [Corresponding gita repo w configs](https://gita.sys.kth.se/kthb/shinyproxy-debug){target="_blank"}
 
 ## Documentation and configurations
 
 The ABM services are documented here (links from Confluence):
 
-- [Project Documentation](https://kth-library.github.io/)
-- [Documentation repo](https://github.com/kth-library/KTH-Library.github.io)
-- [Source code](https://github.com/kth-library/bibliomatrix)
-- [Configurations](https://gita.sys.kth.se/kthb/kontarion-bundle)
-- [Systems configuration (confluence, authenticated)](https://confluence.sys.kth.se/confluence/pages/viewpage.action?pageId=70784672)
+- [Project Documentation](https://kth-library.github.io/){target="_blank"}
+- [Documentation repo](https://github.com/kth-library/KTH-Library.github.io){target="_blank"}
+- [Source code](https://github.com/kth-library/bibliomatrix){target="_blank"}
+- [Configurations](https://gita.sys.kth.se/kthb/kontarion-bundle){target="_blank"}
+- [Systems configuration (confluence, authenticated)](https://confluence.sys.kth.se/confluence/pages/viewpage.action?pageId=118036693){target="_blank"}
 
 # Library apps and APIs
 
@@ -75,33 +75,35 @@ Listed here are some apps and APIs used to support workflows within the KTH Libr
 
 The KTH Library have some non-KTH users (Vinnova / BibCap) which require authed access to apps and APIs.
 
-- [Vinnova and BibCap apps](https://bibliometrics.lib.kth.se/apps) *shinyauth0 used to support non-KTH OIDC logins*
-- [Authed BibCap API](https://bibliometrics.lib.kth.se/bibcap/__docs__/) *JWT tokens used for non-KTH API access*
+- [Vinnova and BibCap apps](https://bibliometrics.lib.kth.se/apps){target="_blank"} *shinyauth0 used to support non-KTH OIDC logins*
+- [Authed BibCap API](https://bibliometrics.lib.kth.se/bibcap/__docs__/){target="_blank"} *JWT tokens used for non-KTH API access*
 
 CI: A webhook at gita redeploys BibCap apps and API on push
 
   - lives at https://bibliometrics.lib.kth.se/hooks/
   - settings for webhook are at https://gita.sys.kth.se/kthb/bibliotools/settings/hooks
-  - [Configurations](https://gita.sys.kth.se/kthb/auth0poc)
+  - [Configurations](https://gita.sys.kth.se/kthb/auth0poc){target="_blank"}
 
 ## Quality Control API and report
 
 The KTH Library also have data curators for DiVA within the PIM unit, involved in curating data flow.
 An application and API is used to simplify and automate this process.
 
-- ["Verktyget" - Report with checks](https://bibliometrics.lib.kth.se/qc/v1/check/report)
-- [API Documentation](https://bibliometrics.lib.kth.se/qc/__docs__/)
-- [Source code](https://github.com/kth-library/kthcorpus)
+- [Report with checks](https://bibliometrics.lib.kth.se/qc/v1/check/report){target="_blank"}
+- [Checks API Documentation](https://bibliometrics.lib.kth.se/qc/__docs__/){target="_blank"}
+- [Curation API Documentation](https://bibliometrics.lib.kth.se/curator/__docs__/){target="_blank"}
+- [Source code](https://github.com/kth-library/kthcorpus){target="_blank"}
 
 ## HR + DiVA Team tools/services
 
-- [Object storage for data](https://data.lib.kth.se) *minio used*
-- [SFTP acccess for HR](https://bibliometrics.lib.kth.se)
+- [Object storage for data](https://data.lib.kth.se){target="_blank"} *minio used*
+- [Search engine for internal use](https://search.lib.kth.se){target="_blank"} *meilisearch used*
+- [SFTP acccess for HR](https://bibliometrics.lib.kth.se){target="_blank"}
 
 ## Source code and CI
 
-Source code for tools/apps/APIs are [open source at GitHub](https://github.com/kth-library) wherever possible. 
-However, code for some apps and deployments are located at [KTHs local git instance, Gita](https://gita.sys.kth.se/kthb/).
+Source code for tools/apps/APIs are [open source at GitHub](https://github.com/kth-library){target="_blank"} wherever possible. 
+However, code for some apps and deployments are located at [KTHs local git instance, Gita](https://gita.sys.kth.se/kthb/){target="_blank"}.
 
 For packages, GitHub Action triggers CI for running tests and checks on commit/push/merge. For more information, see https://www.jimhester.com/talk/2020-rsc-github-actions/.
 
