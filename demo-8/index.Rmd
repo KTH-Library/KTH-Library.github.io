@@ -27,6 +27,8 @@ library(dplyr)
 
 red <- function(txt) 
   sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["cerise"]), txt)
+green <- function(txt) 
+  sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["olive"]), txt)
 
 #webshot::install_phantomjs()
 #unlink("retrosearch-screenshot.png")
@@ -53,11 +55,20 @@ suppressPackageStartupMessages(library(magick))
 
 # Background and progress
 
-## Background context to DAUF 
-- [Research Networks, link to Stanford RIALTO](https://www.youtube.com/watch?v=7UgwzCKIU1A) 
+## DAUF - background and context 
+
+Trend towards `r green("better overview of research outputs")` as well as `r green("integration of systems")`.
 
 <div align="center">
-![Overview](stanford-rialto.png){width=400}
+![*Example from Stanford*](assets/img/stanford_cris.png){width=700}
+</div>
+
+- [Youtube presentation of Stanford RIALTO project](https://www.youtube.com/watch?v=7UgwzCKIU1A) 
+
+## DAUF - data curation
+
+<div align="center">
+![Overview](stanford-rialto.png){width=600}
 </div>
 
 - Researchers <-> Outputs <-> Projects
