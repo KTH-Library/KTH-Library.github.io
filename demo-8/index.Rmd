@@ -80,6 +80,17 @@ Please use Zoom, raise hand for questions or write in the chat, mute if not spea
 
 ## Bibliometric Analytics app
 
+The goal of this app is to help answering some common questions, for example
+
+- What does KTH collaboration with country X or university Y look like?
+  * What is the bibliometric impact of this collaboration?
+
+- What is the collaboration pattern and bibliometric impact of...
+  * a KTH department, based on Diva affiliations?
+  * staff currently or recently employed by some department or division?
+  * some group at KTH not clearly defined in Diva or staff catalogue?
+  * all the Postdocs at school Z?
+
 # Demo of data curation tools
 
 ## Report for KTH publication corpus
