@@ -81,7 +81,10 @@ Data sources need to support questions like:
 
 - Which projects are active? Which researchers are involved? Size?
 
-- Agresso may not provide access to necessary data, so we're investigating alternatives
+- Agresso data may not be suitable for this purpose, 
+
+    - investigating alternatives, e.g. SweCris & Cordis.
+    - current lack of data coordination at KTH
 
 ## Progress - What is new during Q1 2022? {data-background=assets/bg/plant.png data-background-size=cover}
 
