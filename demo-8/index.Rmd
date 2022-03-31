@@ -137,6 +137,10 @@ The goal of this app is to help answering some common questions, for example
   * some group at KTH not clearly defined in Diva or staff catalogue?
   * all the Postdocs at school Z?
 
+## KTH Publication Analysis app
+
+![](kth_publication_analysis.png){width="90%"}
+
 # Questions and feedback
 
 ## Questions and Answers
