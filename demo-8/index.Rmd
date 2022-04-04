@@ -24,6 +24,7 @@ library(reshape2)
 library(formattable)
 library(readxl)
 library(dplyr)
+library(kableExtra)
 
 red <- function(txt) 
   sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["cerise"]), txt)
@@ -71,9 +72,28 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 ![Overview](stanford-rialto.png){width=600}
 </div>
 
-- Researchers <-> Outputs <-> Projects
+- Researchers < > Outputs < > Projects
 
 - DAUF has been building bottom-up data consolidation and analytics for KTH
+
+## Current apps/services
+
+- ABM/ÅBU - yearly reporting, for KTH, schools and departments
+  * Based on KTHs organization tree
+
+- Staff-based ABM,   
+  * Same reporting format as ABM.  
+  * Based on current staff
+  * Can be used at division level and above
+
+- Analysis app  
+  * "Live" data, possibility to filter and mine data.
+  * Ad-hoc groups
+  * Copublication, maps and indicators
+  
+  
+This is our current suggestion for how apps can be used.  
+Possible point for discussion at the end.
 
 ## Projects at KTH
 
@@ -81,19 +101,28 @@ Data sources need to support questions like:
 
 - Which projects are active? Which researchers are involved? Size?
 
-- Agresso data may not be suitable for this purpose, 
+- Current lack of data coordination at KTH
 
-    - investigating alternatives, e.g. SweCris & Cordis.
-    - current lack of data coordination at KTH
+- Have started to look at possible data sources
+  * Agresso data may not be suitable for this purpose, 
+  * investigating alternatives, e.g. SweCris & Cordis.
 
 ## Progress - What is new during Q1 2022? {data-background=assets/bg/plant.png data-background-size=cover}
 
-- KTH Publication Analysis app 
+- *KTH Publication Analysis app*
   * allowing exploration of co-publication and collaboration at KTH 
   * for ad-hoc research groups
   * rolling data (more up to date)
   
-Example: The ECO2 research groups' output
+  Example: The ECO2 research groups' output
+
+- *Curation tool for DiVA*
+
+- *Infrastructure*
+  * KTH OIDC
+  * Server infrastructure
+  * Integration with other reporting at KTH
+  * API output
 
 # Curation tool for DiVA data
 
@@ -101,8 +130,9 @@ Example: The ECO2 research groups' output
 
 - Tool for ongoing curation of research output data (publications, authors)
 - Aiming at interoperable data with good quality
+- More efficient work-flows
 
-![Overview](stanford-rialto.png){width=400,align='center'}
+![](stanford-rialto.png){width=550,align='center'}
 
 ## Report for KTH publication corpus
 
@@ -112,13 +142,13 @@ Example: The ECO2 research groups' output
 
 Data extracts can be copy/pasted from reports. There are other options, too:
 
-- Downloads from [object storage (S3)](https://data.bibliometrics.lib.kth.se)
+- Downloads from *object storage (S3)*
 
 - [Curator API](https://bibliometrics.lib.kth.se/curator/__docs__/) (authenticated)
 
 - [Checks API](https://bibliometrics.lib.kth.se/qc/__docs__/) (partly authenticated)
 
-<div align="right">
+<div align="center">
 ![Curator API](curator-api.png){width=300}
 </div>
 
