@@ -109,16 +109,16 @@ Data sources need to support questions like:
 
 ## Progress - What is new during Q1 2022? {data-background=assets/bg/plant.png data-background-size=cover}
 
-- *KTH Publication Analysis app*
+- **KTH Publication Analysis app**
   * allowing exploration of co-publication and collaboration at KTH 
   * for ad-hoc research groups
   * rolling data (more up to date)
   
   Example: The ECO2 research groups' output
 
-- *Curation tool for DiVA*
+- **Curation tool for DiVA**
 
-- *Infrastructure*
+- **Infrastructure**
   * KTH OIDC
   * Server infrastructure
   * Integration with other reporting at KTH
