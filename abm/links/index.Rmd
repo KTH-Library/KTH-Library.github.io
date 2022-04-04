@@ -25,15 +25,19 @@ opts_chunk$set(echo=FALSE,
 opts_knit$set(width=75)
 ```
 
-# ABM / ÅBU links
+# DAUF links
 
-## Production environment
+The DAUF project (DAUF is an acronym for "Datadriven Analys och Uppföljning av KTHs Forskning") delivers various services including the Annual Bibliometric Monitoring report. 
+
+Some links follow that lead to apps and APIs in the production, staging and development environments.
+
+## Production environment for ABM/ÅBU
 
 - [Authenticated ABM app](https://abm.sys.kth.se/app_direct/abm/){target="_blank"}
 - [Public ABM app](https://kth.se/abm){target="_blank"}
 - [Monitoring endpoint](https://abm.sys.kth.se/_monitor){target="_blank"}
 
-## Staging environment
+## Staging environment ABM/ÅBU
 
 Running on the server shiny-2 (shiny-2-r.referens.sys.kth.se).
 
@@ -81,7 +85,7 @@ The KTH Library have some non-KTH users (Vinnova / BibCap) which require authed 
 CI: A webhook at gita redeploys BibCap apps and API on push
 
   - lives at https://bibliometrics.lib.kth.se/hooks/
-  - settings for webhook are at https://gita.sys.kth.se/kthb/bibliotools/settings/hooks
+  - settings for webhook are configured at at https://github.com/kth-library/bibliotools/settings/hooks
   - [Configurations](https://gita.sys.kth.se/kthb/auth0poc){target="_blank"}
 
 ## Quality Control API and report
@@ -96,8 +100,8 @@ An application and API is used to simplify and automate this process.
 
 ## HR + DiVA Team tools/services
 
-- [Object storage for data](https://data.lib.kth.se){target="_blank"} *minio used*
-- [Search engine for internal use](https://search.lib.kth.se){target="_blank"} *meilisearch used*
+- [Object storage for data](https://data.bibliometrics.lib.kth.se){target="_blank"} *minio used*
+- [Search engine for internal use](https://search.bibliometrics.lib.kth.se){target="_blank"} *meilisearch used*
 - [SFTP acccess for HR](https://bibliometrics.lib.kth.se){target="_blank"}
 
 ## Source code and CI

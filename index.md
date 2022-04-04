@@ -1,21 +1,25 @@
 ## Welcome to the GitHub Pages for the KTH Library - Bibliometrics
 
-These GitHub pages contain POCs, presentations and other documentation related primarily to the Annual Bibliometric Monitoring project.
+These GitHub pages contain POCs, presentations and other documentation related primarily to the DAUF project.
 
 Note that [several other public repositories from KTH](https://github.com/search?q=KTH) are available, for example:
 
 - [https://github.com/KTH](https://github.com/KTH)
 - [https://github.com/KTH-biblioteket](https://github.com/KTH-biblioteket)
 
-### Annual Bibliometric Monitoring 
+### DAUF-project
 
-Public app:
+DAUF is an acronym for "Datadriven Analys och Uppföljning av KTHs Forskning".
+
+Several services and activities are delivered through this project. For example:
+
+Public app for Annual Bibliometric Monitoring:
 
 - [Annual Bibliometric Monitoring Dashboard - KTH 2019](https://kth.se/abm/public)
 
 System requirements: 
 
-- Latest stable version of most popular web browsers; Firefox, Chrome/Chromiumm, MS Edge v 80 or later
+- Latest stable version of most popular web browsers; Firefox, Chrome/Chromium, MS Edge v 80 or later
 - Microsoft IE and earlier versions of MS Edge (< 80) are not supported, please use an alternative above
 
 ### Public project documentation
@@ -30,8 +34,8 @@ Presentations / Demos:
 - [Web slides - Demo 4 - 2020-05-26](/demo-4/)
 - [Web slides - Demo 5 - 2020-11-10](/demo-5/)
 - [Web slides - Demo 6 - 2021-03-15](/demo-6/)
-- [Web slides - Co-publication app - 2021-10-12](/demo-7/)
-
+- [Web slides - Demo 7 - 2021-10-12](/demo-7/)
+- [Web slides - Demo 8 - 2022-04-05 - DAUF-project and KTH Publication Analysis app](/demo-8/)
 __NB.__ Some presentations are outdated but are kept on record here.
 
 ### Technical documentation
@@ -56,8 +60,10 @@ Technical documentation for the components used in ABM:
 - [Documentation for `ktheme` R package at GitHub](https://github.com/KTH-Library/ktheme) - how to use KTH's graphical profile assets from R (for plotting or generating web content with the KTH style)
 - [Documentation for ABM load testing tools](https://gita.sys.kth.se/kthb/kontarion-bundle/tree/master/shinyload) - how to load test the ABM components
 - [Documentation for `kthapi` R package at GitHub](https://github.com/KTH-Library/kthapi) - data access from KTH APIs using R (Profiles, Directory)
+- [Documentation for `kthcorpus` R package at GitHub](https://github.com/KTH-Library/kthcorpus) - data curation tools for the KTH publication corpus (Publications, Authors)
+- [Documentation for `bibliotools` R package at GitHub](https://github.com/KTH-Library/bibliotools) - various authenticated apps, APIs and tools, including the KTH Publication Analysis app (hosted in a private repo)
 
 Build logs:
 
-- [Build logs for `bibliomatrix`](https://travis-ci.org/KTH-Library/bibliomatrix/builds)
-- [Build logs for `kontarion`](https://hub.docker.com/r/kthb/kontarion/builds)
+- [Build logs for `bibliomatrix`](https://github.com/KTH-Library/bibliomatrix/actions/workflows/R-CMD-check.yaml)
+- [Build logs for `kontarion`](https://github.com/KTH-Library/kontarion/actions/workflows/push-kontarion.yml)
