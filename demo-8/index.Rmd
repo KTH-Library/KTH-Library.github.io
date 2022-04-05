@@ -78,16 +78,16 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 
 ## Current apps/services
 
-- ABM/ÅBU - yearly reporting, for KTH, schools and departments
+- ABM/ÅBU - yearly reporting for KTH, schools and departments
   * Based on KTHs organization tree
 
-- Staff-based ABM,   
-  * Same reporting format as ABM.  
+- Staff-based ABM   
+  * Same reporting format as ABM 
   * Based on current staff
   * Can be used at division level and above
 
 - Analysis app  
-  * "Live" data, possibility to filter and mine data.
+  * "Live" data, possibility to filter and mine 
   * Ad-hoc groups
   * Copublication, maps and indicators
   
@@ -105,7 +105,8 @@ Data sources need to support questions like:
 
 - Have started to look at possible data sources
   * Agresso data may not be suitable for this purpose, 
-  * investigating alternatives, e.g. SweCris & Cordis.
+  * investigating alternatives, e.g. SweCris & Cordis
+  * KTH-data; CASE, W3D3
 
 ## Progress - What is new during Q1 2022? {data-background=assets/bg/plant.png data-background-size=cover}
 
@@ -121,8 +122,8 @@ Data sources need to support questions like:
 - **Infrastructure**
   * KTH OIDC
   * Server infrastructure
-  * Integration with other reporting at KTH
-  * API output
+  * Integration with other reporting at KTH,  API output
+ 
 
 # Curation tool for DiVA data
 
@@ -132,7 +133,7 @@ Data sources need to support questions like:
 - Aiming at interoperable data with good quality
 - More efficient work-flows
 
-![](stanford-rialto.png){width=550,align='center'}
+![](assets/img/stanford-rialto_arrow.png){width=550,align='center'}
 
 ## Report for KTH publication corpus
 
