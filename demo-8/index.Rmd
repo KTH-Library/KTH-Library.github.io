@@ -58,7 +58,7 @@ suppressPackageStartupMessages(library(magick))
 
 ## DAUF - background and context 
 
-Trend towards `r green("better overview of research outputs")` as well as `r green("integration of systems")`.
+Trend towards `r green("better overview of research outputs")` as well as `r green("integration of systems.")`
 
 <div align="center">
 ![*Example from Stanford*](assets/img/stanford_cris.png){width=640}
@@ -104,7 +104,7 @@ Need for data to answer questions like:
 - Current lack of coordination at KTH for project data
 
 - Have started to look at possible data sources
-  * Agresso data may not be suitable for this purpose, 
+  * Agresso data may not be suitable for this purpose 
   * investigating alternatives, e.g. SweCris & Cordis
   * other KTH-sources: CASE, W3D3
   
@@ -118,14 +118,13 @@ Can provide a baseline for how to proceed.
   * for ad-hoc research groups
   * rolling data (more up to date)
   
-  Example: The ECO2 research groups' output
-
 - **Curation tool for DiVA**
 
 - **Infrastructure**
   * KTH OIDC
   * Server infrastructure
   * Integration with other reporting at KTH,  API output
+  * Data consolidation in object storage (s3)
  
 
 # Curation tool for DiVA data
