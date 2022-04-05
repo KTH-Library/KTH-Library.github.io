@@ -61,10 +61,10 @@ suppressPackageStartupMessages(library(magick))
 Trend towards `r green("better overview of research outputs")` as well as `r green("integration of systems")`.
 
 <div align="center">
-![*Example from Stanford*](assets/img/stanford_cris.png){width=700}
+![*Example from Stanford*](assets/img/stanford_cris.png){width=640}
 </div>
 
-- [Youtube presentation of Stanford RIALTO project](https://www.youtube.com/watch?v=7UgwzCKIU1A) 
+[Stanford RIALTO project](https://www.youtube.com/watch?v=7UgwzCKIU1A) (Youtube)
 
 ## DAUF - data curation
 
@@ -97,16 +97,19 @@ Possible point for discussion at the end.
 
 ## Projects at KTH
 
-Data sources need to support questions like:
+Need for data to answer questions like:
 
-- Which projects are active? Which researchers are involved? Size?
+- Which projects are active? Which researchers are involved? Grant sizes?
 
-- Current lack of data coordination at KTH
+- Current lack of coordination at KTH for project data
 
 - Have started to look at possible data sources
   * Agresso data may not be suitable for this purpose, 
   * investigating alternatives, e.g. SweCris & Cordis
-  * KTH-data; CASE, W3D3
+  * other KTH-sources: CASE, W3D3
+  
+Our current aim is to get an overview of usable data, and gaps.
+Can provide a baseline for how to proceed.
 
 ## Progress - What is new during Q1 2022? {data-background=assets/bg/plant.png data-background-size=cover}
 
