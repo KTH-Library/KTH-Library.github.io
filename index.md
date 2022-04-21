@@ -11,11 +11,10 @@ Note that [several other public repositories from KTH](https://github.com/search
 
 DAUF is an acronym for "Datadriven Analys och Uppföljning av KTHs Forskning".
 
-Several services and activities are delivered through this project. For example:
+Several services and activities are delivered through this project.  
+For example:
 
-Public app for Annual Bibliometric Monitoring:
-
-- [Annual Bibliometric Monitoring Dashboard - KTH 2019](https://kth.se/abm/public)
+- Public app for Annual Bibliometric Monitoring: [Annual Bibliometric Monitoring Dashboard - KTH 2021](https://kth.se/abm/public)
 
 System requirements: 
 
@@ -35,7 +34,8 @@ Presentations / Demos:
 - [Web slides - Demo 5 - 2020-11-10](/demo-5/)
 - [Web slides - Demo 6 - 2021-03-15](/demo-6/)
 - [Web slides - Demo 7 - 2021-10-12](/demo-7/)
-- [Web slides - Demo 8 - 2022-04-05 - DAUF-project and KTH Publication Analysis app](/demo-8/)
+- [Web slides - Demo 8 - 2022-04-05 - DAUF-project and KTH Publication Analysis app](/demo-8/)  
+
 __NB.__ Some presentations are outdated but are kept on record here.
 
 ### Technical documentation
@@ -53,7 +53,7 @@ Slides providing overviews:
 
 Technical documentation for the components used in ABM:
 
-- [Documentation for `kontarion-bundle`](https://gita.sys.kth.se/kthb/kontarion-bundle) - how to operate and use the full application bundle
+- [Documentation for `kontarion-bundle`](https://gita.sys.kth.se/kthb/kontarion-bundle) - how to operate and use the full application bundle (**Note** that this is behind login in KTHs local git instance 'Gita')
 - [Documentation for `kontarion` source code at GitHub](https://github.com/KTH-Library/kontarion) - how to operate and use the image bundling the ABM application and its dependencies
 - [Documentation for `kontarion` binaries at Docker Hub](https://hub.docker.com/r/kthb/kontarion)
 - [Documentation for `bibliomatrix` R package at GitHub](https://github.com/KTH-Library/bibliomatrix) - how to operate and develop the R package that contains the ABM application, REST API and embedded public data
