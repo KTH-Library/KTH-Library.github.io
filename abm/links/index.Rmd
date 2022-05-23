@@ -103,6 +103,7 @@ An application and API is used to simplify and automate this process.
 - [Object storage for data](https://data.bibliometrics.lib.kth.se){target="_blank"} *minio used*
 - [Search engine for internal use](https://search.bibliometrics.lib.kth.se){target="_blank"} *meilisearch used*
 - [SFTP acccess for HR](https://bibliometrics.lib.kth.se){target="_blank"}
+- [Confluence link documenting HR data flow](https://confluence.sys.kth.se/confluence/pages/viewpage.action?pageId=91857625){target="_blank"}
 
 ## Source code and CI
 
