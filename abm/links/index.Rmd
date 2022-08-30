@@ -112,4 +112,9 @@ However, code for some apps and deployments are located at [KTHs local git insta
 
 For packages, GitHub Action triggers CI for running tests and checks on commit/push/merge. For more information, see https://www.jimhester.com/talk/2020-rsc-github-actions/.
 
+# Status page
 
+Status pages are available here:
+
+- [Status page for DAUF services](https://analysis.sys.kth.se/bibliometrics/status){target="_blank"} *uptimerobot used*
+- [Status page for various KTH services](https://www.kthstatus.se/)
