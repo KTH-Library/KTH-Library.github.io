@@ -35,6 +35,7 @@ Presentations / Demos:
 - [Web slides - Demo 6 - 2021-03-15](/demo-6/)
 - [Web slides - Demo 7 - 2021-10-12](/demo-7/)
 - [Web slides - Demo 8 - 2022-04-05 - DAUF-project and KTH Publication Analysis app](/demo-8/)  
+- [Web slides - Demo - Centre leaders - 2022-10-26](/demo-centres/)  
 
 __NB.__ Some presentations are outdated but are kept on record here.
 
