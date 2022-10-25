@@ -48,12 +48,12 @@ suppressPackageStartupMessages(library(magick))
 The **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
   
 - Started with project to develop/refresh the the [*Annual bibliometric monitoring*](https://kth.se/abm) (ABM/ÅBU)
-- Collaboration between KTH Library and IT
+- Collaboration between KTH Library and ITA
 - Presentation of KTH research output  
    Started from bibliometric data
 - Collation of relevant data sources at KTH  
     Publications, staff/HR, projects ...
-- Servers and data layers
+- Servers and data in object storage (s3)
   
 ## Apps and services
 
