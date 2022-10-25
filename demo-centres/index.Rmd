@@ -1,5 +1,5 @@
 ---
-title: "Publication and project data <br> demo KTH centres"
+title: "Publication and project data <br> Demo centre leaders"
 author: KTH Library & ITA - Datadriven Analys och Uppföljning av KTHs Forskning <br>
   Tobias Jeppsson
 date: '2022-10-26'
@@ -48,19 +48,19 @@ suppressPackageStartupMessages(library(magick))
 The **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
   
 - Started with project to develop/refresh the the [*Annual bibliometric monitoring*](https://kth.se/abm) (ABM/ÅBU)
-  - Collaboration between KTH Library and IT
-  - Presentation of KTH research output  
-    Started from bibliometric data
-  - Collation of relevant data sources at KTH  
+- Collaboration between KTH Library and IT
+- Presentation of KTH research output  
+   Started from bibliometric data
+- Collation of relevant data sources at KTH  
     Publications, staff/HR, projects ...
-  - Servers and data layers
+- Servers and data layers
   
-## Applications and services
+## Apps and services
 
 - [*Annual bibliometric monitoring*](https://kth.se/abm) (ABM/ÅBU)
 - Data curation tool for DiVA publication data
 - Publication analysis (++)
-- R-packages to interact with KTH-relevant data (kthcorpus, kthapi, ktheme, at [Github](https://github.com/KTH-Library))
+- R-packages to interact with KTH-relevant data (kthcorpus, kthapi, ktheme etc, found at [Github](https://github.com/KTH-Library))
 - Some APIs
 
 ## The analysis app
@@ -86,7 +86,7 @@ Selection view
 
 ## Example
 
-Co-publication example
+Co-publishing - organizations and countries
 
 <div align="center">
 ![](assets/img/app3.png){width=1000}
@@ -100,7 +100,7 @@ Project view
 
 ## Demo of TECoSA
 
-Demo of [TECoSA](https://www.tecosa.center.kth.se/), based on 9 PIs  
+[TECoSA](https://www.tecosa.center.kth.se/) used as example, based on 9 PIs  
 Centre running since 2020.
 
 Some summary stats:
@@ -111,28 +111,28 @@ Some summary stats:
 - 39 projecs in CASE
 - 13 projects 2020-2021 (seems to be more in CASE, but some with missing data on duration)
 
+## To-do and limitations
+
+**To-do:**
+
+- Adding filters for projects
+- Adding subject categorisation (publications)
+- More journal info
+
+**Limitations:**
+
+- Only based on KTH researchers
+- Limitations in project data at KTH 
+  * Only PIs
+  * Limited economic data, and uneven quality among schools
+  * System not originally created for project management in a broader sense
+- Co-publication data and bibliometrics currently based on Web of Science
 
 ## Take-away
 
 * Can catch centres and research groups, by ad-hoc selection and saved groups
 * Unified view of publications, staff and project data (to some extent)
 * Can help in reporting and monitoring(?)
+* Can be used to better understand project groups
 
-## To-do and limitations
-
-To-do:
-
-- Adding filters for projects
-- Adding subject categorisation (publications)
-
-Limitations:
-
-- Only based on KTH researchers
-- Limitations to project data at KTH 
-  * Only PIs
-  * Limited economic data
-  * Uneven quality among schools
-  * System not originally created for project management in a broader sense
-- Co-publication data and bibliometrics currently based on Web of Science
-
-## 
+Try out and give feedback.
