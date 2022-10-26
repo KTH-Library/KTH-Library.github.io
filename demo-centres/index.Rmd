@@ -49,6 +49,7 @@ The **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
   
 - Started with project to develop/refresh the the [*Annual bibliometric monitoring*](https://kth.se/abm) (ABM/ÅBU)
 - Collaboration between KTH Library and ITA
+  Agile, sprint-based
 - Presentation of KTH research output  
    Started from bibliometric data
 - Collation of relevant data sources at KTH  
@@ -110,6 +111,8 @@ Some summary stats:
 
 - 39 projecs in CASE
 - 13 projects 2020-2021 (seems to be more in CASE, but some with missing data on duration)
+- Info on funders and SDG-goals on projects
+- Picture of collaborations, through co-publication
 
 ## To-do and limitations
 
