@@ -48,7 +48,7 @@ suppressPackageStartupMessages(library(magick))
 The **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
   
 - Started with project to develop/refresh the the [*Annual bibliometric monitoring*](https://kth.se/abm) (ABM/ÅBU)
-- Collaboration between KTH Library and ITA
+- Collaboration between KTH Library and ITA  
   Agile, sprint-based
 - Presentation of KTH research output  
    Started from bibliometric data
@@ -138,4 +138,5 @@ Some summary stats:
 * Can help in reporting and monitoring(?)
 * Can be used to better understand project groups
 
-Try out and give feedback.
+Try out and give us feedback!  
+Are there specific key data/KPIs that should be added?
