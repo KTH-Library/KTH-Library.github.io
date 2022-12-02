@@ -74,7 +74,7 @@ Utvecklas aktivt och publiceras på https://analysis.sys.kth.se/bibliometrics/ap
 
 * Urval via organisation (som i ÅBU) eller personer
 * Skapa persongrupper eller filtrera på personalkategorier
-* Senast tillgängliga data
+* Senast tillgängliga data i Bibmet
 * Sampublicering
 * Bibliometrisk prestation
 * Filtrering på land, organisation och publikationsår
@@ -109,7 +109,7 @@ Projektvy
 
 * Ämneskategorier - visa upp och möjliggör filtrering
 * Mer tidskriftsinformation
-* Filtrera bland projekt
+* Filtrera bland projekt samt förbättra/utöka datakälla
 
 **Begränsningar i dagsläget**
 
@@ -126,10 +126,28 @@ Gå till https://analysis.sys.kth.se/bibliometrics/app/publ_analysis
 
 I grupper om 2-3 personer, försök under de närmaste 20 minuterna svara på några av dessa frågor:
 
-* asdf
-* sdfa
-* dfas
-* fasd
 
-Skriv gärna ner medan ni håller på om ni fastnar någonstans och om ni har förslag
-på förbättringar av gränssnittet, e-posta isåfall till Tobias eller Agne.
+För gärna anteckningar gruppvis medan ni håller på om ni fastnar någonstans eller har förslag på förbättringar 
+av gränssnittet.
+
+Varje grupp återrapporterar kort hur övningarna gick.  
+
+E-posta sedan även gruppkommentarerna till Tobias eller Agne.
+
+## Uppgift till PIM - frågeställningar
+
+1. Ta fram organisationsbaserade resultat för institutionen "Fibre and Polymer technology" och notera deras andel bibliometriska resultat för Top10% för 2018-2020. Notera även vilka 2 organisationer de oftast sampublicerar med. 
+2. Ta fram personalbaserade resultat för alla anställda på "Electric power and Energy Systems". Notera hur många publikationer de sampublicerat med USA mellan åren 2015-2021, och vilka 3 organisationer som ingår oftast i dessa samarbeten.
+3. Välj ut alla professorer och lektorer (associate professor) från institutionerna "Chemistry" och "Chemical engineering" och ta fram resulat för dessa. Notera hur många projekt som finns kopplade till dessa personer i CASE, och vilka två organisationer som finansierar flest projekt.  
+
+4. Ta fram organisationsbaserade resultat för hela ITM-skolan, och filtrera fram samarbeten med Münchens tekniska universitet (Technical University of Munich, TUM). Notera vilka 2 forskare från KTH resp. TUM som oftast ingår i dessa samarbeten.
+
+## Återrapportering och reflektion
+
+Hur gick övningarna?
+
+Var det någon speciell del som kändes extra oklar eller svårförståerlig?
+
+Har ni fått en bättre känsla för hur bibliometriska data kan användas för KTH:S uppföljning?
+
+Kom ihåg att skicka era kommentarer och tankar!
