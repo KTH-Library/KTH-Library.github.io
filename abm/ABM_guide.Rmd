@@ -195,6 +195,18 @@ mean?](https://support.unpaywall.org/support/solutions/articles/44001777288-what
 
 ![](media/image7.png){width=100%}
 
+## Scopus
+
+The *Scopus* tab presents bibliometric indicator data based on the Scopus database, as a complement to the data in the tabs *Citation impact*, *Journal impact* and *Co-publishing*. 
+This tab has sub-tabs
+
+## SDG
+
+The *SDG* tab provides an overview of how publications are mapped against the UN sustainability goals (SDG).
+The mapping is provided from Scopus, and only publications present in the Scopus database are therefore included in the summary.
+
+
+
 [^1]: Included indices: Science Citation Index Expended (SCIE), Social
     Sciences Citation Index (SSCI), Arts &Humanities Citation Index
     (AHCI), Conference Proceedings Citation Index -Sciences (CPCI-S) and
@@ -205,3 +217,5 @@ mean?](https://support.unpaywall.org/support/solutions/articles/44001777288-what
     of last autumn -- 1), with a non-zero count, for the Total
     publications number, the full period for WoS coverage and last
     three-year period with an indicator for the other numbers.
+    
+
