@@ -137,8 +137,10 @@ E-posta sedan även gruppkommentarerna till Tobias eller Agne.
 ## Uppgift till PIM - frågeställningar
 
 1. Ta fram organisationsbaserade resultat för institutionen "Fibre and Polymer technology" och notera deras andel bibliometriska resultat för Top10% för 2018-2020. Notera även vilka 2 organisationer de oftast sampublicerar med. 
+
 2. Ta fram personalbaserade resultat för alla anställda på "Electric power and Energy Systems". Notera hur många publikationer de sampublicerat med USA mellan åren 2015-2021, och vilka 3 organisationer som ingår oftast i dessa samarbeten.
-3. Välj ut alla professorer och lektorer (associate professor) från institutionerna "Chemistry" och "Chemical engineering" och ta fram resulat för dessa. Notera hur många projekt som finns kopplade till dessa personer i CASE, och vilka två organisationer som finansierar flest projekt.  
+
+3. Välj ut alla professorer och docenter (associate professor) från institutionerna "Chemistry" och "Chemical engineering" och ta fram resulat för grupperingen. Notera hur många projekt som finns kopplade till dessa personer i CASE, och vilka två organisationer som finansierar flest projekt.  
 
 4. Ta fram organisationsbaserade resultat för hela ITM-skolan, och filtrera fram samarbeten med Münchens tekniska universitet (Technical University of Munich, TUM). Notera vilka 2 forskare från KTH resp. TUM som oftast ingår i dessa samarbeten.
 
