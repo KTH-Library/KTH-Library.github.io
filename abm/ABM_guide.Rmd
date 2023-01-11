@@ -180,6 +180,9 @@ academia while an International co-publication is a publication with at
 least two countries in the Web of Science addresses field.
 
 ![](media/image6.png){width=100%}
+The sub-tab *Countries and organizations* contains list of the countries and organizations that the selected unit has co-published with, which can be searched and filtered. These tables are also summarized based on the number of co-authors on individual publications, to differentiate between smaller collaborations and collaborations based on large author groups.
+
+![](media/image6b.png){width=100%}
 
 ## Open Access
 
