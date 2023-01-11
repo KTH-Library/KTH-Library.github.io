@@ -197,15 +197,19 @@ mean?](https://support.unpaywall.org/support/solutions/articles/44001777288-what
 
 ## Scopus
 
-The *Scopus* tab presents bibliometric indicator data based on the Scopus database, as a complement to the data in the tabs *Citation impact*, *Journal impact* and *Co-publishing*. 
-This tab has sub-tabs
+The *Scopus* tab presents bibliometric indicator data based on the Scopus database, as a complement to the indicators in the tabs *Citation impact*, *Journal impact* and *Co-publishing*. 
+This *Scopus* tab has sub-tabs each containing data for one of these aspects. In *Citation impact*, the indicator for field-weighted normalized citations is called FWCI, which is similar to the Cf-indicator. The *Share Top 10%* is a direct parallell to the same indicator based on Web of Science data. 
+Field-normalization for the Scopus indicators are based on the same principles as the Web of Science-based indicators, but are based on the subject categories in the Scopus database and supplied directly by Scopus.
+
+![](media/image8_scopus.png){width=100%}
 
 ## SDG
 
-The *SDG* tab provides an overview of how publications are mapped against the UN sustainability goals (SDG).
+The *SDG* tab provides an overview of how publications are mapped against the [UN sustainability goals (SDG)](https://sdgs.un.org/goals).
 The mapping is provided from Scopus, and only publications present in the Scopus database are therefore included in the summary.
+Publications are mapped to SDGs based on search queries, using keywords found in titles, abstract and author keywords, and the full methodology is described by Scopus [here](https://elsevier.digitalcommonsdata.com/datasets/87txkw7khs/1). The same SDG-mapping is also used in e.g. the *Times Higher Education Impact ranking* (THE Impact ranking)](https://www.timeshighereducation.com/impactrankings). Also note that individual publications can be mapped towards several SDGs. 
 
-
+![](media/image9_sdg.png){width=100%}
 
 [^1]: Included indices: Science Citation Index Expended (SCIE), Social
     Sciences Citation Index (SSCI), Arts &Humanities Citation Index
