@@ -70,7 +70,6 @@ If you require access to content not provided in a format that is accessible for
 - [Introduction to bibliometrics at KTH](Bibliometrics.html){target="_blank"}
 - [Description of data, methods and indicators in KTH Annual Bibliometric Monitoring](Description_data_and_methods_ABM.pdf){target="_blank"}
 - [Information about DiVA and the registration process - Handle publications in DiVA](https://www.kth.se/en/biblioteket/publicera-analysera/hantera-publikationer){target="_blank"}
-- [President decision about the Annual Bibliometric Monitoring](Beslut_ABM.html){target="_blank"}
 - [Report on Open Access publishing at KTH](OARapport.pdf){target="_blank"}
 - [Formal definitions of field normalized citation indicators at KTH](indicators.html){target="_blank"}
 
