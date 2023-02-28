@@ -44,9 +44,9 @@ suppressPackageStartupMessages(library(magick))
 
 - The **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
 
-- Overview of available data sources for projects at KTH
-
 - A demo of the **"KTH Publication Analysis app"** with projects data from CASE
+
+- Overview of available data sources for projects at KTH
 
 - Your **questions and feedback**
 
@@ -75,6 +75,38 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
   * for ad-hoc research groups
   * rolling data
   * CASE projects data
+  
+# Demo of KTH Publication Analysis app
+
+## KTH Publication Analysis app
+
+The goal of this app is to help answering some common questions, for example:
+
+- Who are the main collaborating partners of division X?
+- How large is the publication output of department Y over time, in copublication with German organisations?
+- Which senior staff at CBH is collaborating with MIT, and what is the bibliometric performance of this research compared to CBH baseline? 
+- What is the publication output and project count of the staff related to project X (ad-hoc group of KTH staff)
+
+The idea is that the analysis app will complement the *Annual bibliometric monitoring* (ABM).
+
+## KTH Publication Analysis app
+
+- Screenshot 
+
+## Example based on TECoSA
+
+[TECoSA](https://www.tecosa.center.kth.se/) used as example, based on 9 PIs  
+Centre running since 2020.
+
+Some summary stats:
+
+- 619 publications 2010-2021
+- 96 publications 2020-2021 (e.g from the TECoSA-period)
+
+- 39 projecs in CASE
+- 13 projects 2020-2021 (seems to be more in CASE, but some with missing data on duration)
+- Info on funders and SDG-goals on projects
+- Picture of collaborations, through co-publication
 
 # Data for projects at KTH {data-background=assets/bg/kth-5.png data-background-size=cover}
 
@@ -120,18 +152,6 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 
 - <Overlap - Unions and intersections for different data sources>
 
-# Demo of KTH Publication Analysis app
-
-## KTH Publication Analysis app
-
-The goal of this app is to help answering some common questions, for example:
-
-- <Bullet points to focus on ...>
-- <...>
-
-## KTH Publication Analysis app
-
-- Screenshot etc
 
 ## Future work and directions
 
