@@ -64,18 +64,18 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 
 ## Progress - What is new during Q1 2023? {data-background=assets/bg/plant.png data-background-size=cover}
 
-- **Mobilizations of projects data from other sources**
-  * CASE
-  * SweCris
-  * CORDIS (EU projects)
-  * Other sources
-  
 - **KTH Publication Analysis app**
   * allowing exploration of co-publication and collaboration at KTH 
   * for ad-hoc research groups
   * rolling data
   * CASE projects data
   
+- **Mobilizations of projects data from other sources**
+  * CASE
+  * SweCris
+  * CORDIS (EU projects)
+  * Other sources
+
 # Demo of KTH Publication Analysis app
 
 ## KTH Publication Analysis app
@@ -95,8 +95,7 @@ The idea is that the analysis app will complement the *Annual bibliometric monit
 
 ## Example based on TECoSA
 
-[TECoSA](https://www.tecosa.center.kth.se/) used as example, based on 9 PIs  
-Centre running since 2020.
+[TECoSA](https://www.tecosa.center.kth.se/) Centre running since 2020 used as example, based on 9 PIs.
 
 Some summary stats:
 
