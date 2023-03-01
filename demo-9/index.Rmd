@@ -69,6 +69,7 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
   * SweCris
   * CORDIS (EU projects)
   * Other sources
+  * Blaha
   
 - **KTH Publication Analysis app**
   * allowing exploration of co-publication and collaboration at KTH 
