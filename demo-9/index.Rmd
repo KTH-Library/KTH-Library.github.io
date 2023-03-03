@@ -15,7 +15,7 @@ output:
   
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-
+# install.packages("devtools")
 library(ktheme)
 library(webshot)
 library(DT)
@@ -25,6 +25,7 @@ library(formattable)
 library(readxl)
 library(dplyr)
 library(kableExtra)
+library(knitr)
 
 red <- function(txt) 
   sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["cerise"]), txt)
@@ -64,19 +65,18 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 
 ## Progress - What is new during Q1 2023? {data-background=assets/bg/plant.png data-background-size=cover}
 
-- **Mobilizations of projects data from other sources**
-  * CASE
-  * SweCris
-  * CORDIS (EU projects)
-  * Other sources
-  * Blaha
-  
 - **KTH Publication Analysis app**
   * allowing exploration of co-publication and collaboration at KTH 
   * for ad-hoc research groups
   * rolling data
   * CASE projects data
   
+- **Mobilizations of projects data from other sources**
+  * CASE
+  * SweCris
+  * CORDIS (EU projects)
+  * Other sources
+
 # Demo of KTH Publication Analysis app
 
 ## KTH Publication Analysis app
@@ -96,8 +96,7 @@ The idea is that the analysis app will complement the *Annual bibliometric monit
 
 ## Example based on TECoSA
 
-[TECoSA](https://www.tecosa.center.kth.se/) used as example, based on 9 PIs  
-Centre running since 2020.
+[TECoSA](https://www.tecosa.center.kth.se/) Centre running since 2020 used as example, based on 9 PIs.
 
 Some summary stats:
 
@@ -129,17 +128,29 @@ Some summary stats:
 ## Data sources for projects
 
 - Overview of available data sources
-  - Descriptions of data sources
-  - Data flows and access
-  - Combining data sources for KTH projects
+  - <font size="2">Descriptions of data sources</font>
+  - <font size="2">Data flows and access</font>
+  - <font size="2">Combining data sources for KTH projects</font>
+  
+```{r echo=F,out.width="40%",fig.align='center',fig.cap="Data-driven flowchart. Data wrangling, exploratory data analysis, and data enrichment"}
+include_graphics(path = "assets/img/DataDriven-Flowchart.png")
+```
 
 ## CASE
 
 - <Overview here - nr of records, update frequency, fields available, keys>
 
+```{r echo=F,out.width="60%",fig.align='center',fig.cap="Pareto chart for missing values (counts and proportions) in Case"}
+include_graphics(path = "assets/img/Case-data-Quality.jpg")
+```
+
 ## SweCris
 
 - <Overview here - nr of records, update frequency, fields available, keys>
+
+```{r}
+include_graphics(path = "assets/img/swecris-fig-2.png")
+```
 
 ## CORDIS
 
@@ -153,6 +164,15 @@ Some summary stats:
 
 - <Overlap - Unions and intersections for different data sources>
 
+```{r echo=F,out.width="60%",fig.align='center',fig.cap="Entity/Relationship (ER) diagram. Shared identifiers among specific relational databases (RDB)."}
+include_graphics("assets/img/EntityRelationship.png")
+```
+
+## Selection (Urval)
+
+```{r echo=F,out.width="80%",fig.align='center'}
+include_graphics("assets/img/Table.3.png")
+```
 
 ## Future work and directions
 
