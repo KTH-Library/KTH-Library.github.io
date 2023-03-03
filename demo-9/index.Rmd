@@ -92,7 +92,9 @@ The idea is that the analysis app will complement the *Annual bibliometric monit
 
 ## KTH Publication Analysis app
 
-- Screenshot 
+App link: https://analysis.sys.kth.se/bibliometrics/app/publ_analysis
+
+![*Example collaboration network*](assets/img/app_network1.png){width=1000}
 
 ## Example based on TECoSA
 
@@ -100,11 +102,11 @@ The idea is that the analysis app will complement the *Annual bibliometric monit
 
 Some summary stats:
 
-- 619 publications 2010-2021
-- 96 publications 2020-2021 (e.g from the TECoSA-period)
+- 462 publications 2010-2021
+- 137 publications 2020-2021 (e.g from the TECoSA-period)
 
-- 39 projecs in CASE
-- 13 projects 2020-2021 (seems to be more in CASE, but some with missing data on duration)
+- 28 projecs in CASE
+- 14 projects 2020-2021 (seems to be more in CASE, but some with missing data on duration)
 - Info on funders and SDG-goals on projects
 - Picture of collaborations, through co-publication
 
