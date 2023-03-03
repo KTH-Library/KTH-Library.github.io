@@ -148,6 +148,10 @@ include_graphics(path = "assets/img/Case-data-Quality.jpg")
 
 - <Overview here - nr of records, update frequency, fields available, keys>
 
+```{r}
+include_graphics(path = "assets/img/swecris-fig-2.png")
+```
+
 ## CORDIS
 
 - <Overview here - nr of records, update frequency, fields available, keys>
@@ -162,6 +166,12 @@ include_graphics(path = "assets/img/Case-data-Quality.jpg")
 
 ```{r echo=F,out.width="60%",fig.align='center',fig.cap="Entity/Relationship (ER) diagram. Shared identifiers among specific relational databases (RDB)."}
 include_graphics("assets/img/EntityRelationship.png")
+```
+
+## Selection (Urval)
+
+```{r echo=F,out.width="80%",fig.align='center'}
+include_graphics("assets/img/Table.3.png")
 ```
 
 ## Future work and directions
