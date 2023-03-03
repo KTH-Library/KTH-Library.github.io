@@ -150,13 +150,17 @@ include_graphics(path = "assets/img/Case-data-Quality.jpg")
 
 - <Overview here - nr of records, update frequency, fields available, keys>
 
-```{r}
+```{r echo=F,out.width="60%",fig.align='center'}
 include_graphics(path = "assets/img/swecris-fig-2.png")
 ```
 
 ## CORDIS
 
 - <Overview here - nr of records, update frequency, fields available, keys>
+
+```{r echo=F,out.width="30%",fig.align='center'}
+include_graphics(path = "assets/img/Summary graph.png")
+```
 
 ## Other sources
 
