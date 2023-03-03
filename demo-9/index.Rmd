@@ -15,7 +15,7 @@ output:
   
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-
+# install.packages("devtools")
 library(ktheme)
 library(webshot)
 library(DT)
@@ -25,6 +25,7 @@ library(formattable)
 library(readxl)
 library(dplyr)
 library(kableExtra)
+library(knitr)
 
 red <- function(txt) 
   sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["cerise"]), txt)
@@ -127,13 +128,21 @@ Some summary stats:
 ## Data sources for projects
 
 - Overview of available data sources
-  - Descriptions of data sources
-  - Data flows and access
-  - Combining data sources for KTH projects
+  - <font size="2">Descriptions of data sources</font>
+  - <font size="2">Data flows and access</font>
+  - <font size="2">Combining data sources for KTH projects</font>
+  
+```{r echo=F,out.width="40%",fig.align='center',fig.cap="Data-driven flowchart. Data wrangling, exploratory data analysis, and data enrichment"}
+include_graphics(path = "assets/img/DataDriven-Flowchart.png")
+```
 
 ## CASE
 
 - <Overview here - nr of records, update frequency, fields available, keys>
+
+```{r echo=F,out.width="60%",fig.align='center',fig.cap="Pareto chart for missing values (counts and proportions) in Case"}
+include_graphics(path = "assets/img/Case-data-Quality.jpg")
+```
 
 ## SweCris
 
@@ -151,6 +160,9 @@ Some summary stats:
 
 - <Overlap - Unions and intersections for different data sources>
 
+```{r echo=F,out.width="60%",fig.align='center',fig.cap="Entity/Relationship (ER) diagram. Shared identifiers among specific relational databases (RDB)."}
+include_graphics("assets/img/EntityRelationship.png")
+```
 
 ## Future work and directions
 
