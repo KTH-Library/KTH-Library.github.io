@@ -128,35 +128,34 @@ Some summary stats:
 ## Data sources for projects
 
 - Overview of available data sources
-  - <font size="2">Descriptions of data sources</font>
-  - <font size="2">Data flows and access</font>
-  - <font size="2">Combining data sources for KTH projects</font>
-  
-```{r echo=F,out.width="40%",fig.align='center',fig.cap="Data-driven flowchart. Data wrangling, exploratory data analysis, and data enrichment"}
+
+```{r echo=F,out.width="80%",fig.align='center'}
+#  - <font size="2">Descriptions of data sources</font>
+#  - <font size="2">Data flows and access</font>
+#  - <font size="2">Combining data sources for KTH projects</font>
+
 include_graphics(path = "assets/img/DataDriven-Flowchart.png")
 ```
 
 ## CASE
 
-- <Overview here - nr of records, update frequency, fields available, keys>
-
-```{r echo=F,out.width="60%",fig.align='center',fig.cap="Pareto chart for missing values (counts and proportions) in Case"}
-include_graphics(path = "assets/img/Case-data-Quality.jpg")
+```{r echo=F,out.width="60%",fig.align='center'}
+# - <Overview here - nr of records, update frequency, fields available, keys>
+include_graphics(path = "assets/img/Case-Overview.png")
 ```
 
 ## SweCris
 
-- <Overview here - nr of records, update frequency, fields available, keys>
-
-```{r echo=F,out.width="60%",fig.align='center'}
-include_graphics(path = "assets/img/swecris-fig-2.png")
+```{r echo=F,out.width="70%",fig.align='center'}
+# - <Overview here - nr of records, update frequency, fields available, keys>
+include_graphics(path = "assets/img/sweCris-Overview.png")
 ```
 
 ## CORDIS
 
 - <Overview here - nr of records, update frequency, fields available, keys>
 
-```{r echo=F,out.width="30%",fig.align='center'}
+```{r echo=F,out.width="70%",fig.align='center',fig.}
 include_graphics(path = "assets/img/Summary graph.png")
 ```
 
