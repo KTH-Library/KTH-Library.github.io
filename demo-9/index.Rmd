@@ -131,19 +131,9 @@ Some summary stats:
 
 - Overview of available data sources
 
-```{r echo=F,out.width="80%",fig.align='center'}
-#  - <font size="2">Descriptions of data sources</font>
-#  - <font size="2">Data flows and access</font>
-#  - <font size="2">Combining data sources for KTH projects</font>
-
-include_graphics(path = "assets/img/DataDriven-Flowchart.png")
-```
-
-## Test
-
-```{r echo=F,out.width="90%",fig.align='center'}
-include_graphics(path = "assets/img/testGraph.png")
-```
+- <font size="2">Descriptions of data sources</font>
+- <font size="2">Data flows and access</font>
+- <font size="2">Combining data sources for KTH projects</font>
 
 ## CASE
 
@@ -159,7 +149,7 @@ include_graphics(path = "assets/img/Case-Overview.png")
 include_graphics(path = "assets/img/sweCris-Overview.png")
 ```
 
-## CORDIS
+## CORDIS & openAire
 
 - <Overview here - nr of records, update frequency, fields available, keys>
 
@@ -175,8 +165,8 @@ include_graphics(path = "assets/img/Summary graph_new.png")
 
 - <Overlap - Unions and intersections for different data sources>
 
-```{r echo=F,out.width="60%",fig.align='center',fig.cap="Entity/Relationship (ER) diagram. Shared identifiers among specific relational databases (RDB)."}
-include_graphics("assets/img/EntityRelationship.png")
+```{r echo=F,out.width="100%",fig.align='center'}
+include_graphics(path = "assets/img/testGraph.png")
 ```
 
 ## Selection (Urval)
@@ -185,9 +175,9 @@ include_graphics("assets/img/EntityRelationship.png")
 include_graphics("assets/img/Table.3.png")
 ```
 
-## Explanation?
+## Why the discrepancy?
 
-```{r echo=F,out.width="80%",fig.align='center'}
+```{r echo=F,out.width="50%",fig.align='center'}
 include_graphics("assets/img/typebyyear.png")
 ```
 
