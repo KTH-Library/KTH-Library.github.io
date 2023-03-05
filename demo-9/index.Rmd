@@ -139,6 +139,12 @@ Some summary stats:
 include_graphics(path = "assets/img/DataDriven-Flowchart.png")
 ```
 
+## Test
+
+```{r echo=F,out.width="90%",fig.align='center'}
+include_graphics(path = "assets/img/testGraph.png")
+```
+
 ## CASE
 
 ```{r echo=F,out.width="60%",fig.align='center'}
@@ -158,7 +164,7 @@ include_graphics(path = "assets/img/sweCris-Overview.png")
 - <Overview here - nr of records, update frequency, fields available, keys>
 
 ```{r echo=F,out.width="70%",fig.align='center',fig.}
-include_graphics(path = "assets/img/Summary graph.png")
+include_graphics(path = "assets/img/Summary graph_new.png")
 ```
 
 ## Other sources
