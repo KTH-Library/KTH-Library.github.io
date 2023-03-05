@@ -185,6 +185,12 @@ include_graphics("assets/img/EntityRelationship.png")
 include_graphics("assets/img/Table.3.png")
 ```
 
+## Explanation?
+
+```{r echo=F,out.width="80%",fig.align='center'}
+include_graphics("assets/img/typebyyear.png")
+```
+
 ## Future work and directions
 
 - <Product Owners, Future Outlook>
