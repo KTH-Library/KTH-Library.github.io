@@ -61,7 +61,7 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 ![*Example from Stanford*](assets/img/stanford_cris.png){width=640}
 </div>
 
-[Stanford RIALTO project](https://www.youtube.com/watch?v=7UgwzCKIU1A) (Youtube)
+&emsp;&emsp;[Stanford RIALTO project](https://www.youtube.com/watch?v=7UgwzCKIU1A) (Youtube)
 
 ## Related, currently at KTH
 
