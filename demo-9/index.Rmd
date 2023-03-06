@@ -77,6 +77,9 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
   * CORDIS (EU projects)
   * Other sources
 
+- **ABM**
+  * Sustainable Development Goals
+
 # Demo of KTH Publication Analysis app
 
 ## KTH Publication Analysis app
