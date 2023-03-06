@@ -63,6 +63,13 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 
 [Stanford RIALTO project](https://www.youtube.com/watch?v=7UgwzCKIU1A) (Youtube)
 
+## Related, currently at KTH
+
+- DAUF
+- Data office (in progress)
+- More support and management of research data
+
+
 ## Progress - What is new during Q1 2023? {data-background=assets/bg/plant.png data-background-size=cover}
 
 - **KTH Publication Analysis app**
@@ -93,11 +100,15 @@ The goal of this app is to help answering some common questions, for example:
 
 The idea is that the analysis app will complement the *Annual bibliometric monitoring* (ABM).
 
-## KTH Publication Analysis app
+## KTH Publication Analysis app - example
 
 App link: https://analysis.sys.kth.se/bibliometrics/app/publ_analysis
 
-![*Example collaboration network*](assets/img/app_network1.png){width=1000}
+![*Collaboration network*](assets/img/app_network1.png){width=950}
+
+## KTH Publication Analysis app - example
+
+![*Projects related to staff from ITM:Enery technology*](assets/img/app_projects.png){width=950}
 
 ## Example based on TECoSA
 
