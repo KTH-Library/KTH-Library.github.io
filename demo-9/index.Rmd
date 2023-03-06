@@ -153,13 +153,17 @@ include_graphics(path = "assets/img/sweCris-Overview.png")
 
 - <Overview here - nr of records, update frequency, fields available, keys>
 
-```{r echo=F,out.width="70%",fig.align='center',fig.}
-include_graphics(path = "assets/img/Summary graph_new.png")
+```{r echo=F,out.width="60%",fig.align='center',fig.}
+include_graphics(path = "assets/img/cordisOpenAire Overview.png")
 ```
 
 ## Other sources
 
 - <Overview here - nr of records, update frequency, fields available, keys>
+
+```{r echo=F,out.width="80%",fig.align='center'}
+include_graphics(path = "assets/img/Summary graph_new.png")
+```
 
 ## Combining data sources for projects
 
@@ -171,13 +175,15 @@ include_graphics(path = "assets/img/testGraph.png")
 
 ## Selection (Urval)
 
+- Case versus sweCris
+
 ```{r echo=F,out.width="80%",fig.align='center'}
 include_graphics("assets/img/Table.3.png")
 ```
 
 ## Why the discrepancy?
 
-```{r echo=F,out.width="50%",fig.align='center'}
+```{r echo=F,out.width="90%",fig.align='center'}
 include_graphics("assets/img/typebyyear.png")
 ```
 
