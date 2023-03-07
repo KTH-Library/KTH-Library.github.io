@@ -81,6 +81,9 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
   * for ad-hoc research groups
   * rolling data
   * CASE projects data
+
+- **ABM**
+  * Sustainable Development Goals
   
 - **Mobilizations of projects data from other sources**
   * CASE
@@ -88,25 +91,20 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
   * CORDIS (EU projects)
   * Other sources
 
-- **ABM**
-  * Sustainable Development Goals
-
 # Demo of KTH Publication Analysis app
 
 ## KTH Publication Analysis app
 
-The idea is that the analysis app will complement the *Annual bibliometric monitoring* (ABM).
+The idea is that the analysis app will complement the *Annual bibliometric monitoring* (ABM), and answer questions like:
 
-The goal of this app is to help answering some common questions, for example:
-
-- Who are the main collaborating partners to the division of Electric Power and Energy Systems?
-- How large is the publication output of the department of Gene technology over time, in copublication with German organisations?
-- Which senior staff at CBH is collaborating with MIT, and what is the bibliometric performance of this research compared to CBH baseline? 
-- What is the publication output and project count of the staff related to a particular project (ad hoc group of KTH staff)
+- Who are the *main collaborating partners* to the division of Electric Power and Energy Systems?
+- How large is the publication output of the department of Gene technology over time, in **co-publication with German organisations**?
+- Which **senior staff at CBH is collaborating with MIT**, and what is the bibliometric performance of this research compared to CBH baseline? 
+- What is the publication output and project count for an **ad hoc grouping of staff** related to a particular project?
 
 ## KTH Publication Analysis app - example
 
-App link: https://analysis.sys.kth.se/bibliometrics/app/publ_analysis
+https://analysis.sys.kth.se/bibliometrics/app/publ_analysis
 
 ![&emsp;&emsp;*Collaboration network*](assets/img/app_network1.png){width=950}
 
@@ -132,26 +130,28 @@ Some summary stats:
 
 ## DAUF and data about projects
 
-- DAUF has been building bottom-up data consolidation and analytics for KTH, making links between Researchers <-> Outputs <-> Projects
+- DAUF has been building bottom-up data consolidation and analytics for KTH, making links between *Researchers* <-> *Outputs* <-> *Projects* <-> *Organisations*
 
 - "Which projects are active? Which researchers are involved? Grant sizes?"
 
-- What is a project, really? It is an amorphous concept:
-  - Externally financed research activity, i.e. funders and funding exists?
-  - Internal ongoing "project work" - internal (or not financed at all)?
-  - A call which has (not yet?) been awarded financing?
-  - A way to group publications and their authors together?
+## Definition of "project"?
 
-- There is no single "source of truth" for all projects at KTH
-  - Data requirements depend on who asks the questions and for what purpose
+There is no single "source of truth" for all projects at KTH. Data requirements depend on who asks the questions and for what purpose.
+
+- What is a project, really? It is an amorphous/vague concept:
+  - Externally financed research activity, i.e. requires that funder(s) and funding exists?
+  - A call which has (not yet?) been awarded financing?
+  - Internal ongoing "project work" - internally financed?
+  - A way to topically group publications and their authors together?
+
+
+## Data sources for projects {.columns-2 .smaller}
 
 <style>
 .forceBreak { -webkit-column-break-after: always; break-after: column; }
 </style>
 
-## Data sources for projects {.columns-2 .smaller}
-
-- Overview of available data sources
+### Overview of available data sources
 
 - <font size="5">Descriptions of data sources</font>
 - <font size="5">Data flows and access</font>
@@ -161,11 +161,11 @@ Some summary stats:
 include_graphics(path = "assets/img/Databases Only.png")
 ```
 
-## CASE (I/II) {data-transition="slide-in fade-out"}
+## CASE (I/II) {data-transition="slide-in fade-out" .smaller}
 
-- <font size="5">An internal project management system at KTH, mainly used by the schools and RSO.</font>
+An internal project management system at KTH, mainly used by the schools and RSO.
 
-```{r echo=F,out.width="80%",fig.align='center'}
+```{r echo=F,out.width="75%",fig.align='center'}
 # - <Overview here - nr of records, update frequency, fields available, keys>
 include_graphics(path = "assets/img/Case overview.png")
 ```
@@ -180,12 +180,12 @@ include_graphics(path = "assets/img/Case overview.png")
 include_graphics(path = "assets/img/Case funding.png")
 ```
 
-## SweCris
+## Swecris {.smaller}
 
-- <font size="5">There are seven funding agencies in sweCris.</font>
-- <font size="5">Noticeably, the share of missing information of Primary Researcher and Leading role is moderately high.</font>
+- There are seven funding agencies in Swecris
+- Noticeably, the share of missing information of Primary Researcher and Leading role is moderately high, ca 20%
 
-```{r echo=F,out.width="40%",fig.align='center'}
+```{r echo=F,out.width="50%",fig.align='center'}
 # - <Overview here - nr of records, update frequency, fields available, keys>
 include_graphics(path = "assets/img/sweCris overview.png")
 ```
