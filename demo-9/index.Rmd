@@ -158,7 +158,7 @@ There is no single "source of truth" for all projects at KTH. Data requirements 
 - <font size="5">Combining data sources for KTH projects</font>
 
 ```{r echo=F,out.width="70%"}
-include_graphics(path = "assets/img/Databases Only.png")
+include_graphics(path = "assets/img/data source only.png")
 ```
 
 ## CASE (I/II) {.smaller}
@@ -199,9 +199,11 @@ include_graphics(path = "assets/img/cordis overview.png")
 - bullet p1
 - bullet p2
 
-## OpenAIRE (as separate slide)
+## OpenAIRE
 
-X
+```{r echo=F,out.width="55%",fig.align='center'}
+include_graphics(path = "assets/img/openAire overview.png")
+```
 
 ## Combining data sources for projects
 
