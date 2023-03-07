@@ -167,7 +167,7 @@ include_graphics(path = "assets/img/Databases Only.png")
 
 ```{r echo=F,out.width="80%",fig.align='center'}
 # - <Overview here - nr of records, update frequency, fields available, keys>
-include_graphics(path = "assets/img/Case-overview.png")
+include_graphics(path = "assets/img/Case overview.png")
 ```
 
 ## CASE (II/II) 
