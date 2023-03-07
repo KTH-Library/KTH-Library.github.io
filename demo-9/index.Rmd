@@ -211,18 +211,17 @@ include_graphics(path = "assets/img/Case funding.png")
 
 ## Swecris {.smaller}
 
-- There are seven funding agencies in Swecris
-- Noticeably, the share of missing information of Primary Researcher and Leading role is moderately high, ca 20%
+- <font size="5">There are seven funding agencies in Swecris</font>
+- <font size="5">Noticeably, the share of missing information of Primary Researcher and Leading role is moderately high, ca 20%</font>
 
-```{r echo=F,out.width="45%",fig.align='center'}
+```{r echo=F,out.width="55%",fig.align='center'}
 # - <Overview here - nr of records, update frequency, fields available, keys>
 include_graphics(path = "assets/img/sweCris overview.png")
 ```
 
 ## CORDIS
 
-- Strength and weaknesses?
-- In relation to Case: 232 project matches (i.e. overlap/intersection)
+[Synergies and Challenges of Integrating Heterogeneous KTH Project Datasets](file:///D:/swecris/data-raw/sweCrisQo.html)
 
 ```{r echo=F,out.width="50%",fig.align='center'}
 include_graphics(path = "assets/img/cordis overview.png")
@@ -230,8 +229,7 @@ include_graphics(path = "assets/img/cordis overview.png")
 
 ## OpenAIRE
 
-- Strength and weaknesses?
-- In relation to Case: 225 project matches (i.e. overlap/intersection)
+[Synergies and Challenges of Integrating Heterogeneous KTH Project Datasets](file:///D:/swecris/data-raw/sweCrisQo.html)
 
 ```{r echo=F,out.width="55%",fig.align='center'}
 include_graphics(path = "assets/img/openAire overview.png")
