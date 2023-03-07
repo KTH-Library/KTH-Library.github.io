@@ -1,6 +1,6 @@
 ---
-title: 'DAUF'
-author: "KTH Library & ITA - Datadriven Analys och Uppföljning av KTHs Forskning"
+title: "Sampubliceringsanalys på KTH"
+author: "KTH Library"
 date: '2023-03-07'
 output:
   ioslides_presentation:

@@ -71,6 +71,7 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 - DAUF
 - Data office (in progress)
 - More support and management of research data
+- Project to replace HR-system
 
 
 ## Progress - What is new during Q1 2023? {data-background=assets/bg/plant.png data-background-size=cover}
@@ -98,18 +99,16 @@ The idea is that the analysis app will complement the *Annual bibliometric monit
 
 The goal of this app is to help answering some common questions, for example:
 
-- Who are the main collaborating partners of division X?
-- How large is the publication output of department Y over time, in copublication with German organisations?
+- Who are the main collaborating partners to the division of Electric Power and Energy Systems?
+- How large is the publication output of the department of Gene technology over time, in copublication with German organisations?
 - Which senior staff at CBH is collaborating with MIT, and what is the bibliometric performance of this research compared to CBH baseline? 
-- What is the publication output and project count of the staff related to project X (ad hoc group of KTH staff)
-
-
+- What is the publication output and project count of the staff related to a particular project (ad hoc group of KTH staff)
 
 ## KTH Publication Analysis app - example
 
 App link: https://analysis.sys.kth.se/bibliometrics/app/publ_analysis
 
-![*Collaboration network*](assets/img/app_network1.png){width=950}
+![&emsp;&emsp;*Collaboration network*](assets/img/app_network1.png){width=950}
 
 ## Example analysis app - project view
 
@@ -237,7 +236,7 @@ include_graphics(path = "assets/img/Summary graph_new.png")
 
 ## Project data - discussion
 
-- Do you have a need to follow-up both projects from the "contract" perspective and the "research subject" perspective?
+- Do you have a need to follow-up projects from both the "contract" perspective and the "research subject" perspective?
 - xx
 - yy
 
