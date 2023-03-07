@@ -144,16 +144,20 @@ Some summary stats:
 
 - There is no single "source of truth" for all projects at KTH
   - Data requirements depend on who asks the questions and for what purpose
-  
-## Data sources for projects
+
+<style>
+.forceBreak { -webkit-column-break-after: always; break-after: column; }
+</style>
+
+## Data sources for projects {.columns-2 .smaller}
 
 - Overview of available data sources
 
-- <font size="4">Descriptions of data sources</font>
-- <font size="4">Data flows and access</font>
-- <font size="4">Combining data sources for KTH projects</font>
+- <font size="5">Descriptions of data sources</font>
+- <font size="5">Data flows and access</font>
+- <font size="5">Combining data sources for KTH projects</font>
 
-```{r echo=F,out.width="30%"}
+```{r echo=F,out.width="70%"}
 include_graphics(path = "assets/img/Databases Only.png")
 ```
 
