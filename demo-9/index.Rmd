@@ -205,12 +205,15 @@ include_graphics(path = "assets/img/cordis overview.png")
 include_graphics(path = "assets/img/openAire overview.png")
 ```
 
+- bullet p1
+- bullet p2
+
 ## Combining data sources for projects
 
-- <Overlap - Unions and intersections for different data sources>
+- Overlap - Unions and intersections for different data sources
 
 ```{r echo=F,out.width="100%",fig.align='center'}
-include_graphics(path = "assets/img/testGraph.png")
+include_graphics(path = "assets/img/Dataflow-and-entity-graph.png")
 ```
 
 ## Case versus Swecris
