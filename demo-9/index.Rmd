@@ -172,7 +172,9 @@ include_graphics(path = "assets/img/testGraph.png")
 
 - Case versus sweCris
 
-```{r echo=F,out.width="80%",fig.align='center'}
+  + In total, 203 unique projects can be matched based on ID, Title, and Primary Researcher.
+
+```{r echo=F,out.width="90%",fig.align='center'}
 include_graphics("assets/img/Table.3.png")
 ```
 
