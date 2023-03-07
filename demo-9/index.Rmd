@@ -161,11 +161,11 @@ There is no single "source of truth" for all projects at KTH. Data requirements 
 include_graphics(path = "assets/img/Databases Only.png")
 ```
 
-## CASE (I/II) {data-transition="slide-in fade-out" .smaller}
+## CASE (I/II) {.smaller}
 
 An internal project management system at KTH, mainly used by the schools and RSO.
 
-```{r echo=F,out.width="75%",fig.align='center'}
+```{r echo=F,out.width="50%",fig.align='center'}
 # - <Overview here - nr of records, update frequency, fields available, keys>
 include_graphics(path = "assets/img/Case overview.png")
 ```
@@ -192,10 +192,8 @@ include_graphics(path = "assets/img/sweCris overview.png")
 
 ## CORDIS
 
-- <Overview here - nr of records, update frequency, fields available, keys>
-
-```{r echo=F,out.width="60%",fig.align='center',fig.}
-include_graphics(path = "assets/img/cordisOpenAire Overview.png")
+```{r echo=F,out.width="55%",fig.align='center'}
+include_graphics(path = "assets/img/cordis overview.png")
 ```
 
 - bullet p1
@@ -213,12 +211,11 @@ X
 include_graphics(path = "assets/img/testGraph.png")
 ```
 
-
-## Case versus sweCris
+## Case versus Swecris
 
   + <font size="4">In total, 174 unique KTH research projects could be matched with Swecris.</font> 
   
-```{r echo=F,out.width="95%",fig.align='center'}
+```{r echo=F,out.width="100%",fig.align='center'}
 #   + <font size="4">The use of orCid ID's returned 986 projects from sweCris of which 91 observations could subsequently be matched with Case based on a fuzzy-matching of research title.</font>
 include_graphics("assets/img/Table.3.png")
 ```
@@ -227,13 +224,6 @@ include_graphics("assets/img/Table.3.png")
 
 ```{r echo=F,out.width="90%",fig.align='center'}
 include_graphics("assets/img/typebyyear.png")
-```
-
-## Ancillary results
-
-```{r echo=F,out.width="90%",fig.align='center'}
-# - <Overview here - nr of records, update frequency, fields available, keys>
-include_graphics(path = "assets/img/Summary graph_new.png")
 ```
 
 ## Project data - discussion
