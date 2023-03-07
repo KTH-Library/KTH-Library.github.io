@@ -214,28 +214,26 @@ include_graphics(path = "assets/img/Case funding.png")
 - There are seven funding agencies in Swecris
 - Noticeably, the share of missing information of Primary Researcher and Leading role is moderately high, ca 20%
 
-```{r echo=F,out.width="50%",fig.align='center'}
+```{r echo=F,out.width="45%",fig.align='center'}
 # - <Overview here - nr of records, update frequency, fields available, keys>
 include_graphics(path = "assets/img/sweCris overview.png")
 ```
 
 ## CORDIS
 
-```{r echo=F,out.width="55%",fig.align='center'}
+- 232 project matches between Case and Cordis
+
+```{r echo=F,out.width="50%",fig.align='center'}
 include_graphics(path = "assets/img/cordis overview.png")
 ```
 
-- bullet p1
-- bullet p2
-
 ## OpenAIRE
+
+- 225 project matches between Case and openAire
 
 ```{r echo=F,out.width="55%",fig.align='center'}
 include_graphics(path = "assets/img/openAire overview.png")
 ```
-
-- bullet p1
-- bullet p2
 
 ## Combining data sources for projects
 
