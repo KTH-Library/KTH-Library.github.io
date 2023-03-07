@@ -61,7 +61,14 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 ![*Example from Stanford*](assets/img/stanford_cris.png){width=640}
 </div>
 
-[Stanford RIALTO project](https://www.youtube.com/watch?v=7UgwzCKIU1A) (Youtube)
+&emsp;&emsp;[Stanford RIALTO project](https://www.youtube.com/watch?v=7UgwzCKIU1A) (Youtube)
+
+## Related, currently at KTH
+
+- DAUF
+- Data office (in progress)
+- More support and management of research data
+
 
 ## Progress - What is new during Q1 2023? {data-background=assets/bg/plant.png data-background-size=cover}
 
@@ -84,20 +91,26 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 
 ## KTH Publication Analysis app
 
+The idea is that the analysis app will complement the *Annual bibliometric monitoring* (ABM).
+
 The goal of this app is to help answering some common questions, for example:
 
 - Who are the main collaborating partners of division X?
 - How large is the publication output of department Y over time, in copublication with German organisations?
 - Which senior staff at CBH is collaborating with MIT, and what is the bibliometric performance of this research compared to CBH baseline? 
-- What is the publication output and project count of the staff related to project X (ad-hoc group of KTH staff)
+- What is the publication output and project count of the staff related to project X (ad hoc group of KTH staff)
 
-The idea is that the analysis app will complement the *Annual bibliometric monitoring* (ABM).
 
-## KTH Publication Analysis app
+
+## KTH Publication Analysis app - example
 
 App link: https://analysis.sys.kth.se/bibliometrics/app/publ_analysis
 
-![*Example collaboration network*](assets/img/app_network1.png){width=1000}
+![*Collaboration network*](assets/img/app_network1.png){width=950}
+
+## Example analysis app - project view
+
+![*Projects related to staff from ITM:Energy technology*](assets/img/app_projects.png){width=950}
 
 ## Example based on TECoSA
 
@@ -105,10 +118,10 @@ App link: https://analysis.sys.kth.se/bibliometrics/app/publ_analysis
 
 Some summary stats:
 
-- 462 publications 2010-2021
-- 137 publications 2020-2021 (e.g from the TECoSA-period)
+- 462 publications 2010-2022
+- 137 publications 2020-2022 (e.g. from the TECoSA-period)
 
-- 28 projecs in CASE
+- 28 projects in CASE
 - 14 projects 2020-2021 (seems to be more in CASE, but some with missing data on duration)
 - Info on funders and SDG-goals on projects
 - Picture of collaborations, through co-publication
@@ -117,12 +130,12 @@ Some summary stats:
 
 ## DAUF and data about projects
 
-- DAUF has been building bottom-up data consolidation and analytics for KTH, making links between Researchers <-> Outpus <-> Projects
+- DAUF has been building bottom-up data consolidation and analytics for KTH, making links between Researchers <-> Outputs <-> Projects
 
 - "Which projects are active? Which researchers are involved? Grant sizes?"
 
 - What is a project, really? It is an amorphous concept:
-  - Externally financed research activity, ie funders and funding exists?
+  - Externally financed research activity, i.e. funders and funding exists?
   - Internal ongoing "project work" - internal (or not financed at all)?
   - A call which has (not yet?) been awarded financing?
   - A way to group publications and their authors together?
@@ -140,6 +153,8 @@ Some summary stats:
 
 ## CASE
 
+An internal project management system at KTH, mainly used by the schools and RSO.
+
 ```{r echo=F,out.width="60%",fig.align='center'}
 # - <Overview here - nr of records, update frequency, fields available, keys>
 include_graphics(path = "assets/img/Case-Overview.png")
@@ -152,13 +167,20 @@ include_graphics(path = "assets/img/Case-Overview.png")
 include_graphics(path = "assets/img/sweCris overview.png")
 ```
 
-## CORDIS & OpenAIRE
+## CORDIS
 
 - <Overview here - nr of records, update frequency, fields available, keys>
 
 ```{r echo=F,out.width="60%",fig.align='center',fig.}
 include_graphics(path = "assets/img/cordisOpenAire Overview.png")
 ```
+
+- bullet p1
+- bullet p2
+
+## OpenAIRE (as separate slide)
+
+X
 
 ## Combining data sources for projects
 
@@ -167,6 +189,7 @@ include_graphics(path = "assets/img/cordisOpenAire Overview.png")
 ```{r echo=F,out.width="100%",fig.align='center'}
 include_graphics(path = "assets/img/testGraph.png")
 ```
+
 
 ## Selection (Urval)
 
@@ -190,6 +213,12 @@ include_graphics("assets/img/typebyyear.png")
 # - <Overview here - nr of records, update frequency, fields available, keys>
 include_graphics(path = "assets/img/Summary graph_new.png")
 ```
+
+## Project data - discussion
+
+- Do you have a need to follow-up both projects from the "contract" perspective and the "research subject" perspective?
+- xx
+- yy
 
 ## Future work and directions
 
