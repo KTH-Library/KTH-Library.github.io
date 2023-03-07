@@ -214,11 +214,9 @@ include_graphics(path = "assets/img/testGraph.png")
 ```
 
 
-## Selection (Urval)
+## Case versus sweCris
 
-- Case versus sweCris
-
-  + <font size="4">In total, 174 unique KTH research projects could be matched based on ID, Title, and Primary Researcher.</font> 
+  + <font size="4">In total, 174 unique KTH research projects could be matched with Swecris.</font> 
   
 ```{r echo=F,out.width="95%",fig.align='center'}
 #   + <font size="4">The use of orCid ID's returned 986 projects from sweCris of which 91 observations could subsequently be matched with Case based on a fuzzy-matching of research title.</font>
