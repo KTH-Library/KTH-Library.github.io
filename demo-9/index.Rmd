@@ -184,6 +184,13 @@ tribble(
   ), options = list(dom = ""))  
 ```
 
+### Tools for matching and combining etc
+
+- <https://github.com/KTH-Library/kthcorpus> (open repo, publication and authors in DiVA etc)
+- <https://github.com/KTH-Library/institutions> (open repo, organisation identifers etc)
+- <https://github.com/KTH-Library/bibliotools> (private repo, access to CASE data)
+
+
 ## CASE: a Research Management process in Edge
 
   - Internal source at KTH (Edge, Efecte) - a "Case Management System for Research Projects"
@@ -234,15 +241,13 @@ include_graphics(path = "assets/img/cordis overview.png")
 include_graphics(path = "assets/img/openAire overview.png")
 ```
 
-## Combining data sources for projects
-
-- <Overlap - Unions and intersections for different data sources>
+## Combining data sources for KTH projects
 
 ```{r echo=F,out.width="100%",fig.align='center'}
 include_graphics(path = "assets/img/testGraph.png")
 ```
 
-## Case versus Swecris - 174 exact matches found
+## CASE versus Swecris - 174 exact matches found
 
 ```{r echo=F,out.width="100%",fig.align='center'}
 #   + <font size="4">The use of orCid ID's returned 986 projects from sweCris of which 91 observations could subsequently be matched with Case based on a fuzzy-matching of research title.</font>
@@ -255,7 +260,7 @@ include_graphics("assets/img/Table.3.png")
 include_graphics("assets/img/typebyyear.png")
 ```
 
-# Discussion, Questions and feedback
+# Discussion, Questions, Feedback
 
 ## Future work and directions
 
