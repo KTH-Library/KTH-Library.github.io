@@ -77,17 +77,17 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 ## Progress - What is new during Q1 2023? {data-background=assets/bg/plant.png data-background-size=cover}
 
 - **KTH Publication Analysis app**
-  * allowing exploration of co-publication and collaboration at KTH 
-  * for ad-hoc research groups
-  * rolling data
+  * Allowing exploration of co-publication and collaboration at KTH 
+  * For ad hoc research groups
+  * Rolling data
   * CASE projects data
 
-- **ABM**
+- **ABM, Annual Bibliometric Monitoring**
   * Sustainable Development Goals
   
 - **Mobilizations of projects data from other sources**
   * CASE
-  * SweCris
+  * Swecris
   * CORDIS (EU projects)
   * Other sources
 
@@ -97,24 +97,24 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 
 The idea is that the analysis app will complement the *Annual bibliometric monitoring* (ABM), and answer questions like:
 
-- Who are the *main collaborating partners* to the division of Electric Power and Energy Systems?
-- How large is the publication output of the department of Gene technology over time, in **co-publication with German organisations**?
+- Who are the **main collaborating partners** to the division of Electric Power and Energy Systems?
+- How large co-publication output between is the publication output of the department of Gene technology over time, in **co-publication with German organisations**?
 - Which **senior staff at CBH is collaborating with MIT**, and what is the bibliometric performance of this research compared to CBH baseline? 
 - What is the publication output and project count for an **ad hoc grouping of staff** related to a particular project?
 
-## KTH Publication Analysis app - example
+## KTH Publication Analysis app - collaboration
 
 https://analysis.sys.kth.se/bibliometrics/app/publ_analysis
 
 ![&emsp;&emsp;*Collaboration network*](assets/img/app_network1.png){width=950}
 
-## Example analysis app - project view
+## KTH Publication Analysis app - project view
 
 ![*Projects related to staff from ITM:Energy technology*](assets/img/app_projects.png){width=950}
 
 ## Example based on TECoSA
 
-[TECoSA](https://www.tecosa.center.kth.se/) Centre running since 2020 used as example, based on 9 PIs.
+[TECoSA](https://www.tecosa.center.kth.se/) (Trustworthy Edge Computing Systems and Applications) Centre running since 2020 used as example, based on 9 PIs.
 
 Some summary stats:
 
@@ -122,7 +122,7 @@ Some summary stats:
 - 137 publications 2020-2022 (e.g. from the TECoSA-period)
 
 - 28 projects in CASE
-- 14 projects 2020-2021 (seems to be more in CASE, but some with missing data on duration)
+- 14 projects 2020-2022 (seems to be more in CASE, but some with missing data on duration)
 - Info on funders and SDG-goals on projects
 - Picture of collaborations, through co-publication
 
@@ -241,7 +241,7 @@ include_graphics(path = "assets/img/Summary graph_new.png")
 ## Project data - discussion
 
 - Do you have a need to follow-up projects from both the "contract" perspective and the "research subject" perspective?
-- xx
+- Define purpose of different sources. Should CASE be used to complement other external sources? 
 - yy
 
 ## Future work and directions
