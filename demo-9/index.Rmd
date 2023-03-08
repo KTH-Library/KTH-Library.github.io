@@ -166,10 +166,10 @@ library(tibble)
 tribble(
   ~source, ~url, ~open, ~download_url, ~repo_url, ~rows, ~cols, ~freq,
   "Formas", "https://formas.se/en/start-page/about-formas/what-we-do/open-data---api-containing-information-on-funded-projects/documentation-for-api-containing-information-on-funded-projects.html", TRUE, "projects_formas.csv", "formas", 471, 21, "daily",
-  "OpenAIRE", "https://graph.openaire.eu/develop/api.html#projects", TRUE, "project_openaire.csv", "OpenAIRE", 813, 10, "daily",
-  "Swecris", "https://swecris-api.vr.se/index.html", TRUE, "project_swecris.csv", "swecris", 3165, 26, "daily",
-  "Vinnova", "https://www.vinnova.se/en/about-us/about-the-website/open-data/", TRUE, "project_vinnova.csv", "vinnova", 442, 20, "daily",
-  "CORDIS", "https://data.europa.eu/data/datasets/cordis-eu-research-projects-under-horizon-europe-2021-2027?locale=en", TRUE, "project_cordis.csv", "cordis", 753, 20, "monthly",
+  "OpenAIRE", "https://graph.openaire.eu/develop/api.html#projects", TRUE, "projects_openaire.csv", "OpenAIRE", 813, 10, "daily",
+  "Swecris", "https://swecris-api.vr.se/index.html", TRUE, "projects_swecris.csv", "swecris", 3165, 26, "daily",
+  "Vinnova", "https://www.vinnova.se/en/about-us/about-the-website/open-data/", TRUE, "projects_vinnova.csv", "vinnova", 442, 20, "daily",
+  "CORDIS", "https://data.europa.eu/data/datasets/cordis-eu-research-projects-under-horizon-europe-2021-2027?locale=en", TRUE, "projects_cordis.csv", "cordis", 753, 20, "monthly",
   "CASE", "https://confluence.sys.kth.se/confluence/pages/viewpage.action?pageId=70785591", FALSE, "", "bibliotools", 2647, 40, "daily"
   ) |>
   mutate(open = ifelse(open, "🟢", "🔒")) |>
