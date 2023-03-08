@@ -233,35 +233,23 @@ include_graphics(path = "assets/img/Case overview.png")
 include_graphics(path = "assets/img/Case funding.png")
 ```
 
-## Swecris {.smaller}
+## Swecris, CORDIS, OpenAIRE {.smaller}
 
-- There are seven funding agencies in Swecris
-- Noticeably, the share of missing information of Primary Researcher and Leading role is moderately high, ca 20%
+<font size="4">[Synergies and Challenges of Integrating Heterogeneous KTH Project Datasets](sweCrisQo.html)</font>
 
-```{r echo=F,out.width="55%",fig.align='center'}
-# - <Overview here - nr of records, update frequency, fields available, keys>
+- <font size="4">Swecris, Cordis & OpenAire have better data quality than Case (e.g. see image below).</font>
+- <font size="4">They also differ in their information, while also having some overlapping fields.</font>
+
+- <font size="4">The data quality is however far from perfect. For example,the percentage of missing information for Primary Researcher and Leading Role in Swecris is around 20%, which is moderately high.</font>
+
+```{r echo=F,out.width="40%",fig.align='center'}
 include_graphics(path = "assets/img/sweCris overview.png")
-```
-
-## CORDIS
-
-[Synergies and Challenges of Integrating Heterogeneous KTH Project Datasets](sweCrisQo.html)
-
-```{r echo=F,out.width="50%",fig.align='center'}
-include_graphics(path = "assets/img/cordis overview.png")
-```
-
-## OpenAIRE
-
-[Synergies and Challenges of Integrating Heterogeneous KTH Project Datasets](sweCrisQo.html)
-
-```{r echo=F,out.width="55%",fig.align='center'}
-include_graphics(path = "assets/img/openAire overview.png")
 ```
 
 ## Combining data sources for KTH projects
 
 Overlap - Unions and intersections for different data sources
+
 ```{r echo=F,out.width="100%",fig.align='center'}
 include_graphics(path = "assets/img/Dataflow-and-entity-graph.png")
 ```
@@ -269,7 +257,6 @@ include_graphics(path = "assets/img/Dataflow-and-entity-graph.png")
 ## CASE versus Swecris - 174 exact matches found
 
 ```{r echo=F,out.width="100%",fig.align='center'}
-#   + <font size="4">The use of orCid ID's returned 986 projects from sweCris of which 91 observations could subsequently be matched with Case based on a fuzzy-matching of research title.</font>
 include_graphics("assets/img/Table.3.png")
 ```
 
