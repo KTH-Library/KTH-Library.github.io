@@ -188,7 +188,7 @@ tribble(
   ), options = list(dom = ""))  
 ```
 
-## Tooling and components
+## Tooling and components {.smaller}
 
 <center>
 ![https://data.bibliometrics.lib.kth.se](assets/img/minio-kth.png){height=250}
