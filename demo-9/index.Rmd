@@ -98,7 +98,9 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 The idea is that the analysis app will complement the *Annual bibliometric monitoring* (ABM), and answer questions like:
 
 - Who are the **main collaborating partners** to the division of Electric Power and Energy Systems?
+
 - How large co-publication output between is the publication output of the department of Gene technology over time, in **co-publication with German organisations**?
+
 - Which **senior staff at CBH is collaborating with MIT**, and what is the bibliometric performance of this research compared to CBH baseline? 
 - What is the publication output and project count for an **ad hoc grouping of staff** related to a particular project?
 
@@ -116,23 +118,25 @@ https://analysis.sys.kth.se/bibliometrics/app/publ_analysis
 
 [TECoSA](https://www.tecosa.center.kth.se/) (Trustworthy Edge Computing Systems and Applications) Centre running since 2020 used as example, based on 9 PIs.
 
-Some summary stats:
-
 - 462 publications 2010-2022
 - 137 publications 2020-2022 (e.g. from the TECoSA-period)
 
-- 28 projects in CASE
-- 14 projects 2020-2022 (seems to be more in CASE, but some with missing data on duration)
+- 28 projects in CASE - “Case Management System for Research Projects” @ KTH
+- 14 projects 2020-2021 (seems to be more in CASE, but some with missing data on duration)
 - Info on funders and SDG-goals on projects
 - Picture of collaborations, through co-publication
 
 # Data for projects at KTH {data-background=assets/bg/kth-5.png data-background-size=cover}
 
-## DAUF and data about projects
+## DAUF and data about projects at KTH
 
-- DAUF has been building bottom-up data consolidation and analytics for KTH, making links between *Researchers* <-> *Outputs* <-> *Projects* <-> *Organisations*
+DAUF has been building bottom-up data consolidation and analytics for KTH, making links between **Researchers** <-> **Outputs** <-> **Projects** <-> **Organisations**
 
-- "Which projects are active? Which researchers are involved? Grant sizes?"
+<center>
+![](assets/img/project-person-output.png)
+</center>
+
+"Which projects are active? Which researchers are involved? From which organisations? Grant sizes?"
 
 ## Definition of "project"?
 
@@ -144,28 +148,72 @@ There is no single "source of truth" for all projects at KTH. Data requirements 
   - Internal ongoing "project work" - internally financed?
   - A way to topically group publications and their authors together?
 
+> What are the most important questions you have in relation to projects at KTH?
 
-## Data sources for projects {.columns-2 .smaller}
+## Mobilized data for KTH projects {.smaller}
 
-<style>
-.forceBreak { -webkit-column-break-after: always; break-after: column; }
-</style>
+### Object storage / S3 used
 
-### Overview of available data sources
+<center>
+![](assets/img/minio-object-storage.png){height=100}
+</center>
 
-- <font size="5">Descriptions of data sources</font>
-- <font size="5">Data flows and access</font>
-- <font size="5">Combining data sources for KTH projects</font>
+```{r echo=F}
+#include_graphics(path = "assets/img/data source only.png")
+library(dplyr)
+library(tibble)
 
-```{r echo=F,out.width="70%"}
-include_graphics(path = "assets/img/Databases Only.png")
+#readr::read_csv("https://data.bibliometrics.lib.kth.se/kthcorpus/projects_cordis.csv")
+
+tribble(
+  ~source, ~url, ~open, ~download_url, ~repo_url, ~rows, ~cols, ~freq,
+  "Formas", "https://formas.se/en/start-page/about-formas/what-we-do/open-data---api-containing-information-on-funded-projects/documentation-for-api-containing-information-on-funded-projects.html", TRUE, "projects_formas.csv", "formas", 471, 21, "daily",
+  "OpenAIRE", "https://graph.openaire.eu/develop/api.html#projects", TRUE, "projects_openaire.csv", "OpenAIRE", 813, 10, "daily",
+  "Swecris", "https://swecris-api.vr.se/index.html", TRUE, "projects_swecris.csv", "swecris", 3165, 26, "daily",
+  "Vinnova", "https://www.vinnova.se/en/about-us/about-the-website/open-data/", TRUE, "projects_vinnova.csv", "vinnova", 442, 20, "daily",
+  "CORDIS", "https://data.europa.eu/data/datasets/cordis-eu-research-projects-under-horizon-europe-2021-2027?locale=en", TRUE, "projects_cordis.csv", "cordis", 753, 20, "monthly",
+  "CASE", "https://confluence.sys.kth.se/confluence/pages/viewpage.action?pageId=70785591", FALSE, "", "bibliotools", 2647, 40, "daily"
+  ) |>
+  mutate(open = ifelse(open, "🟢", "🔒")) |>
+  mutate(repo_url = sprintf("<a href='https://github.com/KTH-Library/%s' target='blank'>%s</a>", repo_url, repo_url)) |>
+  mutate(source = sprintf("<a href='%s' target='blank'>%s</a>", url, source)) |>
+  mutate(download_url = ifelse(nzchar(download_url) < 1, "<a href='https://data.bibliometrics.lib.kth.se' target='blank'>Authenticated S3 bucket</a>", glue::glue("<a href='https://data.bibliometrics.lib.kth.se/kthcorpus/{download_url}' target='blank'>{download_url}</a>", .na = NULL))) |> #, download_url, download_url)) |>
+  select(-url) |>
+  DT::datatable(escape = F, rownames = F, colnames = c(
+    Source = "source",
+    Access = "open",
+    Download = "download_url",
+    Tools = "repo_url", 
+    Records = "rows",
+    Fields = "cols",
+    Updates = "freq"
+  ), options = list(dom = ""))  
 ```
 
-## CASE (I/II) {data-transition="slide-in fade-out" .smaller}
+## Tooling and components {.smaller}
 
-An internal project management system at KTH, mainly used by the schools and RSO.
+<center>
+![https://data.bibliometrics.lib.kth.se](assets/img/minio-kth.png){height=250}
+</center>
 
-```{r echo=F,out.width="75%",fig.align='center'}
+### Tools
+- ["kthcorpus" - open repo, publication and authors in DiVA etc](https://github.com/KTH-Library/kthcorpus)
+- ["institutions" - open repo, organisation identifers etc](https://github.com/KTH-Library/institutions)
+- ["bibliotools" - private repo, access to CASE data](https://github.com/KTH-Library/bibliotools)
+
+# External data sources for KTH Projects - Overview {data-background=assets/bg/kth-1.png data-background-size=cover}
+
+## CASE: a Research Management process in Edge
+
+- Internal source at KTH (Efecte Edge) - a "Case Management System for Research Projects"
+- Keeps track of agreements, contracts, legal documents
+- Could be a good source for internally financed projects
+- Can complement what is missing from other open sources
+- Comparatively more diverse (project types, funding organizations)
+
+## CASE (I/II) - fields and missingness {.smaller}
+
+```{r echo=F,out.width="50%",fig.align='center'}
 # - <Overview here - nr of records, update frequency, fields available, keys>
 include_graphics(path = "assets/img/Case overview.png")
 ```
@@ -185,42 +233,37 @@ include_graphics(path = "assets/img/Case funding.png")
 - There are seven funding agencies in Swecris
 - Noticeably, the share of missing information of Primary Researcher and Leading role is moderately high, ca 20%
 
-```{r echo=F,out.width="50%",fig.align='center'}
+```{r echo=F,out.width="55%",fig.align='center'}
 # - <Overview here - nr of records, update frequency, fields available, keys>
 include_graphics(path = "assets/img/sweCris overview.png")
 ```
 
 ## CORDIS
 
-- <Overview here - nr of records, update frequency, fields available, keys>
+[Synergies and Challenges of Integrating Heterogeneous KTH Project Datasets](sweCrisQo.html)
 
-```{r echo=F,out.width="60%",fig.align='center',fig.}
-include_graphics(path = "assets/img/cordisOpenAire Overview.png")
+```{r echo=F,out.width="50%",fig.align='center'}
+include_graphics(path = "assets/img/cordis overview.png")
 ```
 
-- bullet p1
-- bullet p2
+## OpenAIRE
 
-## OpenAIRE (as separate slide)
+[Synergies and Challenges of Integrating Heterogeneous KTH Project Datasets](sweCrisQo.html)
 
-X
+```{r echo=F,out.width="55%",fig.align='center'}
+include_graphics(path = "assets/img/openAire overview.png")
+```
 
-## Combining data sources for projects
+## Combining data sources for KTH projects
 
-- <Overlap - Unions and intersections for different data sources>
+Overlap - Unions and intersections for different data sources
+```{r echo=F,out.width="100%",fig.align='center'}
+include_graphics(path = "assets/img/Dataflow-and-entity-graph.png")
+```
+
+## CASE versus Swecris - 174 exact matches found
 
 ```{r echo=F,out.width="100%",fig.align='center'}
-include_graphics(path = "assets/img/testGraph.png")
-```
-
-
-## Selection (Urval)
-
-- Case versus sweCris
-
-  + <font size="4">In total, 174 unique KTH research projects could be matched based on ID, Title, and Primary Researcher.</font> 
-  
-```{r echo=F,out.width="95%",fig.align='center'}
 #   + <font size="4">The use of orCid ID's returned 986 projects from sweCris of which 91 observations could subsequently be matched with Case based on a fuzzy-matching of research title.</font>
 include_graphics("assets/img/Table.3.png")
 ```
@@ -231,7 +274,7 @@ include_graphics("assets/img/Table.3.png")
 include_graphics("assets/img/typebyyear.png")
 ```
 
-## Ancillary results
+[Details: Combining CASE with Swecris](Case-Presentation.html)
 
 ```{r echo=F,out.width="90%",fig.align='center'}
 # - <Overview here - nr of records, update frequency, fields available, keys>
@@ -243,29 +286,29 @@ include_graphics(path = "assets/img/Summary graph_new.png")
 - Do you have a need to follow-up projects from both the "contract" perspective and the "research subject" perspective?
 - Define purpose of different sources. Should CASE be used to complement other external sources? 
 - yy
+=======
+# Discussion, Questions, Feedback {data-background=assets/bg/kth-2.png data-background-size=cover}
+>>>>>>> e5065f9061ba1e05b99e6abd06d2525213710f27
 
 ## Future work and directions
 
-- <Product Owners, Future Outlook>
-- Subject area analysis
+Determined based on your input and directions provided by product owners.
+
+- Subject area analysis in KTH Publication Analysis app
   - UKÄ/SCB categories
   - Topic clusters and keywords
   - Journal classifications
-
-# Questions and feedback
 
 ## Questions and Answers {.smaller}
 
 Please provide your input!
 
-- Do you think what was presented in the demonstration meets **your needs for analytical exploration**?
-- Would **additional reference datasets** be needed?
-- Would additional ways to **slice and dice** the data along other dimensions be useful?
+- Do you have a need to follow-up projects from both the "contract" perspective and the "research subject" perspective?
+- Do you have ideas for **additional reference datasets** that are useful for analyzing your projects at KTH?
 - Would **parameterized interactive reports** be useful in addition to the raw data and the app?
-- Are metrics related to **author sequence/order** useful?
 - **Other questions** from the Zoom chat
-- Suggestions and **comments**
+- Suggestions and **comments**?
 
-If you prefer to provide written feedback, please use the following [jamboard](https://jamboard.google.com/d/1qJ9v6JyamDLPS82_qYg9l7scWkJcX8xVY0m6weazJCI/viewer)
+If you prefer to provide written feedback, please use the following [jamboard](https://jamboard.google.com/d/17xE5Pxs339c3Teco5DeuTAaz9EbJGdtNQCI6u5lEW3o/viewer).
 
 Thank you for attending!
