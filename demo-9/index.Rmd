@@ -44,19 +44,22 @@ suppressPackageStartupMessages(library(magick))
 
 ```
 
-## Agenda
+## Agenda {.smaller}
 
 - The **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
-
 - A demo of the **"KTH Publication Analysis app"** with projects data from CASE
-
 - Overview of available data sources for projects at KTH
-
 - Your **questions and feedback**
+  
+### About the project
+
+- Collaboration within VS, between KTH-Library, RSO and ITA.  
+- Agile model with 2 week sprints.  
+- Creating services and tools for presentation of data, improved data flows and connecting data sources within KTH.
 
 # Background and progress {data-background=assets/bg/kth-6.png data-background-size=cover}
 
-## DAUF - background and context 
+## DAUF - background and context I
 
 Trend towards `r green("better overview of research outputs")` as well as `r green("integration of systems.")`
 
@@ -72,22 +75,24 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 - Data office (in progress)
 - More support and management of research data
 - Project to replace HR-system
+- Strategisk verksamhetsanalys
+- Updated budgeting tool
 
 
-## Progress - What is new during Q1 2023? {data-background=assets/bg/plant.png data-background-size=cover}
+## Progress - What is new since the last demo meeting {data-background=assets/bg/plant.png data-background-size=cover}
 
 - **KTH Publication Analysis app**
-  * allowing exploration of co-publication and collaboration at KTH 
-  * for ad-hoc research groups
-  * rolling data
+  * Allowing exploration of co-publication and collaboration at KTH 
+  * For ad hoc research groups
+  * Rolling data
   * CASE projects data
 
-- **ABM**
+- **ABM, Annual Bibliometric Monitoring**
   * Sustainable Development Goals
   
 - **Mobilizations of projects data from other sources**
-  * CASE
-  * SweCris
+  * CASE - “Case Management System for Research Projects” @ KTH
+  * Swecris
   * CORDIS (EU projects)
   * Other sources
 
@@ -98,29 +103,31 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 The idea is that the analysis app will complement the *Annual bibliometric monitoring* (ABM), and answer questions like:
 
 - Who are the **main collaborating partners** to the division of Electric Power and Energy Systems?
-- How large is the publication output of the department of Gene technology over time, in **co-publication with German organisations**?
+
+- How large co-publication output between is the publication output of the department of Gene technology over time, in **co-publication with German organisations**?
+
 - Which **senior staff at CBH is collaborating with MIT**, and what is the bibliometric performance of this research compared to CBH baseline? 
 - What is the publication output and project count for an **ad hoc grouping of staff** related to a particular project?
 
-## KTH Publication Analysis app - example
+## KTH Publication Analysis app - collaboration
 
-https://analysis.sys.kth.se/bibliometrics/app/publ_analysis
+https://analysis.sys.kth.se/bibliometrics/app_direct/publ_analysis
 
 ![&emsp;&emsp;*Collaboration network*](assets/img/app_network1.png){width=950}
 
-## Example analysis app - project view
+## KTH Publication Analysis app - project view
 
 ![*Projects related to staff from ITM:Energy technology*](assets/img/app_projects.png){width=950}
 
 ## Example based on TECoSA
 
-[TECoSA](https://www.tecosa.center.kth.se/) Centre running since 2020 used as example, based on 9 PIs.
+[TECoSA](https://www.tecosa.center.kth.se/) (Trustworthy Edge Computing Systems and Applications) Centre running since 2020 used as example, based on 9 PIs.
 
 - 462 publications 2010-2022
 - 137 publications 2020-2022 (e.g. from the TECoSA-period)
 
 - 28 projects in CASE - “Case Management System for Research Projects” @ KTH
-- 14 projects 2020-2021 (seems to be more in CASE, but some with missing data on duration)
+- 14 projects 2020-2022 (seems to be more in CASE, but some with missing data on duration)
 - Info on funders and SDG-goals on projects
 - Picture of collaborations, through co-publication
 
@@ -274,6 +281,11 @@ include_graphics("assets/img/typebyyear.png")
 
 [Details: Combining CASE with Swecris](Case-Presentation.html)
 
+## Project data - discussion
+
+- Do you have a need to follow-up projects from both the "contract" perspective and the "research area/topic" perspective?
+- Define purpose and use data from the most relevant sources. Should CASE be used to complement other external sources? 
+
 # Discussion, Questions, Feedback {data-background=assets/bg/kth-2.png data-background-size=cover}
 
 ## Future work and directions
@@ -284,17 +296,21 @@ Determined based on your input and directions provided by product owners.
   - UKÄ/SCB categories
   - Topic clusters and keywords
   - Journal classifications
+  
+- Improved filtering
+- Preliminary merged project list (based on CASE + external sources)
+
 
 ## Questions and Answers {.smaller}
 
 Please provide your input!
 
-- Do you have a need to follow-up projects from both the "contract" perspective and the "research subject" perspective?
+- Do you have a need to follow-up projects from both the **"contract"** perspective and the **"research area/topic"** perspective?
 - Do you have ideas for **additional reference datasets** that are useful for analyzing your projects at KTH?
 - Would **parameterized interactive reports** be useful in addition to the raw data and the app?
 - **Other questions** from the Zoom chat
 - Suggestions and **comments**?
 
-If you prefer to provide written feedback, please use the following [jamboard](https://jamboard.google.com/d/1qJ9v6JyamDLPS82_qYg9l7scWkJcX8xVY0m6weazJCI/viewer)
+If you prefer to provide written feedback, please use the following [jamboard](https://jamboard.google.com/d/17xE5Pxs339c3Teco5DeuTAaz9EbJGdtNQCI6u5lEW3o/viewer).
 
 Thank you for attending!
