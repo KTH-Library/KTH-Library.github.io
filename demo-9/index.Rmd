@@ -53,10 +53,18 @@ suppressPackageStartupMessages(library(magick))
 - Overview of available data sources for projects at KTH
 
 - Your **questions and feedback**
+  
+<br>
+
+**About the project** 
+
+Collaboration within VS, between KTH-Library, RSO and ITA.  
+Agile model with 2 week sprints.  
+Creating services and tools for presentation of data, improved data flows and connecting data sources within KTH.
 
 # Background and progress {data-background=assets/bg/kth-6.png data-background-size=cover}
 
-## DAUF - background and context 
+## DAUF - background and context I
 
 Trend towards `r green("better overview of research outputs")` as well as `r green("integration of systems.")`
 
@@ -72,9 +80,11 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
 - Data office (in progress)
 - More support and management of research data
 - Project to replace HR-system
+- Strategisk verksamhetsanalys
+- Updated budgeting tool
 
 
-## Progress - What is new during Q1 2023? {data-background=assets/bg/plant.png data-background-size=cover}
+## Progress - What is new since the last demo meeting {data-background=assets/bg/plant.png data-background-size=cover}
 
 - **KTH Publication Analysis app**
   * Allowing exploration of co-publication and collaboration at KTH 
@@ -86,7 +96,7 @@ Trend towards `r green("better overview of research outputs")` as well as `r gre
   * Sustainable Development Goals
   
 - **Mobilizations of projects data from other sources**
-  * CASE
+  * CASE - “Case Management System for Research Projects” @ KTH
   * Swecris
   * CORDIS (EU projects)
   * Other sources
@@ -121,8 +131,8 @@ https://analysis.sys.kth.se/bibliometrics/app/publ_analysis
 - 462 publications 2010-2022
 - 137 publications 2020-2022 (e.g. from the TECoSA-period)
 
-- 28 projects in CASE - “Case Management System for Research Projects” @ KTH
-- 14 projects 2020-2021 (seems to be more in CASE, but some with missing data on duration)
+- 28 projects in CASE 
+- 14 projects 2020-2022 (seems to be more in CASE, but some with missing data on duration)
 - Info on funders and SDG-goals on projects
 - Picture of collaborations, through co-publication
 
@@ -276,19 +286,13 @@ include_graphics("assets/img/typebyyear.png")
 
 [Details: Combining CASE with Swecris](Case-Presentation.html)
 
-```{r echo=F,out.width="90%",fig.align='center'}
-# - <Overview here - nr of records, update frequency, fields available, keys>
-include_graphics(path = "assets/img/Summary graph_new.png")
-```
-
 ## Project data - discussion
 
 - Do you have a need to follow-up projects from both the "contract" perspective and the "research subject" perspective?
 - Define purpose of different sources. Should CASE be used to complement other external sources? 
-- yy
+
 =======
 # Discussion, Questions, Feedback {data-background=assets/bg/kth-2.png data-background-size=cover}
->>>>>>> e5065f9061ba1e05b99e6abd06d2525213710f27
 
 ## Future work and directions
 
@@ -298,6 +302,10 @@ Determined based on your input and directions provided by product owners.
   - UKÄ/SCB categories
   - Topic clusters and keywords
   - Journal classifications
+  
+- Improved filtering
+- Preliminary merged project list (based on CASE + external sources)
+
 
 ## Questions and Answers {.smaller}
 
