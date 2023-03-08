@@ -116,12 +116,10 @@ https://analysis.sys.kth.se/bibliometrics/app/publ_analysis
 
 [TECoSA](https://www.tecosa.center.kth.se/) Centre running since 2020 used as example, based on 9 PIs.
 
-Some summary stats:
-
 - 462 publications 2010-2022
 - 137 publications 2020-2022 (e.g. from the TECoSA-period)
 
-- 28 projects in CASE
+- 28 projects in CASE - “Case Management System for Research Projects” @ KTH
 - 14 projects 2020-2021 (seems to be more in CASE, but some with missing data on duration)
 - Info on funders and SDG-goals on projects
 - Picture of collaborations, through co-publication
@@ -150,7 +148,7 @@ There is no single "source of truth" for all projects at KTH. Data requirements 
 
 > What are the most important questions you have in relation to projects at KTH?
 
-## Mobilized data sources for KTH projects {.smaller}
+## Mobilized data for KTH projects {.smaller}
 
 ```{r echo=F}
 #include_graphics(path = "assets/img/data source only.png")
@@ -184,20 +182,21 @@ tribble(
   ), options = list(dom = ""))  
 ```
 
-### Tools for matching and combining etc
+## Tools for matching and combining etc
 
 - <https://github.com/KTH-Library/kthcorpus> (open repo, publication and authors in DiVA etc)
 - <https://github.com/KTH-Library/institutions> (open repo, organisation identifers etc)
 - <https://github.com/KTH-Library/bibliotools> (private repo, access to CASE data)
 
+![](assets/img/minio-object-storage.png)
 
 ## CASE: a Research Management process in Edge
 
-  - Internal source at KTH (Edge, Efecte) - a "Case Management System for Research Projects"
-  - Keeps track of agreements, contracts, legal documents
-  - Could be a good source for internally financed projects
-  - Can complement what is missing from other open sources
-  - Comparatively more diverse (project types, funding organizations)
+- Internal source at KTH (Edge, Efecte) - a "Case Management System for Research Projects"
+- Keeps track of agreements, contracts, legal documents
+- Could be a good source for internally financed projects
+- Can complement what is missing from other open sources
+- Comparatively more diverse (project types, funding organizations)
 
 ## CASE (I/II) - fields and missingness {.smaller}
 
@@ -228,7 +227,7 @@ include_graphics(path = "assets/img/sweCris overview.png")
 
 ## CORDIS
 
-[Synergies and Challenges of Integrating Heterogeneous KTH Project Datasets](file:///D:/swecris/data-raw/sweCrisQo.html)
+[Synergies and Challenges of Integrating Heterogeneous KTH Project Datasets](sweCrisQo.html)
 
 ```{r echo=F,out.width="50%",fig.align='center'}
 include_graphics(path = "assets/img/cordis overview.png")
@@ -236,7 +235,7 @@ include_graphics(path = "assets/img/cordis overview.png")
 
 ## OpenAIRE
 
-[Synergies and Challenges of Integrating Heterogeneous KTH Project Datasets](file:///D:/swecris/data-raw/sweCrisQo.html)
+[Synergies and Challenges of Integrating Heterogeneous KTH Project Datasets](sweCrisQo.html)
 
 ```{r echo=F,out.width="55%",fig.align='center'}
 include_graphics(path = "assets/img/openAire overview.png")
@@ -262,9 +261,13 @@ include_graphics("assets/img/Table.3.png")
 include_graphics("assets/img/typebyyear.png")
 ```
 
-# Discussion, Questions, Feedback
+[Details: Combining CASE with Swecris](Case-Presentation.html)
+
+# Discussion, Questions, Feedback {data-background=assets/bg/kth-2.png data-background-size=cover}
 
 ## Future work and directions
+
+Determined based on your input and directions provided by product owners.
 
 - Subject area analysis in KTH Publication Analysis app
   - UKÄ/SCB categories
