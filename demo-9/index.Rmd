@@ -150,6 +150,12 @@ There is no single "source of truth" for all projects at KTH. Data requirements 
 
 ## Mobilized data for KTH projects {.smaller}
 
+### Object storage / S3 used
+
+<center>
+![](assets/img/minio-object-storage.png){height=100}
+</center>
+
 ```{r echo=F}
 #include_graphics(path = "assets/img/data source only.png")
 library(dplyr)
@@ -182,17 +188,22 @@ tribble(
   ), options = list(dom = ""))  
 ```
 
-## Tools for matching and combining etc
+## Tooling and components
 
-- <https://github.com/KTH-Library/kthcorpus> (open repo, publication and authors in DiVA etc)
-- <https://github.com/KTH-Library/institutions> (open repo, organisation identifers etc)
-- <https://github.com/KTH-Library/bibliotools> (private repo, access to CASE data)
+<center>
+![https://data.bibliometrics.lib.kth.se](assets/img/minio-kth.png){height=250}
+</center>
 
-![](assets/img/minio-object-storage.png)
+### Tools
+- ["kthcorpus" - open repo, publication and authors in DiVA etc](https://github.com/KTH-Library/kthcorpus)
+- ["institutions" - open repo, organisation identifers etc](https://github.com/KTH-Library/institutions)
+- ["bibliotools" - private repo, access to CASE data](https://github.com/KTH-Library/bibliotools)
+
+# External data sources for KTH Projects - Overview {data-background=assets/bg/kth-1.png data-background-size=cover}
 
 ## CASE: a Research Management process in Edge
 
-- Internal source at KTH (Edge, Efecte) - a "Case Management System for Research Projects"
+- Internal source at KTH (Efecte Edge) - a "Case Management System for Research Projects"
 - Keeps track of agreements, contracts, legal documents
 - Could be a good source for internally financed projects
 - Can complement what is missing from other open sources
