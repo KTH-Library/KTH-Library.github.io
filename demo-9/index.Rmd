@@ -260,6 +260,8 @@ include_graphics(path = "assets/img/Dataflow-and-entity-graph.png")
 include_graphics("assets/img/Table.3.png")
 ```
 
+**Why are projects not being matched at a high rate?**
+
 ## Why the discrepancy?
 
 ```{r echo=F,out.width="90%",fig.align='center'}
