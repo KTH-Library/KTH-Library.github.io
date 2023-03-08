@@ -44,23 +44,18 @@ suppressPackageStartupMessages(library(magick))
 
 ```
 
-## Agenda
+## Agenda {.smaller}
 
 - The **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
-
 - A demo of the **"KTH Publication Analysis app"** with projects data from CASE
-
 - Overview of available data sources for projects at KTH
-
 - Your **questions and feedback**
   
-<br>
+### About the project
 
-**About the project** 
-
-Collaboration within VS, between KTH-Library, RSO and ITA.  
-Agile model with 2 week sprints.  
-Creating services and tools for presentation of data, improved data flows and connecting data sources within KTH.
+- Collaboration within VS, between KTH-Library, RSO and ITA.  
+- Agile model with 2 week sprints.  
+- Creating services and tools for presentation of data, improved data flows and connecting data sources within KTH.
 
 # Background and progress {data-background=assets/bg/kth-6.png data-background-size=cover}
 
@@ -116,7 +111,7 @@ The idea is that the analysis app will complement the *Annual bibliometric monit
 
 ## KTH Publication Analysis app - collaboration
 
-https://analysis.sys.kth.se/bibliometrics/app/publ_analysis
+https://analysis.sys.kth.se/bibliometrics/app_direct/publ_analysis
 
 ![&emsp;&emsp;*Collaboration network*](assets/img/app_network1.png){width=950}
 
@@ -131,7 +126,7 @@ https://analysis.sys.kth.se/bibliometrics/app/publ_analysis
 - 462 publications 2010-2022
 - 137 publications 2020-2022 (e.g. from the TECoSA-period)
 
-- 28 projects in CASE 
+- 28 projects in CASE - “Case Management System for Research Projects” @ KTH
 - 14 projects 2020-2022 (seems to be more in CASE, but some with missing data on duration)
 - Info on funders and SDG-goals on projects
 - Picture of collaborations, through co-publication
@@ -288,10 +283,9 @@ include_graphics("assets/img/typebyyear.png")
 
 ## Project data - discussion
 
-- Do you have a need to follow-up projects from both the "contract" perspective and the "research subject" perspective?
-- Define purpose of different sources. Should CASE be used to complement other external sources? 
+- Do you have a need to follow-up projects from both the "contract" perspective and the "research area/topic" perspective?
+- Define purpose and use data from the most relevant sources. Should CASE be used to complement other external sources? 
 
-=======
 # Discussion, Questions, Feedback {data-background=assets/bg/kth-2.png data-background-size=cover}
 
 ## Future work and directions
@@ -311,7 +305,7 @@ Determined based on your input and directions provided by product owners.
 
 Please provide your input!
 
-- Do you have a need to follow-up projects from both the "contract" perspective and the "research subject" perspective?
+- Do you have a need to follow-up projects from both the **"contract"** perspective and the **"research area/topic"** perspective?
 - Do you have ideas for **additional reference datasets** that are useful for analyzing your projects at KTH?
 - Would **parameterized interactive reports** be useful in addition to the raw data and the app?
 - **Other questions** from the Zoom chat
