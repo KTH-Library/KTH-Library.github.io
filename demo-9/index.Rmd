@@ -59,7 +59,7 @@ suppressPackageStartupMessages(library(magick))
 
 # Background and progress {data-background=assets/bg/kth-6.png data-background-size=cover}
 
-## DAUF - background and context I
+## DAUF - background and context
 
 Trend towards `r green("better overview of research outputs")` as well as `r green("integration of systems.")`
 
@@ -270,10 +270,6 @@ include_graphics("assets/img/typebyyear.png")
 
 [Details: Combining CASE with Swecris](Case-Presentation.html)
 
-## Project data - discussion
-
-- Do you have a need to follow-up projects from both the "contract" perspective and the "research area/topic" perspective?
-- Define purpose and use data from the most relevant sources. Should CASE be used to complement other external sources? 
 
 # Discussion, Questions, Feedback {data-background=assets/bg/kth-2.png data-background-size=cover}
 
@@ -297,6 +293,7 @@ Please provide your input!
 - Do you have a need to follow-up projects from both the **"contract"** perspective and the **"research area/topic"** perspective?
 - Do you have ideas for **additional reference datasets** that are useful for analyzing your projects at KTH?
 - Would **parameterized interactive reports** be useful in addition to the raw data and the app?
+- Should CASE (or other internal KTH sources) be used to complement external sources for project data?
 - **Other questions** from the Zoom chat
 - Suggestions and **comments**?
 
