@@ -270,6 +270,18 @@ include_graphics("assets/img/typebyyear.png")
 
 [Details: Combining CASE with Swecris](Case-Presentation.html)
 
+## Enrichment and supplementing missing and/or incomplete data
+
+- Example: Project Field/ID
+  
+  - For ~480 intersected projects, we are able to reduce the degree of incompleteness in the the project ID field from ~10 to < 3% using equivalent fields in openAire and Swecris.
+
+### Enrichment? 
+
+```{r echo=F,out.width="90%",fig.align='center'}
+
+```
+
 
 # Discussion, Questions, Feedback {data-background=assets/bg/kth-2.png data-background-size=cover}
 
