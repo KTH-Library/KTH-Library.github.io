@@ -1,0 +1,106 @@
+---
+title: 'Mini-hackathon - about Invenio / DiVA / BIBMET'
+author: ""
+date: '2023-04-28'
+output:
+  ioslides_presentation:
+    css: assets/css/styles.css
+    logo: assets/img/logo.svg
+    mathjax: default
+    self-contained: yes
+    transition: slower
+    widescreen: yes
+  beamer_presentation: default
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(ktheme)
+library(webshot)
+
+red <- function(txt) 
+  sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["cerise"]), txt)
+
+#webshot::install_phantomjs()
+#unlink("retrosearch-screenshot.png")
+
+suppressPackageStartupMessages(library(magick))
+
+# BG images that could be used
+
+```
+
+## Mini-hackathon {data-background=assets/bg/kth-6.png data-background-size=cover}
+
+The first time we meet in this setting (first deep dive into DiVA/Inveno):
+
+- Gaël Dubus, Anders Wändahl, Sam Al-Arbid, Nazar Dino, Markus Skyttner
+
+Discussion points:
+
+- When doing analyses of research outputs from KTH, what would be an ergonomic data flow?
+- What system is most suitable as a primary/main data source for research outputs / publication metadata?
+- What can data about research outputs be used for at KTH?
+
+## What do we need for supporting an ergonomic data flow for analysing?
+
+Depending on the analyst or user, different functionality is required:
+
+- Researcher: Good Web UI for data entry for researchers, to maintain and update
+- Analyst: APIs for system integrations and automatable workflows 
+- Analyst: Toolbox / utilities for using and combining data in analysis
+- ITA: Reliable components that can be adapted to workflows at KTH
+
+## Main data source for research outputs -- currently DiVA
+
+Current DiVA - future Invenio ... probably?
+
+The current DiVA repository have some strength and present some challenges:
+
+- Used nationally in many institutions
+- API lacking, slow progress towards CORA (DiVA API v3)
+- Difficult to extend for KTH specific purposes
+
+## Future: Invenio
+
+Invenio have some strengths in areas where DiVA does not:
+
+- Invenio is similar to Zenodo, but more flexible, so known "globally"
+- Good API, documentation
+- Global community, actively maintained
+- Extensible with custom fields
+- Support for links / minted DOIs
+- Presentation / GUI can be customized (can we make it look like DiVA, do we even want this?)
+- Control over the data and the system, more empowered to quickly make adjustments
+- Adapted by other institutions
+- Comply to EU-standards for open data, a regional/global community
+
+## Utblick - dataflöden & tjänster
+
+- Vad är poängen med dataflöden?  <img align="right" height="300" src="https://cdn.hackernoon.com/hn-images/1*7IMev5xslc9FLxr9hHhpFw.png">
+    - transparens & tillgänglighet
+    - reproducerbarhet
+    - analytics
+    - standardisering
+
+<!-- ![Källa: https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007](https://cdn.hackernoon.com/hn-images/1*7IMev5xslc9FLxr9hHhpFw.png){height=200px} -->
+
+
+## Exempel på dataflöde
+
+- Infrastruktur   <img align="right" height="150" src="minio.png">
+  - Datatillgänglighet
+  - Mellanlager för data (S3)
+  - Knyta samman datakällor
+
+<center>
+![HR-data i Minio](buckets.png){height=300px}
+</center>
+
+![Källa: KTHB/PIMS](data-overview-kthb.png){height=500px}
+## Andra tillgängliga datakällor
+
+<center>
+![](kth-datasources.png){height=500px}
+</center>
