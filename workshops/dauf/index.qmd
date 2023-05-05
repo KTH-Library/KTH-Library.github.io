@@ -1,0 +1,187 @@
+---
+title: "DAUF workshop"
+author: "Data. Visuals. Insights."
+format:
+  revealjs:
+    logo: logo.svg
+    footer: "DAUF workshop"
+self-contained: true
+---
+
+## Data -> Visuals -> Insights {.smaller}
+
+Data wrangling - access required **data sources**
+
+  - access data sources (from object storage, Web APIs, databases)
+  - use `tidyverse` APIs (filter, group, summarise, pivot, transform)
+  
+Design appropriate **visuals** (tables, diagrams, maps etc)
+
+- use static plots (`ggplot2` works across most formats, including print)
+- use interactive widgets (`htmlwidgets` can be used in HTML / browsers)
+  
+Provide a coherent **presentation** / story / narrative, including explanations
+
+- use `quarto` for interactive reports
+- provide access via an app or API
+
+## Data wrangling
+
+Utilize the manipulation "grammar" [offered by `tidyverse`](https://www.tidyverse.org/packages/):
+
+- `dplyr` - "everything SQL provides and then some more"
+- `tidyr` - pivoting into long or wide format
+
+Techniques:
+
+- new: support for `.by` parameter, see this [link](https://www.tidyverse.org/blog/2023/02/dplyr-1-1-0-per-operation-grouping/#per-operation-grouping-with-byby)
+- mutate: row-wise and/or column-wise?
+- dealing with nested data
+
+## Resources / links {.smaller}
+
+Working with rows and columns:
+
+- [Row-wise operations](https://dplyr.tidyverse.org/articles/rowwise.html)
+- [Column-wise operations](https://dplyr.tidyverse.org/articles/colwise.html)
+- [Nested data](https://tidyr.tidyverse.org/articles/nest.html#nested-data-and-models)
+- [Performance optimization](https://www.tidyverse.org/blog/2023/04/performant-packages/)
+
+New verbs and functionality:
+
+- ["by" - per operation](https://www.tidyverse.org/blog/2023/02/dplyr-1-1-0-per-operation-grouping/#per-operation-grouping-with-byby)
+- ["pick" and "reframe"](https://www.tidyverse.org/blog/2023/02/dplyr-1-1-0-pick-reframe-arrange/)
+- ["pipes"](https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/)
+
+
+## Visuals - graphs
+
+Static [ggplot2 graph gallery](https://r-graph-gallery.com/)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![ggplot2 graphs (1)](r-graphs-01.png)
+:::
+
+::: {.column width="50%"}
+![ggplot2 graphs (2)](r-graphs-02.png)
+:::
+
+::::
+
+## Visuals - widgets
+
+Interative [HTML Widgets gallery](http://gallery.htmlwidgets.org/), see [showcase link](http://www.htmlwidgets.org/showcase_leaflet.html>)
+
+![Widgets](r-widgets.png)
+
+## Example: Swecris projects {.smaller}
+
+Getting data from Swecris (Web API) - for KTH ...
+
+Do we get any special fields / nested data / "list columns"?
+
+```{r}
+#| code-fold: true
+#| echo: true
+
+# get some data over the web API
+library(tidyverse)
+library(swecris)
+
+# what are all organisations?
+orgs <- swecris_organisations()
+
+# what is KTHs identifier?
+id_kth <- orgs |> 
+  filter(str_detect(organisationNameSv, "KTH, Kungliga")) |> 
+  pull("organisationId")
+
+# all information about projects from KTH
+projects <- id_kth |> swecris_projects()
+
+# non-character columns, which are those?
+glimpse(projects |> select(where(Negate(is.character))))
+
+```
+
+## Table of Swecris projects {.smaller}
+
+Lets take a look at a few samples of Swecris projects data
+
+```{r}
+#| code-fold: true
+#| echo: true
+projects |> 
+  rowwise() |> 
+  mutate(has_people = length(peopleList) > 0) |> 
+  filter(has_people, !is.na(projectTitleEn)) |> 
+  head(2) |> 
+  select(any_of(c("projectId", "projectTitleEn", "peopleList", "scbs"))) |> 
+  knitr::kable()
+
+```
+
+
+## Example: Swecris people {.smaller}
+
+Shows how to untangle information about the people associated with projects into a separate dataset which can be stored in a relational database (ie has projectId and peopleId as well as other fields with information about people)
+
+```{r}
+#| code-fold: true
+#| echo: true
+
+# use the list column to create a table of people connected to projects
+people <- 
+  projects |> select(x = projectId, y = peopleList) |> 
+  pmap(.progress = TRUE, function(x, y, ...) 
+    bind_rows(y) |> mutate(projectId = x)
+  ) |> 
+  bind_rows() 
+
+people |> head(3) |> knitr::kable()
+
+```
+## Example: summary for Swecris people
+
+We now have a separate table for people and can use it for summaries, joins etc:
+
+```{r}
+# summarise
+people |> 
+  group_by(roleEn) |> 
+  summarise(
+    n_people = n_distinct(fullName), 
+    n_projects = n_distinct(projectId), 
+    n_orcids = n_distinct(orcId)
+  ) |> 
+  arrange(desc(n_projects), desc(n_people))
+
+```
+
+
+## Challenge: Which authors have ORCiDs but no DiVA authority person?
+
+Example from yesterday....
+
+> In DiVA, which authors have publications where ORCiD is registered, but there may be no kthid for the author or no DiVA authority person identifier?
+
+
+## Hints {.smaller}
+
+Lets help each other out with this challenge...
+
+- Getting the data
+- Choosing an appropriate visual (table / diagram / graph)
+- Presenting the results in an understandable way
+
+> Hint: There is the `aut.csv` file from `data.bibliometrics.lib.kth.se` in the `kthcorpus`-bucket.
+
+> Hint: Alternatively, the R-package "kthcorpus" has a function `kth_diva_authors()` which can be used to get a table of KTH authors and their corresponding publications.
+
+## Example solution
+
+There are many ways to approach the challenge, here is one:
+
+- see <https://github.com/KTH-Library/kthcorpus/blob/main/inst/rmarkdown/orcid_report.qmd#L256-L271>
