@@ -98,9 +98,83 @@ Invenio have some strengths in areas where DiVA does not:
 ![HR-data i Minio](buckets.png){height=300px}
 </center>
 
+## BIBMET schematics
+
 ![Källa: KTHB/PIMS](data-overview-kthb.png){height=500px}
-## Andra tillgängliga datakällor
+## Andra tillgängliga datakällor och verktyg
 
 <center>
 ![](kth-datasources.png){height=500px}
 </center>
+
+# Workshop #2 - Migrate DiVA to Invenio
+
+## Tasks
+
+- Migrate a few different records from DiVA to Invenio@KTH
+
+  - Upload: Thesis, article, conference proceeding
+  - Evaluate what is missing (for a specific usage / use case)?
+  - Field mappings - Nazar has made a mapping for a complete view (including optional fields)
+  - We could here first focus on required fields in DiVA
+  - How to deal with missing values - a value is missing in DiVA, how will it be filled? 
+
+## Pre-populating Invenio with "vocabularies"
+  
+- Pre-populating or "seeding" Invenio with "vocabularies" requires YAML for
+  - Organizations (ROR and internal KTH orgs)
+  - Names/People/Authors (creators)
+  - Resource types
+  - Funding
+  - Subjects (FOS, CESSDA - controlled vocabulary consortium och european social sciences, MESH) - namespaced with a specific - SwePub requires UKÄ-classification (at least UKÄ, Scopus, WoS etc)
+  - Users
+
+## Discussion points
+
+- Q: You can add, but you can not delete.... So a difference....
+- Q: Are all "funders" pre-seeded/loaded - right now Swecris funders - ROR provides list of funders... and we can add Swecris and ... What are the DiVA funders....
+- Q: How do we match DiVA keywords to controlled vocabularies?
+- Q: For Swedish keywords UKÄ and possibly an European one
+- Q: Is name variations possible to load? Investigate.
+- Q: How would it be possible to use different UI views for different resource types for a) data entry b) curation.
+
+
+## Migrating data from DiVA to Invenio
+
+Description of the data flow / syncing process:
+
+- We need to create 6 yaml files to load into Invenio ("vocabularies")
+- We then can use the API to "batch load" and sync data from DiVA
+- The UI could be customized to support "custom fields", see <https://inveniordm.docs.cern.ch/customize/metadata/custom_fields/records/>
+
+## Example - migrate PID 1750711
+
+Step 1: Some YAML and CSV files to migrate
+
+<https://gist.github.com/mskyttner/8b4e559a21229e494585f0fdc7119868/edit>
+
+Step 2: Create JSON and upload via the API
+
+...
+
+## Migration Plan {.smaller}
+
+- Existing tools
+  - Time to research and evaluate migration tools, for example...
+  - invenio-rdm-migrator (from Invenio Software)
+  - more?
+
+- "Preseeding" Invenio from YAML files
+  - Tool - CSV-to-YAML (possibly)
+  - Load YAML files for affiliations/orgs, people/authors/creators, subjects, users and other "entities"
+
+- Tool - CSV to JSON-file
+  - Cleaning
+  - Untangle mixed vocabularies...
+  - Rate-limiting-call - can be managed individually
+  - Quality control - checks for things like character encoding etc... and content
+  
+## UI - Data Entry and Curation in Invenio
+
+- Investigate existing customizations, such as <https://infoscience.epfl.ch/>
+
