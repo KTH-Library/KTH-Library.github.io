@@ -60,7 +60,7 @@ suppressPackageStartupMessages(library(magick))
 - [ÅBU](https://kth.se/abm) (Årlig bibliometrisk uppföljning)
 - KuraTHor - Datakureringsverktyg för DiVA
 - [KTH Research Information](https://analysis.sys.kth.se/bibliometrics/app/publ_analysis)
-- R-paket för att interagera med relevanta data, se [Github](https://github.com/KTH-Library))
+- R-paket för att interagera med relevanta data (se [Github](https://github.com/KTH-Library))
 - API:er
 
 Se även dokumentation på:
