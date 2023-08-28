@@ -1,0 +1,161 @@
+---
+title: "KTH Project Data with Rill Developer"
+author: "KTH Library & ITA - Datadriven Analys och Uppföljning av KTHs Forskning"
+date: "2023-08-15"
+output:
+  ioslides_presentation:
+    css: assets/css/styles.css
+    logo: assets/img/logo.svg
+    mathjax: default
+    self-contained: yes
+    transition: slower
+    widescreen: yes
+  beamer_presentation: default
+  slidy_presentation: default
+---
+  
+```{r setup, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(DiagrammeR)
+library(dplyr)
+library(DT)
+library(kthcorpus)
+library(readr)
+library(DiagrammeRsvg)
+library(magrittr)
+library(rsvg)
+```
+
+## Agenda
+
+- <span class="grey-header">Recall and Review</span>
+- <span class="grey-header">Relational data table (kopplingstabell)</span>
+- <span class="grey-header">Rill Developer (Demo)</span>
+
+    - <span class="maroon-text" style="color: #DE3163;">Concept</span>
+
+    - <span class="maroon-text" style="color: #DE3163;">How it can be leveraged to answer project-related questions.</span>
+
+## Recall and Review {.smaller}
+
+- <span class="grey-header">“**Which projects are active? Which researchers are involved? From which organisations? Grant sizes?**</span>
+
+- <span class="grey-header">**What we have accomplished so far:**</span>
+
+</br>
+
+:::: {style="display: flex;"}
+
+::: {}
+- <span class="maroon-text centered-text" style="color: #DE3163;">Accessed and collected data via APIs</span>
+- <span class="maroon-text centered-text" style="color: #DE3163;">Mobilized data for KTH projects using Object Storage (S3)</span>
+
+![](assets/img/minio-object-storage.png){height=100}
+:::
+
+::: {}
+- <span class="maroon-text" style="color: #DE3163;">Conducted Exploratory Data Analysis & String Matching:</span>
+
+![](assets/img/dataflow.png){height=200}
+:::
+
+::::
+
+</br>
+
+## KTH Project Data Sources
+
+- <span class="grey-header">Data records as of 2023-08-21</span>
+- [Check out our landing site](https://bibliometrics.lib.kth.se/RI_sources_KTH.html)
+
+```{r warning=FALSE,message=FALSE}
+# Swecris, Vinnova, and Formas
+swecris <- minio_get("projects_swecris.csv","kthcorpus") |> read_csv()
+formas <-  minio_get("projects_formas.csv", "kthcorpus") |> read_csv()
+vinnova <- minio_get("projects_vinnova.csv","kthcorpus") |> read_csv()
+# Cordis and OpenAire
+cordis <-  minio_get("projects_cordis.csv","kthcorpus") |> read_csv()
+openaire <- minio_get("projects_openaire.csv", "kthcorpus") |> read_csv()
+# Case
+case <- bibliotools::case()
+
+# Data frame.
+summary_table <- data.frame(
+  Dataset = c("swecris", "formas", "vinnova","cordis","openaire","case"),
+  Rows = c(dim(swecris)[1], dim(formas)[1],
+           dim(vinnova)[1], dim(cordis)[1],
+           dim(openaire)[1],dim(case)[1]),
+  Cols = c(dim(swecris)[2], dim(formas)[2],
+           dim(vinnova)[2], dim(cordis)[2],
+           dim(openaire)[2],dim(case)[2])) |> 
+  mutate(Open = c(rep("🟢",5),"🔒"))
+
+# Table
+DT::datatable(summary_table,colnames = c('Dataset', 'Rows', 'Columns','Open','R Package'))
+```
+
+## Relational data table
+
+- Method --- Approximate and exact string matching but also probabilistic record linkage
+- Strength --- jaro-winkler similarity index
+
+- Usage --- multi-purpose use e.g., enrich and harvest data from other sources
+
+```{r warning=FALSE,message=FALSE}
+project_links <- minio_get("project_links.csv","kthcorpus") |> read_csv()
+
+project_links |> 
+  slice_head(n = 2) |>
+  DT::datatable(style = "bootstrap4",autoHideNavigation = F,escape = T)
+```
+
+## Rill developer
+
+<span class="grey-header">Rill Developer <https://www.rilldata.com/> is a fast-feedback IDE and analysis tool that transform data tables into Rill dashboards, powered by [DuckDB](https://duckdb.org/).</span>
+
+### Strengths 
+
+- Computationally highly efficient (e.g., basically no run time).
+- Offers many features to explore time-series and data quality.
+- Importantly, it does not require hard-coded efforts on the part of the user (e.g. R, Python).
+
+### Weaknesses
+
+- Restricted visual capabilities.
+- Presupposes working knowledge of Structured Query Language (SQL).
+
+## The nitty-gritty of Rill
+
+<center>
+![](assets/img/rill-logo.png){height=200,width=200}
+<center>
+
+</br>
+
+<center>
+![](assets/img/rill-concept.png){height=200,width=200}
+<center>
+
+```{r}
+# DiagrammeR::grViz("
+#  digraph {
+#
+#    graph [rankdir = LR]
+#    node [shape = rectangle, style = filled, fillcolor = 'lightblue', fontname = 'Arial']
+#
+#    A [label = 'Source\n(data import)', fontname = 'Arial', fontsize = 12]
+#    B [label = 'SQL interface\n(enables custom models to be created)', fontname = 'Arial', fontsize = 12]
+#    C [label = 'Dashboard\n(visual tool)', fontname = 'Arial', fontsize = 12]
+#
+#    A -> B
+#    B -> C
+#  }
+#") 
+```
+
+## Demo
+- <span class="grey-header">Making sense of Case and other source $\rightarrow$ Let's check it out!</span>
+- <http://localhost:9009/>
+
+- <span class="grey-header">We will look at how to use Rill to explore project data and how we can use our relational data table to 1) determine project overlap and difference across different data sources; and 2) quickly visualize select features using basic time-series tools.</span>
