@@ -12,6 +12,8 @@ output:
     widescreen: yes
   beamer_presentation: default
   slidy_presentation: default
+editor_options: 
+  chunk_output_type: console
 ---
   
 ```{r setup, include=FALSE, warning=FALSE}
@@ -24,7 +26,8 @@ library(kthcorpus)
 library(readr)
 library(DiagrammeRsvg)
 library(magrittr)
-library(rsvg)
+library(gt)
+library(purrr)
 ```
 
 ## Agenda
@@ -80,6 +83,13 @@ openaire <- minio_get("projects_openaire.csv", "kthcorpus") |> read_csv()
 # Case
 case <- bibliotools::case()
 
+# Tools
+url_data <- data.frame(url = c("https://github.com/KTH-Library/swecris",
+                               "https://github.com/KTH-Library/formas",
+                               "https://github.com/KTH-Library/vinnova",
+                               "https://github.com/KTH-Library/cordis",
+                               "https://github.com/KTH-Library/OpenAIRE",
+                               "https://github.com/KTH-Library/bibliotools"))
 # Data frame.
 summary_table <- data.frame(
   Dataset = c("swecris", "formas", "vinnova","cordis","openaire","case"),
@@ -89,10 +99,16 @@ summary_table <- data.frame(
   Cols = c(dim(swecris)[2], dim(formas)[2],
            dim(vinnova)[2], dim(cordis)[2],
            dim(openaire)[2],dim(case)[2])) |> 
-  mutate(Open = c(rep("🟢",5),"🔒"))
+  mutate(Open = c(rep("🟢",5),"🔒")) |> 
+  mutate(Tools = paste0("<a href='",
+                        url_data$url,"'>",
+                        url_data$url,
+                        "</a>")) |> 
+  mutate(Updates = c("daily","daily","daily","monthly","daily","daily"))
 
 # Table
-DT::datatable(summary_table,colnames = c('Dataset', 'Rows', 'Columns','Open','R Package'))
+DT::datatable(summary_table,colnames = c('Source', 'Records',
+                                         'Fields','Access',"Tools","Updates"), escape = FALSE)
 ```
 
 ## Relational data table
