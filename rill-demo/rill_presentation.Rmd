@@ -69,46 +69,33 @@ library(purrr)
 
 ## KTH Project Data Sources
 
-- <span class="grey-header">Data records as of 2023-08-21</span>
+- <span class="grey-header">Data records as of 2023-08-28</span>
 - [Check out our landing site](https://bibliometrics.lib.kth.se/RI_sources_KTH.html)
 
-```{r warning=FALSE,message=FALSE}
-# Swecris, Vinnova, and Formas
-swecris <- minio_get("projects_swecris.csv","kthcorpus") |> read_csv()
-formas <-  minio_get("projects_formas.csv", "kthcorpus") |> read_csv()
-vinnova <- minio_get("projects_vinnova.csv","kthcorpus") |> read_csv()
-# Cordis and OpenAire
-cordis <-  minio_get("projects_cordis.csv","kthcorpus") |> read_csv()
-openaire <- minio_get("projects_openaire.csv", "kthcorpus") |> read_csv()
-# Case
-case <- bibliotools::case()
-
-# Tools
-url_data <- data.frame(url = c("https://github.com/KTH-Library/swecris",
-                               "https://github.com/KTH-Library/formas",
-                               "https://github.com/KTH-Library/vinnova",
-                               "https://github.com/KTH-Library/cordis",
-                               "https://github.com/KTH-Library/OpenAIRE",
-                               "https://github.com/KTH-Library/bibliotools"))
-# Data frame.
-summary_table <- data.frame(
-  Dataset = c("swecris", "formas", "vinnova","cordis","openaire","case"),
-  Rows = c(dim(swecris)[1], dim(formas)[1],
-           dim(vinnova)[1], dim(cordis)[1],
-           dim(openaire)[1],dim(case)[1]),
-  Cols = c(dim(swecris)[2], dim(formas)[2],
-           dim(vinnova)[2], dim(cordis)[2],
-           dim(openaire)[2],dim(case)[2])) |> 
-  mutate(Open = c(rep("🟢",5),"🔒")) |> 
-  mutate(Tools = paste0("<a href='",
-                        url_data$url,"'>",
-                        url_data$url,
-                        "</a>")) |> 
-  mutate(Updates = c("daily","daily","daily","monthly","daily","daily"))
-
-# Table
-DT::datatable(summary_table,colnames = c('Source', 'Records',
-                                         'Fields','Access',"Tools","Updates"), escape = FALSE)
+```{r echo=F}
+tribble(
+  ~source, ~url, ~open, ~download_url, ~repo_url, ~rows, ~cols, ~freq,
+  "Formas", "https://formas.se/en/start-page/about-formas/what-we-do/open-data---api-containing-information-on-funded-projects/documentation-for-api-containing-information-on-funded-projects.html", TRUE, "projects_formas.csv", "formas", 478, 21, "daily",
+  "OpenAIRE", "https://graph.openaire.eu/develop/api.html#projects", TRUE, "projects_openaire.csv", "OpenAIRE", 901, 10, "daily",
+  "Swecris", "https://swecris-api.vr.se/index.html", TRUE, "projects_swecris.csv", "swecris", 3204, 26, "daily",
+  "Vinnova", "https://www.vinnova.se/en/about-us/about-the-website/open-data/", TRUE, "projects_vinnova.csv", "vinnova", 463, 20, "daily",
+  "CORDIS", "https://data.europa.eu/data/datasets/cordis-eu-research-projects-under-horizon-europe-2021-2027?locale=en", TRUE, "projects_cordis.csv", "cordis", 753, 20, "monthly",
+  "CASE", "https://confluence.sys.kth.se/confluence/pages/viewpage.action?pageId=70785591", FALSE, "", "bibliotools", 3073, 40, "daily"
+  ) |>
+  mutate(open = ifelse(open, "🟢", "🔒")) |>
+  mutate(repo_url = sprintf("<a href='https://github.com/KTH-Library/%s' target='blank'>%s</a>", repo_url, repo_url)) |>
+  mutate(source = sprintf("<a href='%s' target='blank'>%s</a>", url, source)) |>
+  mutate(download_url = ifelse(nzchar(download_url) < 1, "<a href='https://data.bibliometrics.lib.kth.se' target='blank'>Authenticated S3 bucket</a>", glue::glue("<a href='https://data.bibliometrics.lib.kth.se/kthcorpus/{download_url}' target='blank'>{download_url}</a>", .na = NULL))) |> #, download_url, download_url)) |>
+  select(-url) |>
+  DT::datatable(escape = F, rownames = F, colnames = c(
+    Source = "source",
+    Access = "open",
+    Download = "download_url",
+    Tools = "repo_url", 
+    Records = "rows",
+    Fields = "cols",
+    Updates = "freq"
+  ), options = list(dom = ""))
 ```
 
 ## Relational data table
