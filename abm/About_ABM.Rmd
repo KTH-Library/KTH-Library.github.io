@@ -49,24 +49,16 @@ The bibliometric indicators referred are based on publications registered in DiV
 
 # Contact information
 
-If you have questions about the ABM at KTH please contact <mailto:biblioteket@kth.se>
-
-This form can also be used to submit a question:
-
-- https://www.kth.se/biblioteket/anvanda-biblioteket/oppettider-kontakt/kontaktformular-1.863120
-
-Read more about other ways to get in touch here:
-
-- https://www.kth.se/biblioteket/anvanda-biblioteket/oppettider-kontakt
+If you have further questions about the ABM at KTH please contact [biblioteket$kth.se](mailto:biblioteket@kth.se) or submit a question using [this form](https://www.kth.se/biblioteket/anvanda-biblioteket/oppettider-kontakt/kontaktformular-1.863120){target="_blank"}.
 
 # Accessibility
 
 We aim at providing content in an accessible fashion in compliance with [WCAG 2.1](https://www.w3.org/TR/WCAG21/){target="_blank"}, and are aware that there is room for improvement for some of the content.
 
-If you require access to content not provided in a format that is accessible for you, please contact us at [biblioteket@kth.se](mailto:biblioteket@kth.se). Please find more information about accessibility at KTH here: [KTH Web Accessibility Web Page](https://www.kth.se/gemensamt/tillganglighet){target="_blank"}
+If you require access to content not provided in a format that is accessible for you, please contact us at [biblioteket@kth.se](mailto:biblioteket@kth.se). Please find more information about accessibility at KTH at the [KTH Web Accessibility Web Page](https://www.kth.se/gemensamt/tillganglighet){target="_blank"}.
 
 # Further information
-
+- [Bibliometrics (KTH Library)](https://www.kth.se/en/biblioteket/publicera-analysera/bibliometri/bibliometri-1.1159501){target="_blank"}
 - [Introduction to bibliometrics at KTH](Bibliometrics.html){target="_blank"}
 - [Information about DiVA and the registration process - Handle publications in DiVA](https://www.kth.se/en/biblioteket/publicera-analysera/hantera-publikationer){target="_blank"}
 - [Report on Open Access publishing at KTH](OARapport.pdf){target="_blank"}
