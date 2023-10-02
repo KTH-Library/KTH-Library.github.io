@@ -49,26 +49,17 @@ The bibliometric indicators referred are based on publications registered in DiV
 
 # Contact information
 
-If you have questions about the ABM at KTH please contact <mailto:biblioteket@kth.se>
-
-This form can also be used to submit a question:
-
-- https://www.kth.se/biblioteket/anvanda-biblioteket/oppettider-kontakt/kontaktformular-1.863120
-
-Read more about other ways to get in touch here:
-
-- https://www.kth.se/biblioteket/anvanda-biblioteket/oppettider-kontakt
+If you have further questions about the ABM at KTH please contact [biblioteket$kth.se](mailto:biblioteket@kth.se) or submit a question using [this form](https://www.kth.se/biblioteket/anvanda-biblioteket/oppettider-kontakt/kontaktformular-1.863120){target="_blank"}.
 
 # Accessibility
 
 We aim at providing content in an accessible fashion in compliance with [WCAG 2.1](https://www.w3.org/TR/WCAG21/){target="_blank"}, and are aware that there is room for improvement for some of the content.
 
-If you require access to content not provided in a format that is accessible for you, please contact us at [biblioteket@kth.se](mailto:biblioteket@kth.se). Please find more information about accessibility at KTH here: [KTH Web Accessibility Web Page](https://www.kth.se/gemensamt/tillganglighet){target="_blank"}
+If you require access to content not provided in a format that is accessible for you, please contact us at [biblioteket@kth.se](mailto:biblioteket@kth.se). Please find more information about accessibility at KTH at the [KTH Web Accessibility Web Page](https://www.kth.se/gemensamt/tillganglighet){target="_blank"}.
 
 # Further information
-
+- [Bibliometrics (KTH Library)](https://www.kth.se/en/biblioteket/publicera-analysera/bibliometri/bibliometri-1.1159501){target="_blank"}
 - [Introduction to bibliometrics at KTH](Bibliometrics.html){target="_blank"}
-- [Description of data, methods and indicators in KTH Annual Bibliometric Monitoring](Description_data_and_methods_ABM.pdf){target="_blank"}
 - [Information about DiVA and the registration process - Handle publications in DiVA](https://www.kth.se/en/biblioteket/publicera-analysera/hantera-publikationer){target="_blank"}
 - [Report on Open Access publishing at KTH](OARapport.pdf){target="_blank"}
 - [Formal definitions of field normalized citation indicators at KTH](indicators.html){target="_blank"}
@@ -80,6 +71,22 @@ For further questions, contact the KTH Library at [biblioteket@kth.se](mailto:bi
 ### Redistribution rights for Web Of Science data
 
 Certain data included in the Annual Bibliometric Monitoring report are derived from the © Science Citation Index Expended (SCIE), Social Sciences Citation Index (SSCI), Arts & Humanities Citation Index (AHCI), Conference Proceedings Citation Index - Sciences (CPCI-S) and Conference Proceedings Citation Index - Social Sciences & Humanities (CPCI -SSH) (2021) of Clarivate Analytics (US) LLC. All rights reserved. No part of these materials may be reproduced, stored in a retrieval system or transmitted in any form or by any means, including electronic, mechanical, photographic, magnetic or other means without the expressed permission of the KTH Library.
+
+### General denotation and description of bibliometric indicators at KTH
+
+* **P full:**  Full count of publications.
+* **P frac:** Fractional count of publications.
+* **C full:** Full count of citations.
+* **C frac:** Fractionalized count of citations.
+* **C3 frac:** Fractionalized count of citations with a three year window. The indicator shows the number of citations received from publications published the same year and the two following years. Since older publications have had more time to get cited than new publications, time series of citations counts using an open window are not appropriate. By using a fixed citation window of three years comparisons over time can be made.
+* **WoS coverage:** Share of publications covered by Web of Science
+* **cf:** Mean field normalized citation rate. This indicator normalizes for the variation of citation pattern between subject fields. Each publication is compared to a reference group of publications, i.e. publications within the same Web of Science subject category, published the same year and of the same document type (article or review). This is done by dividing the number of citations of each publication with the average number of citations for the reference group of publications, which results in a normalized citation rate. The indicator value expresses the field normalized average citation rate of the unit’s publications. It follows from the definition of cf that the mean field normalized citation rate of all records in the Web of Science database is 1. A citation rate above one indicates
+that the set of publications is cited above world average, e.g. a citation rate of 1.2 indicates that the publications are cited 20 percent above world average.
+* **Ptopx%:** The number or share of publications among the x percent most cited. The same reference group as for the field normalized citation rate is used for the indicator. Publications can partly belong to the x percent most cited publications if several publications have the same citation value as the percentile limit or if the publication has been classified into multiple fields with different percentile limits.
+* **jcf:** Mean field normalized citation rate for journals and serials. This indicator shows the citation impact of the journals in which the unit has published. It is calculated as an average of the field normalized citation rate of the set of journals in which the analyzed unit has published. If the unit has published multiple articles in the same journal, the journal’s citation rate is counted one time for each article. This journal indicator is normalized for field differences by the same principles as the field normalized citation rate (cf). For a publication published in the year x, the value of the journal is based on the years x-1 to x-5.
+* **JtopX%:** The number or share of publications that have been published in journals which are among the X percent most cited. The same reference group as for the journals’ field normalized citation rate (jcf) is used for the indicator. The journals in the topX% category publish X percent of the publications in the reference group. A journal can partly belong to the topX% percent if it stretches over the percentile limit or if it has been classified into multiple fields with different percentile limits.
+* **International co-publishing:** This indicator shows the number of publications that has been co-published between two or more countries. The default presentation of this indicator is by full counts.
+* **Swe. non-univ. co-publishing:** This indicator shows the number of publications that has been co-published between a university and Swedish non-university organizations. The default presentation of this indicator is by full counts.
 
 <!-- include ABM_guide in this overview/about document -->
 ```{r child = 'ABM_guide.Rmd'}
