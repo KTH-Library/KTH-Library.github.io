@@ -72,6 +72,14 @@ For further questions, contact the KTH Library at [biblioteket@kth.se](mailto:bi
 
 Certain data included in the Annual Bibliometric Monitoring report are derived from the © Science Citation Index Expended (SCIE), Social Sciences Citation Index (SSCI), Arts & Humanities Citation Index (AHCI), Conference Proceedings Citation Index - Sciences (CPCI-S) and Conference Proceedings Citation Index - Social Sciences & Humanities (CPCI -SSH) (2021) of Clarivate Analytics (US) LLC. All rights reserved. No part of these materials may be reproduced, stored in a retrieval system or transmitted in any form or by any means, including electronic, mechanical, photographic, magnetic or other means without the expressed permission of the KTH Library.
 
+### Open Access data
+
+Open Access status of publications is retrieved from [Unpaywall](https://unpaywall.org/).
+
+<!-- ### Scopus
+
+(placeholder) --> <!--  - do we have an attribution text from Scopus? --> 
+
 ### General denotation and description of bibliometric indicators at KTH
 
 * **P full:**  Full count of publications.
