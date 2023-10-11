@@ -80,7 +80,7 @@ Open Access status of publications is retrieved from [Unpaywall](https://unpaywa
 
 (placeholder) --> <!--  - do we have an attribution text from Scopus? --> 
 
-### General denotation and description of bibliometric indicators at KTH
+## General denotation and description of bibliometric indicators at KTH
 
 * **P full:**  Full count of publications.
 * **P frac:** Fractional count of publications.
