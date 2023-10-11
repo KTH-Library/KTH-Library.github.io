@@ -35,8 +35,7 @@ This guide gives an introduction to the Annual Bibliometric Monitoring
 (ABM) at KTH Royal Institute of Technology. The purpose of the guide is
 to help you navigate the presentation of results, to understand the
 bibliometric indicators used in the report, and to interpret the
-results. More detailed description of indicators and methods are found
-in [*Description of methods, data and indicators in KTH Annual Bibliometric Monitoring*](https://kth-library.github.io/abm/Description_data_and_methods_ABM.pdf).
+results.
 
 ## Background 
 
