@@ -43,7 +43,7 @@ The ABM is available at different levels, for KTH in total, schools, departments
 
 ## What data sources is it based on?
 
-ABM is based on data in BIBMET, which in turn collates data from other reference sources, including Web Of Science and Scopus. Statistics regarding citations and co‑publishing are based on the subset of publications in DiVA that are registered in Web of Science (Citation impact, Journal impact and Co‑publishing tabs) or Scopus (Scopus tab).
+ABM is based on data in BIBMET (the bibliometric database at the KTH library), which in turn collates data from other reference sources, including Web Of Science and Scopus. Statistics regarding citations and co‑publishing are based on the subset of publications in DiVA that are registered in Web of Science (Citation impact, Journal impact and Co‑publishing tabs) or Scopus (Scopus tab).
 
 The bibliometric indicators referred are based on publications registered in DiVA and published 2013 to 2019. Only publications which have been affiliated to KTH are included. This means that publications written by a researcher before she/he was employed at KTH, and that are not affiliated to KTH, will not be included in the statistics.
 
@@ -76,9 +76,9 @@ Certain data included in the Annual Bibliometric Monitoring report are derived f
 
 Open Access status of publications is retrieved from [Unpaywall](https://unpaywall.org/).
 
-<!-- ### Scopus
+### Scopus
 
-(placeholder) --> <!--  - do we have an attribution text from Scopus? --> 
+Publication, citation and co-publication data under the Scopus-tab is provided from [Scopus](https://www.scopus.com/) by [Elsevier)[https://www.elsevier.com/]. The data related to KTH is hosted in BIBMET.
 
 ## General denotation and description of bibliometric indicators at KTH
 
