@@ -78,7 +78,7 @@ Open Access status of publications is retrieved from [Unpaywall](https://unpaywa
 
 ### Scopus
 
-Publication, citation, co-publication and SDG-data under the Scopus-tab is provided from [Scopus](https://www.scopus.com/) by [Elsevier)[https://www.elsevier.com/]. The data related to KTH is hosted in BIBMET.
+Publication, citation, co-publication and SDG-data under the Scopus-tab is provided from [Scopus](https://www.scopus.com/) by [Elsevier)[https://www.elsevier.com/]. The data used in the ABM related to KTH is hosted in BIBMET.
 
 ## General denotation and description of bibliometric indicators at KTH
 
