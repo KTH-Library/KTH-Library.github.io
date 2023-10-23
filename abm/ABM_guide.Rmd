@@ -209,7 +209,7 @@ Field-normalization for the Scopus indicators are based on the same principles a
 
 The *SDG* tab provides an overview of how publications are mapped against the [UN sustainability goals (SDG)](https://sdgs.un.org/goals).
 The mapping is provided from Scopus, and only publications present in the Scopus database are therefore included in the summary.
-Publications are mapped to SDGs based on search queries, using keywords found in titles, abstract and author keywords, and the full methodology is described by Scopus [here](https://elsevier.digitalcommonsdata.com/datasets/87txkw7khs/1). The same SDG-mapping is also used in e.g. the *Times Higher Education Impact ranking* (THE Impact ranking)](https://www.timeshighereducation.com/impactrankings). Also note that individual publications can be mapped towards several SDGs. 
+Publications are mapped to SDGs based on search queries, using keywords found in titles, abstract and author keywords, and the full methodology is described by Scopus [here](https://elsevier.digitalcommonsdata.com/datasets/87txkw7khs/1). The same SDG-mapping is also used in e.g. the [*Times Higher Education Impact ranking* (THE Impact ranking)](https://www.timeshighereducation.com/impactrankings). Also note that individual publications can be mapped towards several SDGs. 
 
 ![](media/image9_sdg.png){width=100%}
 
