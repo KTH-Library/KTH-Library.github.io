@@ -2,16 +2,14 @@
 title: "About ABM"
 date: "`r Sys.Date()`"
 output:
-  rmdformats::html_clean:
-    theme:
-      base_font: !expr bslib::font_google("Open Sans")
+  ktheme::kth_neo:
     toc: true
 ---
-
 
 ```{r setup2, include=FALSE}
 library(knitr)
 library(rmdformats)
+library(ktheme)
 
 ## Global options
 options(max.print="75")
