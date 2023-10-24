@@ -1,9 +1,14 @@
 ---
 title: "About ABM"
 date: "`r Sys.Date()`"
+toc: true
+mainfont: figtree
+embed-resources: true
+include-in-header: 
+  - favicon.html
 output:
-  ktheme::kth_neo:
-    toc: true
+  kth-quarto-html: default
+    
 ---
 
 ```{r setup2, include=FALSE}
@@ -95,5 +100,5 @@ that the set of publications is cited above world average, e.g. a citation rate 
 * **Swe. non-univ. co-publishing:** This indicator shows the number of publications that has been co-published between a university and Swedish non-university organizations. The default presentation of this indicator is by full counts.
 
 <!-- include ABM_guide in this overview/about document -->
-```{r child = 'ABM_guide.Rmd'}
+```{r child = 'ABM_guide.qmd'}
 ```
