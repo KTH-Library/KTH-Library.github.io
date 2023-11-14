@@ -1,11 +1,10 @@
 ---
 title: "ABM User Guide"
 date: "`r Sys.Date()`"
+mainfont: figtree
+toc: true
 output:
-  rmdformats::html_clean:
-    theme:
-      base_font: !expr bslib::font_google("Open Sans")
-    toc: true
+  kth-quarto-html: default
 ---
 
 ```{r setup, include=FALSE}

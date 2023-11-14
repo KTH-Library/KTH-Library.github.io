@@ -1,17 +1,20 @@
 ---
 title: "About ABM"
 date: "`r Sys.Date()`"
+toc: true
+mainfont: figtree
+embed-resources: true
+include-in-header: 
+  - favicon.html
 output:
-  rmdformats::html_clean:
-    theme:
-      base_font: !expr bslib::font_google("Open Sans")
-    toc: true
+  kth-quarto-html: default
+    
 ---
-
 
 ```{r setup2, include=FALSE}
 library(knitr)
 library(rmdformats)
+library(ktheme)
 
 ## Global options
 options(max.print="75")
@@ -78,7 +81,7 @@ Open Access status of publications is retrieved from [Unpaywall](https://unpaywa
 
 ### Scopus
 
-Publication, citation, co-publication and SDG-data under the Scopus-tab is provided from [Scopus](https://www.scopus.com/) by [Elsevier)[https://www.elsevier.com/]. The data used in the ABM related to KTH is hosted in BIBMET.
+Publication, citation, co-publication and SDG-data under the Scopus-tab is provided from [Scopus](https://www.scopus.com/) by [Elsevier](https://www.elsevier.com/). The data used in the ABM related to KTH is hosted in BIBMET.
 
 ## General denotation and description of bibliometric indicators at KTH
 
@@ -97,5 +100,5 @@ that the set of publications is cited above world average, e.g. a citation rate 
 * **Swe. non-univ. co-publishing:** This indicator shows the number of publications that has been co-published between a university and Swedish non-university organizations. The default presentation of this indicator is by full counts.
 
 <!-- include ABM_guide in this overview/about document -->
-```{r child = 'ABM_guide.Rmd'}
+```{r child = 'ABM_guide.qmd'}
 ```
