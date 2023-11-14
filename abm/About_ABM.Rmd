@@ -45,7 +45,7 @@ The ABM is available at different levels, for KTH in total, schools, departments
 
 ABM is based on data in BIBMET (the bibliometric database at the KTH library), which in turn collates data from other reference sources, including Web Of Science and Scopus. Statistics regarding citations and co‑publishing are based on the subset of publications in DiVA that are registered in Web of Science (Citation impact, Journal impact and Co‑publishing tabs) or Scopus (Scopus tab).
 
-The bibliometric indicators referred are based on publications registered in DiVA and published 2013 to 2019. Only publications which have been affiliated to KTH are included. This means that publications written by a researcher before she/he was employed at KTH, and that are not affiliated to KTH, will not be included in the statistics.
+The bibliometric indicators referred are based on publications registered in DiVA and published `r bibliomatrix:::abm_config()$start_year` to `r bibliomatrix:::abm_config()$stop_year`. Only publications which have been affiliated to KTH are included. This means that publications written by a researcher before she/he was employed at KTH, and that are not affiliated to KTH, will not be included in the statistics.
 
 # Contact information
 
