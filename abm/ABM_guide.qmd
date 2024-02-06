@@ -51,10 +51,10 @@ That is the version of ABM described here.
 The ABM results are available at different levels, for KTH in total,
 Schools, Departments and for individual researchers. The report
 currently has the same format and contents at all levels. Data is
-presented for the last 6 years with a complete publication record, which
-in practice means the year before last autumn and the five preceding
-years (i.e. in the spring of 2021, the ABM contains data for the
-publication years 2013-2019).
+presented for the last 10 years with a complete publication record, which
+in practice means the year before last autumn and the nine preceding
+years (i.e. in the spring of 2024, the ABM contains data for the
+publication years 2013-2022).
 
 Only publications registered in DiVA and affiliated with KTH are
 included in the results (i.e. publications that KTH researchers have
@@ -136,10 +136,11 @@ definitions](https://kth-library.github.io/abm/Formal_definitions_field_normaliz
 Mean-based citation indicators (such as Cf) can be strongly affected by
 a single publication (or a few) with a very high citation count relative
 to its field, while the Share Top 10% indicator is less sensitive to
-outliers. In that sense, Cf and Share Top 10% are complementary. Since
-field normalized indicators are unstable at low publication counts, this
-table is presented with overlapping three-year periods. Indicators based
-on a small number of publications should still be interpreted with
+outliers. In that sense, Cf and Share Top 10% are complementary. 
+Since field normalized indicators are unstable at low publication counts, the 
+citation indicators are presented both as yearly values (dots) with a volume weighted 
+three-year sliding mean superimposed in the graph to indicate the overall trend (solid line). 
+Indicators based on a small number of publications should still be interpreted with
 caution.
 
 ![](media/image4.png){width=100%}

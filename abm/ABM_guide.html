@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.349">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2023-10-24">
+<meta name="dcterms.date" content="2023-11-14">
 
 <title>ABM User Guide</title>
 <style>
@@ -76,14 +76,13 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 24, 2023</p>
+      <p class="date">November 14, 2023</p>
     </div>
   </div>
   
     
   </div>
   
-
 
 </header>
 
@@ -93,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>The aim of the ABM is to assist monitoring, research evaluation and quality assurance at KTH, but also to provide KTH organizations and researchers with information related to their publications. The ABM was introduced in 2013 and was published annually in the same format since then. In 2019, a project aiming to redesign and develop the ABM was started. This resulted in the current solution, maintaining the same information as in previous years but in a more flexible framework with a presentation that is more dynamic, extendable and easier to maintain. That is the version of ABM described here.</p>
-<p>The ABM results are available at different levels, for KTH in total, Schools, Departments and for individual researchers. The report currently has the same format and contents at all levels. Data is presented for the last 6 years with a complete publication record, which in practice means the year before last autumn and the five preceding years (i.e.&nbsp;in the spring of 2021, the ABM contains data for the publication years 2013-2019).</p>
+<p>The ABM results are available at different levels, for KTH in total, Schools, Departments and for individual researchers. The report currently has the same format and contents at all levels. Data is presented for the last 10 years with a complete publication record, which in practice means the year before last autumn and the nine preceding years (i.e.&nbsp;in the spring of 2024, the ABM contains data for the publication years 2013-2022).</p>
 <p>Only publications registered in DiVA and affiliated with KTH are included in the results (i.e.&nbsp;publications that KTH researchers have published at other organizations are excluded). Affiliations to KTH are based on the actual author affiliation as written in the published paper. All citation data and derived indicators are based on Web of Science<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, and indicators are therefore only presented for publications covered by Web of Science.</p>
 <p>If a School or Department have changed name or the organizational structure has in any other way changed, publications affiliated to old organizational units have been assigned to the corresponding current unit when possible.</p>
 </section>
@@ -118,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The first table in this view shows the total and average number of citations after three years, i.e.&nbsp;citations received in the publication year and the two directly following years, as well as the number and share of publications that were not cited in that time. This table is based on the Web of Science document types Article, Proceedings paper, Review, Letter and Editorial.</p>
 <p>The second table is based on the Web of Science document types Article and Review, and shows Field Normalized Citations (Cf) and the number/share of publications belonging to the 10 percent most cited in its field.</p>
 <p>The normalization is done so that the citation value for each publication is divided by the average number of citations received by publications from the same year, within the same Web of Science category (or categories) and of the same document type. For more detailed descriptions of the field normalized indicators used at KTH, see <a href="https://kth-library.github.io/abm/Formal_definitions_field_normalized_citation.pdf">Formal definitions</a>.</p>
-<p>Mean-based citation indicators (such as Cf) can be strongly affected by a single publication (or a few) with a very high citation count relative to its field, while the Share Top 10% indicator is less sensitive to outliers. In that sense, Cf and Share Top 10% are complementary. Since field normalized indicators are unstable at low publication counts, this table is presented with overlapping three-year periods. Indicators based on a small number of publications should still be interpreted with caution.</p>
+<p>Mean-based citation indicators (such as Cf) can be strongly affected by a single publication (or a few) with a very high citation count relative to its field, while the Share Top 10% indicator is less sensitive to outliers. In that sense, Cf and Share Top 10% are complementary. Since field normalized indicators are unstable at low publication counts, the citation indicators are presented both as yearly values (dots) with a volume weighted three-year sliding mean superimposed in the graph to indicate the overall trend (solid line). Indicators based on a small number of publications should still be interpreted with caution.</p>
 <p><img src="media/image4.png" class="img-fluid" style="width:100.0%"></p>
 </section>
 <section id="journal-impact" class="level2">
@@ -154,13 +153,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 
-<div id="quarto-appendix" class="default"><aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p>Included indices: Science Citation Index Expended (SCIE), Social Sciences Citation Index (SSCI), Arts &amp;Humanities Citation Index (AHCI), Conference Proceedings Citation Index -Sciences (CPCI-S) and Conference Proceedings Citation Index -Social Sciences &amp; Humanities (CPCI -SSH)<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Last year with a complete publication record in DiVA (usually year of last autumn – 1), with a non-zero count, for the Total publications number, the full period for WoS coverage and last three-year period with an indicator for the other numbers.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</aside></div></main>
+</section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -241,9 +240,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+  function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
+      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -253,17 +253,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start',
+      placement: 'bottom-start'
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -276,81 +267,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
-        }
-        return container.innerHTML
-      } else {
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      return note.innerHTML;
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      }
-    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -394,7 +310,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
-            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -420,33 +335,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        console.log("RESIZE");
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -507,7 +395,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-
 
 
 
