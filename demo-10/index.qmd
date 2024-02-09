@@ -4,11 +4,6 @@ author: "KTH Library & ITA"
 date: "2024-02-14"
 format: 
   kth-quarto-revealjs:
-    title-slide-attributes:
-      data-background-image: "assets/bg/kth-lines-blue.jpg"
-      data-background-size: "100%"
-      data-background-position: contain    
-    logo: assets/img/logo.svg
     footer: "DAUF - Demo 10 - 2024-02-14"
 ---
   
