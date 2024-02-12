@@ -5,13 +5,14 @@ date: "2024-02-14"
 format: 
   kth-quarto-revealjs:
     title-slide-attributes:
-      data-background-image: "assets/bg/kth-lines-blue.jpg"
+      data-background-image: "assets/bg/pattern_blue_wide.png"
       data-background-size: "100%"
-      data-background-position: contain    
-    logo: assets/img/logo.svg
+      data-background-position: contain
+      
+    css: logo.css
     footer: "DAUF - Demo 10 - 2024-02-14"
----
-  
+---  
+   
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 # install.packages("devtools")
@@ -47,14 +48,14 @@ suppressPackageStartupMessages(library(magick))
 - Creating services and tools for presentation of **research information data**, improved data flows and connecting data sources within KTH.
 - Agile model with 2 week sprints.  
 - Collaborations within VS, between KTH-Library, RSO and ITA.  
-- New **research portfolio management structure** is taking shape and governs the DAUF project
+- New **research portfolio management structure** is taking shape, which the DAUF project is part of
 
 ## Agenda {data-background=assets/bg/notes.png data-background-size=cover}
 
 - Status update for the **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
 - **ABM 2023** - new Annual Bibliometric Monitoring for 2023
 - New features in **KTH Research Information** app
-- Progress in **data mobilization** - imports for DiVA publications etc
+- Improved import proceedures for DiVA, and other progress in **data mobilization**
 - Your **questions and feedback**
 
 # Background and progress {data-background=assets/bg/kth-6.png data-background-size=cover}
@@ -65,28 +66,35 @@ suppressPackageStartupMessages(library(magick))
 - New features in **KTH Research Information** app
 - New **KTH graphical style** (across all apps and reports)
 - New KTH-styled **quarto extension** with templates
-- New **landing page** at <https://bibliometrics.lib.kth.se>
+- New **DAUF landing page** at <https://bibliometrics.lib.kth.se>
 - Sunsetting of **staff-based variant of ABM** (replaced by Research Information app)
 - Data flow integrations and new S3 data buckets established for data exchange (**Research Data / dmponline** and **Learning Analytics**)
 
 ## The big picture in ABM 2023
 
-- Trends?
-- Variability between schools?
+- Relatively stable citation indicators for KTH as a whole (at article and journal level)
+- Slightly decreasing publications volume 
+- Stable level of international co-publication (not clearly increasing)
+- Open Access leveling off, and variable between schools and departments 
+- Quite large variability between departments?
 
 ## New in **KTH Research Information** {.smaller}
 
 - New **branding** to conform with new graphical profile for KTH
 - Improved **filtering** options
-- Link out to **profile pages** at kth.se
+- Link out to researcher **profile pages** at kth.se
 - Improved **export** functionality
 - **Subject area** analysis
 - **Topic clusters** and keywords
 - **Journal** classifications
 - **Open Access** tab
-- Explore **co-publication** collaborations at KTH
+- Explore **co-publication** within KTH
 - Improved **search** capabilities for finding researchers
 - Data about **projects** at KTH
+
+## KTH Research Information
+
+[![*Copublication within KTH related to Fibre- and Polymer Technology, when publishing with organizations from Germany *](assets/img/kth_RI_kth-copub.png){width=950}](https://analysis.sys.kth.se/bibliometrics/app_direct/research_info/)
 
 # Data mobilization
 
@@ -142,9 +150,19 @@ A number of **new libraries** have been developed and existing libraries are con
 
 Determined based on your input and directions provided by product owners.
 
--
--
--
+- ÅBU: Finns några små ändringar som kulle underlätta mycket? Någon som saknas
+
+## Possible directions
+
+Looking more broadly, DAUF could look in several different directions, e.g.:
+
+- Researcher profiles (research overview, collaboration network)
+- Centre and/or research project overview, also spanning outside of KTH
+- Support for recruitment processes (e.g. applicant evaluation)
+- KTH organization overview - linking data from different domains
+- Including broader forms of "impact" in analyses and evalutions (open science, community engagement etc)
+  
+Which ones do you think are more interesting for KTH, at this moment?
 
 ## Questions and Answers {.smaller}
 
