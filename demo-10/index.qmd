@@ -190,7 +190,7 @@ ggplot() +
 
 ::: {.column width="45%"}
 
-![](mefbc.png)
+![Faster automated imports](mods.png)
 
 :::
 
@@ -222,17 +222,19 @@ plots$plot_conf
 
 -   Efforts towards integrating data about **organisational structure** from HR, DiVA and "UG".
 -   Better **ORCiD linkage** through more automated quality checks
--   Infrastructure upgrade with **server migration** finished, upgraded software stack with automatic certificates, updated monitoring endpoints etc
+
+
+![ORCiD crosschecks](orcid-check.png)
 
 ## Object Storage / S3 {.smaller}
 
-Software upgrade for **object storage** (S3 / minio) at <https://data.bibliometrics.lib.kth.se> which improves on user management, provides SFTP support and more.
+Infrastructure upgrade with **server migration** finished, upgraded software stack with automatic certificates, updated monitoring endpoints. Includes software upgrade for **object storage** (S3 / minio) at <https://data.bibliometrics.lib.kth.se> which improves on user management, provides SFTP support and more.
 
 <center>
 ![https://data.bibliometrics.lib.kth.se](assets/img/minio-kth.png){height="300"}
 </center>
 
-> Should we publish more "open data" (without Personally Identifiable Information) to support general use elsewhere at KTH? For example ABM indicators for 2023, information about organizational units at KTH, information about projects at KTH etc?
+> Should we publish more "open data" (without Personally Identifiable Information) to support general use elsewhere at KTH?
 
 ## Tooling and libraries {.smaller}
 
