@@ -1,5 +1,5 @@
 ---
-title: "Demo #10 - DAUF: Datadriven Analys och Uppföljning av KTHs Forskning"
+title: "Demo #10 - Datadriven Analys och Uppföljning av KTHs Forskning (DAUF)"
 author: "KTH Library & ITA"
 date: "2024-02-14"
 format: 
@@ -11,8 +11,9 @@ format:
       
     css: logo.css
     footer: "DAUF - Demo 10 - 2024-02-14"
----  
-   
+---
+
+>>>>>>> d4f878bdf326ff1ad94b73b0dd076520450f3bc8
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 # install.packages("devtools")
@@ -50,7 +51,8 @@ suppressPackageStartupMessages(library(magick))
 - Collaborations within VS, between KTH-Library, RSO and ITA.  
 - New **research portfolio management structure** is taking shape, which the DAUF project is part of
 
-## Agenda {data-background=assets/bg/notes.png data-background-size=cover}
+
+## Agenda {data-background="assets/bg/notes.png" data-background-size="cover"}
 
 - Status update for the **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
 - **ABM 2023** - new Annual Bibliometric Monitoring for 2023
@@ -58,10 +60,12 @@ suppressPackageStartupMessages(library(magick))
 - Improved import proceedures for DiVA, and other progress in **data mobilization**
 - Your **questions and feedback**
 
-# Background and progress {data-background=assets/bg/kth-6.png data-background-size=cover}
 
-## Progress overview - since last demo {data-background=assets/bg/plant.png data-background-size=cover}
+# Background and progress {data-background="assets/bg/kth-6.png" data-background-size="cover"}
 
+## Progress overview - since last demo {data-background="assets/bg/plant.png" data-background-size="cover"}
+
+<<<<<<< HEAD
 - New **ABM 2023** with [longer timelines and annual indicators](https://www.kth.se/en/biblioteket/nyheter/upptack-kth-s-genomslag-arlig-bibliometrisk-uppfoljning-abu-for-2023-1.1304850)
 - New features in **KTH Research Information** app
 - New **KTH graphical style** (across all apps and reports)
@@ -92,59 +96,151 @@ suppressPackageStartupMessages(library(magick))
 - Improved **search** capabilities for finding researchers
 - Data about **projects** at KTH
 
+
 ## KTH Research Information
 
 [![*Copublication within KTH related to Fibre- and Polymer Technology, when publishing with organizations from Germany *](assets/img/kth_RI_kth-copub.png){width=950}](https://analysis.sys.kth.se/bibliometrics/app_direct/research_info/)
 
 # Data mobilization
 
-## Publication data in DiVA and other sources
+> **MORE. FASTER. BETTER. CHEAPER.**
 
-> KTH Library is serious about data quality. Now use more automated quality checks with fewer manual quality checks required. 
+## Publication data in DiVA and other sources {.smaller}
+
+> KTH Library is serious about **data quality**. We now use more automated quality checks with fewer manual quality checks required.
+
+::::{.columns}
+
+:::{.column width="45%"}
 
 - Improved imports for publication metadata, where **MODS** is generated and ingested into DiVA using an automated process
 - Improved **update frequency** and **data quality**
   - Faster and more frequent imports from Scopus
   - Better affiliations (from Scopus, enriched with internal KTH researcher identifiers etc)
   
-## Data Curation for Publication Data
+:::
 
-![Publications registered over time (total)](assets/img/pubs-registered.png)
+:::{.column width="45%"}
 
-##
+```{r, fig.asp=1}
 
+ggplot() +
+  annotate("segment", 
+    x = 0, xend = 1, y = 0, yend = 1, 
+    colour = kth_colors("blue"), 
+    size = 8, 
+    alpha = 1, 
+    arrow = arrow()
+  ) +
+  annotate("segment", 
+    x = 0, xend = 1, y = 1, yend = 0, 
+    colour = kth_colors("darkred"), 
+    size = 8, 
+    alpha = 1, 
+    arrow = arrow()
+  ) +
+  annotate("text", x = c(0.75), y = c(0.82), 
+    label = c("Data quality") , 
+    color = kth_colors("blue"), 
+    size = 8, 
+    angle = 45
+  ) +
+  annotate("text", x = c(0.52), y = c(0.55), 
+    label = c("Researcher    workload") , 
+    color = kth_colors("darkred"), 
+    size = 8, 
+    angle = -45
+  ) +
+  xlab("") +
+  ylab("") +
+  theme_kth_neo(fontscale_factor = 5) +
+  theme(
+    panel.grid = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank()
+  )
+
+```
+
+:::
+
+::::
+
+## Reduction in manual curation time {.smaller}
+
+### Time savings
+
+- More than **50% time savings** in recent years
+
+### Labour savings
+
+- Automated record entry -\> **reduced workload** for the researcher
+
+### Better quality
+
+- Automated continouous **quality checks** and smoother **workflows**
+- Cross-checking against more sources and using **enrichment** (ORCiD, affiliations)
+
+## 
+
+:::: {.columns}
+
+::: {.column width="45%"}
+![Publications registered in total](assets/img/pubs-registered.png)
+:::
+
+::: {.column width="45%"}
 ![Publications registered by researchers](assets/img/pubs-registered-researchers.png)
+:::
+
+::::
+
+## 
+
+:::: {.columns}
+
+::: {.column width="45%"}
+![Share of researcher registered articles](article_share.png){}
+:::
+
+::: {.column width="45%"}
+![Share of researcher registered conference papers](conf_share.png){}
+:::
+
+::::
 
 ## Other data infrastructure efforts
 
-- Efforts towards integrating data about **organisational structure** from HR, DiVA and "UG".
-- Better **ORCiD linkage** through more automated quality checks
-- Infrastructure upgrade with **server migration** finished, upgraded software stack with automatic certificates, updated monitoring endpoints etc
+-   Efforts towards integrating data about **organisational structure** from HR, DiVA and "UG".
+-   Better **ORCiD linkage** through more automated quality checks
+-   Infrastructure upgrade with **server migration** finished, upgraded software stack with automatic certificates, updated monitoring endpoints etc
 
 ## Object Storage / S3 {.smaller}
 
-- Software upgrade for **object storage** (S3 /minio) at <https://data.bibliometrics.lib.kth.se>
-, using latest version which improves on user management, provides SFTP support and more.
-
-> Should we publish "open data" (without PII) for general use elsewhere at KTH? For example ABM indicators for 2023, information about organizational units at KTH, information about projects at KTH etc?
+Software upgrade for **object storage** (S3 / minio) at <https://data.bibliometrics.lib.kth.se> which improves on user management, provides SFTP support and more.
 
 <center>
-![https://data.bibliometrics.lib.kth.se](assets/img/minio-kth.png){height=200}
+![https://data.bibliometrics.lib.kth.se](assets/img/minio-kth.png){height="300"}
 </center>
 
+> Should we publish more "open data" (without Personally Identifiable Information) to support general use elsewhere at KTH? For example ABM indicators for 2023, information about organizational units at KTH, information about projects at KTH etc?
 
 ## Tooling and libraries {.smaller}
 
 A number of **new libraries** have been developed and existing libraries are continuously maintained:
 
-- ["kthcorpus" - open repo, publication and authors in DiVA, MODS generation, Scopus client etc](https://github.com/KTH-Library/kthcorpus)
-- ["openalex" - open repo, an R client for retrieving open data from openalex.org](https://github.com/KTH-Library/institutions)
-- ["reports" - private repo, various quarto reports from the Bibliometrics Team](https://github.com/KTH-Library/reports) 
-- ["ktheme" - open repo, styling for making plots using KTH style](https://github.com/KTH-Library/ktheme) 
-- ["kth-quarto" - open repo, quarto templates in KTH style](https://github.com/KTH-Library/kth-quarto)
-- ["bootswatch-kth" - open repo, Bootswatch (bootstrap) theme in KTH style](https://github.com/KTH-Library/bootswatch-kth)
+-   ["kthcorpus" - open repo, publication and authors in DiVA, MODS generation, Scopus client etc](https://github.com/KTH-Library/kthcorpus)
+-   ["openalex" - open repo, an R client for retrieving open data from openalex.org](https://github.com/KTH-Library/institutions)
+-   ["reports" - private repo, various quarto reports from the Bibliometrics Team](https://github.com/KTH-Library/reports)
+-   ["ktheme" - open repo, styling for making plots using KTH style](https://github.com/KTH-Library/ktheme)
+-   ["kth-quarto" - open repo, quarto templates in KTH style](https://github.com/KTH-Library/kth-quarto)
+-   ["bootswatch-kth" - open repo, Bootswatch (bootstrap) theme in KTH style](https://github.com/KTH-Library/bootswatch-kth)
 
-# Discussion, Questions, Feedback {data-background=assets/bg/kth-2.png data-background-size=cover}
+# Discussion, Questions, Feedback {data-background="assets/bg/kth-2.png" data-background-size="cover"}
 
 ## Future work and directions
 
@@ -164,13 +260,16 @@ Looking more broadly, DAUF could look in several different directions, e.g.:
   
 Which ones do you think are more interesting for KTH, at this moment?
 
+
 ## Questions and Answers {.smaller}
 
 Please provide your input!
 
--
--
-- Suggestions and **comments**?
+-   
+
+-   
+
+-   Suggestions and **comments**?
 
 If you prefer to provide written feedback, please use the following [jamboard](https://jamboard.google.com/d/17xE5Pxs339c3Teco5DeuTAaz9EbJGdtNQCI6u5lEW3o/viewer).
 
