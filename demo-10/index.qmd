@@ -8,12 +8,10 @@ format:
       data-background-image: "assets/bg/pattern_blue_wide.png"
       data-background-size: "100%"
       data-background-position: contain
-      
     css: logo.css
     footer: "DAUF - Demo 10 - 2024-02-14"
 ---
 
->>>>>>> d4f878bdf326ff1ad94b73b0dd076520450f3bc8
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 # install.packages("devtools")
@@ -65,7 +63,6 @@ suppressPackageStartupMessages(library(magick))
 
 ## Progress overview - since last demo {data-background="assets/bg/plant.png" data-background-size="cover"}
 
-<<<<<<< HEAD
 - New **ABM 2023** with [longer timelines and annual indicators](https://www.kth.se/en/biblioteket/nyheter/upptack-kth-s-genomslag-arlig-bibliometrisk-uppfoljning-abu-for-2023-1.1304850)
 - New features in **KTH Research Information** app
 - New **KTH graphical style** (across all apps and reports)
@@ -76,11 +73,11 @@ suppressPackageStartupMessages(library(magick))
 
 ## The big picture in ABM 2023
 
-- Relatively stable citation indicators for KTH as a whole (at article and journal level)
-- Slightly decreasing publications volume 
-- Stable level of international co-publication (not clearly increasing)
-- Open Access leveling off, and variable between schools and departments 
-- Quite large variability between departments?
+- Relatively **stable citation indicators** for KTH as a whole (at article and journal level)
+- Slightly **decreasing publications volume** 
+- International **co-publication at stable level** (not clearly increasing)
+- **Open Access levelling off**, and variable between schools and departments 
+- Quite **large variability** between departments?
 
 ## New in **KTH Research Information** {.smaller}
 
@@ -172,6 +169,10 @@ ggplot() +
 
 ## Reduction in manual curation time {.smaller}
 
+:::: {.columns}
+
+::: {.column width="45%"}
+
 ### Time savings
 
 - More than **50% time savings** in recent years
@@ -185,16 +186,12 @@ ggplot() +
 - Automated continouous **quality checks** and smoother **workflows**
 - Cross-checking against more sources and using **enrichment** (ORCiD, affiliations)
 
-## 
-
-:::: {.columns}
-
-::: {.column width="45%"}
-![Publications registered in total](assets/img/pubs-registered.png)
 :::
 
 ::: {.column width="45%"}
-![Publications registered by researchers](assets/img/pubs-registered-researchers.png)
+
+![](mefbc.png)
+
 :::
 
 ::::
@@ -204,11 +201,19 @@ ggplot() +
 :::: {.columns}
 
 ::: {.column width="45%"}
-![Share of researcher registered articles](article_share.png){}
+```{r}
+#| fig-height: 14
+plots <- readr::read_rds("plots.rds")
+plots$plot_share
+```
 :::
 
 ::: {.column width="45%"}
-![Share of researcher registered conference papers](conf_share.png){}
+```{r}
+#| fig-height: 14
+plots$plot_conf
+```
+
 :::
 
 ::::
@@ -246,17 +251,17 @@ A number of **new libraries** have been developed and existing libraries are con
 
 Determined based on your input and directions provided by product owners.
 
-- ÅBU: Finns några små ändringar som kulle underlätta mycket? Någon som saknas
+- ABM: Anything missing? Any suggested changes?
 
-## Possible directions
+## Possible directions {.smaller}
 
-Looking more broadly, DAUF could look in several different directions, e.g.:
+Looking more broadly, DAUF could develop in several different directions:
 
-- Researcher profiles (research overview, collaboration network)
-- Centre and/or research project overview, also spanning outside of KTH
-- Support for recruitment processes (e.g. applicant evaluation)
-- KTH organization overview - linking data from different domains
-- Including broader forms of "impact" in analyses and evalutions (open science, community engagement etc)
+- Researcher **profiles** (research overview, collaboration network)
+- Centre and/or research **project overview**, also spanning outside of KTH
+- Support for recruitment processes (e.g. **applicant evaluation**)
+- KTH **organizational overview** - linking data from different domains
+- Including broader forms of **"impact"** in analyses and evaluations (open science, community engagement etc)
   
 Which ones do you think are more interesting for KTH, at this moment?
 
@@ -264,10 +269,6 @@ Which ones do you think are more interesting for KTH, at this moment?
 ## Questions and Answers {.smaller}
 
 Please provide your input!
-
--   
-
--   
 
 -   Suggestions and **comments**?
 

@@ -28,8 +28,8 @@ relative_share <-
   ) |> 
   mutate(Date = parse_date(Date, "%y-%b", locale = locale(date_names = sv_abb_m))) |> 
   rename(
-    `Share by Library` = "Rel1", 
-    `Share by Researchers` = "Rel2",
+    `Share by Researchers` = "Rel1", 
+    `Share by Library` = "Rel2",
   ) |> 
   pivot_longer(cols = -c(1)) |>
   filter(grepl("Share", name)) |> 
@@ -44,17 +44,61 @@ relative_share <-
 total_records_by_role
 relative_share
 
-total_records_by_role |> 
+# conference papers registered by role
+plot_conf <- 
+  total_records_by_role |> 
+  mutate(Date = parse_date(Date, "%Y-%m", locale = locale(date_names=sv_abb_m))) |> 
   filter(Series != "Administration") |> 
+  mutate(Series = replace(Series, Series == "Other", "Researchers")) |> 
   ggplot(aes(x = Date, y = Records, group = Series, color = Series)) +
-  geom_smooth(method = "loess") +
-  geom_line() +
+  geom_smooth(span = 0.4, method = "loess", linetype = "dashed", alpha = 0.2, color = kth_colors("gray")) +
+  #discrete_scale(palette = function(n) palette_kth_neo(n = 6)[4:5], aesthetics = c("color"), scale_name = "kth") +
+  #discrete_scale("colour", "kth_neo", kth_pal()) +
+  geom_step(direction = "mid") +
+  # geom_step() + 
+  # geom_rect(aes(
+  #   xmin = Date, xmax = lead(Date), 
+  #   ymin = 0, ymax = Records), 
+  #   alpha = 0.4
+  # ) +
   facet_wrap(~ Series, ncol = 1) +
-  theme_kth_neo() +
-  theme(axis.text.x = element_blank())
+  theme_kth_neo(fontscale_factor = 1.5) +
+  scale_x_date(
+    date_breaks = "1 year", 
+    date_labels = "%Y", 
+    date_minor_breaks = "month",
+    limits = c(as.Date("2019-01-01"), as.Date("2023-12-01"))
+  ) +
+  ylim(0, 200) +
+  guides(color = "none", alpha = "none") +
+  ggtitle("Conference papers registered by role") +
+  theme(
+    panel.grid.minor = element_blank()
+  )
+  #   axis.text.x = element_blank(),
+  #   axis.ticks.x = element_blank()
+  # )
 
-relative_share |>
+plot_share <- 
+  relative_share |>
+  filter(Series == "Share by Researchers") |> 
   ggplot(aes(x = Date, y = Share, group = Series, color = Series)) +
-  geom_smooth(method = "loess") +
+  geom_smooth(method = "lm", color = kth_colors("gray"), alpha = 0.1, linetype = "dashed") +
+  scale_color_kth() +
   geom_line() +
-  theme_kth_neo()
+  xlim(as.Date("2021-01-01"), as.Date("2024-01-01")) +
+  guides(color = "none", alpha = "none") +
+  ylab("Share (%)") +
+  xlab("Year") +
+  ggtitle("Share of publications registered by researchers\n(2021 - 2024)") +
+  theme_kth_neo(fontscale_factor = 1.5) +
+  theme(
+    panel.grid.minor = element_blank()
+  )  
+
+demo_10_plots <- list(
+  plot_share = plot_share,
+  plot_conf = plot_conf
+)
+
+demo_10_plots |> readr::write_rds("demo-10/plots.rds")
