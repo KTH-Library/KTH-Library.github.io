@@ -8,7 +8,8 @@ format:
       data-background-image: "assets/bg/pattern_blue_wide.png"
       data-background-size: "100%"
       data-background-position: contain
-    css: logo.css
+    css: logo.css 
+    
     footer: "DAUF - Demo 10 - 2024-02-14"
 ---
 
@@ -56,6 +57,7 @@ suppressPackageStartupMessages(library(magick))
 - **ABM 2023** - new Annual Bibliometric Monitoring for 2023
 - New features in **KTH Research Information** app
 - Improved import proceedures for DiVA, and other progress in **data mobilization**
+- Future directions
 - Your **questions and feedback**
 
 
@@ -77,7 +79,14 @@ suppressPackageStartupMessages(library(magick))
 - Slightly **decreasing publications volume** 
 - International **co-publication at stable level** (not clearly increasing)
 - **Open Access levelling off**, and variable between schools and departments 
-- Quite **large variability** between departments?
+- Quite **large variability** between departments
+
+## ABM 2023
+
+[![*AMB 2023: KTH level*](assets/img/ABM_start.png){width=950}](https://kth.se/abm/)
+
+<!-- > Anything missing? Any suggested changes? -->
+
 
 ## New in **KTH Research Information** {.smaller}
 
@@ -110,7 +119,7 @@ suppressPackageStartupMessages(library(magick))
 
 :::{.column width="45%"}
 
-- Improved imports for publication metadata, where **MODS** is generated and ingested into DiVA using an automated process
+- Improved imports for publication metadata, where [**MODS** (Metadata Object Description Schema)](http://www.loc.gov/standards/mods/) is generated and ingested into DiVA using an automated process
 - Improved **update frequency** and **data quality**
   - Faster and more frequent imports from Scopus
   - Better affiliations (from Scopus, enriched with internal KTH researcher identifiers etc)
@@ -247,30 +256,26 @@ A number of **new libraries** have been developed and existing libraries are con
 
 # Discussion, Questions, Feedback {data-background="assets/bg/kth-2.png" data-background-size="cover"}
 
-## Future work and directions
-
-Determined based on your input and directions provided by product owners.
-
-- ABM: Anything missing? Any suggested changes?
-
-## Possible directions {.smaller}
+## Future work directions {.smaller}
 
 Looking more broadly, DAUF could develop in several different directions:
 
 - Researcher **profiles** (research overview, collaboration network)
 - Centre and/or research **project overview**, also spanning outside of KTH
 - Support for recruitment processes (e.g. **applicant evaluation**)
-- KTH **organizational overview** - linking data from different domains
+- KTH **organizational overview** - linking data from different domains within KTH
+- Other source for project data (SweCris, Cordis ++)
+- Other dashboards for KTH leadership, research quality processes etc.
 - Including broader forms of **"impact"** in analyses and evaluations (open science, community engagement etc)
   
-Which ones do you think are more interesting for KTH, at this moment?
+Which ones do you think are most interesting for KTH, at this moment?
 
 
 ## Questions and Answers {.smaller}
 
 Please provide your input!
 
--   Suggestions and **comments**?
+-  Suggestions and **comments**?
 
 If you prefer to provide written feedback, please use the following [jamboard](https://jamboard.google.com/d/17xE5Pxs339c3Teco5DeuTAaz9EbJGdtNQCI6u5lEW3o/viewer).
 
