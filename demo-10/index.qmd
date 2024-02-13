@@ -233,7 +233,7 @@ plots$plot_conf
 
 ## Object Storage / S3 {.smaller}
 
-Infrastructure upgrade with **server migration** finished, upgraded software stack with automatic certificates, updated monitoring endpoints. Includes software upgrade for **object storage** (S3 / minio) at <https://data.bibliometrics.lib.kth.se> which improves on user management, provides SFTP support and more.
+Infrastructure upgrade with **server migration** finished, upgraded software stack with automatic certificates, updated monitoring endpoints. Includes software upgrade for **object storage** (S3 / minio) at <[https://data.bibliometrics.lib.kth.se](https://bibliometrics.lib.kth.se/RI_sources_KTH.html)> which improves on user management, provides SFTP support and more.
 
 <center>
 ![https://data.bibliometrics.lib.kth.se](assets/img/minio-kth.png){height="300"}
