@@ -43,6 +43,15 @@ suppressPackageStartupMessages(library(magick))
 
 ```
 
+## Agenda {data-background="assets/bg/notes.png" data-background-size="cover"}
+
+- Status update for the **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
+- **ABM 2023** - new Annual Bibliometric Monitoring snapshot
+- New features in **KTH Research Information** app
+- Improved import proceedures for DiVA, and other progress in **data mobilization**
+- Future directions
+- Your **questions and feedback**
+
 ## About the DAUF project
 
 - Creating services and tools for presentation of **research information data**, improved data flows and connecting data sources within KTH.
@@ -50,18 +59,7 @@ suppressPackageStartupMessages(library(magick))
 - Collaborations within VS, between KTH-Library, RSO and ITA.  
 - New **research portfolio management structure** is taking shape, which the DAUF project is part of
 
-
-## Agenda {data-background="assets/bg/notes.png" data-background-size="cover"}
-
-- Status update for the **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
-- **ABM 2023** - new Annual Bibliometric Monitoring for 2023
-- New features in **KTH Research Information** app
-- Improved import proceedures for DiVA, and other progress in **data mobilization**
-- Future directions
-- Your **questions and feedback**
-
-
-# Background and progress {data-background="assets/bg/kth-6.png" data-background-size="cover"}
+# Status and progress update {data-background="assets/bg/kth-6.png" data-background-size="cover"}
 
 ## Progress overview - since last demo {data-background="assets/bg/plant.png" data-background-size="cover"}
 
@@ -83,7 +81,7 @@ suppressPackageStartupMessages(library(magick))
 
 ## ABM 2023
 
-[![*AMB 2023: KTH level*](assets/img/ABM_start.png){width=950}](https://kth.se/abm/)
+[![*ABM 2023: KTH level*](assets/img/ABM_start.png){width=950}](https://kth.se/abm/)
 
 <!-- > Anything missing? Any suggested changes? -->
 
@@ -94,20 +92,18 @@ suppressPackageStartupMessages(library(magick))
 - Improved **filtering** options
 - Link out to researcher **profile pages** at kth.se
 - Improved **export** functionality
-- **Subject area** analysis
+- **Subject area** analysis based on **Journal** classifications
 - **Topic clusters** and keywords
-- **Journal** classifications
 - **Open Access** tab
 - Explore **co-publication** within KTH
 - Improved **search** capabilities for finding researchers
 - Data about **projects** at KTH
 
-
 ## KTH Research Information
 
 [![*Copublication within KTH related to Fibre- and Polymer Technology, when publishing with organizations from Germany *](assets/img/kth_RI_kth-copub.png){width=950}](https://analysis.sys.kth.se/bibliometrics/app_direct/research_info/)
 
-# Data mobilization
+# Data curation
 
 > **MORE. FASTER. BETTER. CHEAPER.**
 
