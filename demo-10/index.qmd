@@ -1,5 +1,6 @@
 ---
-title: "Demo #10 - Datadriven Analys och Uppföljning av KTHs Forskning (DAUF)"
+title: "Demo #10 - DAUF"
+subtitle: "Datadriven Analys och Uppföljning av KTHs Forskning"
 author: "KTH Library & ITA"
 date: "2024-02-14"
 format: 
