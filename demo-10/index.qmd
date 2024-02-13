@@ -8,7 +8,6 @@ format:
       data-background-image: "assets/bg/pattern_blue_wide.png"
       data-background-size: "100%"
       data-background-position: contain
-    css: logo.css 
     
     footer: "DAUF - Demo 10 - 2024-02-14"
 ---
@@ -81,7 +80,7 @@ suppressPackageStartupMessages(library(magick))
 
 ## ABM 2023
 
-[![*ABM 2023: KTH level*](assets/img/ABM_start.png){width=950}](https://kth.se/abm/)
+[![*ABM 2023: Overview at KTH level*](assets/img/ABM_start.png){width=950}](https://kth.se/abm/)
 
 <!-- > Anything missing? Any suggested changes? -->
 
@@ -258,7 +257,7 @@ plots$plot_share_conf
 Infrastructure upgrade with **server migration** finished, upgraded software stack with automatic certificates, updated monitoring endpoints. Includes software upgrade for **object storage** (S3 / minio) at <[https://data.bibliometrics.lib.kth.se](https://bibliometrics.lib.kth.se/RI_sources_KTH.html)> which improves on user management, provides SFTP support and more.
 
 <center>
-![https://data.bibliometrics.lib.kth.se](assets/img/minio-kth.png){height="300"}
+![https://data.bibliometrics.lib.kth.se (login required)](assets/img/minio-kth.png){height="300"}
 </center>
 
 > Should we publish more "open data" (without Personally Identifiable Information) to support general use elsewhere at KTH?
@@ -286,7 +285,7 @@ Looking more broadly, DAUF could evolve in several different directions:
 - KTH **organisational overview** - linking data from different domains within KTH
 - Other dashboards for KTH leadership, research quality processes etc.
 - Including broader forms of **"impact"** in analyses and evaluations (open science, community engagement etc)
-- Researcher **profiles** (research overview, collaboration network)
+- Enhancing researcher **profile pages** (research overview, collaboration network)
   
 Which ones do you think are most interesting for KTH, at this moment?
 
