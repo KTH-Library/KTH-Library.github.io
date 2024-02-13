@@ -258,13 +258,13 @@ A number of **new libraries** have been developed and existing libraries are con
 
 Looking more broadly, DAUF could develop in several different directions:
 
-- Researcher **profiles** (research overview, collaboration network)
 - Centre and/or research **project overview**, also spanning outside of KTH
-- Support for recruitment processes (e.g. **applicant evaluation**)
-- KTH **organizational overview** - linking data from different domains within KTH
 - Other source for project data (SweCris, Cordis ++)
+- Support for recruitment processes (e.g. **applicant evaluation**)
+- KTH **organisational overview** - linking data from different domains within KTH
 - Other dashboards for KTH leadership, research quality processes etc.
 - Including broader forms of **"impact"** in analyses and evaluations (open science, community engagement etc)
+- Researcher **profiles** (research overview, collaboration network)
   
 Which ones do you think are most interesting for KTH, at this moment?
 
