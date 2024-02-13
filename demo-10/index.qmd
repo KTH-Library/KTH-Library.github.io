@@ -201,27 +201,49 @@ ggplot() +
 
 ::::
 
-## 
+## Registrations by role
 
 :::: {.columns}
 
 ::: {.column width="45%"}
 ```{r}
-#| fig-height: 14
+#| fig-height: 12
 plots <- readr::read_rds("plots.rds")
-plots$plot_share
+plots$plot_articles
 ```
 :::
 
 ::: {.column width="45%"}
 ```{r}
-#| fig-height: 14
+#| fig-height: 12
 plots$plot_conf
 ```
 
 :::
 
 ::::
+
+## Share of registrations made by researchers
+
+:::: {.columns}
+
+::: {.column width="45%"}
+```{r}
+#| fig-height: 10
+plots$plot_share_articles
+```
+:::
+
+::: {.column width="45%"}
+```{r}
+#| fig-height: 10
+plots$plot_share_conf
+```
+
+:::
+
+::::
+
 
 ## Other data infrastructure efforts
 
@@ -254,9 +276,9 @@ A number of **new libraries** have been developed and existing libraries are con
 
 # Discussion, Questions, Feedback {data-background="assets/bg/kth-2.png" data-background-size="cover"}
 
-## Future work directions {.smaller}
+## Future work and directions {.smaller}
 
-Looking more broadly, DAUF could develop in several different directions:
+Looking more broadly, DAUF could evolve in several different directions:
 
 - Centre and/or research **project overview**, also spanning outside of KTH
 - Other source for project data (SweCris, Cordis ++)
