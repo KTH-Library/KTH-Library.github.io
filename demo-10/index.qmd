@@ -47,7 +47,7 @@ suppressPackageStartupMessages(library(magick))
 - Status update for the **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
 - **ABM 2023** - new Annual Bibliometric Monitoring snapshot
 - New features in **KTH Research Information** app
-- Improved import proceedures for DiVA, and other progress in **data mobilization**
+- Improved import proceedures for DiVA, and other progress in **data curation**
 - Future directions
 - Your **questions and feedback**
 
@@ -123,6 +123,35 @@ suppressPackageStartupMessages(library(magick))
 
 :::{.column width="45%"}
 
+![Faster automated imports](mods.png)
+
+:::
+
+::::
+
+## Reduction in manual curation time {.smaller}
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+### Time savings
+
+- More than **50% time savings** in recent years
+
+### Labour savings
+
+- Automated record entry -\> **reduced workload** for the researcher
+
+### Better quality
+
+- Automated continuous **quality checks** and smoother **workflows**
+- Cross-checking against more sources and using **enrichment** (ORCiD, affiliations)
+
+:::
+
+::: {.column width="45%"}
+
 ```{r, fig.asp=1}
 
 ggplot() +
@@ -166,35 +195,6 @@ ggplot() +
   )
 
 ```
-
-:::
-
-::::
-
-## Reduction in manual curation time {.smaller}
-
-:::: {.columns}
-
-::: {.column width="45%"}
-
-### Time savings
-
-- More than **50% time savings** in recent years
-
-### Labour savings
-
-- Automated record entry -\> **reduced workload** for the researcher
-
-### Better quality
-
-- Automated continuous **quality checks** and smoother **workflows**
-- Cross-checking against more sources and using **enrichment** (ORCiD, affiliations)
-
-:::
-
-::: {.column width="45%"}
-
-![Faster automated imports](mods.png)
 
 :::
 
