@@ -9,7 +9,6 @@ format:
       data-background-image: "assets/bg/pattern_blue_wide.png"
       data-background-size: "100%"
       data-background-position: contain
-    
     footer: "DAUF - Demo 10 - 2024-02-14"
 ---
 
@@ -48,7 +47,7 @@ suppressPackageStartupMessages(library(magick))
 - Status update for the **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
 - **ABM 2023** - new Annual Bibliometric Monitoring snapshot
 - New features in **KTH Research Information** app
-- Improved import proceedures for DiVA, and other progress in **data mobilization**
+- Improved import proceedures for DiVA, and other progress in **data curation**
 - Future directions
 - Your **questions and feedback**
 
@@ -126,6 +125,35 @@ Discussions on how to improve project data
 
 :::{.column width="45%"}
 
+![Faster automated imports](mods.png)
+
+:::
+
+::::
+
+## Reduction in manual curation time {.smaller}
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+### Time savings
+
+- More than **50% time savings** in recent years
+
+### Labour savings
+
+- Automated record entry -\> **reduced workload** for the researcher
+
+### Better quality
+
+- Automated continuous **quality checks** and smoother **workflows**
+- Cross-checking against more sources and using **enrichment** (ORCiD, affiliations)
+
+:::
+
+::: {.column width="45%"}
+
 ```{r, fig.asp=1}
 
 ggplot() +
@@ -174,35 +202,6 @@ ggplot() +
 
 ::::
 
-## Reduction in manual curation time {.smaller}
-
-:::: {.columns}
-
-::: {.column width="45%"}
-
-### Time savings
-
-- More than **50% time savings** in recent years
-
-### Labour savings
-
-- Automated record entry -\> **reduced workload** for the researcher
-
-### Better quality
-
-- Automated continouous **quality checks** and smoother **workflows**
-- Cross-checking against more sources and using **enrichment** (ORCiD, affiliations)
-
-:::
-
-::: {.column width="45%"}
-
-![Faster automated imports](mods.png)
-
-:::
-
-::::
-
 ## Registrations by role
 
 :::: {.columns}
@@ -210,6 +209,7 @@ ggplot() +
 ::: {.column width="45%"}
 ```{r}
 #| fig-height: 12
+
 plots <- readr::read_rds("plots.rds")
 plots$plot_articles
 ```
