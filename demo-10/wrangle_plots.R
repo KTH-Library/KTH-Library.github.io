@@ -265,6 +265,7 @@ plot_share_conf <-
 #     panel.grid.minor = element_blank()
 #   )  
 
+
 demo_10_plots <- list(
   plot_share_articles = plot_share_articles,
   plot_share_conf = plot_share_conf,
