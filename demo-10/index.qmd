@@ -58,6 +58,7 @@ suppressPackageStartupMessages(library(magick))
 - Agile model with 2 week sprints.  
 - Collaborations within VS, between KTH-Library, RSO and ITA.  
 - New **research portfolio management structure** is taking shape, which the DAUF project is part of
+- Several initiatives at KTH to track visions and goals using indicators, where the project can contribute
 
 # Status and progress update {data-background="assets/bg/kth-6.png" data-background-size="cover"}
 
@@ -75,7 +76,7 @@ suppressPackageStartupMessages(library(magick))
 
 - Relatively **stable citation indicators** for KTH as a whole (at article and journal level)
 - Slightly **decreasing publications volume** 
-- International **co-publication at stable level** (not clearly increasing)
+- International **co-publication stable** (not clearly increasing)
 - **Open Access levelling off**, and variable between schools and departments 
 - Quite **large variability** between departments
 
@@ -97,7 +98,8 @@ suppressPackageStartupMessages(library(magick))
 - **Open Access** tab
 - Explore **co-publication** within KTH
 - Improved **search** capabilities for finding researchers
-- Data about **projects** at KTH
+
+Discussions on how to improve project data
 
 ## KTH Research Information
 
