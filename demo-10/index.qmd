@@ -55,7 +55,7 @@ suppressPackageStartupMessages(library(magick))
 
 - Creating services and tools for presentation of **research information data**, improved data flows and connecting data sources within KTH.
 - Agile model with 2 week sprints.  
-- Collaborations within VS, between KTH-Library, RSO and ITA.  
+- Collaboration between KTH Library, RSO and ITA.  
 - New **research portfolio management structure** is taking shape, which the DAUF project is part of
 - Several initiatives at KTH to track visions and goals using indicators, where the project can contribute
 
