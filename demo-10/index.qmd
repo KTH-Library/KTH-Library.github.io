@@ -47,17 +47,17 @@ suppressPackageStartupMessages(library(magick))
 - Status update for the **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
 - **ABM 2023** - new Annual Bibliometric Monitoring snapshot
 - New features in **KTH Research Information** app
-- Improved import proceedures for DiVA, and other progress in **data curation**
+- Progress in **data curation** including improved import procedures for publications
 - Future directions
 - Your **questions and feedback**
 
 ## About the DAUF project
 
 - Creating services and tools for presentation of **research information data**, improved data flows and connecting data sources within KTH.
-- Agile model with 2 week sprints.  
-- Collaboration between KTH Library, RSO and ITA.  
+- Agile model with **2 week sprints**.  
+- Collaboration between **KTH Library, RSO and ITA**.  
 - New **research portfolio management structure** is taking shape, which the DAUF project is part of
-- Several initiatives at KTH to track visions and goals using indicators, where the project can contribute
+- Several initiatives at KTH to track visions and goals using **indicators**, where the project can contribute
 
 # Status and progress update {data-background="assets/bg/kth-6.png" data-background-size="cover"}
 
