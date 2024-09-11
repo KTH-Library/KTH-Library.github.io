@@ -1,0 +1,126 @@
+---
+title: "Demo #11 - DAUF"
+subtitle: "Datadriven Analys och Uppföljning av KTHs Forskning"
+author: "KTH Library & ITA"
+date: "2024-10-15"
+format: 
+  kth-quarto-revealjs:
+    title-slide-attributes:
+      data-background-image: "assets/bg/pattern_blue_wide.png"
+      data-background-size: "100%"
+      data-background-position: contain
+    footer: "DAUF - Demo 11 - 2024-10-15"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+# install.packages("devtools")
+library(ktheme)
+library(webshot)
+library(DT)
+library(ggplot2)
+library(reshape2)
+library(formattable)
+library(readxl)
+library(dplyr)
+#library(kableExtra)
+library(knitr)
+library(htmltools)
+library(htmlwidgets)
+
+red <- function(txt) 
+  sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["cerise"]), txt)
+green <- function(txt) 
+  sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["olive"]), txt)
+
+#webshot::install_phantomjs()
+#unlink("retrosearch-screenshot.png")
+
+suppressPackageStartupMessages(library(magick))
+
+# BG images that could be used
+
+```
+
+## Agenda {data-background="assets/bg/notes.png" data-background-size="cover"}
+
+-   Status update for the **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
+-   Short news about **ABM 2024** and changes in the **KTH Research Information** app
+-   News about the POC for the **KTH Indicators** dashboard
+-   News related to **data curation** (publications and projects)
+    -   Briefly about the **data infrastructure** used
+    -   Involvement in **GDP** (Gemensamma Data för Projekt)
+    -   Using data from **OpenAlex** at KTH
+-   Future directions and your **questions and feedback**
+
+## About the DAUF project
+
+-   Creating services and tools for presentation of **research information data**, improved data flows and connecting data sources within KTH
+-   Agile model with **2 week sprints**
+-   Collaboration between **KTH Library, RSO and ITA**
+
+# Status and progress update {data-background="assets/bg/kth-6.png" data-background-size="cover"}
+
+## Progress overview - since last demo {data-background="assets/bg/plant.png" data-background-size="cover"}
+
+-   The yearly update for **ABM 2024** is being prepared and is planned to be released in Oct/Nov
+
+-   New features in **KTH Research Information** app
+
+-   POC for the **KTH Indicators** dashboard based on consolidated indicators collected from across KTH. The intended user group is KTH leadership and it enables comparing indicators across schools.
+
+-   A new open data source with data from **GDP** (Gemensamma Data för Projekt) has been mobilized
+
+-   The open data source **OpenAlex** (used in the Open Leiden Ranking) has been evaluated and efforts have started to map data in DiVA against OpenAlex and work has begun to enrich DiVA from this source.
+
+## ABM 2024
+
+[![ABM 2024: Overview at KTH level](assets/img/ABM_start.png){width="950"}](https://kth.se/abm/)
+
+<!-- > Anything missing? Any suggested changes? -->
+
+## News in **KTH Research Information** {.smaller}
+
+-   Various UI enhancements
+
+# Data curation
+
+## GDP
+
+> What is GDP? Peter K's definition.
+
+-   Regular harvesting of data from the API is now available from object storage "minio" at KTH
+
+-   We have participated in reference group for the GDP efforts in collaboration with partners, including Vinnova and other universities
+
+-   R package has been developed with a client - <https://github.com/KTH-Library/gdp>
+
+## OpenAlex
+
+-   Research outputs from KTH in OpenAlex - We have started to evaluate OpenAlex as a data source
+
+    -   Comparisons against DiVA, WoS, Scopus, BIBMET
+
+    -   Data enrichment using OpenAlex
+
+    -   R package has been developed with a client - <https://github.com/KTH-Library/openalex>
+
+# Data infrastructure
+
+TODO: One slide here
+
+# Discussion, Questions, Feedback {data-background="assets/bg/kth-2.png" data-background-size="cover"}
+
+## Future work and directions {.smaller}
+
+> In the previous meeting we received feedback to focus efforts on creating a POC for a KTH Indicators dashboard.
+
+## Questions and Answers {.smaller}
+
+Please provide your input!
+
+-   Suggestions and **comments**?
+
+If you prefer to provide written feedback, please use the following [jamboard](https://jamboard.google.com/d/17xE5Pxs339c3Teco5DeuTAaz9EbJGdtNQCI6u5lEW3o/viewer).
+
+Thank you for attending!
