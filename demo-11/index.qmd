@@ -83,6 +83,11 @@ suppressPackageStartupMessages(library(magick))
 
 -   Various UI enhancements
 
+## POC dashboard for KTH indicators
+
+- Brief dashboard viewing
+- description of data collection process and "decentrialized" data at KTH
+
 # Data curation
 
 ## GDP
