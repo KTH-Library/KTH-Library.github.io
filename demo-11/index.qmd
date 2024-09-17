@@ -81,12 +81,12 @@ suppressPackageStartupMessages(library(magick))
 
 ## News in **KTH Research Information** {.smaller}
 
--   Various UI enhancements
+[![KTH Research information: Enhancements](assets/img/RI_demo.png){width="950"}](https://analysis.sys.kth.se/bibliometrics/app/research_info)
 
 ## POC dashboard for KTH indicators
 
 - Brief dashboard viewing
-- description of data collection process and "decentrialized" data at KTH
+- Description of data collection process and "decentrialized" data at KTH
 
 # Data curation
 
@@ -126,6 +126,12 @@ Please provide your input!
 
 -   Suggestions and **comments**?
 
-If you prefer to provide written feedback, please use the following [jamboard](https://jamboard.google.com/d/17xE5Pxs339c3Teco5DeuTAaz9EbJGdtNQCI6u5lEW3o/viewer).
+If you prefer to provide written feedback, please use the following
+
+> Not jamboard - it becomes read-only 1 October
+
+<!--
+[jamboard](https://jamboard.google.com/d/17xE5Pxs339c3Teco5DeuTAaz9EbJGdtNQCI6u5lEW3o/viewer).
+-->
 
 Thank you for attending!
