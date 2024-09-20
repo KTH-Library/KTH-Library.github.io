@@ -78,6 +78,7 @@ suppressPackageStartupMessages(library(magick))
 [![ABM 2024: Overview at KTH level](assets/img/ABM_start.png){width="950"}](https://kth.se/abm/)
 
 <!-- > Anything missing? Any suggested changes? -->
+<!-- New screenshot + link to locked version? (will not be published at time of demo) -->
 
 ## News in **KTH Research Information** {.smaller}
 
@@ -109,6 +110,8 @@ suppressPackageStartupMessages(library(magick))
     -   Data enrichment using OpenAlex
 
     -   R package has been developed with a client - <https://github.com/KTH-Library/openalex>
+    
+    -   Discussions with Sunet and other universities about common resource
 
 # Data infrastructure
 
