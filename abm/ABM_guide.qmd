@@ -5,6 +5,7 @@ mainfont: figtree
 toc: true
 output:
   kth-quarto-html: default
+  lightbox: true
 ---
 
 ```{r setup, include=FALSE}
@@ -60,70 +61,69 @@ Only publications registered in DiVA and affiliated with KTH are
 included in the results (i.e. publications that KTH researchers have
 published at other organizations are excluded). Affiliations to KTH are
 based on the actual author affiliation as written in the published
-paper. All citation data and derived indicators are based on Web of
-Science[^1], and indicators are therefore only presented for
-publications covered by Web of Science.
+paper. Indicators under Citation/Journal impact and Co-publishing tabs
+are based on Web of Science[^1], and indicators are therefore only
+presented for publications covered by Web of Science. Indicators
+under the Scopus and SDG tabs are only presented for publications covered
+by Scopus.
 
 If a School or Department have changed name or the organizational
-structure has in any other way changed, publications affiliated to old
-organizational units have been assigned to the corresponding current
-unit when possible.
+structure has changed, publications affiliated to old organizational
+units have been assigned to the corresponding current unit when possible.
 
 ## Overview
 
 The *Overview* tab includes key indicators displayed for the latest
 available time period[^2] and general information about ABM and
-publication activities at KTH. For organizational units, there is also a
-button leading to the unit's publications at
-[altmetric.com](https://altmetric.com).
+publication activities at KTH.
 
 Most numbers on this tab are based on fractionalized counts, i.e. an
 author's share of a publication is counted as 1/n where n denotes the
-number of authors. The exception is the *Copublication* charts, which
+number of authors. The exception is the *Co-publication* charts, which
 are based on full counts.
 
-The overview at the KTH, school and department level is available to
+Overviews at the KTH, school and department level are available to
 everyone, except for the button for publication list download which is
 only available for logged in KTH users.
 
-![](media/image1.png){width=100%}
+![](media/image1.png){.lightbox width=100%}
 
 The individual view, only available to the researcher, also includes a
 link to edit publications in DiVA.
 
-![](media/image2.png){width=100%}
+![](media/image2.png){.lightbox width=100%}
 
 ## Publications in DiVA
 
 The *Publications in DiVA* tab shows the number of publications
 registered in DiVA for the researcher or organizational unit, by year
-and by publication type. Web of Science (WoS) coverage is also shown for
-each publication type. The validity of bibliometric indicators is in
-general higher if the share of publications covered is high. Results
-based on publications with a smaller share covered in WoS should be
-treated with caution.
+and by publication type. Web of Science (WoS) and Scopus coverage are
+also shown for each publication type. The validity of bibliometric
+indicators is in general higher if the share of publications covered
+is high. Results based on publications with a smaller share covered
+should be treated with caution.
 
-All numbers on this tab are based on fractionalized counts. The graphs
-show the same information as the table.
+There is a tab for fractionalized counts and one for full counts.
+Both graphs are based on the fractionalized counts table.
 
-![](media/image3.png){width=100%}
+![](media/image3.png){.lightbox width=100%}
 
 ## Citation impact
 
 The *Citation impact* tab shows citation impact for the
-researcher's/unit's publications. All numbers on this tab are based on
+researcher's/unit's publications. All indicators on this tab are based on
 fractionalized counts.
 
 The first table in this view shows the total and average number of
 citations after three years, i.e. citations received in the publication
-year and the two directly following years, as well as the number and
-share of publications that were not cited in that time. This table is
+year and the two directly following years, as well as the share of
+publications that were not cited in that time. This table is
 based on the Web of Science document types Article, Proceedings paper,
 Review, Letter and Editorial.
 
 The second table is based on the Web of Science document types Article
 and Review, and shows Field Normalized Citations (Cf) and the
-number/share of publications belonging to the 10 percent most cited in
+share of publications belonging to the 10 percent most cited in
 its field.
 
 The normalization is done so that the citation value for each
@@ -138,12 +138,12 @@ a single publication (or a few) with a very high citation count relative
 to its field, while the Share Top 10% indicator is less sensitive to
 outliers. In that sense, Cf and Share Top 10% are complementary. 
 Since field normalized indicators are unstable at low publication counts, the 
-citation indicators are presented both as yearly values (dots) with a volume weighted 
-three-year sliding mean superimposed in the graph to indicate the overall trend (solid line). 
-Indicators based on a small number of publications should still be interpreted with
-caution.
+citation indicators are presented both as yearly values (dots) with a volume
+weighted three-year sliding mean superimposed in the graph to indicate the
+overall trend (solid line). Indicators based on a small number of publications
+should still be interpreted with caution.
 
-![](media/image4.png){width=100%}
+![](media/image4.png){.lightbox width=100%}
 
 ## Journal impact
 
@@ -152,7 +152,7 @@ journals where researcher's/unit's have published their publications.
 All numbers on this tab are based on fractionalized counts.
 
 The table shows the average Journal Field Normalized Citations (JCf) and
-the number/share of publications in the 20 percent most cited journals
+the share of publications in the 20 percent most cited journals
 in its Web of Science subject category/categories. This table is based
 on the publication types Article and Review.
 
@@ -164,7 +164,7 @@ indicators are often seen as a proxy of the quality of publication
 channels. JCf is also used as a part of the model for allocating KTH
 funding to the schools.
 
-![](media/image5.png){width=100%}
+![](media/image5.png){.lightbox width=100%}
 
 ## Co-publishing 
 
@@ -178,10 +178,15 @@ at least one address belonging to a Swedish organization outside
 academia while an International co-publication is a publication with at
 least two countries in the Web of Science addresses field.
 
-![](media/image6.png){width=100%}
-The sub-tab *Countries and organizations* contains list of the countries and organizations that the selected unit has co-published with, which can be searched and filtered. These tables are also summarized based on the number of co-authors on individual publications, to differentiate between smaller collaborations and collaborations based on large author groups.
+![](media/image6.png){.lightbox width=100%}
+The sub-tab *Countries and organizations* contains list of the countries and
+organizations that the selected unit has co-published with, which can be
+searched and filtered. These tables are also summarized based on the number
+of co-authors on individual publications, to differentiate between smaller
+collaborations and collaborations based on large author groups. The number
+of rows shown can be selected under each table.
 
-![](media/image6b.png){width=100%}
+![](media/image6b.png){.lightbox width=100%}
 
 ## Open Access
 
@@ -195,23 +200,40 @@ The statuses are presented as defined by Unpaywall. For further
 information, see "[What do the types of oa status
 mean?](https://support.unpaywall.org/support/solutions/articles/44001777288-what-do-the-types-of-oa-status-green-gold-hybrid-and-bronze-mean-)" at the unpaywall.org support portal.
 
-![](media/image7.png){width=100%}
+![](media/image7.png){.lightbox width=100%}
 
 ## Scopus
 
-The *Scopus* tab presents bibliometric indicator data based on the Scopus database, as a complement to the indicators in the tabs *Citation impact*, *Journal impact* and *Co-publishing*. 
-This *Scopus* tab has sub-tabs each containing data for one of these aspects. In *Citation impact*, the indicator for field-weighted normalized citations is called FWCI, which is similar to the Cf-indicator. The *Share Top 10%* is a direct parallell to the same indicator based on Web of Science data. 
-Field-normalization for the Scopus indicators are based on the same principles as the Web of Science-based indicators, but are based on the subject categories in the Scopus database and supplied directly by Scopus.
+The *Scopus* tab presents bibliometric indicator data based on the Scopus
+database, as a complement to the indicators in the tabs *Citation impact*,
+*Journal impact* and *Co-publishing*. This *Scopus* tab has sub-tabs each
+containing data for one of these aspects. In *Citation impact*, the indicator
+for field-weighted normalized citations is called FWCI, which is similar to the
+Cf-indicator. The *Share Top 10%* is a direct parallell to the same indicator
+based on Web of Science data.
 
-![](media/image8_scopus.png){width=100%}
+Field-normalization for the Scopus indicators are based on the same principles
+as the Web of Science-based indicators, but are based on the subject categories
+in the Scopus database and supplied directly by Scopus.
+
+![](media/image8_scopus.png){.lightbox width=100%}
 
 ## SDG
 
-The *SDG* tab provides an overview of how publications are mapped against the [UN sustainability goals (SDG)](https://sdgs.un.org/goals).
-The mapping is provided from Scopus, and only publications present in the Scopus database are therefore included in the summary.
-Publications are mapped to SDGs based on search queries, using keywords found in titles, abstract and author keywords, and the full methodology is described by Scopus [here](https://elsevier.digitalcommonsdata.com/datasets/87txkw7khs/1). The same SDG-mapping is also used in e.g. the [*Times Higher Education Impact ranking* (THE Impact ranking)](https://www.timeshighereducation.com/impactrankings). Also note that individual publications can be mapped towards several SDGs. 
+The *SDG* tab provides an overview of how publications are mapped against the
+[UN sustainability goals (SDG)](https://sdgs.un.org/goals).
 
-![](media/image9_sdg.png){width=100%}
+The mapping is provided from Scopus, and only publications present in the Scopus
+database are therefore included in the summary. Publications are mapped to SDGs
+based on search queries, using keywords found in titles, abstract and author
+keywords, and the full methodology is described by Scopus
+[here](https://elsevier.digitalcommonsdata.com/datasets/87txkw7khs/1).
+The same SDG-mapping is also used in e.g. the
+[*Times Higher Education Impact ranking* (THE Impact
+ranking)](https://www.timeshighereducation.com/impactrankings).
+Also note that individual publications can be mapped towards several SDGs. 
+
+![](media/image9_sdg.png){.lightbox width=100%}
 
 [^1]: Included indices: Science Citation Index Expended (SCIE), Social
     Sciences Citation Index (SSCI), Arts &Humanities Citation Index
@@ -221,7 +243,7 @@ Publications are mapped to SDGs based on search queries, using keywords found in
 
 [^2]: Last year with a complete publication record in DiVA (usually year
     of last autumn -- 1), with a non-zero count, for the Total
-    publications number, the full period for WoS coverage and last
+    publications number, the full period for WoS/Scopus coverage and last
     three-year period with an indicator for the other numbers.
     
 
