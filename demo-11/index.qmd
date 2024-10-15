@@ -47,10 +47,11 @@ suppressPackageStartupMessages(library(magick))
 -   Status update for the **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
 -   Short news about **ABM 2024** and changes in the **KTH Research Information** app
 -   News about the POC for the **KTH Indicators** dashboard
+    -   efforts at other universities
 -   News related to **data curation** (publications and projects)
     -   Briefly about the **data infrastructure** used
-    -   Involvement in **GDP** (Gemensamma Data för Projekt)
     -   Using data from **OpenAlex** at KTH
+    -   Mapping of Sustainable Development Goals
 -   Future directions and your **questions and feedback**
 
 ## About the DAUF project
@@ -69,7 +70,7 @@ suppressPackageStartupMessages(library(magick))
 
 -   POC for the **KTH Indicators** dashboard based on consolidated indicators collected from across KTH. The intended user group is KTH leadership and it enables comparing indicators across schools.
 
--   A new open data source with data from **GDP** (Gemensamma Data för Projekt) has been mobilized
+-   Involvement in mobilization of a new open data source with data from **GDP** (Gemensamma Data för Projekt)
 
 -   The open data source **OpenAlex** (used in the Open Leiden Ranking) has been evaluated and efforts have started to map data in DiVA against OpenAlex and work has begun to enrich DiVA from this source.
 
@@ -86,14 +87,22 @@ suppressPackageStartupMessages(library(magick))
 
 ## POC dashboard for KTH indicators
 
+> Screenshot av förstasidan
+
+## POC dashboard for KTH indicators
+
 - Brief dashboard viewing
 - Description of data collection process and "decentrialized" data at KTH
+
+## Efforts at other universities
+
+- Några punkter
 
 # Data curation
 
 ## GDP
 
-> What is GDP? Peter K's definition.
+-   GDP (Gemensamma data för projekt) is an effort of a number of Swedish research funders to create a common data model for project data
 
 -   Regular harvesting of data from the API is now available from object storage "minio" at KTH
 
@@ -117,11 +126,21 @@ suppressPackageStartupMessages(library(magick))
 
 TODO: One slide here
 
-# Discussion, Questions, Feedback {data-background="assets/bg/kth-2.png" data-background-size="cover"}
-
 ## Future work and directions {.smaller}
 
-> In the previous meeting we received feedback to focus efforts on creating a POC for a KTH Indicators dashboard.
+- Change source for research data to Swecris
+
+- Dashboard over company cooperation in student theses
+
+- ABM 2024
+
+Related activities
+
+- Strategisk Verksamhetsanalys
+
+- New data warehouse solution at KTH
+
+# Discussion, Questions, Feedback {data-background="assets/bg/kth-2.png" data-background-size="cover"}
 
 ## Questions and Answers {.smaller}
 
