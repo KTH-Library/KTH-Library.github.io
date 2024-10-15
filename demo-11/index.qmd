@@ -74,16 +74,23 @@ suppressPackageStartupMessages(library(magick))
 
 -   The open data source **OpenAlex** (used in the Open Leiden Ranking) has been evaluated and efforts have started to map data in DiVA against OpenAlex and work has begun to enrich DiVA from this source.
 
-## ABM 2024
+## Annual Bibliometric Monitoring 2024 {.smaller}
 
-[![ABM 2024: Overview at KTH level](assets/img/ABM_start.png){width="950"}](https://kth.se/abm/){.external target="_blank"}
+[![](assets/img/ABM_start.png){height="300"}](https://kth.se/abm/){.external target="_blank"}
 
-<!-- > Anything missing? Any suggested changes? -->
-<!-- New screenshot + link to locked version? (will not be published at time of demo) -->
+- Prettier publication list export
+- Changed OA graph
+- Enabled selection of number of rows for co-publication tables
+- Some cosmetic changes
 
-## News in **KTH Research Information** {.smaller}
+## News in KTH Research Information {.smaller}
 
-[![KTH Research information: Enhancements](assets/img/RI_demo.png){width="950"}](https://analysis.sys.kth.se/bibliometrics/app/research_info){.external target="_blank"}
+[![](assets/img/RI_demo.png){height="300"}](https://analysis.sys.kth.se/bibliometrics/app/research_info){.external target="_blank"}
+
+- "Get results" visibility
+- Improved tables: Mouseovers, multiple selection filtering, filter indication at export, full strings at export
+- Improved networks: Searching enabled, KTH profile colors
+- Co-publication indicators similar to ABM
 
 ## POC dashboard for KTH indicators
 
