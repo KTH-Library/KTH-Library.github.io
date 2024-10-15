@@ -2,7 +2,7 @@
 title: "Demo #11 - DAUF"
 subtitle: "Datadriven Analys och Uppföljning av KTHs Forskning"
 author: "KTH Library & ITA"
-date: "2024-10-15"
+date: "2024-10-23"
 format: 
   kth-quarto-revealjs:
     title-slide-attributes:
@@ -75,14 +75,14 @@ suppressPackageStartupMessages(library(magick))
 
 ## ABM 2024
 
-[![ABM 2024: Overview at KTH level](assets/img/ABM_start.png){width="950"}](https://kth.se/abm/)
+[![ABM 2024: Overview at KTH level](assets/img/ABM_start.png){width="950"}](https://kth.se/abm/){.external target="_blank"}
 
 <!-- > Anything missing? Any suggested changes? -->
 <!-- New screenshot + link to locked version? (will not be published at time of demo) -->
 
 ## News in **KTH Research Information** {.smaller}
 
-[![KTH Research information: Enhancements](assets/img/RI_demo.png){width="950"}](https://analysis.sys.kth.se/bibliometrics/app/research_info)
+[![KTH Research information: Enhancements](assets/img/RI_demo.png){width="950"}](https://analysis.sys.kth.se/bibliometrics/app/research_info){.external target="_blank"}
 
 ## POC dashboard for KTH indicators
 
