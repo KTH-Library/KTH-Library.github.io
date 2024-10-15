@@ -44,7 +44,7 @@ suppressPackageStartupMessages(library(magick))
 
 ## Agenda {data-background="assets/bg/notes.png" data-background-size="cover"}
 
--   Status update for the **DAUF** project - "Datadriven Analys och Uppföljning av KTHs Forskning"
+-   Status update for the **DAUF** project
 -   Short news about **ABM 2024** and changes in the **KTH Research Information** app
 -   News about the POC for the **KTH Indicators** dashboard
     -   efforts at other universities
@@ -128,11 +128,11 @@ TODO: One slide here
 
 ## Future work and directions {.smaller}
 
+- Release of ABM 2024
+
 - Change source for research data to Swecris
 
 - Dashboard over company cooperation in student theses
-
-- ABM 2024
 
 Related activities
 
