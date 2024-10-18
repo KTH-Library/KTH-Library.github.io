@@ -78,10 +78,21 @@ suppressPackageStartupMessages(library(magick))
 
 [![](assets/img/ABM_start.png){height="300"}](https://kth.se/abm/){.external target="_blank"}
 
+Changes in ABM 2024
+
 - Prettier publication list export
 - Changed OA graph
 - Enabled selection of number of rows for co-publication tables
 - Some cosmetic changes
+
+
+## Brief ABM results for KTH
+
+- Number of publications is consistently declining
+- Citations indicators are slightly increasing
+- Journal indicators on a stable level
+- Small changes in co-publication patterns
+- Share of Open Access publications is steadily increasing
 
 ## News in KTH Research Information {.smaller}
 
