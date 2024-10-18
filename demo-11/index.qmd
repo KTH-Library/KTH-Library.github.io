@@ -133,7 +133,7 @@ suppressPackageStartupMessages(library(magick))
 
 TODO: One slide here
 
-## Future work and directions {.smaller}
+## Future work and directions
 
 - Release of ABM 2024
 
@@ -149,18 +149,13 @@ Related activities
 
 # Discussion, Questions, Feedback {data-background="assets/bg/kth-2.png" data-background-size="cover"}
 
-## Questions and Answers {.smaller}
+## Questions and Answers
 
-Please provide your input!
+Please provide your input in chat or verbally.
 
--   Suggestions and **comments**?
+-   Questions, suggestions or comments?
 
-If you prefer to provide written feedback, please use the following
+If you prefer to give your feedback later or come up with questions
+after this demo, you are always welcome to email us at **biblioteket@kth.se**.
 
-> Not jamboard - it becomes read-only 1 October
-
-<!--
-[jamboard](https://jamboard.google.com/d/17xE5Pxs339c3Teco5DeuTAaz9EbJGdtNQCI6u5lEW3o/viewer).
--->
-
-Thank you for attending!
+### **Thank you for attending!**
