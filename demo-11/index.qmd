@@ -68,7 +68,7 @@ suppressPackageStartupMessages(library(magick))
 
 -   New features in **KTH Research Information** app
 
--   POC for the **KTH Indicators** dashboard based on consolidated indicators collected from across KTH. The intended user group is KTH leadership and it enables comparing indicators across schools.
+-   POC for the **KTH Indicators** dashboard based on consolidated indicators collected from across KTH. 
 
 -   Involvement in mobilization of a new open data source with data from **GDP** (Gemensamma Data för Projekt)
 
@@ -117,6 +117,8 @@ Changes in ABM 2024
 - Workshops to align avaliable data with goals
 - Relatively manual data collection process from scattered systems at KTH
 - Indicator report  + beta dashboard for testing purposes
+- The intended user group is KTH leadership and it enables comparing indicators across schools
+
 :::
 
 ::: {.column width="35%"}
@@ -140,7 +142,7 @@ Workshop within BenchTech network
 Examples:
 
   - Several presentations on modelling of student success and predictions on admissions and drop-off
-  - 
+  - Modelling employment outcomes (PoliMi)
   
   
 ## Efforts at other universities - Cont’d
