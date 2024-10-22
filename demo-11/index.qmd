@@ -103,17 +103,21 @@ suppressPackageStartupMessages(library(magick))
 
 ## Efforts at other universities
 
-Attended workshop within BenchTech network
+Workshop within BenchTech network
+
   - Members: TU Münich, ETH, EPFL, Virginia Tech, MIT, TU Delft, HKUST, DTU, PoliMi
   - Theme on institutional research, strategic planning and data insights within university administration
   
 Examples:
+
   - Several presentations on modelling of student success and predictions on admissions and drop-off
   - 
   
 Take home messages:
+
   - Most universities have a more unified data handling than KTH
-  - Sometimes a mix of tools for regular reporting and dashboards and ad hoc-analysis.
+  - Often a mix of tools for regular reporting and dashboards and ad hoc-analysis.
+  - Sometimes frustrating dichotomy
 
 # Data curation
 
@@ -143,7 +147,19 @@ Take home messages:
 
 TODO: One slide here
 
-## Future work and directions {.smaller}
+- our data flows
+- schmatic fig
+- new integration with HR
+
+## Aurora SDG mapping of theses.
+
+- data flow
+- enrichment to DiVA
+- graphs
+
+# Future work and discussion
+
+## Future work and directions
 
 - Release of ABM 2024
 
@@ -156,8 +172,6 @@ Related activities
 - Strategisk Verksamhetsanalys
 
 - New data warehouse solution at KTH
-
-# Discussion, Questions, Feedback {data-background="assets/bg/kth-2.png" data-background-size="cover"}
 
 ## Questions and Answers {.smaller}
 
