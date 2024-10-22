@@ -120,17 +120,19 @@ Changes in ABM 2024
 
 ## GDP
 
--   GDP (Gemensamma data för projekt) is an effort of a number of Swedish research funders to create a common data model for project data
+> GDP (Gemensamma data för projekt) is an effort of a number of Swedish research funders to create a common data model for project data. The five funding agencies Energimyndigheten, Formas, Forte, Vetenskapsrådet and Vinnova is developing a standard which enables sharing of open data about fundings and related information. The standard is developed in cooperation with a reference group including universities and other organisations within the university sector, KTH is a participant in the reference group.
 
--   Regular harvesting of data from the API is now available from object storage "minio" at KTH
+## GDP data mobilization
 
--   We have participated in reference group for the GDP efforts in collaboration with partners, including Vinnova and other universities
+- Regular harvesting of data from the API is now available from object storage "minio" at KTH: <https://data.bibliometrics.lib.kth.se/projects/gdp/gdp.db>
 
--   R package has been developed with a client - <https://github.com/KTH-Library/gdp>
+- We have participated in reference group coordinated by SUNET for the GDP efforts in collaboration with partners, including Vinnova and other universities
+
+- R package has been developed with a client - <https://github.com/KTH-Library/gdp>
 
 ## OpenAlex
 
--   Research outputs from KTH in OpenAlex - We have started to evaluate OpenAlex as a data source
+-   Research outputs from KTH in OpenAlex - We have started to evaluate OpenAlex as a data source...
 
     -   Comparisons against DiVA, WoS, Scopus, BIBMET
 
@@ -138,11 +140,21 @@ Changes in ABM 2024
 
     -   R package has been developed with a client - <https://github.com/KTH-Library/openalex>
     
-    -   Discussions with Sunet and other universities about common resource
+    -   Discussions with SUNET and other universities about common resource
+
+## DiVA harvesting
+
+Enrichment of DiVA publications - an example associating SDG goals with theses from KTH:
+
+- [Enrichment of theses at KTH using SDGs from Aurora classifier](enrichment.html)
 
 # Data infrastructure
 
-TODO: One slide here
+- A data lake is powered by ["minio"](https://minio.org) - and provides object storage compatible with the S3 protocol
+- Data is curated and pushed to "minio" using automated processes
+- Applications and data consumers can then read data from "minio"
+
+- TODO: diagram
 
 ## Future work and directions
 
