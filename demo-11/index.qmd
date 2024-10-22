@@ -231,7 +231,7 @@ The DAUF project now harvests DiVA publication data using the OAI-PMH protocol w
 
 We illustrate enrichment of DiVA publications with an example where we associate SDG goals with all KTH Theses:
 
-<center>[![](assets/img/sdg_qs.png){.lightbox width="600"}](enrichment.html)</center>
+<center>![](assets/img/sdg_qs.png){.lightbox width="400"}</center>
 
 -   Details: [Enrichment of theses at KTH using SDGs from Aurora classifier](enrichment.html)
 
