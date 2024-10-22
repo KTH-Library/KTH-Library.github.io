@@ -78,10 +78,21 @@ suppressPackageStartupMessages(library(magick))
 
 [![](assets/img/ABM_start.png){height="300"}](https://kth.se/abm/){.external target="_blank"}
 
+Changes in ABM 2024
+
 - Prettier publication list export
 - Changed OA graph
 - Enabled selection of number of rows for co-publication tables
 - Some cosmetic changes
+
+
+## Brief ABM results for KTH
+
+- Number of publications is consistently declining
+- Citations indicators are slightly increasing
+- Journal indicators on a stable level
+- Small changes in co-publication patterns
+- Share of Open Access publications is steadily increasing
 
 ## News in KTH Research Information {.smaller}
 
@@ -92,14 +103,32 @@ suppressPackageStartupMessages(library(magick))
 - Improved networks: Searching enabled, KTH profile colors
 - Co-publication indicators similar to ABM
 
-## POC dashboard for KTH indicators
+## Work with KTH indicators & dashboard POC
 
-> Screenshot av förstasidan
+[![](assets/img/kth_indicators_overview.png){height="400"}]
 
-## POC dashboard for KTH indicators
+## KTH indicators - background and process
 
-- Brief dashboard viewing
-- Description of data collection process and "decentrialized" data at KTH
+::: columns
+::: {.column width="65%"}
+
+- Ambition at KTH to track visions and goals using indicators
+- Project within *Strategisk verksamhetsanalys*
+- Workshops to align avaliable data with goals
+- Relatively manual data collection process from scattered systems at KTH
+- Indicator report  + beta dashboard for testing purposes
+:::
+
+::: {.column width="35%"}
+
+test 
+
+[![](assets/img/indicator_report.png){height="30"}]
+
+:::
+:::
+
+
 
 ## Efforts at other universities
 
@@ -113,11 +142,15 @@ Examples:
   - Several presentations on modelling of student success and predictions on admissions and drop-off
   - 
   
+  
+## Efforts at other universities - Cont’d
+
+
 Take home messages:
 
   - Most universities have a more unified data handling than KTH
   - Often a mix of tools for regular reporting and dashboards and ad hoc-analysis.
-  - Sometimes frustrating dichotomy
+  - Sometimes frustrating dichotomy between internal processes (slow) vs data and needs for analysis (fast)
 
 # Data curation
 
@@ -159,6 +192,7 @@ TODO: One slide here
 
 # Future work and discussion
 
+
 ## Future work and directions
 
 - Release of ABM 2024
@@ -173,18 +207,15 @@ Related activities
 
 - New data warehouse solution at KTH
 
+
 ## Questions and Answers {.smaller}
 
-Please provide your input!
+Please provide your input in chat or verbally.
 
--   Suggestions and **comments**?
+-   Questions, suggestions or comments?
 
-If you prefer to provide written feedback, please use the following
+If you prefer to give your feedback later or come up with questions
+after this demo, you are always welcome to email us at **biblioteket@kth.se**.
 
-> Not jamboard - it becomes read-only 1 October
 
-<!--
-[jamboard](https://jamboard.google.com/d/17xE5Pxs339c3Teco5DeuTAaz9EbJGdtNQCI6u5lEW3o/viewer).
--->
-
-Thank you for attending!
+### **Thank you for attending!**
