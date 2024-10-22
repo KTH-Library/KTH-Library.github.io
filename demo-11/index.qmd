@@ -118,7 +118,7 @@ Changes in ABM 2024
 
 ::: {.column width="30%"}
 
-![](assets/img/indicator_report.png){height="400"}
+![](assets/img/indicator_report.png){height="550"}
 :::
 :::::
 
@@ -127,17 +127,19 @@ Changes in ABM 2024
 ![](assets/img/kth_indicators_overview.png){height="400"}
 
 
-## Efforts at other universities
+## Efforts at other universities {.smaller}
 
 Workshop within BenchTech network
 
 -   Members: TU Münich, ETH, EPFL, Virginia Tech, MIT, TU Delft, HKUST, DTU, PoliMi
--   Theme on institutional research, strategic planning and data insights within university administration
+-   Theme this meeting on institutional research, strategic planning and data insights within university administration
 
 Examples:
 
   - Several presentations on modelling of student success and predictions on admissions and drop-off
   - Modelling employment outcomes (PoliMi)
+  - Semantic course mapping - find overlap/synergies (ETH)
+  - Itative development of gender diversity dashboard (TU Delft)
   
 
 ## Efforts at other universities - Cont’d
@@ -145,8 +147,10 @@ Examples:
 Take home messages:
 
 -   Most universities have a more unified data handling than KTH
--   Often a mix of tools for regular reporting and dashboards and ad hoc-analysis.
+-   Often a mix of tools for regular reporting and dashboards and ad hoc-analysis
+    "*All money spend on people, not software*" - reason for open tools
 -   Sometimes frustrating dichotomy between internal processes (slow) vs data and needs for analysis (fast)
+-   Less emphasis on univ. rankings - more on data flows and analyticss
 
 # Data Curation
 
