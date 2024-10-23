@@ -59,6 +59,7 @@ suppressPackageStartupMessages(library(magick))
 -   Creating services and tools for presentation of **research information data**, improved data flows and connecting data sources within KTH
 -   Agile model with **2 week sprints**
 -   Collaboration between **KTH Library, RSO and ITA**
+-   Part of IT portfolio for Research (Delportfölj forskning) 
 
 # Status and progress update {data-background="assets/bg/kth-6.png" data-background-size="cover"}
 
@@ -70,7 +71,7 @@ suppressPackageStartupMessages(library(magick))
 
 -   POC for the **KTH Indicators** dashboard based on consolidated indicators collected from across KTH. 
 
--   Involvement in mobilization of a new open data source with data from **GDP** (Gemensamma Data för Projekt)
+-   Involvement in mobilization of a new open data source with data from **GDP** (Gemensamma dataprojektet)
 
 -   The open data source **OpenAlex** (used in the Open Leiden Ranking) has been evaluated and efforts have started to map data in DiVA against OpenAlex and work has begun to enrich DiVA from this source.
 
@@ -118,13 +119,13 @@ Changes in ABM 2024
 
 ::: {.column width="30%"}
 
-![](assets/img/indicator_report.png){height="550"}
+![](assets/img/indicator_report.png){height="500"}
 :::
 :::::
 
 ## Work with KTH indicators & dashboard POC
 
-![](assets/img/kth_indicators_overview.png){height="400"}
+![](assets/img/kth_indicators_overview.png){height="550"}
 
 
 ## Efforts at other universities {.smaller}
@@ -139,7 +140,7 @@ Examples:
   - Several presentations on modelling of student success and predictions on admissions and drop-off
   - Modelling employment outcomes (PoliMi)
   - Semantic course mapping - find overlap/synergies (ETH)
-  - Itative development of gender diversity dashboard (TU Delft)
+  - Iterative development of gender diversity dashboard (TU Delft)
   
 
 ## Efforts at other universities - Cont’d
@@ -147,10 +148,10 @@ Examples:
 Take home messages:
 
 -   Most universities have a more unified data handling than KTH
--   Often a mix of tools for regular reporting and dashboards and ad hoc-analysis
+-   Often a mix of tools for regular reporting and dashboards and ad hoc-analysis  
     "*All money spend on people, not software*" - reason for open tools
 -   Sometimes frustrating dichotomy between internal processes (slow) vs data and needs for analysis (fast)
--   Less emphasis on univ. rankings - more on data flows and analyticss
+-   Less emphasis on univ. rankings - more on data flows and analytics
 
 # Data Curation
 
