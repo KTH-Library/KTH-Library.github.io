@@ -160,7 +160,7 @@ Take home messages:
 ::: {.column width="45%"}
 ### Object storage (S3)
 
--   An on-premise data lake is powered by [S3 storage using "minio"](https://minio.org)
+-   An on-premise data lake is powered by [S3 storage using "minio"](https://min.io)
 -   Data is curated and pushed to "minio" using automated processes to <https://data.bibliometrics.lib.kth.se>
 -   Applications and data consumers can then read (and/or write) data there
 -   See descriptions [here for available data](https://bibliometrics.lib.kth.se/RI_sources_KTH.html)
