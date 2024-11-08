@@ -10,6 +10,8 @@ output:
     self-contained: true
 ---
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 knitr::opts_chunk$set(cache = TRUE)
@@ -42,7 +44,7 @@ suppressPackageStartupMessages(library(magick))
 - Progress so far
 
 - **Demo** of new ABM app  
-  $\rightarrow$ progress towards ÅBU 1.0
+  <i class="fas fa-arrow-right"></i> progress towards ÅBU 1.0
 
 - Future **possibilities** / examples
 
@@ -51,24 +53,24 @@ suppressPackageStartupMessages(library(magick))
 ## From previous demo
 
 - Questions on the bibliometric evaluation model was raised.  
-  $\rightarrow$ **organization based**  
+  <i class="fas fa-arrow-right"></i> **organization based**  
   Evaluation of KTH-output and higher precision. Will add further **FAQ** to the ABM to answer common concerns and questions.
   
 - Incorrect mappings and wrongly assigned publications  
-  $\rightarrow$ **based on school dialog** and checks by researchers
+  <i class="fas fa-arrow-right"></i> **based on school dialog** and checks by researchers
   
 - Clearer view of incentives and how publications contribute to impact  
-  $\rightarrow$ will add **sortable list** of top-contributing papers and journals
+  <i class="fas fa-arrow-right"></i> will add **sortable list** of top-contributing papers and journals
 
 
 ## From previous demo, cont'd
 
 - **Data access** and exports were requested.  
-  $\rightarrow$ We are developing **an API** (currenlty JSON data) and an R package which bundles "public" data (without requiring database credentials).
+  <i class="fas fa-arrow-right"></i> We are developing **an API** (currenlty JSON data) and an R package which bundles "public" data (without requiring database credentials).
 
 - **Data sources** were discussed, including possible additions  
-  $\rightarrow$ We are testing Scopus data, to add this as complementary indicators (citation counts, Scopus coverage)  
-  $\rightarrow$ We also intend to add functionality to the R package, to embed access to relevant **open data sources** (e.g. Microsoft Academic, Altmetric, Google Scholar etc).
+  <i class="fas fa-arrow-right"></i> We are testing Scopus data, to add this as complementary indicators (citation counts, Scopus coverage)  
+  <i class="fas fa-arrow-right"></i> We also intend to add functionality to the R package, to embed access to relevant **open data sources** (e.g. Microsoft Academic, Altmetric, Google Scholar etc).
   
 ## From previous demo, cont'd
 
