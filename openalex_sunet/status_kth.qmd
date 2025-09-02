@@ -1,0 +1,53 @@
+---
+title: "OpenAlex data at SUNET"
+date: "`r Sys.Date()`"
+format:
+  revealjs:
+    theme: solarized
+    transition: slide
+    slide-number: true
+    controls: true
+    progress: true
+    center: true
+    width: 960
+    height: 700
+---
+
+# openalex.sunet.se - Överblick
+
+- ** Miljö hos SUNET för en server **
+  - Spegling av snapshotdata på AWS S3 openalex snapshot
+  - Schemalagd synk (openalex uppdaterar snapshot:et månadsvis för premium subscriptions)
+  - Processer för att omvandla .jsonl till tabulärt format
+
+- ** Kapacitet **
+  - "demetrius" has 16 vCPUs och 32 GB RAM
+  - Använder S3-lagring för speglingen
+  - Använder "duckdb" för bearbetning (json -> parquet etc)
+
+
+# Frågor om behov och perspektiv
+
+- Vilka perspektiv finns hos de olika lärosätena? Vad är viktigast i sammanhanget?
+- Tankar kring semantiskt lager / "datalake"  ( se https://ducklake.select)
+- Synen på normalisering (på rätt nivå)?
+
+# Frågor om dataflöden mm
+
+- Hur skulle man vilja arbeta i praktiken? 
+- Ansats vid rektangularisering av data?
+- Behov av att kombinera mot "stängd" data från eget lärosäte?
+
+
+# Behov / önskemål kring åtkomst:
+
+- API (demo, se https://openalex.duckdns.org/api/)
+- Databaskopplingar?
+- Överföringar av lärosätesspecifika referensdataset
+
+        select * from topics;
+        select * from works;
+        select * from authors;
+        select * from venues;
+
+- Bredare datakälla? SwePub?
