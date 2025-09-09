@@ -52,10 +52,8 @@ That is the version of ABM described here.
 The ABM results are available at different levels, for KTH in total,
 Schools, Departments and for individual researchers. The report
 currently has the same format and contents at all levels. Data is
-presented for the last 10 years with a complete publication record, which
-in practice means the year before last autumn and the nine preceding
-years (i.e. in the spring of 2024, the ABM contains data for the
-publication years 2013-2022).
+compiled in October - November each year and is presented for the
+last 10 full years.
 
 Only publications registered in DiVA and affiliated with KTH are
 included in the results (i.e. publications that KTH researchers have
@@ -77,7 +75,6 @@ The *Overview* tab includes key indicators displayed for the latest
 available time period[^2] and general information about ABM and
 publication activities at KTH.
 
-Most numbers on this tab are based on fractionalized counts, i.e. an
 author's share of a publication is counted as 1/n where n denotes the
 number of authors. The exception is the *Co-publication* charts, which
 are based on full counts.
