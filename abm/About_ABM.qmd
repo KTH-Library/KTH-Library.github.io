@@ -94,7 +94,7 @@ Publication, citation, co-publication and SDG-data under the Scopus-tab is provi
 ## General denotation and description of bibliometric indicators at KTH
 
 * **P full:**  Full count of publications.
-* **P frac:** Fractional count of publications.
+* **P frac:** Fractional count of publications. For fractional counts, the number of authors from the unit on each publication is divided by the total number of authors on the publikation, so if for example a department has 2 authors on a publication with 5 authors, the department's fraction for that publication is 2/5 = 0.4. **P frac** is the sum of those fractions.
 * **C full:** Full count of citations.
 * **C frac:** Fractionalized count of citations.
 * **C3 frac:** Fractionalized count of citations with a three year window. The indicator shows the number of citations received from publications published the same year and the two following years. Since older publications have had more time to get cited than new publications, time series of citations counts using an open window are not appropriate. By using a fixed citation window of three years comparisons over time can be made.
