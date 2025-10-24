@@ -1,0 +1,271 @@
+---
+title: "Demo #12 - DAUF"
+subtitle: "Datadriven Analys och Uppföljning av KTHs Forskning"
+author: "KTH Library & ITA"
+date: "2025-xx-xx"
+format: 
+  kth-quarto-revealjs:
+    title-slide-attributes:
+      data-background-image: "assets/bg/pattern_blue_wide.png"
+      data-background-size: "100%"
+      data-background-position: contain
+    footer: "DAUF - Demo 11 - 2024-10-15"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+# install.packages("devtools")
+library(ktheme)
+library(webshot)
+library(DT)
+library(ggplot2)
+library(reshape2)
+library(formattable)
+library(readxl)
+library(dplyr)
+#library(kableExtra)
+library(knitr)
+library(htmltools)
+library(htmlwidgets)
+
+red <- function(txt) 
+  sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["cerise"]), txt)
+green <- function(txt) 
+  sprintf("<font color='%s'>\n%s\n</font>", tolower(palette_kth()["olive"]), txt)
+
+#webshot::install_phantomjs()
+#unlink("retrosearch-screenshot.png")
+
+suppressPackageStartupMessages(library(magick))
+
+# BG images that could be used
+
+```
+
+## Agenda {data-background="assets/bg/notes.png" data-background-size="cover"}
+
+-   Status update for the **DAUF** project
+-   New **ABM 2025** with overall result and updates
+-   New beta version of **subject based KTH Research Information** app
+
+-   News about the POC for the **KTH Indicators** dashboard
+    -   efforts at other universities
+-   News related to **data curation** (publications and projects)
+    -   Briefly about the **data infrastructure** used
+    -   Using data from **OpenAlex** at KTH
+    -   Mapping of Sustainable Development Goals
+-   Future directions and your **questions and feedback**
+
+## About the DAUF project
+
+-   Creating services and tools for presentation of **research information data**, improved data flows and connecting data sources within KTH
+-   Agile model with **2 week sprints**
+-   Collaboration between **KTH Library, RSO and ITA**
+-   Part of IT portfolio for Research (Delportfölj forskning), placed in the object "Publicering och analys" 
+
+# Status and progress update {data-background="assets/bg/kth-6.png" data-background-size="cover"}
+
+## Progress overview - since last demo {data-background="assets/bg/plant.png" data-background-size="cover"}
+
+-   The yearly update for **ABM 2024** is being prepared and is planned to be released in Oct/Nov
+
+-   New features in **KTH Research Information** app
+
+-   POC for the **KTH Indicators** dashboard based on consolidated indicators collected from across KTH. 
+
+-   Involvement in mobilization of a new open data source with data from **GDP** (Gemensamma dataprojektet)
+
+-   The open data source **OpenAlex** (used in the Open Leiden Ranking) has been evaluated and efforts have started to map data in DiVA against OpenAlex and work has begun to enrich DiVA from this source.
+
+## Annual Bibliometric Monitoring 2024 {.smaller}
+
+[![](assets/img/ABM_start.png){height="300"}](https://kth.se/abm/)
+
+Changes in ABM 2024
+
+-   Prettier publication list export
+-   Changed OA graph
+-   Enabled selection of number of rows for co-publication tables
+-   Some cosmetic changes
+
+## Brief ABM results for KTH
+
+-   Number of publications is consistently declining
+-   Citations indicators are slightly increasing
+-   Journal indicators on a stable level
+-   Small changes in co-publication patterns
+-   Share of Open Access publications is steadily increasing
+
+## News in KTH Research Information {.smaller}
+
+[![](assets/img/RI_demo.png){height="300"}](https://analysis.sys.kth.se/bibliometrics/app/research_info)
+
+-   "Get results" visibility
+-   Improved tables: Mouseovers, multiple selection filtering, filter indication at export, full strings at export
+-   Improved networks: Searching enabled, KTH profile colors
+-   Co-publication indicators similar to ABM
+
+## KTH indicators - background and process {.smaller}
+
+::::: columns
+::: {.column width="60%"}
+
+- Ambition at KTH to track visions and goals using indicators
+- Project within *Strategisk verksamhetsanalys*
+- Workshops to align avaliable data with goals
+- Relatively manual data collection process from scattered systems at KTH
+- Indicator report  + beta dashboard for testing purposes
+- The intended user group is KTH leadership and it enables comparing indicators across schools
+
+:::
+
+::: {.column width="30%"}
+
+![](assets/img/indicator_report.png){height="500"}
+:::
+:::::
+
+## Work with KTH indicators & dashboard POC
+
+![](assets/img/kth_indicators_overview.png){height="550"}
+
+
+## Efforts at other universities {.smaller}
+
+Workshop within BenchTech network
+
+-   Members: TU Münich, ETH, EPFL, Virginia Tech, MIT, TU Delft, HKUST, DTU, PoliMi
+-   Theme this meeting on institutional research, strategic planning and data insights within university administration
+
+Examples:
+
+  - Several presentations on modelling of student success and predictions on admissions and drop-off
+  - Modelling employment outcomes (PoliMi)
+  - Semantic course mapping - find overlap/synergies (ETH)
+  - Iterative development of gender diversity dashboard (TU Delft)
+  
+
+## Efforts at other universities - Cont’d
+
+Take home messages:
+
+-   Most universities have a more unified data handling than KTH
+-   Often a mix of tools for regular reporting and dashboards and ad hoc-analysis  
+    "*All money spend on people, not software*" - reason for open tools
+-   Sometimes frustrating dichotomy between internal processes (slow) vs data and needs for analysis (fast)
+-   Less emphasis on univ. rankings - more on data flows and analytics
+
+# Data Curation
+
+## Data infrastructure overview {.smaller}
+
+::::: columns
+::: {.column width="45%"}
+### Object storage (S3)
+
+-   An on-premise data lake is powered by [S3 storage using "minio"](https://min.io)
+-   Data is curated and pushed to "minio" using automated processes to <https://data.bibliometrics.lib.kth.se>
+-   Applications and data consumers can then read (and/or write) data there
+-   See descriptions [here for available data](https://bibliometrics.lib.kth.se/RI_sources_KTH.html)
+:::
+
+::: {.column width="45%"}
+### General Dataflow
+
+```{r}
+#| echo: false
+#| output: asis
+
+# https://mermaid-ascii.art/
+# https://www.mermaidflow.app/editor
+
+mermaid <- "flowchart TD
+
+classDef red color:red
+classDef blue color:blue
+classDef green color:green
+
+Data Sources:::red -->|Clean / Crosscheck / Transform| Curated Data:::blue -->|Write / POST| Object Storage (minio):::green -->|Read / GET| Data Consumer / Client:::blue"
+
+html <- 
+    "https://mermaid-ascii.art/generate" |> 
+    httr2::request() |>
+    httr2::req_body_multipart(mermaid = mermaid) |>
+    httr2::req_perform() |>
+    httr2::resp_body_string() 
+
+diagram <-
+    sprintf("<pre>%s</pre>", html)
+```
+
+`r diagram`
+:::
+:::::
+
+## GDP
+
+> GDP (Gemensamma data för projekt) is an effort of a number of Swedish research funders to create a ***common data model for project data***. The five funding agencies **Energimyndigheten, Formas, Forte, Vetenskapsrådet and Vinnova** is developing a standard which enables sharing of open data about fundings and related information.
+>
+> The standard is developed in cooperation with a reference group including universities and other organisations within the university sector, KTH is a participant in the reference group.
+
+## GDP data mobilization
+
+-   We have participated in reference group coordinated by SUNET for the GDP efforts in collaboration with partners, including Vinnova and other universities
+
+-   An R package has been developed with a client - <https://github.com/KTH-Library/gdp>
+
+-   Regular harvesting of data from the API is now available from object storage "minio" at KTH: <https://data.bibliometrics.lib.kth.se/projects/gdp/gdp.db>
+
+## OpenAlex
+
+-   Research outputs from KTH in OpenAlex - We have started to evaluate OpenAlex as a data source...
+
+    -   Comparisons against DiVA, WoS, Scopus, BIBMET
+
+    -   Development of search criteria to capture all KTH publications
+
+    -   R package has been developed with a client - <https://github.com/KTH-Library/openalex>
+
+    -   Discussions with SUNET and other universities about common resource
+
+## DiVA harvesting
+
+The DAUF project now harvests DiVA publication data using the OAI-PMH protocol which regularly updates a single file [duckdb](https://duckdb.org) database, openly available from object storage:
+
+<https://data.bibliometrics.lib.kth.se/kthcorpus/oai.db>
+
+> The database with the harvested information is currently about 4.4 GB large.It is reqularly updated and contains MODS and JSON representations of "all-kth" DiVA records.
+
+## KTH Theses Enrichment: Aurora SDGs
+
+We illustrate enrichment of DiVA publications with an example where we associate SDG goals with all KTH Theses:
+
+<center>![](assets/img/sdg_qs.png){.lightbox width="400"}</center>
+
+-   Details: [Enrichment of theses at KTH using SDGs from Aurora classifier](enrichment.html)
+
+# Future work and discussion
+
+## Future work and directions
+
+-   Release of ABM 2024
+
+-   Change source for research data to Swecris
+
+-   Dashboard over company cooperation in student theses
+
+Related activities
+
+-   Strategisk Verksamhetsanalys
+
+-   New data warehouse solution at KTH
+
+## Questions and Answers {.smaller}
+
+Please provide your input in chat or verbally.
+
+-   Questions, suggestions or comments?
+
+If you prefer to give your feedback later or come up with questions after this demo, you are always welcome to email us at **biblioteket\@kth.se**.
+
+### **Thank you for attending!**
