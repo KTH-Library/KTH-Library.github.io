@@ -34,11 +34,13 @@ opts_knit$set(width=75)
 
 The Annual Bibliometric Monitoring at KTH (shortened to ABM) contains statistics on publication output, citation impact, co-publishing, open access publishing and sustainable development goals.
 
-The ABM, together with goals regarding publishing and citation will be a part of the schools’ operational agreements and to be followed up in the school dialogues. It can be used as a basis for understanding how one’s own activities contribute to this goal. 
+The ABM, together with goals regarding publishing and citation, will be a part of the schools’ operational agreements and to be followed up in the school dialogues. It can be used as a basis for understanding how one’s own activities contribute to this goal. 
 
 ## Which publications are included in ABM?
 
-Publications registered in DiVA as affiliated to KTH and the examined unit (school, department or person) are included. For the external data sources Web of Science, Scopus and Unpaywall, a connection to the DiVA publication needs to be found in the KTH bibliometric database Bibmet.
+Publications registered in DiVA as affiliated to KTH and the examined unit (school, department or person) with publication years `r bibliomatrix:::abm_config()$start_year` to `r bibliomatrix:::abm_config()$stop_year` are included in ABM. For the external data sources Web of Science, Scopus and Unpaywall, a connection to the DiVA publication needs to be found in the KTH bibliometric database Bibmet. 
+
+Only publications affiliated to KTH are included. This means that publications written by a researcher before she/he was employed at KTH, and that are not affiliated to KTH, will not be included in the statistics.
 
 ## At what organizational levels is it available?
 
@@ -46,15 +48,13 @@ The ABM is available at different levels - for KTH in total, schools, department
 
 ## What data sources is it based on?
 
-ABM is based on data in BIBMET (the bibliometric database at the KTH library), which in turn collates data from other reference sources, including Web Of Science, Scopus and Unpaywall. Statistics regarding citations, co‑publishing and open access are based on the subset of publications in DiVA that are registered in Web of Science (Citation impact, Journal impact and Co‑publishing tabs), Scopus (Scopus and SDG tabs) and Unpaywall (Open Access tab).
-
-The bibliometric indicators referred are based on publications registered in DiVA and published `r bibliomatrix:::abm_config()$start_year` to `r bibliomatrix:::abm_config()$stop_year`. Only publications which have been affiliated to KTH are included. This means that publications written by a researcher before she/he was employed at KTH, and that are not affiliated to KTH, will not be included in the statistics.
+ABM is based on data in BIBMET (the bibliometric database at the KTH Library), which in turn collates data from other reference sources, including DiVA, Web Of Science, Scopus and Unpaywall. Statistics regarding citations, co‑publishing and open access are based on the subset of publications in DiVA that are registered in Web of Science (Citation impact, Journal impact and Co‑publishing tabs), Scopus (Scopus and SDG tabs) and Unpaywall (Open Access tab) respectively.
 
 # Further information
 
 ## DAUF
 
-The ABM is developed by [DAUF](https://bibliometrics.lib.kth.se), which is a collaboration between the [KTH Library](https://www.kth.se/en/biblioteket), [Research Support Office](https://intra.kth.se/en/styrning/kths-organisation/vs/rso/forskningsstod-1.876021) and the [IT department](https://intra.kth.se/en/styrning/kths-organisation/vs/ita/ita-1.879113) at KTH.
+The ABM is developed by [DAUF](https://bibliometrics.lib.kth.se), which is a collaboration between the [KTH Library](https://www.kth.se/en/biblioteket), [Research Support Office](https://intra.kth.se/en/styrning/kths-organisation/verksamhetsstod/forskningsstod-1.876021) and the [IT department](https://intra.kth.se/en/styrning/kths-organisation/verksamhetsstod/ita-1.879113) at KTH.
 
 For further information of development of ABM and more, see the R pacakges [bibliomatrix](https://github.com/KTH-Library/bibliomatrix) and [kontarion](https://github.com/KTH-Library/kontarion).
 
@@ -66,13 +66,13 @@ If you have further questions about the ABM at KTH please contact [biblioteket@k
 
 We aim at providing content in an accessible fashion in compliance with [WCAG 2.1](https://www.w3.org/TR/WCAG21/){target="_blank"}, and are aware that there is room for improvement for some of the content.
 
-If you require access to content not provided in a format that is accessible for you, please contact us at [biblioteket@kth.se](mailto:biblioteket@kth.se). Please find more information about accessibility at KTH at the [KTH Web Accessibility Web Page](https://www.kth.se/gemensamt/tillganglighet){target="_blank"}.
+If you require access to content not provided in a format that is accessible for you, please contact us at [biblioteket@kth.se](mailto:biblioteket@kth.se). Please find more information about accessibility at KTH at the [KTH Digital Accessibility web page](https://intra.kth.se/en/administration/kommunikation/webb/tillganglighet){target="_blank"}.
 
 # Further information
-- [Bibliometrics (KTH Library)](https://www.kth.se/en/biblioteket/publicera-analysera/bibliometri/bibliometri-1.1159501){target="_blank"}
+- [Bibliometrics (KTH Library)](https://www.kth.se/biblioteket/publicera-analysera/analysera-forskning/bibliometri-1.1159501){target="_blank"}
 - [Introduction to bibliometrics at KTH](Bibliometrics.html){target="_blank"}
 - [Information about DiVA and the registration process - Handle publications in DiVA](https://www.kth.se/en/biblioteket/publicera-analysera/hantera-publikationer){target="_blank"}
-- [Report on Open Access publishing at KTH](OARapport.pdf){target="_blank"}
+- [Statistics on Open Access publishing at KTH](https://bibliometrics.lib.kth.se/OA-rapport.html){target="_blank"}
 - [Formal definitions of field normalized citation indicators at KTH](indicators.html){target="_blank"}
 
 For further questions, contact the KTH Library at [biblioteket@kth.se](mailto:biblioteket@kth.se).
@@ -85,7 +85,7 @@ Certain data included in the Annual Bibliometric Monitoring report are derived f
 
 ### Open Access data
 
-Open Access status of publications is retrieved from [Unpaywall](https://unpaywall.org/).
+Open Access status of publications is retrieved from [OpenAlex](https://openalex.org/).
 
 ### Scopus
 
@@ -94,7 +94,7 @@ Publication, citation, co-publication and SDG-data under the Scopus-tab is provi
 ## General denotation and description of bibliometric indicators at KTH
 
 * **P full:**  Full count of publications.
-* **P frac:** Fractional count of publications.
+* **P frac:** Fractional count of publications. For fractional counts, the number of authors from the unit on each publication is divided by the total number of authors on the publikation, so if for example a department has 2 authors on a publication with 5 authors, the department's fraction for that publication is 2/5 = 0.4. **P frac** is the sum of those fractions.
 * **C full:** Full count of citations.
 * **C frac:** Fractionalized count of citations.
 * **C3 frac:** Fractionalized count of citations with a three year window. The indicator shows the number of citations received from publications published the same year and the two following years. Since older publications have had more time to get cited than new publications, time series of citations counts using an open window are not appropriate. By using a fixed citation window of three years comparisons over time can be made.
