@@ -188,14 +188,14 @@ of rows shown can be selected under each table.
 ## Open Access
 
 The *Open Access* tab shows the OA status of publications according to
-[Unpaywall](https://unpaywall.org). For a publication to be included, it
+[OpenAlex](https://openalex.org). For a publication to be included, it
 needs to be marked as a peer reviewed publication in DiVA and have a
-Digital Object Identifier (DOI) that Unpaywall can recognice and
+Digital Object Identifier (DOI) that OpenAlex can recognice and
 determine an OA status for.
 
-The statuses are presented as defined by Unpaywall. For further
+The statuses are presented as defined by OpenAlex. For further
 information, see "[What do the types of oa status
-mean?](https://support.unpaywall.org/support/solutions/articles/44001777288-what-do-the-types-of-oa-status-green-gold-hybrid-and-bronze-mean-)" at the unpaywall.org support portal.
+mean?](https://support.unpaywall.org/support/solutions/articles/44001777288-what-do-the-types-of-oa-status-green-gold-hybrid-and-bronze-mean-)".
 
 ![](media/image7.png){.lightbox width=100%}
 
