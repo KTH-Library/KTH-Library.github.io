@@ -193,9 +193,9 @@ needs to be marked as a peer reviewed publication in DiVA and have a
 Digital Object Identifier (DOI) that OpenAlex can recognice and
 determine an OA status for.
 
-The statuses are presented as defined by OpenAlex. For further
-information, see "[What do the types of oa status
-mean?](https://support.unpaywall.org/support/solutions/articles/44001777288-what-do-the-types-of-oa-status-green-gold-hybrid-and-bronze-mean-)".
+The statuses are presented as defined by OpenAlex with the exeption that we
+count bronze publications as closed. For further information, see
+[OpenAlex Support pages](https://help.openalex.org/hc/en-us/articles/24347035046295-Open-Access-OA).
 
 ![](media/image7.png){.lightbox width=100%}
 
