@@ -14,7 +14,7 @@ DAUF is an acronym for "Datadriven Analys och Uppföljning av KTHs Forskning".
 Several services and activities are delivered through this project.  
 For example:
 
-- Public app for Annual Bibliometric Monitoring: [Annual Bibliometric Monitoring Dashboard - KTH 2021](https://kth.se/abm/public)
+- Public app for Annual Bibliometric Monitoring: [Annual Bibliometric Monitoring Dashboard - KTH 2024](https://kth.se/abm/public)
 
 System requirements: 
 
