@@ -3,6 +3,7 @@ title: "ABM User Guide"
 date: "`r Sys.Date()`"
 mainfont: figtree
 toc: true
+embed-resources: true
 output:
   kth-quarto-html: default
   lightbox: true
