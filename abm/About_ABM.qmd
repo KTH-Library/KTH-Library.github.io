@@ -50,6 +50,13 @@ The ABM is available at different levels - for KTH in total, schools, department
 
 ABM is based on data in BIBMET (the bibliometric database at the KTH Library), which in turn collates data from other reference sources, including DiVA, Web Of Science, Scopus and Unpaywall. Statistics regarding citations, co‑publishing and open access are based on the subset of publications in DiVA that are registered in Web of Science (Citation impact, Journal impact and Co‑publishing tabs), Scopus (Scopus and SDG tabs) and Unpaywall (Open Access tab) respectively.
 
+
+# Accessibility
+
+We aim at providing content in an accessible fashion in compliance with [WCAG 2.1](https://www.w3.org/TR/WCAG21/){target="_blank"}, and are aware that there is room for improvement for some of the content.
+
+If you require access to content not provided in a format that is accessible for you, please contact us at [biblioteket@kth.se](mailto:biblioteket@kth.se). Please find more information about accessibility at KTH at the [KTH Digital Accessibility web page](https://intra.kth.se/en/administration/kommunikation/webb/tillganglighet){target="_blank"}.
+
 # Further information
 
 ## DAUF
@@ -62,13 +69,8 @@ For further information of development of ABM and more, see the R pacakges [bibl
 
 If you have further questions about the ABM at KTH please contact [biblioteket@kth.se](mailto:biblioteket@kth.se) or submit a question using [this form](https://www.kth.se/biblioteket/anvanda-biblioteket/oppettider-kontakt/kontaktformular-1.863120){target="_blank"}.
 
-# Accessibility
+## Additional links
 
-We aim at providing content in an accessible fashion in compliance with [WCAG 2.1](https://www.w3.org/TR/WCAG21/){target="_blank"}, and are aware that there is room for improvement for some of the content.
-
-If you require access to content not provided in a format that is accessible for you, please contact us at [biblioteket@kth.se](mailto:biblioteket@kth.se). Please find more information about accessibility at KTH at the [KTH Digital Accessibility web page](https://intra.kth.se/en/administration/kommunikation/webb/tillganglighet){target="_blank"}.
-
-# Further information
 - [Bibliometrics (KTH Library)](https://www.kth.se/biblioteket/publicera-analysera/analysera-forskning/bibliometri-1.1159501){target="_blank"}
 - [Introduction to bibliometrics at KTH](Bibliometrics.html){target="_blank"}
 - [Information about DiVA and the registration process - Handle publications in DiVA](https://www.kth.se/en/biblioteket/publicera-analysera/hantera-publikationer){target="_blank"}
