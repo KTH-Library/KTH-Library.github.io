@@ -197,6 +197,10 @@ The statuses are presented as defined by Unpaywall. For further
 information, see "[What do the types of oa status
 mean?](https://support.unpaywall.org/support/solutions/articles/44001777288-what-do-the-types-of-oa-status-green-gold-hybrid-and-bronze-mean-)" at the unpaywall.org support portal.
 
+Note that there is also a separate report only dealing with [Open Access at KTH](https://bibliometrics.lib.kth.se/OA-rapport.html). In addition to Open access-status across time
+that report also presents OA status for thesis, Article processing charges (APC) and OA-status for individual 
+publication channels.
+
 ![](media/image7.png){.lightbox width=100%}
 
 ## Scopus
