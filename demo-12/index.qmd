@@ -48,7 +48,6 @@ suppressPackageStartupMessages(library(magick))
 -   New **ABM 2025** with overall result and updates
 -   New beta version of **subject based KTH Research Information** app
 -   News related to **data curation** - new version of DiVA coming
--   Tests and prep for GDP2 - new standard for Swedish project data
 -   OpenAlex on Sunet
 -   Future directions and your **questions and feedback**
 
@@ -69,7 +68,7 @@ suppressPackageStartupMessages(library(magick))
 
 -   POC for the **KTH Indicators** dashboard based on consolidated indicators collected from across KTH. 
 
--   Involvement in mobilization of a new open data source with data from **GDP** (Gemensamma dataprojektet)
+-   Tests and prep for **GDP 2.0** (Gemensamma dataprojektet) - new standard for Swedish project data
 
 -   The open data source **OpenAlex** (used in the Open Leiden Ranking) has been evaluated and efforts have started to map data in DiVA against OpenAlex and work has begun to enrich DiVA from this source.
 
@@ -79,7 +78,7 @@ suppressPackageStartupMessages(library(magick))
 
 Changes in ABM 2024
 
--   Prettier publication list export
+-   More interactive graphs (plotly)
 -   Changed OA graph
 -   Enabled selection of number of rows for co-publication tables
 -   Some cosmetic changes
@@ -98,7 +97,33 @@ Changes in ABM 2024
 
 -   
 
-## KTH indicators - background and process {.smaller}
+## Data curation and DiVA {.smaller}
+
+- Harvest of DiVA through OAI-PMH --> database
+- Can curate and annotate connected to this database
+- Preperation for new DiVA 
+- Ambition to decouple importing and curation from DiVA
+- Preparation to use APIs to communicate with DiVA  
+
+## DiVA curation and stats
+
+- some summary data?
+
+## DiVA harvesting
+
+The DAUF project now harvests DiVA publication data using the OAI-PMH protocol which regularly updates a single file [duckdb](https://duckdb.org) database, openly available from object storage:
+
+<https://data.bibliometrics.lib.kth.se/kthcorpus/oai.db>
+
+> The database with the harvested information is currently about 4.4 GB large.It is reqularly updated and contains MODS and JSON representations of "all-kth" DiVA records.
+
+## Swedish bibliometric resource based on OpenAlex
+
+- 
+
+
+
+## X
 
 ::::: columns
 ::: {.column width="60%"}
@@ -229,29 +254,20 @@ The DAUF project now harvests DiVA publication data using the OAI-PMH protocol w
 
 > The database with the harvested information is currently about 4.4 GB large.It is reqularly updated and contains MODS and JSON representations of "all-kth" DiVA records.
 
-## KTH Theses Enrichment: Aurora SDGs
-
-We illustrate enrichment of DiVA publications with an example where we associate SDG goals with all KTH Theses:
-
-<center>![](assets/img/sdg_qs.png){.lightbox width="400"}</center>
-
--   Details: [Enrichment of theses at KTH using SDGs from Aurora classifier](enrichment.html)
 
 # Future work and discussion
 
 ## Future work and directions
 
--   Release of ABM 2024
+-   x
 
--   Change source for research data to Swecris
-
--   Dashboard over company cooperation in student theses
 
 Related activities
 
--   Strategisk Verksamhetsanalys
+-   KTH Cris/Rims
 
--   New data warehouse solution at KTH
+-   KTH Insights/datastyrning (MS Fabric/Power BI) 
+
 
 ## Questions and Answers {.smaller}
 
