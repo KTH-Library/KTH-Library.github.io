@@ -2,14 +2,14 @@
 title: "Demo #12 - DAUF"
 subtitle: "Datadriven Analys och Uppföljning av KTHs Forskning"
 author: "KTH Library & ITA"
-date: "2025-xx-xx"
+date: "2025-12-05"
 format: 
   kth-quarto-revealjs:
     title-slide-attributes:
       data-background-image: "assets/bg/pattern_blue_wide.png"
       data-background-size: "100%"
       data-background-position: contain
-    footer: "DAUF - Demo 11 - 2024-10-15"
+    footer: "DAUF - Demo 11 - 2025-12-05"
 ---
 
 ```{r setup, include=FALSE}
@@ -47,13 +47,9 @@ suppressPackageStartupMessages(library(magick))
 -   Status update for the **DAUF** project
 -   New **ABM 2025** with overall result and updates
 -   New beta version of **subject based KTH Research Information** app
-
--   News about the POC for the **KTH Indicators** dashboard
-    -   efforts at other universities
--   News related to **data curation** (publications and projects)
-    -   Briefly about the **data infrastructure** used
-    -   Using data from **OpenAlex** at KTH
-    -   Mapping of Sustainable Development Goals
+-   News related to **data curation** - new version of DiVA coming
+-   Tests and prep for GDP2 - new standard for Swedish project data
+-   OpenAlex on Sunet
 -   Future directions and your **questions and feedback**
 
 ## About the DAUF project
@@ -61,15 +57,15 @@ suppressPackageStartupMessages(library(magick))
 -   Creating services and tools for presentation of **research information data**, improved data flows and connecting data sources within KTH
 -   Agile model with **2 week sprints**
 -   Collaboration between **KTH Library, RSO and ITA**
--   Part of IT portfolio for Research (Delportfölj forskning), placed in the object "Publicering och analys" 
+-   Part of IT portfolio for Research (Delportfölj forskning), within in the object "Publicering och analys" 
 
 # Status and progress update {data-background="assets/bg/kth-6.png" data-background-size="cover"}
 
 ## Progress overview - since last demo {data-background="assets/bg/plant.png" data-background-size="cover"}
 
--   The yearly update for **ABM 2024** is being prepared and is planned to be released in Oct/Nov
+-   This years version of **ABM** was released about a week ago
 
--   New features in **KTH Research Information** app
+-   Recently released beta-version of  **KTH Research Information** app
 
 -   POC for the **KTH Indicators** dashboard based on consolidated indicators collected from across KTH. 
 
@@ -77,7 +73,7 @@ suppressPackageStartupMessages(library(magick))
 
 -   The open data source **OpenAlex** (used in the Open Leiden Ranking) has been evaluated and efforts have started to map data in DiVA against OpenAlex and work has begun to enrich DiVA from this source.
 
-## Annual Bibliometric Monitoring 2024 {.smaller}
+## Annual Bibliometric Monitoring 2025 {.smaller}
 
 [![](assets/img/ABM_start.png){height="300"}](https://kth.se/abm/)
 
@@ -96,14 +92,11 @@ Changes in ABM 2024
 -   Small changes in co-publication patterns
 -   Share of Open Access publications is steadily increasing
 
-## News in KTH Research Information {.smaller}
+## Subject based Resarch Information-app {.smaller}
 
 [![](assets/img/RI_demo.png){height="300"}](https://analysis.sys.kth.se/bibliometrics/app/research_info)
 
--   "Get results" visibility
--   Improved tables: Mouseovers, multiple selection filtering, filter indication at export, full strings at export
--   Improved networks: Searching enabled, KTH profile colors
--   Co-publication indicators similar to ABM
+-   
 
 ## KTH indicators - background and process {.smaller}
 

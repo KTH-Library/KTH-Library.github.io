@@ -1,0 +1,104 @@
+meta: 
+  name: 
+    full: KTH - Kungliga Tekniska Högskolan
+    short: KTH
+  link: 
+    home: https://www.kth.se
+    github: https://github.com/KTH-Library
+  description: |
+    KTH Royal Institute of Technology is located in Stockholm, Sweden.
+
+logo: 
+  images: 
+    icon-color: _extensions/kth-library/kth-quarto/favicon.png
+    wide-color: _extensions/kth-library/kth-quarto/img/kth_logo_blue_spaced.png
+    tall-color: _extensions/kth-library/kth-quarto/img/kth_logo_blue_spaced.png
+  small: icon-color
+  medium: wide-color
+  large: tall-color
+
+color: 
+  palette: 
+    white: "#fcfcfc"
+    black: "#212121"
+    gray100: "#f2f2f2"
+    gray200: "#ededed"
+    gray300: "#e6e6e6"
+    gray400: "#8D8D8D"
+    gray500: "#9C9C9C"
+    gray600: "#a5a5a5"
+    gray700: "#646464"
+    gray800: "#3e3e3e"
+    gray900: "#323232"
+    blue: "#004791"
+    bluelink: "#036eb8"
+    indigo: "#000061"
+    darkblue: "#003975"
+    digitalblue: "#221dd9"
+    lightblue: "#DEF0FF"
+    purple: "#78001A"
+    red: "#c7321d"
+    lightred: "#fad6d6"
+    darkred: "#bf2c17"
+    darkerred: "#962312"
+    orange: "#A65900"
+    yellow: "#FFBE00"
+    green: "#3d784a"
+    lightgreen: "#d8ffe7"
+    darkgreen: "#366f43"
+    darkergreen: "#264f30"
+    teal: "#339C9C"
+    cyan: "#6298D2"
+    sand: "#EBE5E0"
+    gray: "#A5A5A5"
+    lightyellow: "#FFF080"
+    pink: "#FFCCC4"
+    lightteal: "#B2E0E0"
+  primary: blue
+  success: green
+  warning: yellow
+  secondary: cyan
+  info: sand
+  danger: red
+  light: gray200
+  dark: gray700
+  foreground: black
+  background: sand
+  tertiary: green
+
+typography:
+  fonts:
+    - family: Figtree
+      source: google
+    - family: Tinos
+      source: google
+    - family: Rubik
+      source: google
+  base:
+    family: Figtree
+    line-height: 1.6
+  headings:
+    family: Georgia
+    weight: 700
+#  link:
+#    color: bluelink
+  monospace:
+    family: IBM Plex Mono
+    size: 1em
+
+defaults:
+  bootstrap:
+    defaults:
+    # bootstrap variable definitions
+      enable-rounded: false
+      link-decoration: none
+  quarto:
+    format:
+      # basic format-specific settings
+      html: kth-quarto-html
+      typst: kth-quarto-typst
+      revealjs:
+  shiny:
+    # shiny specific settings
+
+
