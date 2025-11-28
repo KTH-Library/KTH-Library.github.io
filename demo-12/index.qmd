@@ -74,7 +74,7 @@ suppressPackageStartupMessages(library(magick))
 
 ## Annual Bibliometric Monitoring 2025 {.smaller}
 
-[![](assets/img/ABM_start.png){height="300"}](https://kth.se/abm/)
+[![](assets/img/ABM_start.png){height="350"}](https://kth.se/abm/)
 
 Changes in ABM 2024
 
@@ -85,11 +85,12 @@ Changes in ABM 2024
 
 ## Brief ABM results for KTH
 
--   Number of publications is consistently declining
--   Citations indicators are slightly increasing
--   Journal indicators on a stable level
+-   Number of publications seems to have stabilized
+-   Citations indicators relatively stable
+-   Journal indicators stable but slightly increasing over last 5 years
 -   Small changes in co-publication patterns
--   Share of Open Access publications is steadily increasing
+-   Share of Open Access publications sharply decreasing last year  
+    reasons unclear at the moment
 
 ## Subject based Resarch Information-app {.smaller}
 
