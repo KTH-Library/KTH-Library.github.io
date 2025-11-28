@@ -64,7 +64,7 @@ suppressPackageStartupMessages(library(magick))
 
 -   This years version of **ABM** was released about a week ago
 
--   Recently released beta-version of  **KTH Research Information** app
+-   Recently released beta version of topics based **KTH Research Information**
 
 -   POC for the **KTH Indicators** dashboard based on consolidated indicators collected from across KTH. 
 
@@ -91,11 +91,13 @@ Changes in ABM 2024
 -   Small changes in co-publication patterns
 -   Share of Open Access publications is steadily increasing
 
-## Subject based Resarch Information-app {.smaller}
+## KTH Resarch Information - Topics (beta) {.smaller}
 
-[![](assets/img/RI_demo.png){height="300"}](https://analysis.sys.kth.se/bibliometrics/app/research_info)
+[![](assets/img/RI_subject.png){height="400"}](https://analysis.sys.kth.se/bibliometrics/app_direct/subject_ri)
 
--   
+-   Selection based on Web of Science Citation Topics
+-   Three levels - macro, meso and micro
+-   Otherwise similar to [KTH Research Information - Units](https://analysis.sys.kth.se/)
 
 ## Data curation and DiVA {.smaller}
 
