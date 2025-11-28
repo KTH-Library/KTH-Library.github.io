@@ -70,7 +70,7 @@ suppressPackageStartupMessages(library(magick))
 
 -   Tests and prep for **GDP 2.0** (Gemensamma dataprojektet) - new standard for Swedish project data
 
--   The open data source **OpenAlex** (used in the Open Leiden Ranking) has been evaluated and efforts have started to map data in DiVA against OpenAlex and work has begun to enrich DiVA from this source.
+-   Work to use OpenAlex to update DiVA, and to construct bibliometric database
 
 ## Annual Bibliometric Monitoring 2025 {.smaller}
 
@@ -90,7 +90,7 @@ Changes in ABM 2024
 -   Journal indicators stable but slightly increasing over last 5 years
 -   Small changes in co-publication patterns
 -   Share of Open Access publications sharply decreasing last year  
-    reasons unclear at the moment
+      - reasons unclear at the moment
 
 ## Subject based Resarch Information-app {.smaller}
 
@@ -144,35 +144,6 @@ The DAUF project now harvests DiVA publication data using the OAI-PMH protocol w
 :::
 :::::
 
-## Work with KTH indicators & dashboard POC
-
-![](assets/img/kth_indicators_overview.png){height="550"}
-
-
-## Efforts at other universities {.smaller}
-
-Workshop within BenchTech network
-
--   Members: TU Münich, ETH, EPFL, Virginia Tech, MIT, TU Delft, HKUST, DTU, PoliMi
--   Theme this meeting on institutional research, strategic planning and data insights within university administration
-
-Examples:
-
-  - Several presentations on modelling of student success and predictions on admissions and drop-off
-  - Modelling employment outcomes (PoliMi)
-  - Semantic course mapping - find overlap/synergies (ETH)
-  - Iterative development of gender diversity dashboard (TU Delft)
-  
-
-## Efforts at other universities - Cont’d
-
-Take home messages:
-
--   Most universities have a more unified data handling than KTH
--   Often a mix of tools for regular reporting and dashboards and ad hoc-analysis  
-    "*All money spend on people, not software*" - reason for open tools
--   Sometimes frustrating dichotomy between internal processes (slow) vs data and needs for analysis (fast)
--   Less emphasis on univ. rankings - more on data flows and analytics
 
 # Data Curation
 
@@ -235,17 +206,7 @@ diagram <-
 
 -   Regular harvesting of data from the API is now available from object storage "minio" at KTH: <https://data.bibliometrics.lib.kth.se/projects/gdp/gdp.db>
 
-## OpenAlex
 
--   Research outputs from KTH in OpenAlex - We have started to evaluate OpenAlex as a data source...
-
-    -   Comparisons against DiVA, WoS, Scopus, BIBMET
-
-    -   Development of search criteria to capture all KTH publications
-
-    -   R package has been developed with a client - <https://github.com/KTH-Library/openalex>
-
-    -   Discussions with SUNET and other universities about common resource
 
 ## DiVA harvesting
 
