@@ -92,7 +92,7 @@ Changes in ABM 2024
 -   Share of Open Access publications sharply decreasing last year  
       - reasons unclear at the moment
 
-## KTH Resarch Information - Topics (beta) {.smaller}
+## KTH Research Information - Topics (beta) {.smaller}
 
 [![](assets/img/RI_subject.png){height="400"}](https://analysis.sys.kth.se/bibliometrics/app_direct/subject_ri)
 
