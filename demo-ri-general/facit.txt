@@ -1,0 +1,45 @@
+1. Ta fram organisationsbaserade resultat för institutionen "Fibre and Polymer technology" och notera deras andel bibliometriska resultat för Top10% för 2018-2020. Notera även vilka 2 organisationer de oftast sampublicerar med. 
+
+* Välj Organization
+* Välj institutionen
+* Get results
+* Bibliometric impact
+*** Svar: 17.1%, 19.6%, 14.4% ***
+* Organizations
+*** Svar: WWSC och RISE ***
+
+2. Ta fram personalbaserade resultat för alla anställda på "Electric power and Energy Systems". Notera hur många publikationer de sampublicerat med USA mellan åren 2018-2023, och vilka 3 organisationer inom och utanför USA som ingår oftast i dessa samarbeten.
+
+* Välj Staff
+* Leta upp Elecric power and Energy Systems
+* Skicka över alla namn till selected
+* Get results
+* Filter country: United States
+* Filter publication years: 2018-2023
+* Summary, tabellen Filtered selection
+*** Svar: 38 (fullräknade, 10,8 fraktioner) ***
+* Organizations
+*** Svar: Center for Research and Teaching in Economics (CIDE), Mexico; German Institute for Economic Research (DIW Berlin), Tyskland; Rice University, USA ***
+
+3. Välj ut alla professorer och docenter (associate professor) från institutionerna "Chemistry" och "Chemical engineering" och ta fram resulat för grupperingen. Notera hur många projekt som finns kopplade till dessa personer i CASE, och vilka två organisationer som finansierar flest projekt.  
+* Välj Staff
+* Rensa namnlistan
+* Välj Professor och Associate Professor i Positions-filtret
+* Leta upp Chemistry
+* Lägg över till Selected
+* Leta upp Chemical engineering
+* Lägg över till Selected
+* Get results
+* Projects
+*** Svar: 126 projekt varav 116 pågående ***
+*** Svar: EU och Energimyndigheten ***
+
+4. Ta fram organisationsbaserade resultat för hela ITM-skolan, och filtrera fram samarbeten med Münchens tekniska universitet (Technical University of Munich, TUM). Notera vilka 2 forskare från KTH resp. TUM som oftast ingår i dessa samarbeten.
+
+* Välj Organization
+* Välj institutionen
+* Get results
+* Authors
+*** Svar: Antoniou, C och Gankin, D ***
+* Klicka i Include KTH Authors
+*** Svar: Pernestal, A och Arnet, C ***
