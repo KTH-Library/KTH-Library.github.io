@@ -59,9 +59,9 @@ output:
 
 ## Uppgift
 
-Gå till https://analysis.sys.kth.se/bibliometrics/app_direct/research_info/
+Gå till https://analysis.sys.kth.se/
 
-I grupper om 2-3 personer, försök under de närmaste 20 minuterna svara på några av dessa frågor:
+I grupper om 2-3 personer eller enskilt, försök under de närmaste ca 15 minuterna svara på några av dessa frågor:
 
 För gärna anteckningar om ni fastnar någonstans eller har förslag på förbättringar av gränssnittet.
 
@@ -71,7 +71,7 @@ E-posta gärna eventuella kommentarer till Tobias eller Agne.
 
 ## Uppgift - frågeställningar
 
-1. Ta fram organisationsbaserade resultat för institutionen "Fibre and Polymer technology" och notera deras andel bibliometriska resultat för Top10% för 2018-2020. Notera även vilka 2 organisationer de oftast sampublicerar med. 
+1. Ta fram organisationsbaserade resultat för institutionen "Fibre and Polymer technology" och notera deras andel Top10%-citerade publikationer för 2018-2020. Notera även vilka 2 organisationer de oftast sampublicerar med.
 
 2. Ta fram personalbaserade resultat för alla anställda på "Electric power and Energy Systems". Notera hur många publikationer de sampublicerat med USA mellan åren 2018-2023, och vilka 3 organisationer inom och utanför USA som ingår oftast i dessa samarbeten.
 
