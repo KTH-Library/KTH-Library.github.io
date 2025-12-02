@@ -1,0 +1,90 @@
+---
+title: "KTH Research Information"
+author: KTHB Bibliometri och DAUF
+date: '2025-12-06'
+output:
+  ioslides_presentation:
+    css: assets/css/styles.css
+    logo: assets/img/logo.svg
+    mathjax: default
+    self-contained: yes
+    transition: slower
+    widescreen: yes
+  beamer_presentation: default
+  slidy_presentation: default
+---
+
+## KTH Research Information
+
+* Analys av KTH:s publikationsproduktion
+    * Sampublicering
+    * Tidskrifter och ämnen
+    * Open Access
+    * Bibliometrisk prestation
+    * Projekt (endast CASE tills vidare)
+* Publikationer väljs via
+    * Organisationsenheter
+    * Personer
+    * Ämnen (Beta-version)
+* Filtrering på land, organisation och publikationsår
+
+## Exempel - personurval
+
+<div align="center">
+![](assets/img/app1.png){width=1000}
+</div>
+
+## Exempel - sampublicering
+
+<div align="center">
+![](assets/img/app3.png){width=1000}
+</div>
+
+## Exempel - projekt
+
+<div align="center">
+![](assets/img/app2.png){width=1000}
+</div>
+
+## [Demo](https://analysis.sys.kth.se/bibliometrics/app_direct/research_info/)
+
+**Begränsningar i dagsläget**
+
+* Endast KTH-forskare
+* Endast Web of Science-publikationer
+* Projektdata på KTH innehåller:
+    * Bara PI:s (Primary Investigator)
+    * Begränsade ekonomidata
+    * Ojämn kvalitet mellan skolor
+
+## Uppgift
+
+Gå till https://analysis.sys.kth.se/bibliometrics/app_direct/research_info/
+
+I grupper om 2-3 personer, försök under de närmaste 20 minuterna svara på några av dessa frågor:
+
+För gärna anteckningar om ni fastnar någonstans eller har förslag på förbättringar av gränssnittet.
+
+Varje grupp återrapporterar kort hur övningarna gick.
+
+E-posta gärna eventuella kommentarer till Tobias eller Agne.
+
+## Uppgift - frågeställningar
+
+1. Ta fram organisationsbaserade resultat för institutionen "Fibre and Polymer technology" och notera deras andel bibliometriska resultat för Top10% för 2018-2020. Notera även vilka 2 organisationer de oftast sampublicerar med. 
+
+2. Ta fram personalbaserade resultat för alla anställda på "Electric power and Energy Systems". Notera hur många publikationer de sampublicerat med USA mellan åren 2018-2023, och vilka 3 organisationer inom och utanför USA som ingår oftast i dessa samarbeten.
+
+3. Välj ut alla professorer och docenter (associate professor) från institutionerna "Chemistry" och "Chemical engineering" och ta fram resulat för grupperingen. Notera hur många projekt som finns kopplade till dessa personer i CASE, och vilka två organisationer som finansierar flest projekt.  
+
+4. Ta fram organisationsbaserade resultat för hela ITM-skolan, och filtrera fram samarbeten med Münchens tekniska universitet (Technical University of Munich, TUM). Notera vilka 2 forskare från KTH resp. TUM som oftast ingår i dessa samarbeten.
+
+## Återrapportering och reflektion
+
+Hur gick övningarna?
+
+Var det någon speciell del som kändes extra oklar eller svårförståerlig?
+
+Har ni fått en bättre känsla för hur bibliometriska data kan användas för KTH:S uppföljning?
+
+Kom ihåg att skicka era kommentarer och tankar!
