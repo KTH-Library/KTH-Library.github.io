@@ -1,6 +1,6 @@
 ---
 title: "OpenAlex data at SUNET"
-date: "`r Sys.Date()`"
+date: today
 format:
   revealjs:
     theme: solarized
@@ -13,16 +13,41 @@ format:
     height: 700
 ---
 
-# openalex.sunet.se - Överblick
+# Agenda
 
-- ** Miljö hos SUNET för en server **
-  - Spegling av snapshotdata på AWS S3 openalex snapshot
+1. Status och läge hos resp. organisation
+
+2. Resurser & engagemang
+
+3. Vad vill vi uppnå i närtid?
+
+4. Metoder för primär inläsning av utplattning av json  
+  konkret första område att utvärdera?
+
+# Överblick & status KTH
+
+- Dialog med Sunet under våren
+
+- Server uppe från maj
+
+- Första tester av tjänst + datadump därefter
+
+- Preliminärt avtal under juni
+
+# openalex.sunet.se 
+
+- **Miljö hos SUNET för en server**
+  - Spegling av snapshotdata från AWS S3 openalex snapshot
   - Schemalagd synk (openalex uppdaterar snapshot:et månadsvis för premium subscriptions)
   - Processer för att omvandla .jsonl till tabulärt format
+  - inga försök att ladda som formell databas 
+  
+# openalex.sunet.se 
 
-- ** Kapacitet **
-  - "demetrius" has 16 vCPUs och 32 GB RAM
-  - Använder S3-lagring för speglingen
+- **Kapacitet**
+  - "demetrius" har 16 vCPUs och 32 GB RAM
+  - 2,8TB lokal disk
+  - Använder Sunet S3-lagring för speglingen
   - Använder "duckdb" för bearbetning (json -> parquet etc)
 
 

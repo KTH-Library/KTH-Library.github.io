@@ -86,7 +86,9 @@ Changes in ABM 2024
 ## Brief ABM results for KTH
 
 -   Number of publications seems to have stabilized
--   Citations indicators relatively stable
+-   Tendency for citations indicators to decrease
+    - will be evaluted further
+    - seems to be spread across several schools and subjects
 -   Journal indicators stable but slightly increasing over last 5 years
 -   Small changes in co-publication patterns
 -   Share of Open Access publications sharply decreasing last year  
@@ -120,32 +122,35 @@ The DAUF project now harvests DiVA publication data using the OAI-PMH protocol w
 
 > The database with the harvested information is currently about 4.4 GB large.It is reqularly updated and contains MODS and JSON representations of "all-kth" DiVA records.
 
-## Swedish bibliometric resource based on OpenAlex
+# Swedish bibliometrics & OpenAlex 
 
+![](assets/img/openalex_logo.png){height="400"}
+
+## Background 
+
+- Bibliometric analysis has historically been based on commercial data sources (Web of Science, SciVal, Incites, Dimensions) 
+- Sverige har saknat en nationell ansats eller gemensamma system
+- Forskningsproposition pekar mot större öppenhet kring forskningsutvärdering
+
+**OpenAlex**
+
+![](assets/img/openalex_logo.png){.r-stretch}
+
+- Öppen resurs, härstammar från Microsoft Academic (stängdes 2021)
+- Webgränssnitt och API (json)
 - 
 
+## Status
+
+- System för nedladdning och utplattning
+
+## Datainnehåll
 
 
-## X
 
-::::: columns
-::: {.column width="60%"}
+## Framtid
 
-- Ambition at KTH to track visions and goals using indicators
-- Project within *Strategisk verksamhetsanalys*
-- Workshops to align avaliable data with goals
-- Relatively manual data collection process from scattered systems at KTH
-- Indicator report  + beta dashboard for testing purposes
-- The intended user group is KTH leadership and it enables comparing indicators across schools
-
-:::
-
-::: {.column width="30%"}
-
-![](assets/img/indicator_report.png){height="500"}
-:::
-:::::
-
+- 
 
 # Data Curation
 

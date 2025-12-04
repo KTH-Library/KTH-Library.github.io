@@ -9,7 +9,7 @@
 <link href="status_kth_files/libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.30">
 
-  <meta name="dcterms.date" content="2025-09-02">
+  <meta name="dcterms.date" content="2025-09-03">
   <title>OpenAlex data at SUNET</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -132,21 +132,50 @@
 <div class="quarto-title-authors">
 </div>
 
-  <p class="date">2025-09-02</p>
+  <p class="date">2025-09-03</p>
 </section>
-<section id="openalex.sunet.se---överblick" class="title-slide slide level1 center">
-<h1>openalex.sunet.se - Överblick</h1>
+<section id="agenda" class="title-slide slide level1 center">
+<h1>Agenda</h1>
+<ol type="1">
+<li><p>Status och läge hos resp. organisation</p></li>
+<li><p>Resurser &amp; engagemang</p></li>
+<li><p>Vad vill vi uppnå i närtid?</p></li>
+<li><p>Metoder för primär inläsning av utplattning av json<br>
+konkret första område att utvärdera?</p></li>
+</ol>
+</section>
+
+<section id="överblick-status-kth" class="title-slide slide level1 center">
+<h1>Överblick &amp; status KTH</h1>
 <ul>
-<li>** Miljö hos SUNET för en server **
+<li><p>Dialog med Sunet under våren</p></li>
+<li><p>Server uppe från maj</p></li>
+<li><p>Första tester av tjänst + datadump därefter</p></li>
+<li><p>Preliminärt avtal under juni</p></li>
+</ul>
+</section>
+
+<section id="openalex.sunet.se" class="title-slide slide level1 center">
+<h1>openalex.sunet.se</h1>
 <ul>
-<li>Spegling av snapshotdata på AWS S3 openalex snapshot</li>
+<li><strong>Miljö hos SUNET för en server</strong>
+<ul>
+<li>Spegling av snapshotdata från AWS S3 openalex snapshot</li>
 <li>Schemalagd synk (openalex uppdaterar snapshot:et månadsvis för premium subscriptions)</li>
 <li>Processer för att omvandla .jsonl till tabulärt format</li>
+<li>inga försök att ladda som formell databas</li>
 </ul></li>
-<li>** Kapacitet **
+</ul>
+</section>
+
+<section id="openalex.sunet.se-1" class="title-slide slide level1 center">
+<h1>openalex.sunet.se</h1>
 <ul>
-<li>“demetrius” has 16 vCPUs och 32 GB RAM</li>
-<li>Använder S3-lagring för speglingen</li>
+<li><strong>Kapacitet</strong>
+<ul>
+<li>“demetrius” har 16 vCPUs och 32 GB RAM</li>
+<li>2,8TB lokal disk</li>
+<li>Använder Sunet S3-lagring för speglingen</li>
 <li>Använder “duckdb” för bearbetning (json -&gt; parquet etc)</li>
 </ul></li>
 </ul>
