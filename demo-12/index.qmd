@@ -92,7 +92,7 @@ Changes in ABM 2025
 -   Journal indicators stable but slightly increasing over last 5 years
 -   Small changes in co-publication patterns
 -   Share of Open Access publications sharply decreasing last year
-    -   reasons unclear at the moment
+    -   reasons unclear at the moment - might in part be lagging green OA                                                                                  
 
 ## KTH Research Information - Topics (beta) {.smaller}
 
@@ -104,7 +104,7 @@ Changes in ABM 2025
 
 # Data Curation
 
-## Data Curation - overview
+## Data Curation - overview {.smaller}
 
 -   Preparations under way for migration to a future **new version of DiVA**
     -   Launch of new DiVA with API is postponed, and has **new timeline**
@@ -237,9 +237,9 @@ cat diva_stats_con.csv
 
 ## 
 
-![Demetrius](https://www.openalex.duckdns.org/logo.jpeg){width="100%"}
+![](https://www.openalex.duckdns.org/logo.jpeg){width="100%"}
 
-## Background
+## Background {.smaller}
 
 -   Bibliometric analysis has historically been based on commercial data sources (Web of Science, SciVal, Incites, Dimensions)
 -   Sweden is lacking a national effort or common system
@@ -256,15 +256,17 @@ cat diva_stats_con.csv
 
 - Server running on Sunet for snapshot download and data processing
 - Flattening of json to .parquet
-- database using [duckdb](https://duckdb.org/)
-- 
+- Database using [duckdb](https://duckdb.org/)
+- Access by database connections and [sql requests through basic API](https://openalex.duckdns.org/api/)
+- Model for long-term funding and development currently missing
+- Current development with KTHB bibliometrics and the DAUF project, together with KI
 
-## Data contents
+## Data contents {.smaller}
 
-About 200 milj articles, 24 milj book chapters, 10 milj proceedings
+About 200 mln articles, 24 mln book chapters, 10 mln proceedings
 
 +--------------------------------------------------------------------------------------+
-| ::: {style="font-size: smaller;"}                                                    |
+| ::: {style="font-size: smaller; "}
 | +-----------------------------+----------------------------------------------------+ |
 | | Type                        | Exemple                                            | |
 | +=============================+====================================================+ |
@@ -287,14 +289,16 @@ About 200 milj articles, 24 milj book chapters, 10 milj proceedings
 | :::                                                                                  |
 +--------------------------------------------------------------------------------------+
 
+
 ## Future
 
--   Aim for common system and data flows
+-   Aim for common system and data flows  
+  Would allow for more transparent and comparable analyses
 -   Working on project idea with Vinnova, KI and VR
 -   Evaluation of data
     -   strengths and weaknesses
     -   where is additional curation needed?
--   
+- Multiple ways for access, depending on different needs and use cases
 
 # GDP
 
