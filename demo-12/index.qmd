@@ -76,7 +76,7 @@ suppressPackageStartupMessages(library(magick))
 
 [![](assets/img/ABM_start.png){height="350"}](https://kth.se/abm/)
 
-Changes in ABM 2024
+Changes in ABM 2025
 
 -   More interactive graphs (plotly)
 -   Changed OA graph
@@ -100,65 +100,17 @@ Changes in ABM 2024
 -   Three levels - macro, meso and micro
 -   Otherwise similar to [KTH Research Information - Units](https://analysis.sys.kth.se/)
 
-## Data curation and DiVA {.smaller}
-
-- Harvest of DiVA through OAI-PMH --> database
-- Can curate and annotate connected to this database
-- Preperation for new DiVA 
-- Ambition to decouple importing and curation from DiVA
-- Preparation to use APIs to communicate with DiVA  
-
-## DiVA curation and stats
-
-- some summary data?
-
-## DiVA harvesting
-
-The DAUF project now harvests DiVA publication data using the OAI-PMH protocol which regularly updates a single file [duckdb](https://duckdb.org) database, openly available from object storage:
-
-<https://data.bibliometrics.lib.kth.se/kthcorpus/oai.db>
-
-> The database with the harvested information is currently about 4.4 GB large.It is reqularly updated and contains MODS and JSON representations of "all-kth" DiVA records.
-
-## Swedish bibliometric resource based on OpenAlex
-
-- 
-
-
-
-## X
-
-::::: columns
-::: {.column width="60%"}
-
-- Ambition at KTH to track visions and goals using indicators
-- Project within *Strategisk verksamhetsanalys*
-- Workshops to align avaliable data with goals
-- Relatively manual data collection process from scattered systems at KTH
-- Indicator report  + beta dashboard for testing purposes
-- The intended user group is KTH leadership and it enables comparing indicators across schools
-
-:::
-
-::: {.column width="30%"}
-
-![](assets/img/indicator_report.png){height="500"}
-:::
-:::::
-
-
-# Data Curation
-
-## Data infrastructure overview {.smaller}
+## Data Curation - overview {.smaller}
 
 ::::: columns
 ::: {.column width="45%"}
 ### Object storage (S3)
 
 -   An on-premise data lake is powered by [S3 storage using "minio"](https://min.io)
--   Data is curated and pushed to "minio" using automated processes to <https://data.bibliometrics.lib.kth.se>
+-   Data is curated and pushed using automated processes to <https://data.bibliometrics.lib.kth.se> ("minio" / S3)
 -   Applications and data consumers can then read (and/or write) data there
 -   See descriptions [here for available data](https://bibliometrics.lib.kth.se/RI_sources_KTH.html)
+
 :::
 
 ::: {.column width="45%"}
@@ -177,7 +129,7 @@ classDef red color:red
 classDef blue color:blue
 classDef green color:green
 
-Data Sources:::red -->|Clean / Crosscheck / Transform| Curated Data:::blue -->|Write / POST| Object Storage (minio):::green -->|Read / GET| Data Consumer / Client:::blue"
+Data Sources:::red -->|Clean / Crosscheck / Transform| Curated Data:::blue -->|Write / POST| [S3] Bronze/Silver/Gold:::green -->|Read / GET| Data Consumer / Client:::blue"
 
 html <- 
     "https://mermaid-ascii.art/generate" |> 
@@ -187,10 +139,114 @@ html <-
     httr2::resp_body_string() 
 
 diagram <-
-    sprintf("<pre>%s</pre>", html)
+    sprintf("<pre style='font-size:12px;line-height:1'>%s</pre>", html)
 ```
 
 `r diagram`
+:::
+:::::
+
+
+## DiVA curation {.smaller}
+
+The DAUF project now harvests DiVA publication data from KTH using the OAI-PMH protocol which regularly updates [duckdb](https://duckdb.org) databases, openly available from object storage:
+
+- <https://data.bibliometrics.lib.kth.se/kthcorpus/oai.db> (Raw MODS in XML and JSON)
+- <https://data.bibliometrics.lib.kth.se/kthcorpus/diva.db> (**Tables** / RDBMs format)
+
+> The database is regularly updated. This is WIP and jocularly codenamed **"KaTHarsis"**
+
+- Harvest of KTH works in DiVA now available as **relational database**
+- Ambition to decouple importing and curation from DiVA in preparation for new DiVA
+- Can curate and annotate works using this database, aka "stoplists"
+- Preparations to use APIs to sync data between DiVA repository and this database
+
+## DiVA curation stats
+
+### **Journal articles** in DiVA 2015 - 2025
+
+```{css}
+.simpletable {
+  font-size: 16px
+}
+
+.simplediagram {
+  font-size: 12px
+}
+```
+
+::: {.simpletable}
+
+```{bash}
+# duckdb -c "from 'diva_stats_art_10y.csv';" | \
+# # remove box drawing chars
+# sed -E $'s/[\u2500-\u257F]/ /g' | \
+# # remove unneeded parts of header
+# sed -E $'1d;3d;' | \
+# # remove footer
+# head -n -2 
+cat diva_stats_art_11y.csv
+```
+
+:::
+
+## DiVA curation stats ...
+
+### **Conference papers** in DiVA 2015 - 2025
+
+::: {.simpletable}
+
+```{bash}
+cat diva_stats_con_11y.csv
+```
+
+:::
+
+## DiVA curation stats ...
+
+### **Journal articles** in 2025, by month
+
+::: {.simpletable}
+
+```{bash}
+cat diva_stats_art.csv
+```
+
+:::
+
+## DiVA curation stats ...
+
+### **Conference papers** in 2025, by month
+
+::: {.simpletable}
+
+```{bash}
+cat diva_stats_con.csv
+```
+
+:::
+
+## Swedish bibliometric resource (OpenAlex)
+
+![Demetrius](https://www.openalex.duckdns.org/logo.jpeg){width='100%'}
+
+## X
+
+::::: columns
+::: {.column width="60%"}
+
+- Ambition at KTH to track visions and goals using indicators
+- Project within *Strategisk verksamhetsanalys*
+- Workshops to align available data with goals
+- Relatively manual data collection process from scattered systems at KTH
+- Indicator report  + beta dashboard for testing purposes
+- The intended user group is KTH leadership and it enables comparing indicators across schools
+
+:::
+
+::: {.column width="30%"}
+
+![](assets/img/indicator_report.png){height="500"}
 :::
 :::::
 
@@ -202,22 +258,9 @@ diagram <-
 
 ## GDP data mobilization
 
--   We have participated in reference group coordinated by SUNET for the GDP efforts in collaboration with partners, including Vinnova and other universities
-
--   An R package has been developed with a client - <https://github.com/KTH-Library/gdp>
+-   Version 2 of the GDP API has recently been released. Tooling has been developed at KTH for harvesting data from the different sources using this version of the API, see <https://github.com/KTH-Library/gdp>.
 
 -   Regular harvesting of data from the API is now available from object storage "minio" at KTH: <https://data.bibliometrics.lib.kth.se/projects/gdp/gdp.db>
-
-
-
-## DiVA harvesting
-
-The DAUF project now harvests DiVA publication data using the OAI-PMH protocol which regularly updates a single file [duckdb](https://duckdb.org) database, openly available from object storage:
-
-<https://data.bibliometrics.lib.kth.se/kthcorpus/oai.db>
-
-> The database with the harvested information is currently about 4.4 GB large.It is reqularly updated and contains MODS and JSON representations of "all-kth" DiVA records.
-
 
 # Future work and discussion
 
@@ -225,13 +268,10 @@ The DAUF project now harvests DiVA publication data using the OAI-PMH protocol w
 
 -   x
 
-
 Related activities
 
--   KTH Cris/Rims
-
--   KTH Insights/datastyrning (MS Fabric/Power BI) 
-
+-   KTH CRIS/RIMS
+-   KTH Insights / datastyrning (MS Fabric/Power BI) 
 
 ## Questions and Answers {.smaller}
 
