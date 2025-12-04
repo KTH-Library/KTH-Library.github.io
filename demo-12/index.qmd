@@ -100,7 +100,19 @@ Changes in ABM 2025
 -   Three levels - macro, meso and micro
 -   Otherwise similar to [KTH Research Information - Units](https://analysis.sys.kth.se/)
 
-## Data Curation - overview {.smaller}
+## Data Curation - overview
+
+- Preparations under way for migration to a future **new version of DiVA**
+  - Launch of new DiVA with API is postponed, and has **new timeline**
+  - All **records need review** to meet new (not yet finalized) requirements
+  - Updates are required for KTH curation tools and processes
+
+- Broader discussions relating to a future **data lake for "KTH Works"**
+  - Publication data mirrored in a separate system under control from KTH
+  - Ability to cross reference other research outputs and auxiliary data from **external sources**
+  - Revamp curation process - increase automation and **data enrichment** from external sources, sync to DiVA repository
+
+## Data Curation and data flows
 
 ::::: columns
 ::: {.column width="45%"}
@@ -229,26 +241,6 @@ cat diva_stats_con.csv
 ## Swedish bibliometric resource (OpenAlex)
 
 ![Demetrius](https://www.openalex.duckdns.org/logo.jpeg){width='100%'}
-
-## X
-
-::::: columns
-::: {.column width="60%"}
-
-- Ambition at KTH to track visions and goals using indicators
-- Project within *Strategisk verksamhetsanalys*
-- Workshops to align available data with goals
-- Relatively manual data collection process from scattered systems at KTH
-- Indicator report  + beta dashboard for testing purposes
-- The intended user group is KTH leadership and it enables comparing indicators across schools
-
-:::
-
-::: {.column width="30%"}
-
-![](assets/img/indicator_report.png){height="500"}
-:::
-:::::
 
 ## GDP
 
