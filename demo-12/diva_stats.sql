@@ -66,16 +66,25 @@ create or replace table diva_stats_1 as (
             select
                 pid,
                 type_diva,
+                code_subtype,
                 latest_oai: datestamp::date,
         ) pt using (pid)
+        left join (
+            from contentType
+            select
+                pid, 
+                code_diva,
+        ) ct using (pid)        
         select
             y: year(creation_date),
             type: lower(left(type_diva, 3)),
-            n_pi: count(distinct pid) filter (unit_abbr = 'TRAC')::int,
-            n_r: count(distinct pid) filter (unit_abbr != 'TRAC')::int,
+            n_pi: count(distinct pid) filter (left(unit_abbr, 2) = 'TR')::int,
+            n_r: count(distinct pid) filter (left(unit_abbr, 2) != 'TR')::int,
             share: round(n_pi / (n_r + n_pi), 2),
         group by all
-        having type_diva in ('Article in journal', 'Conference paper')
+        having 
+            (type_diva = 'Conference paper') or-- and code_subtype = 'publishedPaper') or 
+            (type_diva = 'Article in journal') -- and code_diva = 'refereed') 
         order by y desc
     ),
 
@@ -98,7 +107,7 @@ create or replace table diva_stats_1 as (
         columns('art_share'),
         columns('con_n_')::int,
         columns('con_share'),
-    order by y desc
+    order by y asc
 );
 
 from diva_stats_1;
@@ -129,18 +138,27 @@ create or replace table diva_stats_2 as (
             select
                 pid,
                 type_diva,
+                code_subtype,
                 latest_oai: datestamp::date,
         ) pt using (pid)
+        left join (
+            from contentType
+            select
+                pid, 
+                code_diva
+        ) ct using (pid)
         select
             y: year(creation_date),
             m: month(creation_date),
             type: lower(left(type_diva, 3)),
-            n_pi: count(distinct pid) filter (unit_abbr = 'TRAC')::int,
-            n_r: count(distinct pid) filter (unit_abbr != 'TRAC')::int,
+            n_pi: count(distinct pid) filter (left(unit_abbr, 2) = 'TR')::int,
+            n_r: count(distinct pid) filter (left(unit_abbr, 2) != 'TR')::int,
             share: round(n_pi / (n_r + n_pi), 2),
         group by all
---        having type_diva in ('Article in journal', 'Conference paper')
-        order by y desc
+        having
+            (type_diva = 'Article in journal') or -- and code_diva = 'refereed') or 
+            (type_diva = 'Conference paper') -- and code_subtype = 'publishedPaper')
+        order by y asc, m asc
     ),
 
     uds as (
@@ -162,6 +180,8 @@ create or replace table diva_stats_2 as (
         columns('..._share'),
     order by y desc
 );
+
+from diva_stats_2;
 
 copy (
     from diva_stats_1

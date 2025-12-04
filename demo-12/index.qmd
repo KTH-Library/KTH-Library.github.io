@@ -100,19 +100,19 @@ Changes in ABM 2025
 -   Three levels - macro, meso and micro
 -   Otherwise similar to [KTH Research Information - Units](https://analysis.sys.kth.se/)
 
-## Data Curation - overview
+## Data Curation - overview {.smaller}
 
-- Preparations under way for migration to a future **new version of DiVA**
-  - Launch of new DiVA with API is postponed, and has **new timeline**
-  - All **records need review** to meet new (not yet finalized) requirements
-  - Updates are required for KTH curation tools and processes
+- Preparations under way for migration to future **new DiVA**
+  - Launch of new DiVA with API is postponed, **new timeline**
+  - All **records need review** to meet new DiVA requirements
+  - Updates also required for KTH curation tools and processes
 
-- Broader discussions relating to a future **data lake for "KTH Works"**
-  - Publication data mirrored in a separate system under control from KTH
+- Broader discussions in KTH relating to a future **data lake for "KTH Works"**
+  - Publication data mirrored in separate system under control from KTH
   - Ability to cross reference other research outputs and auxiliary data from **external sources**
-  - Revamp curation process - increase automation and **data enrichment** from external sources, sync to DiVA repository
+  - Free to revamp curation process; increase automation and **data enrichment** from external sources, sync to DiVA repository etc
 
-## Data Curation and data flows
+## Data Curation and data flows {.smaller}
 
 ::::: columns
 ::: {.column width="45%"}
