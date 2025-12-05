@@ -62,11 +62,11 @@ suppressPackageStartupMessages(library(magick))
 
 ## Progress overview - since last demo {data-background="assets/bg/plant.png" data-background-size="cover"}
 
--   This years version of **ABM** was released about a week ago
+-   This years version of **ABM** was released a couple of weeks ago
 
 -   Recently released beta version of topics based **KTH Research Information**
 
--   POC for the **KTH Indicators** dashboard based on consolidated indicators collected from across KTH.
+-   Assisting on graphs and summary for **KTH Indicator report** based on consolidated indicators collected from across KTH.
 
 -   Tests and prep for **GDP 2.0** (Gemensamma dataprojektet) - new standard for Swedish project data
 
