@@ -38,7 +38,8 @@ Presentations / Demos:
 - [Web slides - Demo - Centre leaders - 2022-10-26](/demo-centres/)  
 - [Web slides - Demo 9 - 2023-03-09 - KTH Publication Analysis app and Projects](/demo-9/)  
 - [Web slides - Demo 10 - 2024-02-14](/demo-10/)  
-- [Web slides - Demo 11 - 2024-10-23](/demo-11/)  
+- [Web slides - Demo 11 - 2024-10-23](/demo-11/) 
+- [Web slides - Demo 12 - 2025-12-05](/demo-12/)
 
 __NB.__ Some presentations are outdated but are kept on record here.
 
