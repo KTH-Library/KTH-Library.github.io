@@ -139,7 +139,7 @@ About 200 mln articles, 24 mln book chapters, 10 mln proceedings
 +--------------------------------------------------------------------------------------+
 | ::: {style="font-size: smaller; "}
 | +-----------------------------+----------------------------------------------------+ |
-| | Type                        | Exemple                                            | |
+| | Type                        | Example                                            | |
 | +=============================+====================================================+ |
 | | Basic bibliographics        | Title, publication channel, year, issue…           | |
 | +-----------------------------+----------------------------------------------------+ |
@@ -159,6 +159,16 @@ About 200 mln articles, 24 mln book chapters, 10 mln proceedings
 | +-----------------------------+----------------------------------------------------+ |
 | :::                                                                                  |
 +--------------------------------------------------------------------------------------+
+
+## DiVA works in Open Alex
+
+Preliminary/WIP: matching DiVA pid against Open Alex ids using DOIs/PMIDs; coverage:
+
+::: simpletable
+```{bash}
+cat diva_coverage.txt
+```
+:::
 
 ## Future
 
@@ -304,16 +314,6 @@ cat diva_stats_con.csv
 ## Curation tools for KTH Works
 
 ![SQL workbench "Pond Pilot" (wasm) for combining DiVA, OpenAlex and other data sources](ui.png)
-
-## DiVA works in Open Alex
-
-Preliminary/WIP: matching DiVA pid against Open Alex ids using DOIs/PMIDs; coverage:
-
-::: simpletable
-```{bash}
-cat diva_coverage.txt
-```
-:::
 
 # GDP
 
