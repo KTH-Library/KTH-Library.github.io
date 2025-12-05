@@ -47,8 +47,8 @@ suppressPackageStartupMessages(library(magick))
 -   Status update for the **DAUF** project
 -   New **ABM 2025** with overall result and updates
 -   New beta version of **subject based KTH Research Information** app
+-   OpenAlex Database on Sunet
 -   News related to **data curation** - new version of DiVA coming
--   OpenAlex on Sunet
 -   Future directions and your **questions and feedback**
 
 ## About the DAUF project
@@ -87,7 +87,7 @@ Changes in ABM 2025
 
 -   Number of publications seems to have stabilized
 -   Tendency for citations indicators to decrease
-    -   will be evaluted further
+    -   will be evaluated further
     -   seems to be spread across several schools and subjects
 -   Journal indicators stable but slightly increasing over last 5 years
 -   Small changes in co-publication patterns
@@ -102,6 +102,72 @@ Changes in ABM 2025
 -   Three levels - macro, meso and micro
 -   Otherwise similar to [KTH Research Information - Units](https://analysis.sys.kth.se/)
 
+# Swedish bibliometrics & OpenAlex {.smaller}
+
+![](assets/img/openalex_logo.png){height="400"}
+
+## Background {.smaller}
+
+-   Bibliometric analysis has historically been based on commercial data sources (Web of Science, SciVal, Incites, Dimensions)
+-   Sweden is lacking a national effort or common system
+-   Latest research bill is pointing towards more openness in research evaluation
+
+**OpenAlex**
+
+-   Open resource, stemming from Microsoft Academic (closed 2021)
+-   Web interface and API (json)
+-   Harvesting from Crossref, Pubmed, ArXiv, Zenodo and local repositories
+
+## 
+
+![](https://www.openalex.duckdns.org/logo.jpeg){width="100%"}
+
+## Current status
+
+- Server running on Sunet for snapshot download and data processing
+- Flattening of json to .parquet
+- Database using [duckdb](https://duckdb.org/)
+- Access by database connections and [sql requests through basic API](https://openalex.duckdns.org/api/)
+- Model for long-term funding and development currently missing
+- Current development with KTHB bibliometrics and the DAUF project, together with KI
+
+## Data contents {.smaller}
+
+About 200 mln articles, 24 mln book chapters, 10 mln proceedings
+
++--------------------------------------------------------------------------------------+
+| ::: {style="font-size: smaller; "}
+| +-----------------------------+----------------------------------------------------+ |
+| | Type                        | Exemple                                            | |
+| +=============================+====================================================+ |
+| | Basic bibliographics        | Title, publication channel, year, issue…           | |
+| +-----------------------------+----------------------------------------------------+ |
+| | Authors                     | Name, Person-ID (Orcid), affiliation               | |
+| +-----------------------------+----------------------------------------------------+ |
+| | Organisations               | Address, Org-ID (ROR), Organisation type           | |
+| +-----------------------------+----------------------------------------------------+ |
+| | Funders                     | Funder type, roles, grant nr. (sometimes)          | |
+| +-----------------------------+----------------------------------------------------+ |
+| | Subject area                | Keywords, hierarchical topic structure, MESH-terms | |
+| +-----------------------------+----------------------------------------------------+ |
+| | Open Access                 | Status, URL:s                                      | |
+| +-----------------------------+----------------------------------------------------+ |
+| | Sustainability class        | SDG                                                | |
+| +-----------------------------+----------------------------------------------------+ |
+| | Reference lists & citations | Citation counts, some basic indicators             | |
+| +-----------------------------+----------------------------------------------------+ |
+| :::                                                                                  |
++--------------------------------------------------------------------------------------+
+
+## Future
+
+-   Aim for common system and data flows, enabling more transparent and comparable analyses
+-   Working on project idea with Vinnova, KI and VR
+-   Evaluation of data
+    -   strengths and weaknesses
+    -   where is additional curation needed?
+- Multiple ways for access, depending on different needs and use cases
+
 # Data Curation
 
 ## Data Curation - overview {.smaller}
@@ -114,6 +180,7 @@ Changes in ABM 2025
     -   Publication data mirrored in a separate system under control from KTH
     -   Ability to cross reference other research outputs and auxiliary data from **external sources**
     -   Revamp curation process - increase automation and **data enrichment** from external sources, sync to DiVA repository
+
 
 ## Data Curation and data flows {.smaller}
 
@@ -231,74 +298,19 @@ cat diva_stats_con.csv
 ```
 :::
 
-# Swedish bibliometrics & OpenAlex {.smaller}
+## Curation tools for KTH Works
 
-![](assets/img/openalex_logo.png){height="400"}
+![SQL workbench "Pond Pilot" (wasm) for combining DiVA, OpenAlex and other data sources](ui.png)
 
-## 
+## DiVA works in Open Alex
 
-![](https://www.openalex.duckdns.org/logo.jpeg){width="100%"}
+Preliminary/WIP: matching DiVA pid against Open Alex ids using DOIs/PMIDs; coverage:
 
-## Background {.smaller}
-
--   Bibliometric analysis has historically been based on commercial data sources (Web of Science, SciVal, Incites, Dimensions)
--   Sweden is lacking a national effort or common system
--   Latest research bill is pointing towards more openness in research evaluation
-
-**OpenAlex**
-
--   Open resource, stemming from Microsoft Academic (closed 2021)
--   Web interface and API (json)
--   Harvesting from Crossref, Pubmed, ArXiv, Zenodo and local repositories
-- 
-
-## Current status
-
-- Server running on Sunet for snapshot download and data processing
-- Flattening of json to .parquet
-- Database using [duckdb](https://duckdb.org/)
-- Access by database connections and [sql requests through basic API](https://openalex.duckdns.org/api/)
-- Model for long-term funding and development currently missing
-- Current development with KTHB bibliometrics and the DAUF project, together with KI
-
-## Data contents {.smaller}
-
-About 200 mln articles, 24 mln book chapters, 10 mln proceedings
-
-+--------------------------------------------------------------------------------------+
-| ::: {style="font-size: smaller; "}
-| +-----------------------------+----------------------------------------------------+ |
-| | Type                        | Exemple                                            | |
-| +=============================+====================================================+ |
-| | Basic bibliographics        | Title, publication channel, year, issue…           | |
-| +-----------------------------+----------------------------------------------------+ |
-| | Authors                     | Name, Person-ID (Orcid), affiliation               | |
-| +-----------------------------+----------------------------------------------------+ |
-| | Organisations               | Address, Org-ID (ROR), Organisation type           | |
-| +-----------------------------+----------------------------------------------------+ |
-| | Funders                     | Funder type, roles, grant nr. (sometimes)          | |
-| +-----------------------------+----------------------------------------------------+ |
-| | Subject area                | Keywords, hierarchical topic structure, MESH-terms | |
-| +-----------------------------+----------------------------------------------------+ |
-| | Open Access                 | Status, URL:s                                      | |
-| +-----------------------------+----------------------------------------------------+ |
-| | Sustainability class        | SDG                                                | |
-| +-----------------------------+----------------------------------------------------+ |
-| | Reference lists & citations | Citation counts, some basic indicators             | |
-| +-----------------------------+----------------------------------------------------+ |
-| :::                                                                                  |
-+--------------------------------------------------------------------------------------+
-
-
-## Future
-
--   Aim for common system and data flows  
-  Would allow for more transparent and comparable analyses
--   Working on project idea with Vinnova, KI and VR
--   Evaluation of data
-    -   strengths and weaknesses
-    -   where is additional curation needed?
-- Multiple ways for access, depending on different needs and use cases
+::: simpletable
+```{bash}
+cat diva_coverage.txt
+```
+:::
 
 # GDP
 

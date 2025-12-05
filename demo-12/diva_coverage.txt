@@ -1,0 +1,22 @@
+  n_yes   n_no                   type_diva                           coverage           
+                                                                                        
+  65712    8544   Article in journal                         ██████████████████░░ 88 %  
+  19163   18698   Conference paper                           ██████████░░░░░░░░░░ 51 %  
+   2460    2881   Chapter in book                            █████████░░░░░░░░░░░ 46 %  
+   1383      86   Article, review/survey                     ███████████████████░ 94 %  
+    172     596   Book                                       ████░░░░░░░░░░░░░░░░ 22 %  
+    157    4822   Manuscript (preprint)                      █░░░░░░░░░░░░░░░░░░░  3 %  
+    152     313   Article, book review                       ███████░░░░░░░░░░░░░ 33 %  
+     89     241   Collection (editor)                        █████░░░░░░░░░░░░░░░ 27 %  
+     54    4109   Report                                     ░░░░░░░░░░░░░░░░░░░░  1 %  
+     52     216   Conference proceedings (editor)            ████░░░░░░░░░░░░░░░░ 19 %  
+     20     699   Other                                      █░░░░░░░░░░░░░░░░░░░  3 %  
+      8      33   Data set                                   ████░░░░░░░░░░░░░░░░ 20 %  
+      5    1281   Doctoral thesis, monograph                 ░░░░░░░░░░░░░░░░░░░░  0 %  
+      4    5547   Doctoral thesis, comprehensive summary     ░░░░░░░░░░░░░░░░░░░░  0 %  
+      1      54   Artistic output                            ░░░░░░░░░░░░░░░░░░░░  2 %  
+      1    2369   Licentiate thesis, comprehensive summary   ░░░░░░░░░░░░░░░░░░░░  0 %  
+      1   42086   Student thesis                             ░░░░░░░░░░░░░░░░░░░░  0 %  
+      0     960   Licentiate thesis, monograph               ░░░░░░░░░░░░░░░░░░░░  0 %  
+      0     290   Manuscript                                 ░░░░░░░░░░░░░░░░░░░░  0 %  
+      0     621   Patent                                     ░░░░░░░░░░░░░░░░░░░░  0 %  
