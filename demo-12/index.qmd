@@ -86,6 +86,7 @@ Changes in ABM 2025
 ## Brief ABM results for KTH
 
 -   Number of publications seems to have stabilized
+    - proceedings have reterned to pre-covid levels
 -   Tendency for citations indicators to decrease
     -   will be evaluated further
     -   seems to be spread across several schools and subjects
@@ -166,6 +167,8 @@ About 200 mln articles, 24 mln book chapters, 10 mln proceedings
 -   Evaluation of data
     -   strengths and weaknesses
     -   where is additional curation needed?
+- More filters for selection of source and work types
+- Bibliometric indicators
 - Multiple ways for access, depending on different needs and use cases
 
 # Data Curation
